@@ -8,7 +8,6 @@ const config: DocsThemeConfig = {
     next: false,
   },
   sidebar: {
-    defaultMenuCollapseLevel: 1,
     autoCollapse: true,
     toggleButton: true,
   },

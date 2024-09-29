@@ -1,0 +1,11 @@
+{
+  "*": {
+    "theme": {
+      "footer": false,
+      "pagination": true
+    }
+  },
+  "index": {
+    "title": "Home"
+  }
+}

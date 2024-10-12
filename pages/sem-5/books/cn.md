@@ -1,6 +1,6 @@
 # Computer Networks
 
-### [computer-networks.pdf](./cn/computer-networks.pdf)
+### [computer-networks.pdf](/sem-5/books/cn/computer-networks.pdf)
 
 ### [data-and-computer-connections.pdf](./cn/data-and-computer-connections.pdf)
 

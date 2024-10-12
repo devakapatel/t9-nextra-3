@@ -19,7 +19,7 @@ const config: DocsThemeConfig = {
     content: null,
   },
   footer: {
-    component: null,
+    text: "T9 © 2024",
   },
   head: (
     <>

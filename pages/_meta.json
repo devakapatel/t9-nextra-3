@@ -1,7 +1,6 @@
 {
   "*": {
     "theme": {
-      "footer": false,
       "pagination": true
     }
   },

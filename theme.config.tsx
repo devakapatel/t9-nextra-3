@@ -10,6 +10,7 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
+    autoCollapse: true,
   },
   editLink: {
     text: null,

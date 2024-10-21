@@ -1,7 +1,6 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
 
-const config: DocsThemeConfig = {
+export default {
   logo: <span>T9</span>,
   navigation: {
     prev: false,
@@ -20,7 +19,7 @@ const config: DocsThemeConfig = {
     content: null,
   },
   footer: {
-    text: "T9 © 2024",
+    content: <span>T9 © {new Date().getFullYear()} </span>,
   },
   head: (
     <>
@@ -38,5 +37,3 @@ const config: DocsThemeConfig = {
     };
   },
 };
-
-export default config;

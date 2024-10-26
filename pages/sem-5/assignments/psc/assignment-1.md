@@ -1,4 +1,4 @@
-## Assignment 1
+# Assignment 1
 
 ## 1) What is Abstract Data Types? Demonstrate importance of ADT in python.
 

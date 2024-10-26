@@ -1,7 +1,6 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
 
-const config: DocsThemeConfig = {
+export default {
   logo: <span>T9</span>,
   navigation: {
     prev: false,
@@ -10,6 +9,7 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
+    autoCollapse: true,
   },
   editLink: {
     text: null,
@@ -19,7 +19,7 @@ const config: DocsThemeConfig = {
     content: null,
   },
   footer: {
-    text: "T9 © 2024",
+    content: <span>T9 © {new Date().getFullYear()} </span>,
   },
   head: (
     <>
@@ -31,11 +31,16 @@ const config: DocsThemeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </>
   ),
-  useNextSeoProps() {
+
+  // Function to set SEO properties
+  useNextSeoProps({ frontMatter, content }) {
+    // Extract the first H1 from the content
+    const firstH1Match = content.match(/<h1>(.*?)<\/h1>/);
+    const title = firstH1Match ? firstH1Match[1] : "Default Title"; // Fallback title
+
     return {
-      titleTemplate: "%s",
+      titleTemplate: `%s | ${title}`, // Use the extracted title
+      title, // Set the actual title for the page
     };
   },
 };
-
-export default config;

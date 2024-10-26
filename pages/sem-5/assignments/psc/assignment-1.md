@@ -15,7 +15,7 @@ Abstract Data Types (ADTs) are conceptual models that define the basic operation
 
 Here's an example of how ADTs can be used in Python:
 
-```python
+```python copy showLineNumbers
 class Stack:
     def __init__(self):
         self.items = []

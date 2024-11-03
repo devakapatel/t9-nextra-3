@@ -839,4 +839,342 @@ document.getElementById("close-popup").addEventListener("click", function() {
 </html>
 ```
 
-## Practical 9 : 
+## Practical 9.1 : Write a PHP program to make the sum of first 100 odd numbers.
+
+```php
+<?php
+$sum = 0;
+$count = 0;
+$num = 1;
+
+while ($count < 100) {
+    if ($num % 2 != 0) {
+        $sum += $num;
+        $count++;
+    }
+    $num++;
+}
+
+echo "The sum of the first 100 odd numbers is: $sum";
+?>
+```
+
+## Practical 9.2 : Aim: Write a PHP program that receives the value of N using HTML form and displays the first N Fibonacci numbers as HTML list.
+
+### HTML
+
+```html
+<html>
+<head>
+    <title>9.2</title>
+</head>
+<body>
+    <form action="fibonacci.php" method="post">
+        <label for="n">Enter the value of N:</label>
+        <input type="number" id="n" name="n" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+```
+
+### PHP
+
+```php
+<?php
+if (isset($_POST['n'])) {
+    $n = $_POST['n'];
+    $fibonacciNumbers = array(0, 1);
+    $i = 2;
+
+    while (count($fibonacciNumbers) < $n) {
+        $fibonacciNumbers[] = $fibonacciNumbers[$i - 1] + $fibonacciNumbers[$i - 2];
+        $i++;
+    }
+
+    echo "<h2>The first $n Fibonacci numbers are:</h2>";
+    echo "<ul>";
+    foreach ($fibonacciNumbers as $number) {
+        echo "<li>$number</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "Please enter a value for N.";
+}
+?>
+```
+
+## Practical 9.3 : Create HTML form to enter one number. Write PHP code to display the message about number is odd or even.
+
+### HTML
+
+```html
+<html>
+<head>
+    <title>9.3</title>
+</head>
+<body>
+    <form action="process.php" method="post">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" name="number"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+```
+
+### PHP
+
+```php
+<?php
+$number = $_POST['number'];
+
+if ($number % 2 == 0) {
+    echo "<p>The number $number is even.</p>";
+} else {
+    echo "<p>The number $number is odd.</p>";
+}
+?>
+```
+
+## Practical 9.4 : Write PHP code to create database state, create table city(cityname, area,population) and insert data from table.
+
+```php
+<?php
+// Database configuration
+$servername = "localhost"; // Change if your MySQL server is on a different host
+$username = "root"; // Your MySQL username
+$password = ""; // Your MySQL password
+$dbname = "state"; // Database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Create database
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully\n";
+} else {
+    echo "Error creating database: " . $conn->error . "\n";
+}
+
+// Select the database
+$conn->select_db($dbname);
+
+// Create table
+$sql = "CREATE TABLE IF NOT EXISTS city (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    cityname VARCHAR(100) NOT NULL,
+    area FLOAT NOT NULL,
+    population INT NOT NULL
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Table city created successfully\n";
+} else {
+    echo "Error creating table: " . $conn->error . "\n";
+}
+
+// Insert data into the table
+$sql = "INSERT INTO city (cityname, area, population) VALUES
+    ('New York', 468.9, 8419600),
+    ('Los Angeles', 503, 3980400),
+    ('Chicago', 227.3, 2716000),
+    ('Houston', 637.4, 2328000),
+    ('Phoenix', 517.6, 1663000)";
+if ($conn->query($sql) === TRUE) {
+    echo "Data inserted successfully\n";
+} else {
+    echo "Error inserting data: " . $conn->error . "\n";
+}
+
+// Close connection
+$conn->close();
+?>
+```
+
+## Practical 10.1 : Write a PHP program to store user registration (user-name, address, Date of Birth,age, pan card, gender) with mysql database.
+
+```php
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$dbname = "your_database_name"; // Don't forget to set your database name
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user_name = $conn->real_escape_string($_POST['user_name']);
+    $address = $conn->real_escape_string($_POST['address']);
+    $date_of_birth = $conn->real_escape_string($_POST['date_of_birth']);
+    $age = (int)$_POST['age'];
+    $pan_card = $conn->real_escape_string($_POST['pan_card']);
+    $gender = $conn->real_escape_string($_POST['gender']);
+
+    $sql = "INSERT INTO users (user_name, address, date_of_birth, age, pan_card, gender)
+            VALUES ('$user_name', '$address', '$date_of_birth', $age, '$pan_card', '$gender')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "User registered successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form method="POST" action="prc10a.php">
+        <label for="user_name">User Name:</label>
+        <input type="text" name="user_name" required><br><br>
+        
+        <label for="address">Address:</label>
+        <input type="text" name="address"><br><br>
+        
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" name="date_of_birth"><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br><br>
+        
+        <label for="pan_card">PAN Card:</label>
+        <input type="text" name="pan_card" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="M"> Male
+        <input type="radio" name="gender" value="F"> Female<br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+```
+
+## Practical 10.2 : Write PHP code to read from a file and display it in browser.
+
+```php
+<?php
+$filename = 'demo.txt'; // Added semicolon
+
+if (file_exists($filename)) {
+    $file = fopen($filename, 'r');
+
+    $file_content = fread($file, filesize($filename));
+
+    fclose($file);
+    echo "<pre>$file_content</pre>"; // Corrected variable name
+} else {
+    echo "The file does not exist.";
+}
+?>
+```
+
+## Practical 10.3 : Write HTML and PHP program to read and store student information such as enrollment no, name, semester and percentage from database table and Output the data to a webpage in tabular format.
+
+```php
+<?php
+$host = "localhost";
+$dbname = "test";
+$username = "root";
+$password = "";
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $enrollment_no = $conn->real_escape_string($_POST['enrollment_no']);
+    $name = $conn->real_escape_string($_POST['name']);
+    $semester = (int)$_POST['semester'];
+    $percentage = (float)$_POST['percentage'];
+
+    $sql_insert = "INSERT INTO students (enrollment_no, name, semester, percentage)
+                   VALUES ('$enrollment_no', '$name', $semester, $percentage)";
+
+    if ($conn->query($sql_insert) === TRUE) {
+        echo "New student registered successfully!";
+    } else {
+        echo "Error: " . $sql_insert . "<br>" . $conn->error;
+    }
+}
+
+$sql = "SELECT enrollment_no, name, semester, percentage FROM students";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration and Information</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form method="POST" action="prc10c.php">
+        <label for="enrollment_no">Enrollment No:</label><br>
+        <input type="text" id="enrollment_no" name="enrollment_no" required><br>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="semester">Semester:</label><br>
+        <input type="number" id="semester" name="semester" required><br>
+
+        <label for="percentage">Percentage:</label><br>
+        <input type="number" id="percentage" name="percentage" step="0.01" required><br><br>
+
+        <input type="submit" value="Register Student">
+    </form>
+
+    <h2>Student Information Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Enrollment No</th>
+                <th>Name</th>
+                <th>Semester</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['enrollment_no'] . "</td>";
+                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['semester'] . "</td>";
+                echo "<td>" . $row['percentage'] . "%</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='4'>No records found</td></tr>";
+        }
+        ?>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<?php
+$conn->close();
+?>
+```

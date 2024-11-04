@@ -1,5 +1,5 @@
 # Practicals
 
-### [MI](./practicals/mi)
+### [DAA](./practicals/daa)
 
 ### [WT](./practicals/wt)

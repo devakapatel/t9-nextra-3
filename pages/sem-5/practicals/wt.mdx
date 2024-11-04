@@ -562,6 +562,56 @@
 </html>
 ```
 
+### OR
+
+```html copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Day Night Animation</title>
+    <style>
+        /* Body style and background transition */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #87CEEB; /* Daytime color */
+            overflow: hidden;
+            animation: backgroundChange 6s infinite alternate;
+        }
+
+        /* Sun/Moon style */
+        .sun-moon {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #FFD700; /* Sun color */
+            animation: moveAcross 6s infinite alternate;
+        }
+
+        /* Background color change for day and night */
+        @keyframes backgroundChange {
+            0% { background-color: #87CEEB; } /* Day */
+            100% { background-color: #2C3E50; } /* Night */
+        }
+
+        /* Move the sun across the screen and change to moon */
+        @keyframes moveAcross {
+            0% { left: 100%; background-color: #FFD700; } /* Sun on right */
+            100% { left: 0%; background-color: #FFF; } /* Moon on left */
+        }
+    </style>
+</head>
+<body>
+    <div class="sun-moon"></div>
+</body>
+</html>
+```
+
 ## Practical 7 : To create a registration form with JavaScript.
 
 ### HTML

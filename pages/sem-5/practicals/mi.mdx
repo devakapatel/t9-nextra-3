@@ -414,23 +414,19 @@ HLT
 
 ```nasm copy
 DATA SEGMENT
-    NUM1 DW 1234H
+; No data is defined in this segment
 DATA ENDS
-
 CODE SEGMENT
-ASSUME CS:CODE, DS:DATA
-
-START:  MOV AX, DATA     ; Initialize data segment
-        MOV DS, AX       ; Move AX to DS
-
-        MOV AX, NUM1     ; Load NUM1 into AX
-        MOV BX, AX       ; Move AX to BX (Data Transfer)
-
-        ; At this point, BX contains the value of NUM1
-
-        MOV AH, 4CH      ; Terminate program
-        INT 21H
-
+ASSUME CS: CODE, DS: DATA
+START:
+MOV AX, 0FFFFH ; Load AX with FFFFH
+MOV BX, 0000H ; Load BX with 0000H
+MOV CX, AX ; Transfer data from AX to CX
+MOV DX, BX ; Transfer data from BX to DX
+MOV SI, CX ; Transfer data from CX to SI
+MOV DI, DX ; Transfer data from DX to DI
+MOV AH, 4CH ; Load AH with 4CH (Exit code)
+INT 21H ; Call DOS interrupt to exit
 CODE ENDS
 END START
 ```
@@ -439,51 +435,41 @@ END START
 
 ```nasm copy
 DATA SEGMENT
-    NUM1 DW 1234H
-    NUM2 DW 5678H
-    RESULT DW ?
+NUM1 DW 2335H
+NUM2 DW 6789H
+RESULT DW ?
 DATA ENDS
-
-CODE SEGMENT
-ASSUME CS:CODE, DS:DATA
-
-START:  MOV AX, DATA     ; Initialize data segment
-        MOV DS, AX       ; Move AX to DS
-
-        MOV AX, NUM1     ; Load NUM1 into AX
-        ADD AX, NUM2     ; Add NUM2 to AX
-        MOV RESULT, AX   ; Store result in RESULT
-
-        MOV AH, 4CH      ; Terminate program
-        INT 21H
-
-CODE ENDS
+CODE SEGMENT ; Code Start Here
+ASSUME CS: CODE, DS: DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AX, NUM1
+MOV BX, NUM2
+ADD AX,BX
+MOV RESULT, AX
+INT 21H
+CODE ENDS ; Program ends here
 END START
 ```
 
 ### 3) Write ALP Subtract two 16 bit numbers.
 
 ```nasm copy
-DATA SEGMENT
-    NUM1 DW 5678H
-    NUM2 DW 1234H
-    RESULT DW ?
+DATA SEGMENT ; Define the Data if Required..
+NUM1 DW 2335H
+NUM2 DW 6789H
+RESULT DW ?
 DATA ENDS
-
-CODE SEGMENT
-ASSUME CS:CODE, DS:DATA
-
-START:  MOV AX, DATA     ; Initialize data segment
-        MOV DS, AX       ; Move AX to DS
-
-        MOV AX, NUM1     ; Load NUM1 into AX
-        SUB AX, NUM2     ; Subtract NUM2 from AX
-        MOV RESULT, AX   ; Store result in RESULT
-
-        MOV AH, 4CH      ; Terminate program
-        INT 21H
-
-CODE ENDS
+CODE SEGMENT ; Code Start Here
+ASSUME CS: CODE, DS: DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AX, NUM1
+MOV BX, NUM2
+SUB BX,AX
+MOV RESULT, AX
+INT 21H
+CODE ENDS ; Program ends here
 END START
 ```
 
@@ -492,33 +478,48 @@ END START
 ### 1) An ALP to transfer a given block of data from source memory block to the destination memory block without overlap.
 
 ```nasm copy
-ASSUME CS:CODE, DS:DATA
-
+CASE 1: BYTE TRANSFER
 DATA SEGMENT
-    SOURCE DB 10 DUP(?)  ; Source block
-    DEST DB 10 DUP(?)    ; Destination block
-    COUNT DW 10          ; Number of bytes to transfer
+BLOCK1 DB 25H, 55H, 35H, 45H
+BLOCK2 DB ?
 DATA ENDS
-
 CODE SEGMENT
-START:
-    MOV AX, DATA
-    MOV DS, AX
-    MOV ES, AX           ; Set ES to point to the same segment as DS
+ASSUME CS:CODE DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AL, [SI]
+MOV [DI], AL
+INC SI
+INC DI
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
 
-    LEA SI, SOURCE       ; Load effective address of source into SI
-    LEA DI, DEST         ; Load effective address of destination into DI
-    MOV CX, COUNT        ; Load count into CX for loop
-
-TRANSFER:
-    MOV AL, [SI]         ; Move byte from source to AL
-    MOV [DI], AL         ; Move byte from AL to destination
-    INC SI               ; Increment source index
-    INC DI               ; Increment destination index
-    LOOP TRANSFER        ; Repeat until CX = 0
-
-    MOV AH, 4CH          ; DOS function: Exit program
-    INT 21H              ; DOS interrupt
+CASE 2: WORD TRANSFER
+DATA SEGMENT
+BLOCK1 DW 2500H,5554H,3541H,4524H
+BLOCK2 DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+JAIVAL ACHARYA IU2241050062 5CE-A
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK:MOV AX, [SI]
+MOV [DI], AX
+ADD SI, 2
+ADD DI, 2
+DEC CL
+JNZ BACK
+INT 21H
 CODE ENDS
 END START
 ```
@@ -526,35 +527,50 @@ END START
 ### 2) An ALP to exchange a block of data located from source to the destination memory locations.
 
 ```nasm copy
-ASSUME CS:CODE, DS:DATA
-
+CASE 1: BYTE EXCHANGE
 DATA SEGMENT
-    SOURCE DB 10 DUP(?)  ; Source block
-    DEST DB 10 DUP(?)    ; Destination block
-    COUNT DW 10          ; Number of bytes to exchange
+BLOCK1 DB 25H,55H,35H,45H
+BLOCK2 DB 22H,15H,47H,57H
 DATA ENDS
-
 CODE SEGMENT
-START:
-    MOV AX, DATA
-    MOV DS, AX
-    MOV ES, AX           ; Set ES to point to the same segment as DS
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AL, [SI]
+XCHG AL,[DI]
+MOV [SI], AL
+INC SI
+INC DI
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
 
-    LEA SI, SOURCE       ; Load effective address of source into SI
-    LEA DI, DEST         ; Load effective address of destination into DI
-    MOV CX, COUNT        ; Load count into CX for loop
-
-EXCHANGE:
-    MOV AL, [SI]         ; Move byte from source to AL
-    MOV BL, [DI]         ; Move byte from destination to BL
-    MOV [SI], BL         ; Move byte from BL to source
-    MOV [DI], AL         ; Move byte from AL to destination
-    INC SI               ; Increment source index
-    INC DI               ; Increment destination index
-    LOOP EXCHANGE        ; Repeat until CX = 0
-
-    MOV AH, 4CH          ; DOS function: Exit program
-    INT 21H              ; DOS interrupt
+CASE 2: WORD TRANSFER
+DATA SEGMENT
+4
+BLOCK1 DW 2554H,5445H,3325H,4435H
+BLOCK2 DW 2762H,1125H,4637H,5657H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AX, [SI]
+XCHG AX,[DI]
+MOV [SI], AX
+ADD SI, 2
+ADD DI, 2
+DEC CL
+JNZ BACK
+INT 21H
 CODE ENDS
 END START
 ```
@@ -564,175 +580,155 @@ END START
 ### 1) Write an ALP to find the largest number from an array.
 
 ```nasm copy
-; ALP to find the largest number from an array
-
-.MODEL SMALL
-.STACK 100H
-.DATA
-    ARRAY DB 5, 12, 3, 8, 15, 1, 9  ; Example array
-    LEN EQU $-ARRAY                 ; Length of array
-    LARGEST DB ?                    ; Variable to store largest number
-
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
-
-    MOV CX, LEN        ; Set counter to array length
-    MOV SI, 0          ; Initialize index
-    MOV AL, ARRAY[SI]  ; Assume first element is largest
-    MOV LARGEST, AL    ; Store in LARGEST
-
-LOOP_START:
-    CMP ARRAY[SI], AL  ; Compare current element with AL
-    JLE NEXT_ITER      ; If less or equal, move to next iteration
-    MOV AL, ARRAY[SI]  ; If greater, update AL
-    MOV LARGEST, AL    ; Update LARGEST
-
-NEXT_ITER:
-    INC SI             ; Move to next element
-    LOOP LOOP_START    ; Decrement CX and continue if not zero
-
-    ; At this point, LARGEST contains the largest number
-
-    MOV AH, 4CH        ; DOS function to exit program
-    INT 21H
-MAIN ENDP
-END MAIN
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+LARGEST DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV AX, [SI] ; Initialize LARGEST with the first element
+MOV LARGEST, AX
+MOV CX, 03H ; Loop counter (since we've already processed the first
+element)
+BACK:
+ADD SI, 2 ; Move to the next element
+MOV AX, [SI]
+CMP AX, LARGEST
+JLE SKIP ; If current element is not larger, skip updating LARGEST
+MOV LARGEST, AX
+SKIP:
+LOOP BACK
+MOV AX, LARGEST ; Print the largest number
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+INT 21H
+CODE ENDS
+END START
 ```
 
 ### 2) Write an ALP to find the smallest number from an array.
 
 ```nasm copy
-; ALP to find the smallest number from an array
-
-.MODEL SMALL
-.STACK 100H
-.DATA
-    ARRAY DB 5, 12, 3, 8, 15, 1, 9  ; Example array
-    LEN EQU $-ARRAY                 ; Length of array
-    SMALLEST DB ?                   ; Variable to store smallest number
-
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
-
-    MOV CX, LEN        ; Set counter to array length
-    MOV SI, 0          ; Initialize index
-    MOV AL, ARRAY[SI]  ; Assume first element is smallest
-    MOV SMALLEST, AL   ; Store in SMALLEST
-
-LOOP_START:
-    CMP ARRAY[SI], AL  ; Compare current element with AL
-    JGE NEXT_ITER      ; If greater or equal, move to next iteration
-    MOV AL, ARRAY[SI]  ; If smaller, update AL
-    MOV SMALLEST, AL   ; Update SMALLEST
-
-NEXT_ITER:
-    INC SI             ; Move to next element
-    LOOP LOOP_START    ; Decrement CX and continue if not zero
-
-    ; At this point, SMALLEST contains the smallest number
-
-    MOV AH, 4CH        ; DOS function to exit program
-    INT 21H
-MAIN ENDP
-END MAIN
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 1541H, 4524H
+SMALLEST DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV AX, [SI] ; Initialize SMALLEST with the first element
+MOV SMALLEST, AX
+MOV CX, 03H ; Loop counter (since we've already processed the first
+element)
+BACK:
+ADD SI, 2 ; Move to the next element
+MOV AX, [SI]
+CMP AX, SMALLEST
+JGE SKIP ; If current element is not smaller, skip updating SMALLEST
+MOV SMALLEST, AX
+SKIP:
+LOOP BACK
+MOV AX, SMALLEST ; Print the smallest number
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+INT 21H
+CODE ENDS
+END START
 ```
 
 ### 3) Write an ALP to sort the given array of numbers in ascending order.
 
 ```nasm copy
-; ALP to sort the given array of numbers in ascending order
-
-.MODEL SMALL
-.STACK 100H
-.DATA
-    ARRAY DB 5, 12, 3, 8, 15, 1, 9  ; Example array
-    LEN EQU $-ARRAY                 ; Length of array
-
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
-
-    MOV CX, LEN        ; Set outer loop counter
-    DEC CX             ; Decrement by 1 for N-1 passes
-
-OUTER_LOOP:
-    MOV BX, CX         ; Set inner loop counter
-    MOV SI, 0          ; Reset array index
-
-INNER_LOOP:
-    MOV AL, ARRAY[SI]  ; Load current element
-    CMP AL, ARRAY[SI+1]; Compare with next element
-    JLE NEXT_ITER      ; If in order, move to next iteration
-
-    ; Swap elements if out of order
-    XCHG AL, ARRAY[SI+1]
-    MOV ARRAY[SI], AL
-
-NEXT_ITER:
-    INC SI             ; Move to next element
-    DEC BX             ; Decrement inner loop counter
-    JNZ INNER_LOOP     ; Continue inner loop if not zero
-
-    LOOP OUTER_LOOP    ; Continue outer loop
-
-    ; At this point, the array is sorted in ascending order
-
-    MOV AH, 4CH        ; DOS function to exit program
-    INT 21H
-MAIN ENDP
-END MAIN
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+COUNT DW 04H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV CX, COUNT
+DEC CX
+OUTER:
+LEA SI, BLOCK1
+MOV DX, CX
+INNER:
+MOV AX, [SI]
+CMP AX, [SI+2]
+JLE SKIP
+XCHG AX, [SI+2]
+MOV [SI], AX
+SKIP:
+ADD SI, 2
+DEC DX
+JNZ INNER
+LOOP OUTER
+LEA SI, BLOCK1
+MOV CX, COUNT
+PRINT:
+MOV AX, [SI]
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+ADD SI, 2
+LOOP PRINT
+INT 21H
+CODE ENDS
+END START
 ```
 
 ### 4) Write an ALP to sort the given array of numbers in descending order.
 
 ```nasm copy
-; ALP to sort the given array of numbers in descending order
-
-.MODEL SMALL
-.STACK 100H
-.DATA
-    ARRAY DB 5, 12, 3, 8, 15, 1, 9  ; Example array
-    LEN EQU $-ARRAY                 ; Length of array
-
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
-
-    MOV CX, LEN        ; Set outer loop counter
-    DEC CX             ; Decrement by 1 for N-1 passes
-
-OUTER_LOOP:
-    MOV BX, CX         ; Set inner loop counter
-    MOV SI, 0          ; Reset array index
-
-INNER_LOOP:
-    MOV AL, ARRAY[SI]  ; Load current element
-    CMP AL, ARRAY[SI+1]; Compare with next element
-    JGE NEXT_ITER      ; If in order (descending), move to next iteration
-
-    ; Swap elements if out of order
-    XCHG AL, ARRAY[SI+1]
-    MOV ARRAY[SI], AL
-
-NEXT_ITER:
-    INC SI             ; Move to next element
-    DEC BX             ; Decrement inner loop counter
-    JNZ INNER_LOOP     ; Continue inner loop if not zero
-
-    LOOP OUTER_LOOP    ; Continue outer loop
-
-    ; At this point, the array is sorted in descending order
-
-    MOV AH, 4CH        ; DOS function to exit program
-    INT 21H
-MAIN ENDP
-END MAIN
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+COUNT DW 04H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV CX, COUNT
+DEC CX
+OUTER:
+LEA SI, BLOCK1
+MOV DX, CX
+INNER:
+MOV AX, [SI]
+CMP AX, [SI+2]
+JGE SKIP
+XCHG AX, [SI+2]
+MOV [SI], AX
+SKIP:
+ADD SI, 2
+DEC DX
+JNZ INNER
+LOOP OUTER
+LEA SI, BLOCK1
+MOV CX, COUNT
+PRINT:
+MOV AX, [SI]
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+ADD SI, 2
+LOOP PRINT
+INT 21H
+CODE ENDS
+END START
 ```
 
 ## Lab 7 : Programming based on Bit Manipulation
@@ -740,213 +736,88 @@ END MAIN
 ### 1) Write a program to check if given data is positive or negative.
 
 ```nasm copy
-section .data
-    prompt db "Enter a number: ", 0
-    positive_msg db "The number is positive.", 0
-    negative_msg db "The number is negative.", 0
-    zero_msg db "The number is zero.", 0
-
-section .bss
-    num resb 4
-
-section .text
-    global _start
-
-_start:
-    ; Print prompt
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, prompt
-    mov edx, 18
-    int 0x80
-
-    ; Read input
-    mov eax, 3
-    mov ebx, 0
-    mov ecx, num
-    mov edx, 4
-    int 0x80
-
-    ; Convert ASCII to integer
-    mov eax, [num]
-    sub eax, '0'
-
-    ; Check if positive, negative, or zero
-    cmp eax, 0
-    jg positive
-    jl negative
-    je zero
-
-positive:
-    mov ecx, positive_msg
-    mov edx, 23
-    jmp print
-
-negative:
-    mov ecx, negative_msg
-    mov edx, 23
-    jmp print
-
-zero:
-    mov ecx, zero_msg
-    mov edx, 19
-
-print:
-    mov eax, 4
-    mov ebx, 1
-    int 0x80
-
-    ; Exit program
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+ ; DATA Positive / Negative
+DATA SEGMENT
+NUM DB 72H ; 1000 0010
+MES1 DB 'DATA IS POSITIVE $'
+MES2 DB 'DATA IS NEGATIVE $'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AL,NUM
+ROL AL,1
+JC NEGA
+LEA DX,MES1 ;Declare it positive.
+JMP EXIT ;Exit program.
+NEGA: LEA DX,MES2;Declare it negative.
+8
+EXIT: MOV AH,09H
+INT 21H
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
 ```
 
 ### 2) Write a program to check if given data is odd or even.
 
 ```nasm copy
-section .data
-    prompt db "Enter a number: ", 0
-    odd_msg db "The number is odd.", 0
-    even_msg db "The number is even.", 0
-
-section .bss
-    num resb 4
-
-section .text
-    global _start
-
-_start:
-    ; Print prompt
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, prompt
-    mov edx, 18
-    int 0x80
-
-    ; Read input
-    mov eax, 3
-    mov ebx, 0
-    mov ecx, num
-    mov edx, 4
-    int 0x80
-
-    ; Convert ASCII to integer
-    mov eax, [num]
-    sub eax, '0'
-
-    ; Check if odd or even
-    test al, 1
-    jz even
-
-odd:
-    mov ecx, odd_msg
-    mov edx, 18
-    jmp print
-
-even:
-    mov ecx, even_msg
-    mov edx, 19
-
-print:
-    mov eax, 4
-    mov ebx, 1
-    int 0x80
-
-    ; Exit program
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+; Data even or odd
+DATA SEGMENT
+X DB 27
+MSG1 DB 'NUMBER IS EVEN$'
+MSG2 DB 'NUMBER IS ODD$'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AL,X
+TEST AL,01H
+JNZ EXIT
+LEA DX,MSG1
+MOV AH,09H
+INT 21H
+JMP LAST
+EXIT: LEA DX,MSG2 ;Declare it is Odd number.
+MOV AH,09H
+INT 21H
+LAST: MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
 ```
 
 ### 3) Write a program to count the number of 1’s and 0’s in given data.
 
 ```nasm copy
-section .data
-    prompt db "Enter a number: ", 0
-    ones_msg db "Number of 1's: ", 0
-    zeros_msg db "Number of 0's: ", 0
-
-section .bss
-    num resb 4
-    ones_count resb 1
-    zeros_count resb 1
-
-section .text
-    global _start
-
-_start:
-    ; Print prompt
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, prompt
-    mov edx, 18
-    int 0x80
-
-    ; Read input
-    mov eax, 3
-    mov ebx, 0
-    mov ecx, num
-    mov edx, 4
-    int 0x80
-
-    ; Convert ASCII to integer
-    mov al, [num]
-    sub al, '0'
-
-    ; Initialize counters
-    mov byte [ones_count], 0
-    mov byte [zeros_count], 0
-    mov cl, 8  ; Loop counter (8 bits)
-
-count_loop:
-    shr al, 1  ; Shift right to check least significant bit
-    jc increment_ones
-    inc byte [zeros_count]
-    jmp continue
-
-increment_ones:
-    inc byte [ones_count]
-
-continue:
-    dec cl
-    jnz count_loop
-
-    ; Print results
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, ones_msg
-    mov edx, 16
-    int 0x80
-
-    mov al, [ones_count]
-    add al, '0'
-    mov [num], al
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, num
-    mov edx, 1
-    int 0x80
-
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, zeros_msg
-    mov edx, 17
-    int 0x80
-
-    mov al, [zeros_count]
-    add al, '0'
-    mov [num], al
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, num
-    mov edx, 1
-    int 0x80
-
-    ; Exit program
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+; Count number of ones and zeros in a number
+DATA SEGMENT
+X DB 0AAH
+ONE DB ?
+ZERO DB ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS: CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AH,X
+MOV BL,8 ;Initialize BL to 8.
+MOV CL,1 ;Initialize CL to 1.
+UP: ROR AH,CL ;Perform the single bit rotate operation
+;with respect to right.
+JNC DOWN ;If no carry go to DOWN label.
+INC ONE ;Increment one.
+JMP DOWN1 ;Jump to DOWN1.
+DOWN: INC ZERO ;Increment ZERO.
+DOWN1: DEC BL ;Decrement the BL.
+JNZ UP ;If no zero go to UP label.
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
 ```
 
 ## Lab 8 : Programming based on String Operations
@@ -955,35 +826,21 @@ continue:
 
 ```nasm copy
 DATA SEGMENT
-    SOURCE DB 'Hello, World!', '$'  ; Source string
-    DEST DB 20 DUP(?)               ; Destination buffer
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+STRING2 DB 20 DUP (0) ; Destination string, initialized to 0
 DATA ENDS
-
 CODE SEGMENT
-    ASSUME CS:CODE, DS:DATA
-
+ASSUME CS:CODE, DS:DATA
 START:
-    MOV AX, DATA
-    MOV DS, AX
-    MOV ES, AX                      ; Set ES to point to the same segment as DS
-
-    LEA SI, SOURCE                  ; Load effective address of source into SI
-    LEA DI, DEST                    ; Load effective address of destination into DI
-
-    MOV CX, 13                      ; Length of the string (including '$')
-
-    CLD                             ; Clear direction flag (forward direction)
-    REP MOVSB                       ; Repeat move string byte
-
-    ; Display the transferred string
-    MOV AH, 09H
-    LEA DX, DEST
-    INT 21H
-
-    ; Exit program
-    MOV AH, 4CH
-    INT 21H
-
+LEA SI, STRING1 ; Load the address of the source string into SI
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REP MOVSB ; Repeat moving bytes from DS:SI to ES:DI
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
 CODE ENDS
 END START
 ```
@@ -992,55 +849,32 @@ END START
 
 ```nasm copy
 DATA SEGMENT
-    STRING DB 'Hello, World!', '$'  ; Original string
-    REVERSED DB 20 DUP(?)           ; Buffer for reversed string
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+STRING2 DB 20 DUP (0) ; Destination string, initialized to 0
 DATA ENDS
-
 CODE SEGMENT
-    ASSUME CS:CODE, DS:DATA
-
+ASSUME CS:CODE, DS:DATA
 START:
-    MOV AX, DATA
-    MOV DS, AX
-
-    ; Calculate string length (excluding '$')
-    MOV CX, 0
-    LEA SI, STRING
-COUNT_LOOP:
-    MOV AL, [SI]
-    CMP AL, '$'
-    JE COUNT_DONE
-    INC CX
-    INC SI
-    JMP COUNT_LOOP
-COUNT_DONE:
-
-    ; Reverse the string
-    LEA SI, STRING
-    LEA DI, REVERSED
-    ADD DI, CX
-    DEC DI
-
-REVERSE_LOOP:
-    MOV AL, [SI]
-    MOV [DI], AL
-    INC SI
-    DEC DI
-    LOOP REVERSE_LOOP
-
-    ; Add '$' terminator to reversed string
-    INC DI
-    MOV BYTE PTR [DI], '$'
-
-    ; Display the reversed string
-    MOV AH, 09H
-    LEA DX, REVERSED
-    INT 21H
-
-    ; Exit program
-    MOV AH, 4CH
-    INT 21H
-
+LEA SI, STRING1 ; Load the address of the source string into SI
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REP MOVSB ; Repeat moving bytes from DS:SI to ES:DI
+LEA SI, STRING2 ; Load the address of the destination string into SI
+ADD SI, CX ; Point SI to the end of the string
+DEC SI ; Decrement SI to point to the last character
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+STD ; Set the direction flag for backward string operations
+LOOP1:
+LODSB ; Load the byte at SI into AL
+STOSB ; Store the byte in AL at DI
+LOOP LOOP1 ; Repeat until CX = 0
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
 CODE ENDS
 END START
 ```
@@ -1049,48 +883,29 @@ END START
 
 ```nasm copy
 DATA SEGMENT
-    STRING DB 'Hello, World!', '$'  ; String to search in
-    CHAR DB 'o'                     ; Character to find
-    FOUND DB 'Character found!$'    ; Message if character is found
-    NOT_FOUND DB 'Character not found!$' ; Message if character is not found
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+CHAR DB 'A' ; Character to find
+INDEX DW ? ; Index of the found character
 DATA ENDS
-
 CODE SEGMENT
-    ASSUME CS:CODE, DS:DATA
-
+ASSUME CS:CODE, DS:DATA
 START:
-    MOV AX, DATA
-    MOV DS, AX
-
-    LEA SI, STRING     ; Load address of string into SI
-    MOV AL, CHAR       ; Load character to find into AL
-
-SEARCH_LOOP:
-    MOV BL, [SI]       ; Load current character from string
-    CMP BL, '$'        ; Check if end of string
-    JE NOT_FOUND_CHAR  ; If end of string, character not found
-
-    CMP BL, AL         ; Compare current character with search character
-    JE FOUND_CHAR      ; If equal, character found
-
-    INC SI             ; Move to next character
-    JMP SEARCH_LOOP    ; Continue searching
-
-FOUND_CHAR:
-    MOV AH, 09H        ; Function to print string
-    LEA DX, FOUND      ; Load address of "found" message
-    INT 21H            ; Print message
-    JMP EXIT
-
-NOT_FOUND_CHAR:
-    MOV AH, 09H        ; Function to print string
-    LEA DX, NOT_FOUND  ; Load address of "not found" message
-    INT 21H            ; Print message
-
+LEA SI, STRING1 ; Load the address of the source string into SI
+MOV AL, CHAR ; Load the character to find into AL
+MOV CX, 11 ; Load length of string into CX
+CLD ; Clear the direction flag for forward string operations
+REPNE SCASB ; Scan the source string until the character is
+found
+JNZ NOT_FOUND ; Jump if the character is not found
+SUB SI, CX ; Calculate the index of the found character
+MOV INDEX, SI ; Store the index of the found character
+JMP EXIT
+NOT_FOUND:
+MOV INDEX, -1 ; Set the index to -1 if the character is not found
 EXIT:
-    MOV AH, 4CH        ; Function to exit program
-    INT 21H
-
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
 CODE ENDS
 END START
 ```
@@ -1099,63 +914,42 @@ END START
 
 ```nasm copy
 DATA SEGMENT
-    STRING DB 'racecar', '$'       ; String to check (palindrome example)
-    IS_PALINDROME DB 'The string is a palindrome!$'
-    NOT_PALINDROME DB 'The string is not a palindrome!$'
+STRING DB "madam", '$' ; String to check, terminated with '$'
+MSG_PALINDROME DB "Palindrome$"
+MSG_NOT_PALINDROME DB "Not a Palindrome$"
 DATA ENDS
-
 CODE SEGMENT
-    ASSUME CS:CODE, DS:DATA
-
+ASSUME CS:CODE, DS:DATA
 START:
-    MOV AX, DATA
-    MOV DS, AX
-
-    ; Calculate string length (excluding '$')
-    MOV CX, 0
-    LEA SI, STRING
-LENGTH_LOOP:
-    MOV AL, [SI]
-    CMP AL, '$'
-    JE LENGTH_DONE
-    INC CX
-    INC SI
-    JMP LENGTH_LOOP
-LENGTH_DONE:
-
-    ; Set up pointers for comparison
-    LEA SI, STRING     ; SI points to start of string
-    LEA DI, STRING
-    ADD DI, CX
-    DEC DI             ; DI points to last character of string
-
-    ; Divide length by 2 for comparison loop
-    SHR CX, 1          ; CX = CX / 2
-
-COMPARE_LOOP:
-    MOV AL, [SI]
-    MOV BL, [DI]
-    CMP AL, BL
-    JNE NOT_PALINDROME_LABEL
-    INC SI
-    DEC DI
-    LOOP COMPARE_LOOP
-
-    ; If we've made it here, it's a palindrome
-    MOV AH, 09H
-    LEA DX, IS_PALINDROME
-    INT 21H
-    JMP EXIT
-
-NOT_PALINDROME_LABEL:
-    MOV AH, 09H
-    LEA DX, NOT_PALINDROME
-    INT 21H
-
+LEA SI, STRING ; Load the address of the source string into SI
+LEA DI, STRING ; Load the address of the source string into DI
+MOV CX, 5 ; Load length of string into CX (excluding '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REPNE SCASB ; Scan the source string until the end is reached
+JNZ NOT_PALINDROME ; Jump if the end of the string is not reached
+LEA SI, STRING ; Load the address of the source string into SI
+LEA DI, STRING ; Load the address of the source string into DI
+ADD SI, CX ; Point SI to the end of the string
+DEC SI ; Decrement SI to point to the last character
+MOV CX, 5 ; Load length of string into CX (excluding '$'
+terminator)
+STD ; Set the direction flag for backward string operations
+REP CMPSB ; Compare bytes from DS:SI to ES:DI
+JE PALINDROME ; Jump if the strings match
+NOT_PALINDROME:
+12
+LEA DX, MSG_NOT_PALINDROME
+MOV AH, 09H
+INT 21H
+JMP EXIT
+PALINDROME:
+LEA DX, MSG_PALINDROME
+MOV AH, 09H
+INT 21H
 EXIT:
-    MOV AH, 4CH
-    INT 21H
-
+MOV AH, 4CH
+INT 21H
 CODE ENDS
 END START
 ```
@@ -1165,23 +959,19 @@ END START
 ### 1) Display string on console using DOS interrupts.
 
 ```copy
-.MODEL SMALL
-.STACK 100H
-.DATA
-    MSG DB 'Hello, World!$'
-.CODE
-MAIN PROC
-    MOV AX, @DATA
-    MOV DS, AX
-
-    ; Display string
-    MOV AH, 09H
-    LEA DX, MSG
-    INT 21H
-
-    ; Exit program
-    MOV AH, 4CH
-    INT 21H
-MAIN ENDP
-END MAIN
+DATA SEGMENT
+MSG DB 'Hello, World!$'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA DX, MSG
+MOV AH, 09h
+INT 21h
+MOV AH, 4Ch
+INT 21h
+CODE ENDS
+END START
 ```

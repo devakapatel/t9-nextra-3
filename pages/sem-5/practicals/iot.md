@@ -33,3 +33,5 @@
 ### [Docx 9b](/9b.docx)
 
 ### [Docx 10](/10.docx)
+
+### [Image](/iot.jpg)

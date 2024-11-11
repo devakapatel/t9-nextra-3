@@ -37,3 +37,33 @@ print(stuffed_string)
 FLAG Hello World FLAG
 FLAG Hello ESCFLAG World FLAG
 ```
+
+Code (C)
+```c copy
+//BYTE STUFFING
+#include <stdio.h>
+
+int main() {
+    char data[] = "FHelloEWorldF";  // Original data
+    char stuffed[50];
+    char FLAG = 'F';  // Frame delimiter
+    char ESC = 'E';   // Escape character
+    int i = 0, j = 0;
+    
+    stuffed[j] = FLAG; 
+       //whenever E or F occurs,E is inserted before it(E is escape charc.)
+    while (data[i] != '\0') {
+        if (data[i] == FLAG || data[i] == ESC) {
+            stuffed[j++] = ESC;  // Insert escape character
+        }
+        stuffed[j++] = data[i++]; // Copy data character
+    }
+
+    stuffed[j++] = FLAG; // End the frame
+    stuffed[j] = '\0';   // Null-terminate stuffed data
+    
+    printf("Stuffed Data: %s\n", stuffed);
+
+    return 0;
+}
+```

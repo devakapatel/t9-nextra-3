@@ -1,0 +1,34 @@
+# Practical 6
+
+### AIM:
+Write a program to demonstrate the concept of bit stuffing.
+
+### Program Code (python):
+```python copy
+def bit_stuff(data):
+    stuffed = ""
+    count = 0
+    for bit in data:
+        if bit == "1":
+            count += 1
+            stuffed += bit
+            if count == 5:
+                stuffed += "0"  # Insert '0' after five consecutive '1's
+                count = 0
+        else:
+            count = 0
+            stuffed += bit
+    return stuffed
+
+data = input("Enter binary data: ")
+stuffed_data = bit_stuff(data)
+print("Original Data:", data)
+print("Stuffed Data:", stuffed_data)
+```
+
+### Sample Output:
+```
+Enter binary data: 1111101111101111
+Original Data: 1111101111101111
+Stuffed Data: 1111100111110111110
+```

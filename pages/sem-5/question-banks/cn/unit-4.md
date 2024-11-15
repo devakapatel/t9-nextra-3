@@ -954,27 +954,7 @@ The principle of congestion control is fundamental to maintaining the performanc
 
 The Transmission Control Protocol (TCP) header is a critical component of TCP communication, providing necessary information for reliable data transmission between applications. Below is a diagram depicting the TCP header structure, followed by a detailed explanation of each field.
 
-```
-  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-  0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-  +---------------------------------------------------------------------------------+
-  |    Source Port (16 bits)    |    Destination Port (16 bits)                  |
-  +------------------------------+--------------------------------------------------+
-  |           Sequence Number (32 bits)                                                  |
-  +---------------------------------------------------------------------------------+
-  |        Acknowledgment Number (32 bits)                                            |
-  +---------------------------------------------------------------------------------+
-  | Data  |Rese-|Control Flags (9 bits)|     Window Size (16 bits)                 |
-  |Offset |rved |                     |                                                   |
-  | (4 bits)| (3 bits)|                     |                                                   |
-  +------------------------------+--------------------------------------------------+
-  |        Checksum (16 bits)       |   Urgent Pointer (16 bits)                   |
-  +---------------------------------------------------------------------------------+
-  |                               Options (Variable length)                          |
-  +---------------------------------------------------------------------------------+
-  |                                   Data (Variable length)                          |
-  +---------------------------------------------------------------------------------+
-```
+![4-20.jpg](./4-20.jpg)
 
 ### Breakdown of TCP Header Fields
 
@@ -1041,20 +1021,7 @@ Understanding the TCP header is essential for comprehending how reliable data tr
 
 The User Datagram Protocol (UDP) header is a simple structure that consists of four fields, each with a fixed size. The total size of the UDP header is 8 bytes. Below is a diagram representing the UDP header structure, followed by an explanation of each field.
 
-```
-  0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L
-  +---------------------------------------------+
-  |        Source Port (16 bits)                |
-  +---------------------------------------------+
-  |      Destination Port (16 bits)             |
-  +---------------------------------------------+
-  |                Length (16 bits)             |
-  +---------------------------------------------+
-  |               Checksum (16 bits)            |
-  +---------------------------------------------+
-  |                Data (Variable length)       |
-  +---------------------------------------------+
-```
+![4-21.jpg](./4-21.jpg)
 
 ### Breakdown of UDP Header Fields
 

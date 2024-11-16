@@ -809,13 +809,13 @@ LoRaWAN plays a crucial role in enabling long-range communication in Smart Agric
 
 ## 13) What is the role of MQTT in IoT communication for a Smart Home Automation System, and how does it enable efficient communication between devices and the cloud?
 
-###### The Role of MQTT in IoT Communication for a Smart Home Automation System
+### The Role of MQTT in IoT Communication for a Smart Home Automation System
 
-####### Overview of MQTT
+#### Overview of MQTT
 
 MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol designed for low-bandwidth, high-latency, or unreliable networks. It is particularly well-suited for IoT applications, including Smart Home Automation Systems, due to its efficiency in enabling communication between devices and the cloud.
 
-####### Key Roles of MQTT in Smart Home Automation
+#### Key Roles of MQTT in Smart Home Automation
 
 1. **Efficient Communication**:
 
@@ -836,7 +836,7 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol d
    - MQTT can handle thousands of devices simultaneously, making it scalable for homes with many IoT devices. The broker can manage multiple connections efficiently, allowing for easy expansion of the smart home system.
    - For example, as homeowners add more devices (like smart locks, cameras, and appliances), MQTT can seamlessly integrate these devices into the existing architecture without significant changes.
 
-####### Communication Between Devices and the Cloud
+#### Communication Between Devices and the Cloud
 
 1. **Device Interaction**:
 
@@ -852,7 +852,7 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol d
    - The broker facilitates bidirectional communication. For example, if a healthcare provider or user needs to adjust a device setting remotely, the command can be sent from the cloud to the MQTT broker, which then relays it to the relevant home device.
    - This capability is essential for real-time updates and control, allowing users to respond immediately to alerts or changes in their home environment.
 
-####### Example in a Smart Home System
+#### Example in a Smart Home System
 
 1. **Smart Light Control**:
 
@@ -861,7 +861,7 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol d
 2. **Temperature Monitoring**:
    - A smart thermostat publishes its temperature readings to the topic `home/thermostat/status`. The cloud application can subscribe to this topic to display real-time temperature information on the user's mobile app, allowing for efficient monitoring and control.
 
-####### Conclusion
+#### Conclusion
 
 MQTT plays a vital role in enabling efficient communication between devices and the cloud in a Smart Home Automation System. Its lightweight design, support for real-time messaging, and scalability make it an ideal choice for managing a wide range of IoT devices in a home environment. By leveraging MQTT, homeowners can enjoy seamless control and monitoring of their smart devices, enhancing convenience, security, and energy efficiency. The protocol's ability to facilitate bidirectional communication and low bandwidth usage further exemplifies its suitability for smart home applications.
 

@@ -16,6 +16,8 @@
 
 ### To host this website, I use [Cloudflare](https://cloudflare.com)
 
+### Fonts : [Inter](https://rsms.me/inter/) for all body text & [Fira Code](https://github.com/tonsky/FiraCode) for code snippets
+
 ### This website uses MarkDown Format for all the content you see, for that I use [VSCode](https://code.visualstudio.com/) and [Obsidian](https://obsidian.md/)
 
 ### Operating System : Proud User of Linux [Ubuntu 24.04.1](https://ubuntu.com)

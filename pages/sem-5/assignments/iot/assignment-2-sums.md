@@ -34,8 +34,6 @@ Here’s how you can calculate the subnet mask, network ID, subnet address, broa
 
    So, the host range is `192.168.30.113 - 192.168.30.126`.
 
----
-
 #### B) 172.160.16.224/20
 
 1. Subnet Mask:
@@ -64,8 +62,6 @@ Here’s how you can calculate the subnet mask, network ID, subnet address, broa
 
    So, the host range is `172.160.16.1 - 172.160.31.254`.
 
----
-
 #### C) 11.11.108.96/22
 
 1. Subnet Mask:
@@ -93,8 +89,6 @@ Here’s how you can calculate the subnet mask, network ID, subnet address, broa
    The last usable address is `11.11.111.254` (Broadcast Address - 1).
 
    So, the host range is `11.11.108.1 - 11.11.111.254`.
-
----
 
 These are the network details for each of the given IP addresses.
 

@@ -428,6 +428,8 @@ A co-processor configuration is a system architecture that enhances a primary pr
 
 The block diagram of a co-processor configuration typically includes the following components:
 
+![cop](./cop.png)
+
 Co-Processor Configuration Block Diagram :
 
 ![4-8.png](./4-8.png)

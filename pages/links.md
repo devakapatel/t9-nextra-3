@@ -1,13 +1,35 @@
-# Links
+## 📌 Links
 
-### ↗️ About me and this website : [here](./links/about)
+### 🔗 About Me and This Website
 
-### ↗️ Join WhatsApp group : [here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0)
+Find out more about this project and its creator: [here](./links/about).
 
-### 🏴‍☠️ New site for entertainment (games/movies/web-series) : https://u9.pages.dev
+---
 
-### ↗️ Submit material : [here](https://tally.so/r/nr6d2N)
+### 💬 Join the Community
 
-### 🤷 Submit suggestion/reviews/doubts/corrections : [here](https://tally.so/r/w48opO)
+- WhatsApp Group: Connect and collaborate with peers: [Join Here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0).
 
-### ✉️ Get in touch with me : [nexa.skore@proton.me](mailto:nexa.skore@proton.me)
+---
+
+### 🎮 Entertainment Zone
+
+Explore the latest games, movies, and web series: [Visit the Entertainment Site](https://u9.pages.dev).
+
+---
+
+### 📤 Contribute Resources
+
+Help expand the community knowledge base by submitting material: [Submit Here](https://tally.so/r/nr6d2N).
+
+---
+
+### 🤔 Feedback and Queries
+
+Have suggestions, corrections, or reviews? Let me know: [Submit Feedback](https://tally.so/r/w48opO).
+
+---
+
+### 📧 Contact Me
+
+Need help or want to connect? Drop me an email at [nexa.skore@proton.me](mailto:nexa.skore@proton.me).

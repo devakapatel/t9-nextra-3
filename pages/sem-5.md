@@ -1,9 +1,27 @@
-# Semester 5
+# Semester 5 Resources
 
-### [Assignments](./sem-5/assignments)
+Explore all the essential materials for Semester 5 below:
 
-### [Practicals](./sem-5/practicals)
+---
 
-### [Question Banks](./sem-5/question-banks)
+### 📄 Assignments
 
-### [Syllabus](./sem-5/syllabus)
+Access and download all your assignments: [View Here](./sem-5/assignments).
+
+---
+
+### 🛠️ Practicals
+
+Find practicals and lab work resources: [View Here](./sem-5/practicals).
+
+---
+
+### ❓ Question Banks
+
+Prepare for exams with comprehensive question banks: [View Here](./sem-5/question-banks).
+
+---
+
+### 📘 Syllabus
+
+Stay updated with the official syllabus: [View Here](./sem-5/syllabus).

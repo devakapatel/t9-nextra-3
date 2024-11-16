@@ -10,6 +10,14 @@
 
 #### This website was initially created for our group of 5 friends, but later on, found useful for all peers, then I decided to publish it and gave it polished look with some useful functionalities.
 
+## Current and Future of this website :
+
+This website will remain ALWAYS FREE. Which does not mean that I do not know how to implement payment gateways or anything, but from the very first day, I decided to keep this project free forever.
+
+The website may change as per the requirements (Like changing the technology, or UI, or anything).
+
+As I am the only owner of this website, all the decisions are made by me only. However you can suggest any changes by filling form under [LINKS](../links) section.
+
 ## What I use :
 
 ### Technology : [Nextra | By Next.js](https://nextra.site)
@@ -17,6 +25,8 @@
 ### To host this website, I use [Cloudflare](https://cloudflare.com)
 
 ### Fonts : [Inter](https://rsms.me/inter/) for all body text & [Fira Code](https://github.com/tonsky/FiraCode) for code snippets
+
+### Forms : [Tally.so](https://tally.so)
 
 ### This website uses MarkDown Format for all the content you see, for that I use [VSCode](https://code.visualstudio.com/) and [Obsidian](https://obsidian.md/)
 

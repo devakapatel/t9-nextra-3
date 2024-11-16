@@ -1,7 +1,18 @@
-# Internet of Things
+# Internet of Things (IoT)
 
-## Go to Assignments page : [IoT](/sem-5/assignments/iot)
+### 📄 Go to Assignments Page:
 
-### Since we do not have any question bank in this subject, we only have one source (assignments), and I am mentioning them here.
+[View Assignments](/sem-5/assignments/iot)
 
-### If you have any source of material, please submit the same on the link (mentioned on the home page) or send in WhatsApp group or personal chat on WhatsApp (WhatsApp group link on home page)
+---
+
+### ℹ️ Note:
+
+Currently, we do not have any question banks for IoT. Our only available resource is the **assignments**, which are linked above.
+
+If you have additional study materials or resources for IoT, please contribute by:
+
+- Submitting them through the form (link mentioned on the home page).
+- Sharing them in the **WhatsApp group** or via a personal message (WhatsApp group link is on the home page).
+
+Your contributions are highly appreciated and will help build a stronger resource pool for everyone!

@@ -4,10 +4,6 @@ const withNextra = nextra({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.jsx",
   latex: true,
-  // Optimize search
-  flexsearch: {
-    codeblocks: false,
-  },
 });
 
 export default withNextra({

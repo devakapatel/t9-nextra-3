@@ -4,6 +4,24 @@ const withNextra = nextra({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.jsx",
   latex: true,
+  // Optimize search
+  flexsearch: {
+    codeblocks: false,
+  },
 });
 
-export default withNextra();
+export default withNextra({
+  // Important for Cloudflare Pages
+  output: "export",
+
+  // Basic optimizations
+  swcMinify: true,
+  compress: true,
+
+  // Image optimization
+  images: {
+    formats: ["image/webp"],
+    minimumCacheTTL: 60,
+    unoptimized: true, // Required for Cloudflare Pages static exports
+  },
+});

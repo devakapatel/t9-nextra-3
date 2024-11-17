@@ -7,14 +7,11 @@ const withNextra = nextra({
 });
 
 export default withNextra({
-  // Basic optimizations
-  swcMinify: true,
   compress: true,
 
-  // Image optimization
   images: {
     formats: ["image/webp"],
     minimumCacheTTL: 60,
-    unoptimized: true, // Required for Cloudflare Pages static exports
+    unoptimized: true,
   },
 });

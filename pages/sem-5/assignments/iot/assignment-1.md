@@ -177,18 +177,11 @@ Public and private clouds are two distinct cloud computing models, each with its
 
 #### Differences
 
-| Feature  | Public Cloud                                          | Private Cloud |
-| -------- | ----------------------------------------------------- | ------------- |
-| Security | - Generally less secure due to shared infrastructure. |               |
-
-- Security measures are provided by the cloud service provider but may not meet specific regulatory requirements.
-- Vulnerable to data breaches and unauthorized access due to multi-tenancy. | - More secure as resources are dedicated to a single organization.|
-- Allows for customized security measures to meet specific compliance and regulatory requirements.
-- Greater control over data privacy and security protocols. | | Scalability | - Highly scalable due to vast resources available from the cloud provider.
-- Users can easily scale up or down based on demand without significant limitations. | - Scalability can be limited by the organization’s own infrastructure and resources.
-- While private clouds can be designed for scalability, they may require additional investment in hardware and software. | | Cost | - Typically lower costs due to shared resources and pay-as-you-go pricing models.
-- No need for organizations to invest in physical hardware or maintenance. | - Higher upfront and ongoing costs due to the need for dedicated hardware, software, and maintenance.
-- Organizations must manage and maintain the infrastructure, which can increase operational costs. |
+| Feature         | Public Cloud                                                                                                                                                                                                                                              | Private Cloud                                                                                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Security**    | - Generally less secure due to shared infrastructure.<br>- Security measures are provided by the cloud service provider but may not meet specific regulatory requirements.<br>- Vulnerable to data breaches and unauthorized access due to multi-tenancy. | - More secure as resources are dedicated to a single organization.<br>- Allows for customized security measures to meet specific compliance and regulatory requirements.<br>- Greater control over data privacy and security protocols. |
+| **Scalability** | - Highly scalable due to vast resources available from the cloud provider.<br>- Users can easily scale up or down based on demand without significant limitations.                                                                                        | - Scalability can be limited by the organization’s own infrastructure and resources.<br>- While private clouds can be designed for scalability, they may require additional investment in hardware and software.                        |
+| **Cost**        | - Typically lower costs due to shared resources and pay-as-you-go pricing models.<br>- No need for organizations to invest in physical hardware or maintenance.                                                                                           | - Higher upfront and ongoing costs due to the need for dedicated hardware, software, and maintenance.<br>- Organizations must manage and maintain the infrastructure, which can increase operational costs.                             |
 
 #### Advantages and Disadvantages
 
@@ -408,19 +401,16 @@ Here is a side-by-side comparison of hardware firewalls and software firewalls i
 
 Here is a side-by-side comparison of a network bridge and a repeater, focusing on their purposes and applications:
 
-| Feature            | Network Bridge                                                                                                     | Repeater                                                                                                           |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| Purpose            | Connects and filters traffic between two or more network segments at the data link layer (Layer 2).                | Regenerates and amplifies signals to extend the physical distance of a network at the physical layer (Layer 1).    |
-| Operation          | Analyzes incoming data frames and forwards them based on MAC addresses, reducing collisions by segmenting traffic. | Receives weak signals and retransmits them at full strength without analyzing the data.                            |
-| Layer of Operation | Operates at the Data Link Layer (Layer 2) of the OSI model.                                                        | Operates at the Physical Layer (Layer 1) of the OSI model.                                                         |
-| Traffic Management | Can filter and manage traffic to reduce congestion and improve performance.                                        | Does not filter traffic; it forwards all received signals indiscriminately.                                        |
-| Collision Domain   | Creates separate collision domains for each connected segment, reducing the chance of collisions.                  | Does not create separate collision domains; all devices connected to the repeater share the same collision domain. |
-| Broadcast Domain   | Maintains a single broadcast domain, allowing broadcasts to be sent to all segments.                               | Also maintains a single broadcast domain, forwarding all broadcasts to all connected devices.                      |
-| Latency            | Introduces some latency due to frame processing and decision-making.                                               | Introduces minimal latency, primarily related to signal regeneration.                                              |
-| Applications       | - Connecting different LAN segments to improve performance and manage traffic.                                     |                                                                                                                    |
-
-- Filtering traffic between networks to enhance security. | - Extending the physical reach of a network, such as in large buildings or outdoor areas.
-- Connecting network segments that use different cable types or technologies. |
+| Feature                | Network Bridge                                                                                                                              | Repeater                                                                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Purpose**            | Connects and filters traffic between two or more network segments at the data link layer (Layer 2).                                         | Regenerates and amplifies signals to extend the physical distance of a network at the physical layer (Layer 1).                                                            |
+| **Operation**          | Analyzes incoming data frames and forwards them based on MAC addresses, reducing collisions by segmenting traffic.                          | Receives weak signals and retransmits them at full strength without analyzing the data.                                                                                    |
+| **Layer of Operation** | Operates at the Data Link Layer (Layer 2) of the OSI model.                                                                                 | Operates at the Physical Layer (Layer 1) of the OSI model.                                                                                                                 |
+| **Traffic Management** | Can filter and manage traffic to reduce congestion and improve performance.                                                                 | Does not filter traffic; it forwards all received signals indiscriminately.                                                                                                |
+| **Collision Domain**   | Creates separate collision domains for each connected segment, reducing the chance of collisions.                                           | Does not create separate collision domains; all devices connected to the repeater share the same collision domain.                                                         |
+| **Broadcast Domain**   | Maintains a single broadcast domain, allowing broadcasts to be sent to all segments.                                                        | Also maintains a single broadcast domain, forwarding all broadcasts to all connected devices.                                                                              |
+| **Latency**            | Introduces some latency due to frame processing and decision-making.                                                                        | Introduces minimal latency, primarily related to signal regeneration.                                                                                                      |
+| **Applications**       | - Connecting different LAN segments to improve performance and manage traffic.<br>- Filtering traffic between networks to enhance security. | - Extending the physical reach of a network, such as in large buildings or outdoor areas.<br>- Connecting network segments that use different cable types or technologies. |
 
 ## 12) How does a MAC address differ from an IP address in terms of use and assignment?
 
@@ -486,22 +476,16 @@ Here's a side-by-side comparison of a modem and a router in terms of their funct
 
 Here’s a side-by-side comparison of TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), focusing on their use cases and performance characteristics:
 
-| Feature           | TCP (Transmission Control Protocol)                                                                                                        | UDP (User Datagram Protocol)                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| Connection Type   | Connection-oriented; establishes a connection before data transfer.                                                                        | Connectionless; no connection is established before sending data.                                        |
-| Reliability       | Reliable; ensures data delivery through acknowledgments and retransmissions of lost packets.                                               | Unreliable; does not guarantee delivery, order, or error correction.                                     |
-| Data Transmission | Data is sent in a continuous stream, and packets are reassembled in order at the destination.                                              | Data is sent as discrete packets (datagrams), and order is not guaranteed.                               |
-| Flow Control      | Implements flow control mechanisms to manage the rate of data transmission.                                                                | Does not provide flow control; packets are sent as quickly as possible.                                  |
-| Error Checking    | Includes error-checking mechanisms and retransmits lost or corrupted packets.                                                              | Has basic error-checking through checksums but does not retransmit lost packets.                         |
-| Performance       | Generally has higher overhead due to connection establishment, acknowledgments, and error checking, which can result in increased latency. | Lower overhead, leading to faster data transmission, making it suitable for time-sensitive applications. |
-| Use Cases         | - Web browsing (HTTP/HTTPS)                                                                                                                |                                                                                                          |
-
-- File transfers (FTP)
-- Email (SMTP, IMAP)
-- Remote administration (SSH, Telnet) | - Streaming media (audio and video)
-- Online gaming
-- VoIP (Voice over IP)
-- DNS queries | | Header Size | Larger header size (20 bytes minimum) due to additional fields for managing connections and reliability. | Smaller header size (8 bytes) for faster processing and reduced overhead. |
+| Feature               | TCP (Transmission Control Protocol)                                                                                                        | UDP (User Datagram Protocol)                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| **Connection Type**   | Connection-oriented; establishes a connection before data transfer.                                                                        | Connectionless; no connection is established before sending data.                                        |
+| **Reliability**       | Reliable; ensures data delivery through acknowledgments and retransmissions of lost packets.                                               | Unreliable; does not guarantee delivery, order, or error correction.                                     |
+| **Data Transmission** | Data is sent in a continuous stream, and packets are reassembled in order at the destination.                                              | Data is sent as discrete packets (datagrams), and order is not guaranteed.                               |
+| **Flow Control**      | Implements flow control mechanisms to manage the rate of data transmission.                                                                | Does not provide flow control; packets are sent as quickly as possible.                                  |
+| **Error Checking**    | Includes error-checking mechanisms and retransmits lost or corrupted packets.                                                              | Has basic error-checking through checksums but does not retransmit lost packets.                         |
+| **Performance**       | Generally has higher overhead due to connection establishment, acknowledgments, and error checking, which can result in increased latency. | Lower overhead, leading to faster data transmission, making it suitable for time-sensitive applications. |
+| **Use Cases**         | - Web browsing (HTTP/HTTPS)<br>- File transfers (FTP)<br>- Email (SMTP, IMAP)<br>- Remote administration (SSH, Telnet)                     | - Streaming media (audio and video)<br>- Online gaming<br>- VoIP (Voice over IP)<br>- DNS queries        |
+| **Header Size**       | Larger header size (20 bytes minimum) due to additional fields for managing connections and reliability.                                   | Smaller header size (8 bytes) for faster processing and reduced overhead.                                |
 
 ## 16) Compare symmetric and asymmetric encryption. What are the advantages and disadvantages of each method?
 
@@ -647,48 +631,32 @@ Here’s a side-by-side comparison of IPv4 and IPv6 addressing, along with a dis
 
 Here is a side-by-side comparison of the functionality and use cases of DNS (Domain Name System) and DHCP (Dynamic Host Configuration Protocol) in a network:
 
-| Feature             | DNS (Domain Name System)                                                    | DHCP (Dynamic Host Configuration Protocol)                                                   |
-| ------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Purpose             | Translates human-readable domain names to machine-readable IP addresses.    | Automatically assigns IP addresses and other network configuration parameters to devices.    |
-| Layer of Operation  | Application Layer (Layer 7)                                                 | Application Layer (Layer 7)                                                                  |
-| Protocol            | Uses UDP and TCP protocols                                                  | Uses UDP protocol                                                                            |
-| Functionality       | Resolves domain names to IP addresses by querying DNS servers.              | Assigns IP addresses, subnet masks, default gateways, and DNS server information to clients. |
-| Server-Client Model | DNS servers respond to queries from clients (devices or other DNS servers). | DHCP server assigns IP addresses and configuration to clients.                               |
-| Configuration       | DNS servers are configured with domain name to IP address mappings.         | DHCP server is configured with IP address pools and other network parameters.                |
-| Use Cases           | - Accessing websites and online resources by domain name                    |                                                                                              |
-
-- Email routing
-- Reverse DNS lookups for IP to domain name mapping | - Automatically assigning IP addresses to devices when they connect to the network
-- Providing network configuration parameters like subnet mask, default gateway, and DNS servers to clients | | Benefits | - Simplifies network access by using human-readable names
-- Enables load balancing and failover for services | - Reduces manual configuration effort for network administrators
-- Efficiently manages IP address allocation, especially in networks with many devices | | Limitations | - Relies on correct configuration of DNS servers and mappings
-- Potential performance impact if DNS servers are overloaded or unavailable | - Requires a DHCP server to be present and configured correctly
-- Clients may experience connectivity issues if the DHCP server is unavailable |
+| Feature                 | DNS (Domain Name System)                                                                                                                     | DHCP (Dynamic Host Configuration Protocol)                                                                                                                                                       |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Purpose**             | Translates human-readable domain names to machine-readable IP addresses.                                                                     | Automatically assigns IP addresses and other network configuration parameters to devices.                                                                                                        |
+| **Layer of Operation**  | Application Layer (Layer 7)                                                                                                                  | Application Layer (Layer 7)                                                                                                                                                                      |
+| **Protocol**            | Uses UDP and TCP protocols                                                                                                                   | Uses UDP protocol                                                                                                                                                                                |
+| **Functionality**       | Resolves domain names to IP addresses by querying DNS servers.                                                                               | Assigns IP addresses, subnet masks, default gateways, and DNS server information to clients.                                                                                                     |
+| **Server-Client Model** | DNS servers respond to queries from clients (devices or other DNS servers).                                                                  | DHCP server assigns IP addresses and configuration to clients.                                                                                                                                   |
+| **Configuration**       | DNS servers are configured with domain name to IP address mappings.                                                                          | DHCP server is configured with IP address pools and other network parameters.                                                                                                                    |
+| **Use Cases**           | - Accessing websites and online resources by domain name<br>- Email routing<br>- Reverse DNS lookups for IP to domain name mapping           | - Automatically assigning IP addresses to devices when they connect to the network<br>- Providing network configuration parameters like subnet mask, default gateway, and DNS servers to clients |
+| **Benefits**            | - Simplifies network access by using human-readable names<br>- Enables load balancing and failover for services                              | - Reduces manual configuration effort for network administrators<br>- Efficiently manages IP address allocation, especially in networks with many devices                                        |
+| **Limitations**         | - Relies on correct configuration of DNS servers and mappings<br>- Potential performance impact if DNS servers are overloaded or unavailable | - Requires a DHCP server to be present and configured correctly<br>- Clients may experience connectivity issues if the DHCP server is unavailable                                                |
 
 ## 21) Discuss the differences between Quality of Service (QoS) and load balancing in network performance management.
 
 Here’s a side-by-side comparison of Quality of Service (QoS) and Load Balancing in network performance management:
 
-| Feature                       | Quality of Service (QoS)                                                                                                                           | Load Balancing                                                                                                                                       |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Definition                    | A set of techniques to manage network resources by prioritizing certain types of traffic to ensure performance and reliability.                    | A method of distributing network or application traffic across multiple servers or resources to optimize resource use and improve performance.       |
-| Purpose                       | Ensures that critical applications receive the necessary bandwidth and low latency, improving the overall user experience.                         | Enhances performance and availability by preventing any single server from becoming a bottleneck, ensuring efficient resource utilization.           |
-| Functionality                 | Classifies and prioritizes traffic types (e.g., voice, video, data) based on predefined policies to manage bandwidth and latency.                  | Distributes incoming traffic across multiple servers, using algorithms to determine how to allocate requests (e.g., round-robin, least connections). |
-| Implementation                | Configured on routers and switches, often requiring specific QoS policies and traffic shaping techniques.                                          | Implemented at the application layer or through dedicated load balancers, which can be hardware-based or software-based.                             |
-| Impact on Network Performance | Improves performance for high-priority traffic, ensuring that latency-sensitive applications (like VoIP and video conferencing) function smoothly. | Reduces server response times and increases availability by evenly distributing workloads, minimizing the risk of server overload.                   |
-| Use Cases                     | - Voice over IP (VoIP) applications                                                                                                                |                                                                                                                                                      |
-
-- Video streaming services
-- Online gaming
-- Mission-critical business applications | - Web servers handling large amounts of traffic
-- Application servers in cloud environments
-- Database servers to manage data requests | | Benefits | - Improved user experience for critical applications
-- Better resource allocation and utilization
-- Enhanced reliability and performance consistency | - Increased availability and reliability of applications
-- Efficient resource utilization
-- Scalability to handle varying traffic loads | | Drawbacks | - Complexity in configuration and management
-- Potential for misconfiguration leading to unintended traffic prioritization | - Additional overhead in managing load balancers
-- Complexity in ensuring session persistence (for stateful applications) |
+| Feature                           | Quality of Service (QoS)                                                                                                                                   | Load Balancing                                                                                                                                       |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Definition**                    | A set of techniques to manage network resources by prioritizing certain types of traffic to ensure performance and reliability.                            | A method of distributing network or application traffic across multiple servers or resources to optimize resource use and improve performance.       |
+| **Purpose**                       | Ensures that critical applications receive the necessary bandwidth and low latency, improving the overall user experience.                                 | Enhances performance and availability by preventing any single server from becoming a bottleneck, ensuring efficient resource utilization.           |
+| **Functionality**                 | Classifies and prioritizes traffic types (e.g., voice, video, data) based on predefined policies to manage bandwidth and latency.                          | Distributes incoming traffic across multiple servers, using algorithms to determine how to allocate requests (e.g., round-robin, least connections). |
+| **Implementation**                | Configured on routers and switches, often requiring specific QoS policies and traffic shaping techniques.                                                  | Implemented at the application layer or through dedicated load balancers, which can be hardware-based or software-based.                             |
+| **Impact on Network Performance** | Improves performance for high-priority traffic, ensuring that latency-sensitive applications (like VoIP and video conferencing) function smoothly.         | Reduces server response times and increases availability by evenly distributing workloads, minimizing the risk of server overload.                   |
+| **Use Cases**                     | - Voice over IP (VoIP) applications<br>- Video streaming services<br>- Online gaming<br>- Mission-critical business applications                           | - Web servers handling large amounts of traffic<br>- Application servers in cloud environments<br>- Database servers to manage data requests         |
+| **Benefits**                      | - Improved user experience for critical applications<br>- Better resource allocation and utilization<br>- Enhanced reliability and performance consistency | - Increased availability and reliability of applications<br>- Efficient resource utilization<br>- Scalability to handle varying traffic loads        |
+| **Drawbacks**                     | - Complexity in configuration and management<br>- Potential for misconfiguration leading to unintended traffic prioritization                              | - Additional overhead in managing load balancers<br>- Complexity in ensuring session persistence (for stateful applications)                         |
 
 ## 22) Compare MQTT and CoAP protocols in terms of their suitability for IoT applications.
 
@@ -723,21 +691,16 @@ CoAP (Constrained Application Protocol):
 
 Edge computing and cloud computing are two distinct paradigms for processing and managing data in IoT applications. Here’s a detailed comparison focusing on latency and processing capabilities:
 
-| Feature         | Edge Computing                                                                                               | Cloud Computing                                                                                              |
-| --------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Definition      | A decentralized computing model that processes data closer to the source (i.e., at the edge of the network). | A centralized computing model where data is processed and stored on remote servers in data centers.          |
-| Latency         | Lower latency due to proximity to data sources; real-time processing is possible.                            | Higher latency as data must be transmitted to and from remote servers, which can delay processing.           |
-| Data Processing | Processes data locally, enabling faster decision-making and immediate responses.                             | Processes large volumes of data in the cloud, suitable for batch processing and complex analytics.           |
-| Bandwidth Usage | Reduces bandwidth usage by filtering and processing data locally, sending only relevant data to the cloud.   | May require significant bandwidth for data transfer, especially with large datasets or real-time streaming.  |
-| Scalability     | Limited by local resources; scaling may require additional edge devices.                                     | Highly scalable; can easily accommodate increasing data and processing needs by adding more cloud resources. |
-| Reliability     | More resilient to network disruptions; local processing continues even if connectivity to the cloud is lost. | Dependent on internet connectivity; service interruptions can affect data access and processing.             |
-| Security        | Enhanced security through localized data processing; sensitive data can be kept on-site.                     | Centralized security measures; potential risks associated with data transmission and storage in the cloud.   |
-| Use Cases       | - Real-time analytics (e.g., autonomous vehicles, industrial automation)                                     |                                                                                                              |
-
-- Smart cities (e.g., traffic management)
-- Healthcare (e.g., remote patient monitoring) | - Big data analytics (e.g., data lakes)
-- Machine learning and AI (e.g., training models)
-- Backup and disaster recovery solutions |
+| Feature             | Edge Computing                                                                                                                                                          | Cloud Computing                                                                                                                          |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Definition**      | A decentralized computing model that processes data closer to the source (i.e., at the edge of the network).                                                            | A centralized computing model where data is processed and stored on remote servers in data centers.                                      |
+| **Latency**         | Lower latency due to proximity to data sources; real-time processing is possible.                                                                                       | Higher latency as data must be transmitted to and from remote servers, which can delay processing.                                       |
+| **Data Processing** | Processes data locally, enabling faster decision-making and immediate responses.                                                                                        | Processes large volumes of data in the cloud, suitable for batch processing and complex analytics.                                       |
+| **Bandwidth Usage** | Reduces bandwidth usage by filtering and processing data locally, sending only relevant data to the cloud.                                                              | May require significant bandwidth for data transfer, especially with large datasets or real-time streaming.                              |
+| **Scalability**     | Limited by local resources; scaling may require additional edge devices.                                                                                                | Highly scalable; can easily accommodate increasing data and processing needs by adding more cloud resources.                             |
+| **Reliability**     | More resilient to network disruptions; local processing continues even if connectivity to the cloud is lost.                                                            | Dependent on internet connectivity; service interruptions can affect data access and processing.                                         |
+| **Security**        | Enhanced security through localized data processing; sensitive data can be kept on-site.                                                                                | Centralized security measures; potential risks associated with data transmission and storage in the cloud.                               |
+| **Use Cases**       | - Real-time analytics (e.g., autonomous vehicles, industrial automation)<br>- Smart cities (e.g., traffic management)<br>- Healthcare (e.g., remote patient monitoring) | - Big data analytics (e.g., data lakes)<br>- Machine learning and AI (e.g., training models)<br>- Backup and disaster recovery solutions |
 
 ## 24) What are the challenges and differences in securing IoT devices compared to traditional IT devices?
 
@@ -771,22 +734,17 @@ Securing Internet of Things (IoT) devices presents unique challenges and conside
 
 In an IoT network architecture, the edge, gateway, and cloud layers each play distinct but complementary roles. Here’s a detailed comparison of their functionalities and contributions to the overall system:
 
-| Layer      | Role and Functionality                                       | Key Characteristics |
-| ---------- | ------------------------------------------------------------ | ------------------- |
-| Edge Layer | - Processes data locally, close to the source (IoT devices). |                     |
-
-- Performs real-time analytics and decision-making.
-- Reduces latency by minimizing data transmission to the cloud. | - Composed of IoT devices, sensors, and actuators.
-- Limited processing power and storage compared to cloud resources.
-- Often operates in a resource-constrained environment. | | Gateway Layer | - Acts as a bridge between the edge devices and the cloud.
-- Aggregates and preprocesses data from multiple IoT devices.
-- Handles protocol translation and communication management. | - Connects various IoT devices using different communication protocols (e.g., MQTT, CoAP).
-- Provides security features such as data encryption and access control.
-- Can perform local data filtering and analytics. | | Cloud Layer | - Centralized data storage and processing.
-- Supports advanced analytics, machine learning, and big data processing.
-- Provides scalability and resource management for IoT applications. | - Offers virtually unlimited storage and processing power.
-- Facilitates data aggregation from multiple gateways and edge devices.
-- Enables remote monitoring, management, and updates of devices. |
+| Layer             | Role and Functionality                                                    | Key Characteristics                                                                        |
+| ----------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Edge Layer**    | - Processes data locally, close to the source (IoT devices).              | - Composed of IoT devices, sensors, and actuators.                                         |
+|                   | - Performs real-time analytics and decision-making.                       | - Limited processing power and storage compared to cloud resources.                        |
+|                   | - Reduces latency by minimizing data transmission to the cloud.           | - Often operates in a resource-constrained environment.                                    |
+| **Gateway Layer** | - Acts as a bridge between the edge devices and the cloud.                | - Connects various IoT devices using different communication protocols (e.g., MQTT, CoAP). |
+|                   | - Aggregates and preprocesses data from multiple IoT devices.             | - Provides security features such as data encryption and access control.                   |
+|                   | - Handles protocol translation and communication management.              | - Can perform local data filtering and analytics.                                          |
+| **Cloud Layer**   | - Centralized data storage and processing.                                | - Offers virtually unlimited storage and processing power.                                 |
+|                   | - Supports advanced analytics, machine learning, and big data processing. | - Facilitates data aggregation from multiple gateways and edge devices.                    |
+|                   | - Provides scalability and resource management for IoT applications.      | - Enables remote monitoring, management, and updates of devices.                           |
 
 ### Use cases :
 
@@ -814,34 +772,35 @@ In an IoT network architecture, the edge, gateway, and cloud layers each play di
 
 When comparing 4G and 5G mobile networks, several key factors come into play, particularly in terms of speed, latency, and use cases. Below is a detailed comparison:
 
-| Feature | 4G (Fourth Generation)                                          | 5G (Fifth Generation) |
-| ------- | --------------------------------------------------------------- | --------------------- |
-| Speed   | - Maximum speeds of around 100 Mbps (mobile) to 1 Gbps (fixed). |                       |
-
-- Average speeds typically range from 10 to 50 Mbps. | - Maximum speeds can exceed 10 Gbps.
-- Average speeds typically range from 100 Mbps to several Gbps. | | Latency | - Latency typically around 30-50 milliseconds. | - Latency as low as 1 millisecond, enabling near real-time communication. | | Bandwidth | - Uses frequency bands up to 20 MHz. | - Utilizes wider frequency bands, including millimeter waves (up to 100 MHz or more), allowing for more simultaneous connections. | | Network Architecture | - Primarily based on macro cells and relies on a centralized architecture. | - Utilizes a more decentralized architecture with small cells, enabling better coverage and capacity. | | Use Cases | - Mobile broadband services (e.g., streaming, video calls).
-- Basic IoT applications (e.g., smart meters, connected vehicles). | - Enhanced mobile broadband (e.g., ultra-HD video streaming, augmented reality).
-- Massive IoT (e.g., smart cities, smart factories).
-- Critical applications (e.g., remote surgery, autonomous vehicles). | | Device Density | - Supports approximately 2,000 devices per square kilometer. | - Designed to support up to 1 million devices per square kilometer. | | Energy Efficiency | - Moderate energy efficiency; devices consume more power with increased data rates. | - Improved energy efficiency, allowing devices to operate longer on battery power. | | Security Features | - Basic security features, relying on existing protocols. | - Enhanced security protocols and features to address the increased number of connected devices and data privacy concerns. |
+| Feature                  | 4G (Fourth Generation)                                                              | 5G (Fifth Generation)                                                                                                             |
+| ------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Speed**                | - Maximum speeds of around 100 Mbps (mobile) to 1 Gbps (fixed).                     | - Maximum speeds can exceed 10 Gbps.                                                                                              |
+|                          | - Average speeds typically range from 10 to 50 Mbps.                                | - Average speeds typically range from 100 Mbps to several Gbps.                                                                   |
+| **Latency**              | - Latency typically around 30-50 milliseconds.                                      | - Latency as low as 1 millisecond, enabling near real-time communication.                                                         |
+| **Bandwidth**            | - Uses frequency bands up to 20 MHz.                                                | - Utilizes wider frequency bands, including millimeter waves (up to 100 MHz or more), allowing for more simultaneous connections. |
+| **Network Architecture** | - Primarily based on macro cells and relies on a centralized architecture.          | - Utilizes a more decentralized architecture with small cells, enabling better coverage and capacity.                             |
+| **Use Cases**            | - Mobile broadband services (e.g., streaming, video calls).                         | - Enhanced mobile broadband (e.g., ultra-HD video streaming, augmented reality).                                                  |
+|                          | - Basic IoT applications (e.g., smart meters, connected vehicles).                  | - Massive IoT (e.g., smart cities, smart factories).                                                                              |
+|                          |                                                                                     | - Critical applications (e.g., remote surgery, autonomous vehicles).                                                              |
+| **Device Density**       | - Supports approximately 2,000 devices per square kilometer.                        | - Designed to support up to 1 million devices per square kilometer.                                                               |
+| **Energy Efficiency**    | - Moderate energy efficiency; devices consume more power with increased data rates. | - Improved energy efficiency, allowing devices to operate longer on battery power.                                                |
+| **Security Features**    | - Basic security features, relying on existing protocols.                           | - Enhanced security protocols and features to address the increased number of connected devices and data privacy concerns.        |
 
 ## 27) Compare Wi-Fi and Bluetooth in terms of range, speed, and typical applications in IoT.
 
 Here is a comparison of Wi-Fi and Bluetooth in terms of range, speed, and typical applications in IoT:
 
-| Feature                  | Wi-Fi                                                       | Bluetooth                                                         |
-| ------------------------ | ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| Range                    | Typically 100-150 meters indoors, up to 300 meters outdoors | 10-30 meters, up to 100 meters with Bluetooth 5                   |
-| Speed                    | Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps           | Bluetooth 5 supports speeds up to 2 Mbps                          |
-| Frequency                | 2.4 GHz and 5 GHz bands                                     | 2.4 GHz band                                                      |
-| Power Consumption        | Higher power consumption compared to Bluetooth              | Lower power consumption, suitable for battery-powered IoT devices |
-| Network Topology         | Star topology with access points                            | Peer-to-peer or star topology                                     |
-| Typical IoT Applications | - Smart home devices (e.g., smart TVs, speakers)            |                                                                   |
-
-- Industrial IoT (e.g., asset tracking, predictive maintenance)
-- Wireless cameras and security systems | - Wearable devices (e.g., fitness trackers, smart watches)
-- Wireless sensors and beacons
-- Smart home automation (e.g., lighting, thermostats)
-- Wireless keyboards and mice |
+| Feature                      | Wi-Fi                                                           | Bluetooth                                                         |
+| ---------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Range**                    | Typically 100-150 meters indoors, up to 300 meters outdoors     | 10-30 meters, up to 100 meters with Bluetooth 5                   |
+| **Speed**                    | Wi-Fi 6 (802.11ax) supports speeds up to 9.6 Gbps               | Bluetooth 5 supports speeds up to 2 Mbps                          |
+| **Frequency**                | 2.4 GHz and 5 GHz bands                                         | 2.4 GHz band                                                      |
+| **Power Consumption**        | Higher power consumption compared to Bluetooth                  | Lower power consumption, suitable for battery-powered IoT devices |
+| **Network Topology**         | Star topology with access points                                | Peer-to-peer or star topology                                     |
+| **Typical IoT Applications** | - Smart home devices (e.g., smart TVs, speakers)                | - Wearable devices (e.g., fitness trackers, smart watches)        |
+|                              | - Industrial IoT (e.g., asset tracking, predictive maintenance) | - Wireless sensors and beacons                                    |
+|                              | - Wireless cameras and security systems                         | - Smart home automation (e.g., lighting, thermostats)             |
+|                              |                                                                 | - Wireless keyboards and mice                                     |
 
 ## 28) How does LoRaWAN differ from Zigbee in terms of range, power consumption, and use cases in IoT?
 
@@ -863,16 +822,21 @@ Here’s a detailed comparison of LoRaWAN (Long Range Wide Area Network) and Zig
 
 When comparing the security challenges of mobile wireless networks with wired networks, several key differences and challenges arise due to the inherent characteristics of each type of network. Here’s a detailed comparison:
 
-| Aspect                   | Mobile Wireless Networks                                                                         | Wired Networks |
-| ------------------------ | ------------------------------------------------------------------------------------------------ | -------------- |
-| Security Vulnerabilities | - More susceptible to eavesdropping and interception due to the open nature of wireless signals. |                |
-
-- Vulnerable to man-in-the-middle attacks, where an attacker can intercept and alter communications. | - Generally more secure against eavesdropping since data travels through physical cables.
-- Less susceptible to man-in-the-middle attacks due to the physical connection. | | Access Control | - Challenges in ensuring proper authentication and authorization for mobile devices.
-- Devices may connect from various locations, complicating access control. | - Easier to implement strict access control measures, as physical access to the network is more easily managed. | | Data Integrity | - Risks of data tampering during transmission, especially if encryption is not used.
-- Reliance on secure protocols (e.g., TLS, HTTPS) is critical to ensure data integrity. | - Data integrity can be better assured through physical security measures and controlled environments. | | Network Configuration | - Dynamic and often changing network configurations can lead to vulnerabilities if not properly managed.
-- Mobile devices may connect to insecure networks (e.g., public Wi-Fi) without adequate security measures. | - More stable and predictable network configurations, allowing for consistent security policies. | | Device Management | - Difficulty in managing a diverse range of mobile devices with varying security capabilities.
-- Increased risk of outdated software and security patches on mobile devices. | - Easier to manage and update a limited number of devices, leading to better overall security hygiene. | | Signal Interference | - Wireless signals can be affected by interference, which can lead to connection drops and potential vulnerabilities during reconnections. | - Wired connections are generally stable and less prone to interference, providing more reliable security. | | Physical Security | - Physical security is harder to enforce as devices can be lost or stolen, leading to unauthorized access. | - Physical security measures can be implemented more effectively to protect network infrastructure. | | User Awareness | - Users may lack awareness of mobile security risks, leading to poor security practices (e.g., using weak passwords). | - Users typically have more training and awareness regarding wired network security practices. |
+| Aspect                       | Mobile Wireless Networks                                                                                                                   | Wired Networks                                                                                                  |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| **Security Vulnerabilities** | - More susceptible to eavesdropping and interception due to the open nature of wireless signals.                                           | - Generally more secure against eavesdropping since data travels through physical cables.                       |
+|                              | - Vulnerable to man-in-the-middle attacks, where an attacker can intercept and alter communications.                                       | - Less susceptible to man-in-the-middle attacks due to the physical connection.                                 |
+| **Access Control**           | - Challenges in ensuring proper authentication and authorization for mobile devices.                                                       | - Easier to implement strict access control measures, as physical access to the network is more easily managed. |
+|                              | - Devices may connect from various locations, complicating access control.                                                                 |                                                                                                                 |
+| **Data Integrity**           | - Risks of data tampering during transmission, especially if encryption is not used.                                                       | - Data integrity can be better assured through physical security measures and controlled environments.          |
+|                              | - Reliance on secure protocols (e.g., TLS, HTTPS) is critical to ensure data integrity.                                                    |                                                                                                                 |
+| **Network Configuration**    | - Dynamic and often changing network configurations can lead to vulnerabilities if not properly managed.                                   | - More stable and predictable network configurations, allowing for consistent security policies.                |
+|                              | - Mobile devices may connect to insecure networks (e.g., public Wi-Fi) without adequate security measures.                                 |                                                                                                                 |
+| **Device Management**        | - Difficulty in managing a diverse range of mobile devices with varying security capabilities.                                             | - Easier to manage and update a limited number of devices, leading to better overall security hygiene.          |
+|                              | - Increased risk of outdated software and security patches on mobile devices.                                                              |                                                                                                                 |
+| **Signal Interference**      | - Wireless signals can be affected by interference, which can lead to connection drops and potential vulnerabilities during reconnections. | - Wired connections are generally stable and less prone to interference, providing more reliable security.      |
+| **Physical Security**        | - Physical security is harder to enforce as devices can be lost or stolen, leading to unauthorized access.                                 | - Physical security measures can be implemented more effectively to protect network infrastructure.             |
+| **User Awareness**           | - Users may lack awareness of mobile security risks, leading to poor security practices (e.g., using weak passwords).                      | - Users typically have more training and awareness regarding wired network security practices.                  |
 
 ## 30) What are the differences between Bluetooth Classic and Bluetooth Low Energy (BLE) in terms of power consumption and data rate?
 
@@ -894,12 +858,14 @@ Data Rate:
 
 Cellular and Wi-Fi networks are two primary technologies used for wireless communication, each with its own characteristics, advantages, and challenges. Below is a comparison of the two in terms of coverage, speed, and cost.
 
-| Feature  | Cellular Networks                                                 | Wi-Fi Networks |
-| -------- | ----------------------------------------------------------------- | -------------- |
-| Coverage | - Wide area coverage, capable of spanning cities and rural areas. |                |
-
-- Coverage is provided by a network of cell towers, allowing for seamless mobility. | - Limited range, typically covering a few hundred feet indoors and up to several hundred meters outdoors.
-- Coverage is dependent on the placement of access points (APs). | | Speed | - Speeds vary by technology (e.g., 4G, 5G).
-- 4G offers speeds up to 100 Mbps, while 5G can exceed 10 Gbps under ideal conditions. | - Speeds also vary by technology (e.g., Wi-Fi 5, Wi-Fi 6).
-- Wi-Fi 6 can support speeds up to 9.6 Gbps, but real-world speeds are often lower due to interference and network congestion. | | Cost | - Typically involves monthly subscription fees for data plans.
-- Costs can vary significantly based on data usage and provider. | - Generally lower operational costs; users pay for equipment (routers) and internet service, often with no recurring fees for local network use. | | Mobility | - Supports high mobility; users can move freely while maintaining connectivity. | - Limited mobility; users must remain within the coverage area of the Wi-Fi network. | | Device Connection | - Can connect a large number of devices, but may experience congestion in high-density areas. | - Can connect many devices but may face performance issues with too many simultaneous connections. | | Security | - Cellular networks generally have built-in security features, such as encryption and authentication. | - Security depends on the configuration of the Wi-Fi network; protocols like WPA3 enhance security, but vulnerabilities can exist if not properly configured. | | Use Cases | - Ideal for mobile applications (e.g., smartphones, tablets) and services requiring wide-area coverage (e.g., IoT devices in remote locations). | - Commonly used for local area networks (LANs) in homes, offices, and public spaces (e.g., cafes, airports). |
+| Feature               | Cellular Networks                                                                                                                               | Wi-Fi Networks                                                                                                                                                |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Coverage**          | - Wide area coverage, capable of spanning cities and rural areas.                                                                               | - Limited range, typically covering a few hundred feet indoors and up to several hundred meters outdoors.                                                     |
+|                       | - Coverage is provided by a network of cell towers, allowing for seamless mobility.                                                             | - Coverage is dependent on the placement of access points (APs).                                                                                              |
+| **Speed**             | - Speeds vary by technology (e.g., 4G, 5G).                                                                                                     | - Speeds also vary by technology (e.g., Wi-Fi 5, Wi-Fi 6).                                                                                                    |
+|                       | - 4G offers speeds up to 100 Mbps, while 5G can exceed 10 Gbps under ideal conditions.                                                          | - Wi-Fi 6 can support speeds up to 9.6 Gbps, but real-world speeds are often lower due to interference and network congestion.                                |
+| **Cost**              | - Typically involves monthly subscription fees for data plans.                                                                                  | - Generally lower operational costs; users pay for equipment (routers) and internet service, often with no recurring fees for local network use.              |
+| **Mobility**          | - Supports high mobility; users can move freely while maintaining connectivity.                                                                 | - Limited mobility; users must remain within the coverage area of the Wi-Fi network.                                                                          |
+| **Device Connection** | - Can connect a large number of devices, but may experience congestion in high-density areas.                                                   | - Can connect many devices but may face performance issues with too many simultaneous connections.                                                            |
+| **Security**          | - Cellular networks generally have built-in security features, such as encryption and authentication.                                           | - Security depends on the configuration of the Wi-Fi network; protocols like WPA3 enhance security, but vulnerabilities can exist if not properly configured. |
+| **Use Cases**         | - Ideal for mobile applications (e.g., smartphones, tablets) and services requiring wide-area coverage (e.g., IoT devices in remote locations). | - Commonly used for local area networks (LANs) in homes, offices, and public spaces (e.g., cafes, airports).                                                  |

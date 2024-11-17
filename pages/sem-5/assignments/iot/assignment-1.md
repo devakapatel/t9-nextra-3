@@ -606,21 +606,16 @@ Drawbacks:
 
 Here is a side-by-side comparison of subnetting and supernetting in IP address management:
 
-| Feature           | Subnetting                                                                                            | Supernetting                                                                                                                    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Definition        | Dividing a network into smaller subnetworks by borrowing bits from the host portion of an IP address. | Combining multiple contiguous networks into a single larger network by borrowing bits from the network portion of IP addresses. |
-| Purpose           | Improves network efficiency and security by segmenting a network into smaller, manageable parts.      | Reduces the number of network entries in routing tables by aggregating routes.                                                  |
-| Subnet Mask       | Borrowed host bits are set to 1 in the subnet mask.                                                   | Borrowed network bits are set to 0 in the supernet mask.                                                                        |
-| Subnet Addressing | Subnets have unique network addresses but share the same network prefix.                              | Supernets have unique network prefixes but share the same network address.                                                      |
-| Routing           | Routers must be configured with subnet information to route traffic between subnets.                  | Routers advertise a single supernet route instead of multiple network routes.                                                   |
-| Advantages        | - Increased number of available networks                                                              |                                                                                                                                 |
-
-- Improved network performance and security
-- Efficient use of IP address space | - Reduced size of routing tables
-- Simplified routing configuration
-- Improved routing efficiency | | Disadvantages | - Increased complexity in network configuration and management
-- Reduced number of available hosts per subnet | - Potential for inefficient use of IP address space if subnets are not contiguous
-- Increased complexity in network design to ensure contiguous subnets | | Example | Dividing a Class C network (e.g., 192.168.1.0/24) into multiple subnets (e.g., 192.168.1.0/25, 192.168.1.128/25) | Combining multiple Class C networks (e.g., 192.168.1.0/24, 192.168.2.0/24, 192.168.3.0/24) into a single supernet (e.g., 192.168.0.0/22) |
+| Feature               | Subnetting                                                                                                                     | Supernetting                                                                                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Definition**        | Dividing a network into smaller subnetworks by borrowing bits from the host portion of an IP address.                          | Combining multiple contiguous networks into a single larger network by borrowing bits from the network portion of IP addresses.                            |
+| **Purpose**           | Improves network efficiency and security by segmenting a network into smaller, manageable parts.                               | Reduces the number of network entries in routing tables by aggregating routes.                                                                             |
+| **Subnet Mask**       | Borrowed host bits are set to 1 in the subnet mask.                                                                            | Borrowed network bits are set to 0 in the supernet mask.                                                                                                   |
+| **Subnet Addressing** | Subnets have unique network addresses but share the same network prefix.                                                       | Supernets have unique network prefixes but share the same network address.                                                                                 |
+| **Routing**           | Routers must be configured with subnet information to route traffic between subnets.                                           | Routers advertise a single supernet route instead of multiple network routes.                                                                              |
+| **Advantages**        | - Increased number of available networks<br>- Improved network performance and security<br>- Efficient use of IP address space | - Reduced size of routing tables<br>- Simplified routing configuration<br>- Improved routing efficiency                                                    |
+| **Disadvantages**     | - Increased complexity in network configuration and management<br>- Reduced number of available hosts per subnet               | - Potential for inefficient use of IP address space if subnets are not contiguous<br>- Increased complexity in network design to ensure contiguous subnets |
+| **Example**           | Dividing a Class C network (e.g., 192.168.1.0/24) into multiple subnets (e.g., 192.168.1.0/25, 192.168.1.128/25)               | Combining multiple Class C networks (e.g., 192.168.1.0/24, 192.168.2.0/24, 192.168.3.0/24) into a single supernet (e.g., 192.168.0.0/22)                   |
 
 ## 19) What are the key differences between IPv4 and IPv6 addressing, and why is IPv6 important for the future of networking?
 

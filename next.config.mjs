@@ -11,9 +11,6 @@ const withNextra = nextra({
 });
 
 export default withNextra({
-  // Important for Cloudflare Pages
-  output: "export",
-
   // Basic optimizations
   swcMinify: true,
   compress: true,

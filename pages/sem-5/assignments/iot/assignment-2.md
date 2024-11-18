@@ -2,41 +2,52 @@
 
 ## 1) Explain the differences between Class A, Class B, and Class C IP addresses, including their default subnet masks and address ranges.
 
-### IPv4 Address Classes
+## Differences Between Class A, Class B, and Class C IP Addresses
 
-IPv4 addresses are divided into classes to define different network sizes:
+IP addresses are categorized into classes based on their leading bits, which determine the size of the network and the number of hosts it can accommodate. Here’s a detailed comparison of Class A, Class B, and Class C IP addresses, including their default subnet masks and address ranges.
 
-#### Class A
+### Class A IP Addresses
 
-- Address Range: 1.0.0.0 to 126.0.0.0
-- Default Subnet Mask: 255.0.0.0 (or /8)
-- Network/Host Allocation:
-  - First 8 bits for the network
-  - Remaining 24 bits for the host
-- Total Hosts: Approximately 16.7 million per network
-- Usage: Large organizations
+- **Address Range**: 1.0.0.0 to 126.255.255.255
+- **Default Subnet Mask**: 255.0.0.0
+- **Network Portion**: 8 bits
+- **Host Portion**: 24 bits
+- **Number of Networks**: 128 (0 and 127 are reserved)
+- **Maximum Hosts per Network**: Approximately 16,777,214 (2^24 - 2) [1][4].
 
-#### Class B
+Class A addresses are primarily used by large organizations such as multinational corporations and ISPs that require a vast number of IP addresses.
 
-- Address Range: 128.0.0.0 to 191.255.0.0
-- Default Subnet Mask: 255.255.0.0 (or /16)
-- Network/Host Allocation:
-  - First 16 bits for the network
-  - Remaining 16 bits for the host
-- Total Hosts: Approximately 65,534 per network
-- Usage: Medium-sized organizations
+### Class B IP Addresses
 
-#### Class C
+- **Address Range**: 128.0.0.0 to 191.255.255.255
+- **Default Subnet Mask**: 255.255.0.0
+- **Network Portion**: 16 bits
+- **Host Portion**: 16 bits
+- **Number of Networks**: 16,384
+- **Maximum Hosts per Network**: Approximately 65,534 (2^16 - 2) [1][4].
 
-- Address Range: 192.0.0.0 to 223.255.255.0
-- Default Subnet Mask: 255.255.255.0 (or /24)
-- Network/Host Allocation:
-  - First 24 bits for the network
-  - Remaining 8 bits for the host
-- Total Hosts: 254 per network
-- Usage: Small networks
+Class B addresses are suitable for medium to large-sized networks, such as those used by universities and regional ISPs.
 
-These classes define the size and scale of networks, with Class A being the largest and Class C the smallest.
+### Class C IP Addresses
+
+- **Address Range**: 192.0.0.0 to 223.255.255.255
+- **Default Subnet Mask**: 255.255.255.0
+- **Network Portion**: 24 bits
+- **Host Portion**: 8 bits
+- **Number of Networks**: Over 2 million
+- **Maximum Hosts per Network**: 254 (2^8 - 2) [1][4].
+
+Class C addresses are commonly used for small networks, including home networks and small businesses.
+
+### Summary Table
+
+| Class | Address Range                | Default Subnet Mask | Network Bits | Host Bits | Number of Networks | Max Hosts per Network |
+| ----- | ---------------------------- | ------------------- | ------------ | --------- | ------------------ | --------------------- |
+| A     | 1.0.0.0 to 126.255.255.255   | 255.0.0.0           | 8            | 24        | 128                | ~16,777,214           |
+| B     | 128.0.0.0 to 191.255.255.255 | 255.255.0.0         | 16           | 16        | 16,384             | ~65,534               |
+| C     | 192.0.0.0 to 223.255.255.255 | 255.255.255.0       | 24           | 8         | >2 million         | 254                   |
+
+Understanding these classes is crucial for effective network management and allocation of IP addresses within different organizational contexts [3][5].
 
 ## 2) Describe the process of subnetting and explain its benefits in network management.
 

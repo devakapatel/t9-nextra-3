@@ -2,11 +2,11 @@
 
 ## 1) Explain the differences between Class A, Class B, and Class C IP addresses, including their default subnet masks and address ranges.
 
-## Differences Between Class A, Class B, and Class C IP Addresses
+### Differences Between Class A, Class B, and Class C IP Addresses
 
 IP addresses are categorized into classes based on their leading bits, which determine the size of the network and the number of hosts it can accommodate. Here’s a detailed comparison of Class A, Class B, and Class C IP addresses, including their default subnet masks and address ranges.
 
-### Class A IP Addresses
+#### Class A IP Addresses
 
 - **Address Range**: 1.0.0.0 to 126.255.255.255
 - **Default Subnet Mask**: 255.0.0.0
@@ -17,7 +17,7 @@ IP addresses are categorized into classes based on their leading bits, which det
 
 Class A addresses are primarily used by large organizations such as multinational corporations and ISPs that require a vast number of IP addresses.
 
-### Class B IP Addresses
+#### Class B IP Addresses
 
 - **Address Range**: 128.0.0.0 to 191.255.255.255
 - **Default Subnet Mask**: 255.255.0.0
@@ -28,7 +28,7 @@ Class A addresses are primarily used by large organizations such as multinationa
 
 Class B addresses are suitable for medium to large-sized networks, such as those used by universities and regional ISPs.
 
-### Class C IP Addresses
+#### Class C IP Addresses
 
 - **Address Range**: 192.0.0.0 to 223.255.255.255
 - **Default Subnet Mask**: 255.255.255.0
@@ -39,7 +39,7 @@ Class B addresses are suitable for medium to large-sized networks, such as those
 
 Class C addresses are commonly used for small networks, including home networks and small businesses.
 
-### Summary Table
+#### Summary Table
 
 | Class | Address Range                | Default Subnet Mask | Network Bits | Host Bits | Number of Networks | Max Hosts per Network |
 | ----- | ---------------------------- | ------------------- | ------------ | --------- | ------------------ | --------------------- |

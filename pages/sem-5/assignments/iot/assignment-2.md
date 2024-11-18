@@ -51,7 +51,7 @@ Understanding these classes is crucial for effective network management and allo
 
 ## 2) Describe the process of subnetting and explain its benefits in network management.
 
-## Subnetting Process
+### Subnetting Process
 
 Subnetting is the technique of dividing a larger network into smaller, manageable sub-networks (subnets). This process enhances network performance and security. Here’s a detailed breakdown of how subnetting works:
 

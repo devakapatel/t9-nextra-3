@@ -206,11 +206,7 @@ In memory interfacing, decoding techniques are essential for determining how the
 
 Decoding techniques in memory interfacing include direct decoding, partial decoding, full decoding, memory-mapped I/O, and I/O mapped I/O. Each technique has its advantages and disadvantages depending on system requirements, complexity, and the number of devices being interfaced. Understanding these techniques is crucial for designing efficient microprocessor-based systems.
 
-## 7) Explain following decoding techniques.
-
-a. Absolute decoding
-b. Partial decoding
-c. Block decoding
+## 7) Explain following decoding techniques. <br> a. Absolute decoding <br> b. Partial decoding <br> c. Block decoding
 
 Here’s an explanation of the three decoding techniques in memory interfacing: **Absolute Decoding**, **Partial Decoding**, and **Block Decoding**.
 

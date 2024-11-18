@@ -94,7 +94,7 @@ These are the network details for each of the given IP addresses.
 
 ## 11) A company has three networks into three different cities, namely Ahmedabad Delhi and Chennai Ahmedabad has three branches. A has 120 PCs, B has 170 PCs and C has 60 PCs. Delhi branch has 29 PC and 14 PC respectively and Chennai branch has 14 ,6 and 4 PC respectively. Determine the IP address scheme using VLSM and submitting summaries of the design in tabular form. Use class C Private address for the Design.
 
-To design an IP address scheme using **VLSM (Variable Length Subnet Masking)** for the given setup, we will:
+To design an IP address scheme using VLSM (Variable Length Subnet Masking) for the given setup, we will:
 
 1. Use a Class C private IP address range: `192.168.0.0/24`.
 2. Subdivide this address space to allocate IP addresses efficiently based on the number of PCs in each branch while reserving addresses for future growth.
@@ -105,16 +105,16 @@ To design an IP address scheme using **VLSM (Variable Length Subnet Masking)** f
 
 For each branch, calculate the required number of IP addresses (including network and broadcast addresses):
 
-| **City/Branch** | **Number of PCs** | **Required IPs** | **Nearest Power of 2** | **Subnet Mask**       |
-| --------------- | ----------------- | ---------------- | ---------------------- | --------------------- |
-| Ahmedabad-A     | 120               | 122              | 128                    | /25 (255.255.255.128) |
-| Ahmedabad-B     | 170               | 172              | 256                    | /24 (255.255.255.0)   |
-| Ahmedabad-C     | 60                | 62               | 64                     | /26 (255.255.255.192) |
-| Delhi-A         | 29                | 31               | 32                     | /27 (255.255.255.224) |
-| Delhi-B         | 14                | 16               | 16                     | /28 (255.255.255.240) |
-| Chennai-A       | 14                | 16               | 16                     | /28 (255.255.255.240) |
-| Chennai-B       | 6                 | 8                | 8                      | /29 (255.255.255.248) |
-| Chennai-C       | 4                 | 6                | 8                      | /29 (255.255.255.248) |
+| City/Branch | Number of PCs | Required IPs | Nearest Power of 2 | Subnet Mask           |
+| ----------- | ------------- | ------------ | ------------------ | --------------------- |
+| Ahmedabad-A | 120           | 122          | 128                | /25 (255.255.255.128) |
+| Ahmedabad-B | 170           | 172          | 256                | /24 (255.255.255.0)   |
+| Ahmedabad-C | 60            | 62           | 64                 | /26 (255.255.255.192) |
+| Delhi-A     | 29            | 31           | 32                 | /27 (255.255.255.224) |
+| Delhi-B     | 14            | 16           | 16                 | /28 (255.255.255.240) |
+| Chennai-A   | 14            | 16           | 16                 | /28 (255.255.255.240) |
+| Chennai-B   | 6             | 8            | 8                  | /29 (255.255.255.248) |
+| Chennai-C   | 4             | 6            | 8                  | /29 (255.255.255.248) |
 
 ---
 
@@ -122,31 +122,31 @@ For each branch, calculate the required number of IP addresses (including networ
 
 Allocate the subnets sequentially, starting from `192.168.0.0`.
 
-| **City/Branch** | **Subnet Address** | **Subnet Mask**       | **Usable IP Range**         | **Broadcast Address** |
-| --------------- | ------------------ | --------------------- | --------------------------- | --------------------- |
-| Ahmedabad-A     | 192.168.0.0        | /25 (255.255.255.128) | 192.168.0.1–192.168.0.126   | 192.168.0.127         |
-| Ahmedabad-B     | 192.168.0.128      | /24 (255.255.255.0)   | 192.168.0.129–192.168.1.254 | 192.168.1.255         |
-| Ahmedabad-C     | 192.168.2.0        | /26 (255.255.255.192) | 192.168.2.1–192.168.2.62    | 192.168.2.63          |
-| Delhi-A         | 192.168.2.64       | /27 (255.255.255.224) | 192.168.2.65–192.168.2.94   | 192.168.2.95          |
-| Delhi-B         | 192.168.2.96       | /28 (255.255.255.240) | 192.168.2.97–192.168.2.110  | 192.168.2.111         |
-| Chennai-A       | 192.168.2.112      | /28 (255.255.255.240) | 192.168.2.113–192.168.2.126 | 192.168.2.127         |
-| Chennai-B       | 192.168.2.128      | /29 (255.255.255.248) | 192.168.2.129–192.168.2.134 | 192.168.2.135         |
-| Chennai-C       | 192.168.2.136      | /29 (255.255.255.248) | 192.168.2.137–192.168.2.142 | 192.168.2.143         |
+| City/Branch | Subnet Address | Subnet Mask           | Usable IP Range             | Broadcast Address |
+| ----------- | -------------- | --------------------- | --------------------------- | ----------------- |
+| Ahmedabad-A | 192.168.0.0    | /25 (255.255.255.128) | 192.168.0.1–192.168.0.126   | 192.168.0.127     |
+| Ahmedabad-B | 192.168.0.128  | /24 (255.255.255.0)   | 192.168.0.129–192.168.1.254 | 192.168.1.255     |
+| Ahmedabad-C | 192.168.2.0    | /26 (255.255.255.192) | 192.168.2.1–192.168.2.62    | 192.168.2.63      |
+| Delhi-A     | 192.168.2.64   | /27 (255.255.255.224) | 192.168.2.65–192.168.2.94   | 192.168.2.95      |
+| Delhi-B     | 192.168.2.96   | /28 (255.255.255.240) | 192.168.2.97–192.168.2.110  | 192.168.2.111     |
+| Chennai-A   | 192.168.2.112  | /28 (255.255.255.240) | 192.168.2.113–192.168.2.126 | 192.168.2.127     |
+| Chennai-B   | 192.168.2.128  | /29 (255.255.255.248) | 192.168.2.129–192.168.2.134 | 192.168.2.135     |
+| Chennai-C   | 192.168.2.136  | /29 (255.255.255.248) | 192.168.2.137–192.168.2.142 | 192.168.2.143     |
 
 ---
 
 ### Step 3: Summary in Tabular Form
 
-| **City**  | **Branch** | **Subnet Address** | **Subnet Mask**       | **Usable IPs**              | **Broadcast Address** |
-| --------- | ---------- | ------------------ | --------------------- | --------------------------- | --------------------- |
-| Ahmedabad | A          | 192.168.0.0        | /25 (255.255.255.128) | 192.168.0.1–192.168.0.126   | 192.168.0.127         |
-| Ahmedabad | B          | 192.168.0.128      | /24 (255.255.255.0)   | 192.168.0.129–192.168.1.254 | 192.168.1.255         |
-| Ahmedabad | C          | 192.168.2.0        | /26 (255.255.255.192) | 192.168.2.1–192.168.2.62    | 192.168.2.63          |
-| Delhi     | A          | 192.168.2.64       | /27 (255.255.255.224) | 192.168.2.65–192.168.2.94   | 192.168.2.95          |
-| Delhi     | B          | 192.168.2.96       | /28 (255.255.255.240) | 192.168.2.97–192.168.2.110  | 192.168.2.111         |
-| Chennai   | A          | 192.168.2.112      | /28 (255.255.255.240) | 192.168.2.113–192.168.2.126 | 192.168.2.127         |
-| Chennai   | B          | 192.168.2.128      | /29 (255.255.255.248) | 192.168.2.129–192.168.2.134 | 192.168.2.135         |
-| Chennai   | C          | 192.168.2.136      | /29 (255.255.255.248) | 192.168.2.137–192.168.2.142 | 192.168.2.143         |
+| City      | Branch | Subnet Address | Subnet Mask           | Usable IPs                  | Broadcast Address |
+| --------- | ------ | -------------- | --------------------- | --------------------------- | ----------------- |
+| Ahmedabad | A      | 192.168.0.0    | /25 (255.255.255.128) | 192.168.0.1–192.168.0.126   | 192.168.0.127     |
+| Ahmedabad | B      | 192.168.0.128  | /24 (255.255.255.0)   | 192.168.0.129–192.168.1.254 | 192.168.1.255     |
+| Ahmedabad | C      | 192.168.2.0    | /26 (255.255.255.192) | 192.168.2.1–192.168.2.62    | 192.168.2.63      |
+| Delhi     | A      | 192.168.2.64   | /27 (255.255.255.224) | 192.168.2.65–192.168.2.94   | 192.168.2.95      |
+| Delhi     | B      | 192.168.2.96   | /28 (255.255.255.240) | 192.168.2.97–192.168.2.110  | 192.168.2.111     |
+| Chennai   | A      | 192.168.2.112  | /28 (255.255.255.240) | 192.168.2.113–192.168.2.126 | 192.168.2.127     |
+| Chennai   | B      | 192.168.2.128  | /29 (255.255.255.248) | 192.168.2.129–192.168.2.134 | 192.168.2.135     |
+| Chennai   | C      | 192.168.2.136  | /29 (255.255.255.248) | 192.168.2.137–192.168.2.142 | 192.168.2.143     |
 
 ---
 

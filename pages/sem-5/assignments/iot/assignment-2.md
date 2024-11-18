@@ -51,45 +51,43 @@ Understanding these classes is crucial for effective network management and allo
 
 ## 2) Describe the process of subnetting and explain its benefits in network management.
 
-### Subnetting: Overview and Process
+## Subnetting Process
 
-Subnetting involves dividing a larger IP network into smaller, more manageable sub-networks (subnets). It is done by borrowing bits from the host portion of an IP address to extend the network portion.
+Subnetting is the technique of dividing a larger network into smaller, manageable sub-networks (subnets). This process enhances network performance and security. Here’s a detailed breakdown of how subnetting works:
 
-#### Process of Subnetting
+1. **Identify the Network**: Start with a Class A, B, or C IP address. For example, consider the Class C address `192.168.1.0`.
 
-1. Determine the Bits to Borrow:  
-   Identify how many bits from the host portion are needed to create a subnet mask.
+2. **Determine the Subnet Mask**: The subnet mask defines how many bits are allocated for the network and how many for hosts. For instance, a default Class C subnet mask is `255.255.255.0` (or `/24`), allowing for 256 addresses.
 
-2. Calculate Subnets and Hosts:  
-   Compute the number of subnets and hosts per subnet.
+3. **Decide on Subnet Size**: Determine how many subnets are needed and how many hosts each subnet should support. For example, if you need four subnets, you can borrow two bits from the host part:
 
-   - Subnets: \( 2^n \), where \( n \) is the number of borrowed bits.
-   - Hosts: \( 2^h - 2 \), where \( h \) is the remaining host bits (subtracting 2 for network and broadcast addresses).
+   - Original mask: `255.255.255.0` or `/24`
+   - New mask: `255.255.255.192` or `/26`, which allows for four subnets (2² = 4) with 64 addresses each.
 
-3. Assign Subnets:  
-   Allocate the subnets to various network segments based on requirements.
+4. **Calculate Subnet Addresses**: With a new subnet mask of `/26`, the subnets would be:
 
-4. Configure Network Devices:  
-   Apply the new subnetting scheme to routers, switches, and other devices.
+   - `192.168.1.0/26` (addresses 0-63)
+   - `192.168.1.64/26` (addresses 64-127)
+   - `192.168.1.128/26` (addresses 128-191)
+   - `192.168.1.192/26` (addresses 192-255)
 
-#### Benefits of Subnetting
+5. **Assign Hosts**: Each subnet can now host devices, with specific IP ranges allocated to each subnet.
 
-- Efficient IP Address Utilization:  
-  Minimizes waste by allocating only necessary IP addresses to each segment.
+### Benefits of Subnetting
 
-- Improved Network Performance:  
-  Reduces the size of broadcast domains, minimizing congestion.
+Subnetting offers several advantages in network management:
 
-- Enhanced Security:  
-  Isolates subnets, limiting access and increasing network security.
+1. **Improved Network Performance**: By reducing broadcast domains, subnetting minimizes unnecessary traffic and enhances overall performance by allowing data to travel shorter distances without passing through unnecessary routers[1][2].
 
-- Simplified Management:  
-  Divides large networks into smaller, more manageable sections.
+2. **Enhanced Security**: Subnets can isolate sensitive data and restrict access between departments or user groups within an organization, improving security measures[3].
 
-- Scalability:  
-  Facilitates structured growth of networks.
+3. **Simplified Management**: Network administrators can manage smaller subnets more effectively than a single large network, allowing for easier troubleshooting and monitoring[2].
 
-Subnetting optimizes resource usage, improves performance, enhances security, and simplifies network administration.
+4. **Efficient IP Address Utilization**: Subnetting allows organizations to use their IP address space more efficiently, especially in environments where devices frequently join or leave the network[1][3].
+
+5. **Scalability**: As organizations grow, subnetting provides a framework that accommodates expansion without requiring a complete overhaul of the existing network infrastructure[2].
+
+In summary, subnetting is an essential practice in modern networking that enhances performance, security, and management capabilities within organizational networks, making it a critical component of effective network design and operation[1][3].
 
 ## 3) Explain how the DHCP (Dynamic Host Configuration Protocol) operates in a network and its advantages over static IP addressing.
 

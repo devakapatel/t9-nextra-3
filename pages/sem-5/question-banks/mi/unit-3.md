@@ -212,7 +212,7 @@ Here’s an explanation of the three decoding techniques in memory interfacing: 
 
 #### a. Absolute Decoding
 
-![3-7-1.png](3-7-1.png)
+![3-7-1.png](./3-7-1.png)
 
 - **Definition**: Absolute decoding involves connecting the address lines of the microprocessor directly to the address lines of the memory or I/O devices. Each device is assigned a unique address, and the microprocessor can access each device directly through its specific address.
 - **Characteristics**:
@@ -223,7 +223,7 @@ Here’s an explanation of the three decoding techniques in memory interfacing: 
 
 #### b. Partial Decoding
 
-![3-7-2.png](3-7-2.png)
+![3-7-2.png](./3-7-2.png)
 
 - **Definition**: In partial decoding, only a subset of the address lines is used to select a device or memory location. This technique allows multiple devices to share an address range.
 - **Characteristics**:
@@ -234,7 +234,7 @@ Here’s an explanation of the three decoding techniques in memory interfacing: 
 
 #### c. Block Decoding
 
-![3-7-3.png](3-7-3.png)
+![3-7-3.png](./3-7-3.png)
 
 - **Definition**: Block decoding divides the entire address space into blocks and assigns each block to a specific device or group of devices. This technique uses a combination of both absolute and partial decoding.
 - **Characteristics**:

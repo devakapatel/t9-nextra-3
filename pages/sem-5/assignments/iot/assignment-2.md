@@ -13,7 +13,7 @@ IP addresses are categorized into classes based on their leading bits, which det
 - **Network Portion**: 8 bits
 - **Host Portion**: 24 bits
 - **Number of Networks**: 128 (0 and 127 are reserved)
-- **Maximum Hosts per Network**: Approximately 16,777,214 (2^24 - 2) [1][4].
+- **Maximum Hosts per Network**: Approximately 16,777,214 (2^24 - 2).
 
 Class A addresses are primarily used by large organizations such as multinational corporations and ISPs that require a vast number of IP addresses.
 
@@ -24,7 +24,7 @@ Class A addresses are primarily used by large organizations such as multinationa
 - **Network Portion**: 16 bits
 - **Host Portion**: 16 bits
 - **Number of Networks**: 16,384
-- **Maximum Hosts per Network**: Approximately 65,534 (2^16 - 2) [1][4].
+- **Maximum Hosts per Network**: Approximately 65,534 (2^16 - 2).
 
 Class B addresses are suitable for medium to large-sized networks, such as those used by universities and regional ISPs.
 
@@ -35,7 +35,7 @@ Class B addresses are suitable for medium to large-sized networks, such as those
 - **Network Portion**: 24 bits
 - **Host Portion**: 8 bits
 - **Number of Networks**: Over 2 million
-- **Maximum Hosts per Network**: 254 (2^8 - 2) [1][4].
+- **Maximum Hosts per Network**: 254 (2^8 - 2).
 
 Class C addresses are commonly used for small networks, including home networks and small businesses.
 
@@ -47,7 +47,7 @@ Class C addresses are commonly used for small networks, including home networks 
 | B     | 128.0.0.0 to 191.255.255.255 | 255.255.0.0         | 16           | 16        | 16,384             | ~65,534               |
 | C     | 192.0.0.0 to 223.255.255.255 | 255.255.255.0       | 24           | 8         | >2 million         | 254                   |
 
-Understanding these classes is crucial for effective network management and allocation of IP addresses within different organizational contexts [3][5].
+Understanding these classes is crucial for effective network management and allocation of IP addresses within different organizational contexts.
 
 ## 2) Describe the process of subnetting and explain its benefits in network management.
 
@@ -77,17 +77,17 @@ Subnetting is the technique of dividing a larger network into smaller, manageabl
 
 Subnetting offers several advantages in network management:
 
-1. **Improved Network Performance**: By reducing broadcast domains, subnetting minimizes unnecessary traffic and enhances overall performance by allowing data to travel shorter distances without passing through unnecessary routers[1][2].
+1. **Improved Network Performance**: By reducing broadcast domains, subnetting minimizes unnecessary traffic and enhances overall performance by allowing data to travel shorter distances without passing through unnecessary routers.
 
-2. **Enhanced Security**: Subnets can isolate sensitive data and restrict access between departments or user groups within an organization, improving security measures[3].
+2. **Enhanced Security**: Subnets can isolate sensitive data and restrict access between departments or user groups within an organization, improving security measures.
 
-3. **Simplified Management**: Network administrators can manage smaller subnets more effectively than a single large network, allowing for easier troubleshooting and monitoring[2].
+3. **Simplified Management**: Network administrators can manage smaller subnets more effectively than a single large network, allowing for easier troubleshooting and monitoring.
 
-4. **Efficient IP Address Utilization**: Subnetting allows organizations to use their IP address space more efficiently, especially in environments where devices frequently join or leave the network[1][3].
+4. **Efficient IP Address Utilization**: Subnetting allows organizations to use their IP address space more efficiently, especially in environments where devices frequently join or leave the network.
 
-5. **Scalability**: As organizations grow, subnetting provides a framework that accommodates expansion without requiring a complete overhaul of the existing network infrastructure[2].
+5. **Scalability**: As organizations grow, subnetting provides a framework that accommodates expansion without requiring a complete overhaul of the existing network infrastructure.
 
-In summary, subnetting is an essential practice in modern networking that enhances performance, security, and management capabilities within organizational networks, making it a critical component of effective network design and operation[1][3].
+In summary, subnetting is an essential practice in modern networking that enhances performance, security, and management capabilities within organizational networks, making it a critical component of effective network design and operation.
 
 ## 3) Explain how the DHCP (Dynamic Host Configuration Protocol) operates in a network and its advantages over static IP addressing.
 

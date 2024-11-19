@@ -583,6 +583,12 @@ Block Diagram :
 6. **Bus Arbitration**:
    - Since multiple modules may need to access the shared system bus simultaneously, bus control logic is essential for resolving access conflicts. This typically involves various bus allocation schemes, such as daisy chaining, polling, and independent requesting.
 
+### Advantages of Loosely Coupled Configuration
+
+- **Fault Tolerance**: The failure of one module typically does not disrupt the operation of the overall system, enhancing reliability.
+- **Scalability**: New modules can be added without significant redesign, making it easy to expand system capabilities.
+- **Specialization**: Modules can be specialized to perform different tasks, optimizing resource usage.
+
 ## 12) Bus allocation schemes.
 
 ### Bus Allocation Schemes
@@ -599,9 +605,3 @@ In a loosely coupled configuration, several bus masters may attempt to access th
 
 3. **Independent Request Scheme**:
    - Each module has its own bus request and grant lines, allowing for parallel resolution of requests. A priority decoder selects the highest priority request for bus access, making this scheme the fastest among the three.
-
-### Advantages of Loosely Coupled Configuration
-
-- **Fault Tolerance**: The failure of one module typically does not disrupt the operation of the overall system, enhancing reliability.
-- **Scalability**: New modules can be added without significant redesign, making it easy to expand system capabilities.
-- **Specialization**: Modules can be specialized to perform different tasks, optimizing resource usage.

@@ -20,10 +20,6 @@ Consider a shortest path problem in a weighted graph. If you find the shortest p
 
 The Principle of Optimality is essential for designing algorithms that solve complex problems efficiently by leveraging optimal solutions of their subproblems, forming the basis for many dynamic programming approaches.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 2) Explain the terms: Optimal Substructure property
 
 ### Optimal Substructure Property
@@ -59,10 +55,6 @@ $$
 ### Conclusion
 
 The Optimal Substructure Property is fundamental in algorithm design, particularly in dynamic programming and greedy algorithms. It allows complex problems to be solved efficiently by breaking them down into simpler subproblems whose solutions can be reused, thus ensuring that we do not compute the same results multiple times. This property is essential for achieving optimality in various computational problems.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
 
 ## 3) Explain common characteristics of dynamic programming.
 
@@ -100,10 +92,6 @@ Dynamic programming algorithms often trade space for time efficiency. While they
 
 Dynamic programming is a versatile technique applicable to various problems, including those in optimization, combinatorial problems, and decision-making processes. Its characteristics make it an essential tool in algorithm design and analysis, enabling efficient solutions to complex problems by leveraging optimal substructures and overlapping subproblems.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 4) What is the Principle of Optimality? Explain its use in Dynamic Programming Method.
 
 ### Principle of Optimality
@@ -140,10 +128,6 @@ In dynamic programming, the Principle of Optimality is employed in several ways:
 
 The Principle of Optimality is crucial for dynamic programming as it underpins the methodology used to solve complex optimization problems efficiently. By ensuring that optimal solutions are built from optimal subsolutions, dynamic programming provides a systematic approach to tackling problems that would otherwise require exponential time if solved using naive recursive methods.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 5) Compare Dynamic Programming Technique with Greedy Algorithms.
 
 ### Comparison of Dynamic Programming Technique with Greedy Algorithms
@@ -163,10 +147,6 @@ Dynamic programming and greedy algorithms are both algorithmic techniques used f
 
 In summary, dynamic programming is a more comprehensive approach that guarantees optimal solutions by considering all possible configurations, while greedy algorithms focus on making local optimal choices with the hope that they will lead to a global optimum. The choice between using dynamic programming or greedy algorithms depends on the specific problem being addressed and its characteristics.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 6) Explain the difference between divide and conquer method and dynamic programming.
 
 ### Difference Between Divide and Conquer Method and Dynamic Programming
@@ -185,10 +165,6 @@ Both **Divide and Conquer** and **Dynamic Programming** are algorithmic techniqu
 ### Summary
 
 In summary, while both techniques involve breaking down problems into smaller parts, **Divide and Conquer** focuses on independent subproblems and combines their results, whereas **Dynamic Programming** emphasizes solving overlapping subproblems optimally and storing their results for reuse. The choice between the two methods depends on the nature of the problem being solved.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
 
 ## 7)What are the advantages of dynamic programming method over divide and conquer method?
 
@@ -217,10 +193,6 @@ Dynamic programming is applicable to a broader range of problems, especially tho
 ### Conclusion
 
 In summary, dynamic programming offers advantages in terms of efficiency, guaranteed optimality, and applicability to a wider range of problems compared to divide and conquer. It is particularly beneficial when dealing with overlapping subproblems where storing intermediate results can lead to significant performance improvements.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
 
 ## 8) How to solve knapsack problem using dynamic programming?
 
@@ -311,10 +283,6 @@ Where $$ n $$ is the number of items and $$ W $$ is the maximum weight capacity.
 ### Conclusion
 
 Dynamic programming provides an efficient way to solve the Knapsack Problem by systematically exploring possible combinations of items while storing intermediate results to avoid redundant calculations. This method guarantees finding an optimal solution for the 0/1 Knapsack Problem.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
 
 ## 9) Explain Chained Matrix Multiplication with example.
 
@@ -414,10 +382,6 @@ $$
 
 The Chained Matrix Multiplication problem can be efficiently solved using dynamic programming by systematically calculating and storing intermediate results. This approach minimizes the total number of scalar multiplications required to compute the product of a chain of matrices.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 10) Give optimal substructure for make change problem. Consider an instance of such a problem with coins 1, 4 and 6 units. Illustrate its solutions using a dynamic programming approach involving a payment of 8 units or less.
 
 ### Optimal Substructure for the Make Change Problem
@@ -491,10 +455,6 @@ After filling out the table:
 ### Conclusion
 
 The dynamic programming approach effectively utilizes the optimal substructure property of the Make Change Problem. By systematically calculating and storing results for each subproblem (amount), we can efficiently determine the minimum number of coins needed for any target amount up to a specified limit. This method ensures that we do not recompute values unnecessarily and guarantees an optimal solution.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
 
 ## 11) Solve Making Change problem using Dynamic Programming. (Denominations: d1=1, d2=4, d3=6). Give your answer for making change of Rs. 9.
 
@@ -584,24 +544,20 @@ $$
 
 Using dynamic programming for the Making Change Problem with denominations of {1, 4, and 6}, we find that a total of **4 coins** are needed to make change for Rs. **9**. The approach effectively utilizes previously computed results to build up solutions for larger amounts efficiently.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/443e1bd2-ef4f-4795-ac64-ae1165a7ae79/introduction-to-algorithms.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/760075/547595f6-72bd-4a89-8105-bb2f085d1aa6/introduction-to-the-design-and-analysis-of-algorithms.pdf
-
 ## 12) Given coins of denominations 1, 3 and 4 with the amount to be pay is 7. Find optimal no. Of coins and sequence of coins used to pay a given amount using a dynamic method.
 
 To solve the coin change problem using dynamic programming, we need to determine the optimal number of coins needed to make a specific amount (in this case, 7) using coins of denominations 1, 3, and 4. We will also identify the sequence of coins used.
 
-## Dynamic Programming Approach
+### Dynamic Programming Approach
 
-### Problem Definition
+#### Problem Definition
 
 We are given:
 
 - Coin denominations: $$ \{1, 3, 4\} $$
 - Target amount: $$ 7 $$
 
-### Steps to Solve
+#### Steps to Solve
 
 1. **Initialization**:
 
@@ -621,7 +577,7 @@ We are given:
    - After filling the `dp` array, if `dp` is still infinity, it means that it is not possible to form that amount with the given coins.
    - Otherwise, backtrack through the `dp` array to find which coins were used.
 
-### Implementation
+#### Implementation
 
 Here’s a Python implementation of this approach:
 
@@ -659,21 +615,13 @@ print(f"Minimum number of coins: {min_coins}")
 print(f"Sequence of coins used: {sequence_of_coins}")
 ```
 
-### Output Explanation
+#### Output Explanation
 
 When you run this code with the provided denominations and target amount:
 
 - **Minimum number of coins**: The output will indicate how many coins are needed.
 - **Sequence of coins used**: It will display which specific coins were used to achieve that total.
 
-### Conclusion
+#### Conclusion
 
 Using dynamic programming allows us to efficiently compute both the minimum number of coins required and the specific combination of those coins for any given target amount. In this example with an amount of 7 using denominations of 1, 3, and 4, you can find that the optimal solution uses two coins: one coin of denomination 3 and one coin of denomination 4.
-
-Citations:
-[1] https://www.geeksforgeeks.org/coin-change-dp-7/
-[2] https://www.geeksforgeeks.org/understanding-the-coin-change-problem-with-dynamic-programming/
-[3] https://www.simplilearn.com/tutorials/data-structure-tutorial/coin-change-problem-with-dynamic-programming
-[4] https://www.khoury.northeastern.edu/home/jaa/CSG713.04F/Information/Handouts/dyn_prog.pdf
-[5] https://www.youtube.com/watch?v=x-QkFoh-i5Y
-[6] https://stackoverflow.com/questions/2633848/dynamic-programming-coin-change-decision

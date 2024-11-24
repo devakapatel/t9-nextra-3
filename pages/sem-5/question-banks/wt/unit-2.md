@@ -1,4 +1,4 @@
-## Unit 2
+# Unit 2
 
 ## 1) What is CSS? Describe the different ways to apply CSS to an HTML document.
 
@@ -382,9 +382,7 @@ CSS3 transformations allow you to modify the appearance and position of elements
 CSS3 also supports 3D transformations, which include `perspective`, `rotateX`, `rotateY`, and `rotateZ`.
 
 1. **Perspective**: Gives a sense of depth by defining a perspective distance.
-
    - **Example**:
-
      ```css
      .perspective-example {
        perspective: 1000px; /* Defines the perspective distance */
@@ -394,7 +392,6 @@ CSS3 also supports 3D transformations, which include `perspective`, `rotateX`, `
        transform: rotateY(45deg); /* Rotates the element in 3D space */
      }
      ```
-
 2. **Rotate in 3D**:
    - **Example**:
      ```css
@@ -413,7 +410,6 @@ CSS3 also supports 3D transformations, which include `perspective`, `rotateX`, `
 You can use transitions to animate transformations smoothly.
 
 - **Example**:
-
   ```css
   .transition-example {
     transition: transform 0.5s; /* Animation duration */
@@ -1718,3 +1714,540 @@ Certainly! The `position` property in CSS is used to define the positioning beha
      left: 50px;
    }
    ```
+
+4. **fixed:**
+
+   - **Description:** Elements are positioned relative to the viewport, which means they stay in the same place even when the page is scrolled.
+   - **Usage:** Commonly used for navigation bars and footers.
+
+   ```css
+   .fixed-box {
+     position: fixed;
+     top: 10px;
+     right: 10px;
+   }
+   ```
+
+5. **sticky:**
+
+   - **Description:** Elements are positioned based on the user's scroll position. It toggles between relative and fixed, depending on the scroll position.
+   - **Usage:** Useful for creating sticky headers or navigation bars.
+
+   ```css
+   .sticky-box {
+     position: sticky;
+     top: 0;
+   }
+   ```
+
+#### Summary:
+
+- **static:** Default positioning.
+- **relative:** Positioned relative to its normal position.
+- **absolute:** Positioned relative to the nearest positioned ancestor.
+- **fixed:** Positioned relative to the viewport.
+- **sticky:** Positioned based on the user's scroll position.
+
+Each value of the `position` property serves a specific purpose, allowing you to control the layout and behavior of elements on your web page effectively.
+
+## 30) How to create a hyperlink in HTML? Explain all pseudo classes of hyperlink in detail.
+
+Certainly! Creating a hyperlink in HTML is straightforward. Here's how you can do it, along with an explanation of the pseudo-classes of hyperlinks.
+
+#### Creating a Hyperlink:
+
+To create a hyperlink, you use the `<a>` (anchor) tag with the `href` attribute specifying the URL.
+
+```html
+<a href="<https://www.example.com>">Visit Example</a>
+```
+
+#### Pseudo-Classes of Hyperlinks:
+
+Pseudo-classes are used to define the styles of hyperlinks based on their state. Here are the main pseudo-classes:
+
+1. **:link**
+
+   - **Description:** Applies to links that have not been visited.
+   - **Usage:** Styles unvisited links.
+
+   ```css
+   a:link {
+     color: blue;
+     text-decoration: none;
+   }
+   ```
+
+2. **:visited**
+
+   - **Description:** Applies to links that have been visited.
+   - **Usage:** Styles visited links.
+
+   ```css
+   a:visited {
+     color: purple;
+     text-decoration: none;
+   }
+   ```
+
+3. **:hover**
+
+   - **Description:** Applies to links when the user hovers over them.
+   - **Usage:** Styles links when the mouse pointer is over them.
+
+   ```css
+   a:hover {
+     color: red;
+     text-decoration: underline;
+   }
+   ```
+
+4. **:active**
+
+   - **Description:** Applies to links when they are being activated (e.g., clicked).
+   - **Usage:** Styles links when they are clicked.
+
+   ```css
+   a:active {
+     color: green;
+     text-decoration: underline;
+   }
+   ```
+
+#### Example:
+
+Here’s a complete example putting it all together:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      a:link {
+        color: blue;
+        text-decoration: none;
+      }
+      a:visited {
+        color: purple;
+        text-decoration: none;
+      }
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      a:active {
+        color: green;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="<https://www.example.com>">Visit Example</a>
+  </body>
+</html>
+```
+
+#### Summary:
+
+- **Creating a Hyperlink:** Use the `<a>` tag with the `href` attribute.
+- **Pseudo-Classes:**
+  - `:link`: Styles unvisited links.
+  - `:visited`: Styles visited links.
+  - `:hover`: Styles links when hovered over.
+  - `:active`: Styles links when clicked.
+
+These pseudo-classes help you create interactive and visually appealing hyperlinks on your web page.
+
+## 31) Discuss pseudo class and pseudo element with examples.
+
+**Pseudo-classes and Pseudo-elements in CSS:**
+
+**Pseudo-classes** style elements based on their state, while **pseudo-elements** represent abstract or virtual elements that aren't physically present in the HTML.
+
+**Pseudo-classes:**
+
+- Style links based on their state:
+  - `:link`: Unvisited link (blue)
+  - `:visited`: Visited link (purple)
+  - `:hover`: Link on hover (underline)
+  - `:active`: Link being clicked (yellow background)
+  - `:focus`: Link with focus (red outline)
+
+Example:
+
+```css
+a:link {
+  color: blue;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: yellow;
+}
+a:focus {
+  outline: 2px solid red;
+}
+```
+
+**Pseudo-elements:**
+
+- `::before`: Insert content before an element's content.
+  - Example: `p::before { content: "📝 "; }` (Adds a note icon before paragraph text)
+- `::after`: Insert content after an element's content.
+  - Example: `p::after { content: " 🌟"; }` (Adds a star after paragraph text)
+- `::first-line`: Select the first line of a block-level element.
+  - Example: `p::first-line { font-size: 1.5em; }` (Makes the first line of a paragraph larger)
+- `::marker`: Select the marker box of a list item.
+  - Example: `li::marker { color: red; }` (Changes the color of list item markers)
+- `::selection`: Select the part of an element that is selected by the user.
+  - Example: `p::selection { background-color: yellow; }` (Highlights selected text in yellow)
+
+Example:
+
+```css
+p::before {
+  content: "📝 ";
+}
+p::after {
+  content: " 🌟";
+}
+p::first-line {
+  font-size: 1.5em;
+}
+li::marker {
+  color: red;
+}
+p::selection {
+  background-color: yellow;
+}
+```
+
+## 32) What are JavaScript Data Types? What is the use of the NaN function?
+
+**JavaScript Data Types:**
+
+JavaScript has six primitive data types and one non-primitive (object) data type:
+
+1. **Number:** Represents numeric values, both integers and floating-point numbers.
+   - Example: `let x = 42;`
+2. **String:** Represents textual data.
+   - Example: `let name = "John Doe";`
+3. **Boolean:** Represents logical values: true or false.
+   - Example: `let isStudent = true;`
+4. **Null:** Represents an empty value or no value.
+   - Example: `let empty = null;`
+5. **Undefined:** Represents a variable that has not been assigned a value.
+   - Example: `let y;`
+6. **Symbol (ES6):** Represents unique and immutable values, often used as object keys.
+   - Example: `let sym = Symbol("description");`
+7. **Object:** Represents complex data structures, collections of key-value pairs.
+   - Example: `let person = { name: "John", age: 30 };`
+
+**Use of the `NaN` function:**
+
+`NaN` stands for "Not a Number" and is a special numeric value that represents an invalid or undefined mathematical operation result. The `NaN` function returns the `NaN` value.
+
+Here's why `NaN` is useful:
+
+- **Checking for invalid numbers:** You can use `NaN` to check if a value is a valid number or not.
+  - Example: `console.log(Number("hello") === NaN); // true`
+- **Avoiding mathematical errors:** By checking for `NaN`, you can prevent your code from throwing errors due to invalid mathematical operations.
+  - Example:
+    ```jsx
+    let x = 10 / "2";
+    if (isNaN(x)) {
+      console.log("Invalid operation");
+    } else {
+      console.log(x);
+    }
+    ```
+- **Comparing with `NaN`:** Comparing with `NaN` using the strict equality operator (`===`) always returns `false`. To check if a value is `NaN`, use the `isNaN()` function.
+  - Example: `console.log(NaN === NaN); // false`
+  - Example: `console.log(isNaN(NaN)); // true`
+
+## 33) What are global variables? How are these variables declared and what are the problems associated with using them?
+
+**Global Variables in JavaScript:**
+
+Global variables are variables declared outside of any function or block, making them accessible throughout the entire script or even across different scripts.
+
+**Declaring Global Variables:**
+
+1. **At the top level of your script:**
+
+   ```jsx
+   let globalVar = "I am a global variable";
+   ```
+
+2. **Using the `window` object:**
+
+   ```jsx
+   window.globalVar = "I am a global variable";
+   ```
+
+**Problems Associated with Using Global Variables:**
+
+1. **Name collisions:** Global variables can overwrite or be overwritten by other scripts or libraries, leading to unexpected behavior.
+   - Example:
+     ```jsx
+     // Script 1
+     let user = "John Doe";
+
+     // Script 2
+     let user = "Jane Doe"; // Overwrites the global user variable from Script 1
+     ```
+2. **Tight coupling:** Global variables create tight coupling between different parts of your code, making it harder to maintain, test, and reuse your code.
+   - Example:
+     ```jsx
+     // Function A uses globalVar
+     function A() {
+       console.log(globalVar);
+     }
+
+     // Function B changes globalVar
+     function B() {
+       globalVar = "New value";
+     }
+     ```
+3. **Inaccessibility in modules:** Global variables are not accessible inside modules (ES6) or IIFE (Immediately Invoked Function Expression) closures.
+   - Example:
+     ```jsx
+     // Global variable
+     let globalVar = "I am a global variable";
+
+     // Module
+     (() => {
+       console.log(globalVar); // ReferenceError: globalVar is not defined
+     })();
+     ```
+
+To avoid these problems, consider using function-scoped or module-scoped variables instead of global variables.
+
+## 34) What is 'this' keyword in JavaScript?
+
+**The 'this' Keyword in JavaScript:**
+
+The `this` keyword in JavaScript refers to an object, and its value depends on how it's used:
+
+1. **In a function:** `this` refers to the global object (`window` in browsers) if the function is called as a standalone function.
+   - Example:
+     ```jsx
+     function foo() {
+       console.log(this);
+     }
+     foo(); // logs Window {}
+     ```
+2. **As a method of an object:** `this` refers to the object that the method is called on.
+   - Example:
+     ```jsx
+     const obj = {
+       name: "John",
+       sayName: function () {
+         console.log(this.name);
+       },
+     };
+     obj.sayName(); // logs "John"
+     ```
+3. **With a constructor function:** `this` refers to the newly created object.
+   - Example:
+     ```jsx
+     function Person(name) {
+       this.name = name;
+     }
+     const john = new Person("John");
+     console.log(john.name); // logs "John"
+     ```
+4. **With call(), apply(), or bind() methods:** You can explicitly set the value of `this` using these methods.
+   - Example:
+     ```jsx
+     function sayName() {
+       console.log(this.name);
+     }
+     const obj = { name: "John" };
+     sayName.call(obj); // logs "John"
+     ```
+
+**Memorable Tip:**
+
+Think of `this` as a reference to the current object, and its value changes based on how the function is called.
+
+## 35) What are all the types of Pop up boxes available in JavaScript?
+
+**JavaScript Pop-up Boxes:**
+
+JavaScript offers several types of pop-up boxes, also known as dialogs or modals, to display information or prompt user input. Here are the main types:
+
+1. **Alert:** Displays important information or warnings. It has only an "OK" button.
+   - Syntax: `alert(message);`
+   - Example: `alert("Hello, World!");`
+2. **Confirm:** Asks the user to confirm an action with "OK" and "Cancel" buttons. It returns a boolean value (`true` for "OK," `false` for "Cancel").
+   - Syntax: `confirm(message);`
+   - Example: `let isConfirmed = confirm("Are you sure?");`
+3. **Prompt:** Asks the user for input with an "OK" and "Cancel" buttons. It returns the user's input as a string or `null` if the user clicks "Cancel."
+   - Syntax: `prompt(message, [defaultValue]);`
+   - Example: `let userInput = prompt("Enter your name:", "Guest");`
+4. **Custom Modals:** Create custom pop-up boxes using HTML, CSS, and JavaScript. You can control their appearance, content, and behavior.
+   - Example using Bootstrap's Modal component:
+     ```html
+     <!-- Modal -->
+     <div
+       class="modal fade"
+       id="myModal"
+       tabindex="-1"
+       aria-labelledby="exampleModalLabel"
+       aria-hidden="true"
+     >
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+             <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+             ></button>
+           </div>
+           <div class="modal-body">...</div>
+           <div class="modal-footer">
+             <button
+               type="button"
+               class="btn btn-secondary"
+               data-bs-dismiss="modal"
+             >
+               Close
+             </button>
+             <button type="button" class="btn btn-primary">Save changes</button>
+           </div>
+         </div>
+       </div>
+     </div>
+     ```
+     ```jsx
+     const myModal = new bootstrap.Modal(document.getElementById("myModal"));
+     myModal.show();
+     ```
+
+These pop-up boxes can be used to provide feedback, ask for user input, or display important information. Custom modals offer more flexibility and control over the appearance and behavior of pop-up boxes.
+
+## 36) How are DOM utilised in JavaScript?
+
+**Utilizing the Document Object Model (DOM) in JavaScript:**
+
+The Document Object Model (DOM) is a programming interface for web documents. It represents a page so that programs can change the document structure, style, and content. Here's how you can utilize the DOM in JavaScript:
+
+1. **Accessing Elements:**
+   - By ID: `document.getElementById('id')`
+   - By Class Name: `document.getElementsByClassName('className')`
+   - By Tag Name: `document.getElementsByTagName('tagName')`
+   - By Selector (using querySelector or querySelectorAll): `document.querySelector('#id')`, `document.querySelectorAll('.className')`
+2. **Creating Elements:**
+   - Using `createElement()`: `let newElement = document.createElement('tagName');`
+3. **Manipulating Content:**
+   - Inner Text: `element.innerText = 'new text';`
+   - Inner HTML: `element.innerHTML = '<new html content>';`
+   - Text Content: `element.textContent = 'new text';`
+4. **Changing Attributes:**
+   - Getting an attribute: `let attrValue = element.getAttribute('attributeName');`
+   - Setting an attribute: `element.setAttribute('attributeName', 'newValue');`
+   - Removing an attribute: `element.removeAttribute('attributeName');`
+5. **Modifying Styles:**
+   - Inline styles: `element.style.property = 'value';`
+   - ClassList: `element.classList.add('className');`, `element.classList.remove('className');`, `element.classList.toggle('className');`
+   - Computed styles: `let style = window.getComputedStyle(element);`
+6. **Event Handling:**
+   - Adding an event listener: `element.addEventListener('eventType', function);`
+7. **Traversing the DOM:**
+   - Parent: `element.parentElement;`
+   - Children: `element.children;`
+   - Siblings: `element.previousElementSibling`, `element.nextElementSibling;`
+   - First/Last Child: `element.firstElementChild`, `element.lastElementChild;`
+
+Here's a simple example of accessing, manipulating, and event handling with the DOM:
+
+```jsx
+// Access an element by ID
+const myElement = document.getElementById("myElement");
+
+// Change the inner text
+myElement.innerText = "New text content";
+
+// Add an event listener
+myElement.addEventListener("click", function () {
+  alert("You clicked the element!");
+});
+```
+
+Understanding and utilizing the DOM is crucial for working with web pages in JavaScript, enabling you to interact with, manipulate, and respond to HTML content dynamically.
+
+## 37) How are event handlers utilised in JavaScript?
+
+**Utilizing Event Handlers in JavaScript:**
+
+Event handlers in JavaScript allow you to respond to user interactions and other events, such as mouse clicks, key presses, or page loading. Here's how you can utilize event handlers in a simple, memorable way:
+
+1. **Adding Event Listeners:**
+   - Using `addEventListener()` method:
+     ```jsx
+     element.addEventListener('eventType', function);
+
+     ```
+   - Example: Add a click event listener to a button:
+     ```jsx
+     const myButton = document.getElementById("myButton");
+     myButton.addEventListener("click", function () {
+       alert("Button clicked!");
+     });
+     ```
+2. **Inline Event Handlers (not recommended):**
+   - Attaching event handlers directly in HTML attributes:
+     ```html
+     <button onclick="myFunction()">Click me</button>
+     ```
+   - Example function:
+     ```jsx
+     function myFunction() {
+       alert("Button clicked!");
+     }
+     ```
+3. **Removing Event Listeners:**
+   - Using `removeEventListener()` method:
+     ```jsx
+     element.removeEventListener('eventType', function);
+
+     ```
+   - Example: Remove the click event listener after a single click:
+     ```jsx
+     const myButton = document.getElementById('myButton');
+     let clickCount = 0;
+     myButton.addEventListener('click', function() {
+       alert('Button clicked!');
+       clickCount++;
+       if (clickCount === 1) {
+         myButton.removeEventListener('click', function);
+       }
+     });
+
+     ```
+4. **Event Object:**
+   - The `event` object contains information about the event, like the target element, mouse position, or key code.
+   - Example: Accessing the target element:
+     ```jsx
+     element.addEventListener("click", function (event) {
+       console.log("Clicked element:", event.target);
+     });
+     ```
+5. **Preventing Default Behavior:**
+   - Using `event.preventDefault()` to stop the default behavior of an event.
+   - Example: Preventing a link from following its URL:
+     ```jsx
+     const myLink = document.getElementById("myLink");
+     myLink.addEventListener("click", function (event) {
+       event.preventDefault();
+       alert("Link clicked!");
+     });
+     ```

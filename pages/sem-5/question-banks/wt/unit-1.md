@@ -906,7 +906,7 @@ Here’s an example showcasing some of these new features:
 
 HTML5 forms significantly enhance user input capabilities through new input types, attributes, and built-in validation features. These enhancements improve user experience by making forms more intuitive, accessible, and efficient. By leveraging these new capabilities, developers can create forms that are not only functional but also user-friendly, ultimately leading to higher completion rates and better data quality.
 
-## 13) Explain the role of the <form> element in HTML5. What are some new attributes introduced for forms?
+## 13) Explain the role of the `<form>` element in HTML5. What are some new attributes introduced for forms?
 
 ### Role of the `<form>` Element in HTML5
 
@@ -1115,23 +1115,23 @@ These five basic HTML tags form the foundation of any HTML document. They help s
 
 ## 15) Write the usage, attributes and syntax for the following tags:
 
-<p>,<b>, <u>, <i>, `<tt>`,<div>, <span>,<h1> to <h6>,<hr>, <br> `<font>`,<marquee>,<img>,<a>,<sub>, <sup>,<dd>, <dt>, <dl> <ol>, <ul>, <li>,<strong>, <em>,`<frameset>`, <iframe>.
+`<p>`,`<b>`, `<u>`, `<i>`, `<tt>`, `<div>`, `<span>`, `<h1>` to `<h6>`, `<hr>`, `<br>` `<font>`, `<marquee>`, `<img>`, `<a>`, `<sub>`, `<sup>`, `<dd>`, `<dt>`, `<dl>`, `<ol>`, `<ul>`, `<li>`, `<strong>`, `<em>`, `<frameset>`, `<iframe>`.
 
 **HTML Tags Usage, Attributes, and Syntax:**
 
-1. **<p>** - Paragraph
+1. **`<p>`** - Paragraph
    - _Usage_: Defines a paragraph.
    - _Attributes_: align, class, dir, id, lang, style, title, etc.
    - _Syntax_: `<p>Content goes here</p>`
-2. **<b>** - Bold text
+2. **`<b>`** - Bold text
    - _Usage_: Makes text bold.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<b>Bold text</b>`
-3. **<u>** - Underlined text
+3. **`<u>`** - Underlined text
    - _Usage_: Underlines text.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<u>Underlined text</u>`
-4. **<i>** - Italic text
+4. **`<i>`** - Italic text
    - _Usage_: Italicizes text.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<i>Italic text</i>`
@@ -1139,23 +1139,23 @@ These five basic HTML tags form the foundation of any HTML document. They help s
    - _Usage_: Displays text in a fixed-width font, like a teletype machine.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<tt>`Teletype text`</tt>`
-6. **<div>** - Division or Section
+6. **`<div>`** - Division or Section
    - _Usage_: Defines a division or a section in an HTML document.
    - _Attributes_: align, class, dir, id, lang, style, title, etc.
    - _Syntax_: `<div>Content goes here</div>`
-7. **<span>** - Span
+7. **`<span>`** - Span
    - _Usage_: Groups inline-elements for styling purposes.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<span>Span content</span>`
-8. **<h1> to <h6>** - Headings
+8. **`<h1>` to `<h6>`** - Headings
    - _Usage_: Defines HTML headings.
    - _Attributes_: align, class, dir, id, lang, style, title, etc.
    - _Syntax_: `<h1>Heading 1</h1>` to `<h6>Heading 6</h6>`
-9. **<hr>** - Horizontal rule
+9. **`<hr>`** - Horizontal rule
    - _Usage_: Defines a thematic break in an HTML page (like a horizontal rule).
    - _Attributes_: align, color, noshade, size, width, etc.
    - _Syntax_: `<hr>`
-10. **<br>** - Line break
+10. **`<br>`** - Line break
     - _Usage_: Inserts a single line break.
     - _Attributes_: None.
     - _Syntax_: `<br>`
@@ -1163,55 +1163,55 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     - _Usage_: Specifies a text font.
     - _Attributes_: color, face, size.
     - _Syntax_: `<font face="Arial" size="3">Font content</font>`
-12. **<marquee>** - Scrolling text
+12. **`<marquee>`** - Scrolling text
     - _Usage_: Defines scrolling text.
     - _Attributes_: behavior, direction, scrollamount, scrolldelay, etc.
     - _Syntax_: `<marquee>Scrolling text</marquee>`
-13. **<img>** - Image
+13. **`<img>`** - Image
     - _Usage_: Defines an image.
     - _Attributes_: align, alt, border, height, hspace, src, vspace, width.
     - _Syntax_: `<img src="image.jpg" alt="Alternative text">`
-14. **<a>** - Anchor
+14. **`<a>`** - Anchor
     - _Usage_: Defines a hyperlink.
     - _Attributes_: href, target, title, etc.
     - _Syntax_: `<a href="<https://www.example.com>">Link text</a>`
-15. **<sub>** - Subscript
+15. **`<sub>`** - Subscript
     - _Usage_: Defines subscripted text.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<sub>Subscript text</sub>`
-16. **<sup>** - Superscript
+16. **`<sup>`** - Superscript
     - _Usage_: Defines superscripted text.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<sup>Superscript text</sup>`
-17. **<dd>** - Description
+17. **`<dd>`** - Description
     - _Usage_: Defines a description of a term in a description list.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<dd>Description text</dd>`
-18. **<dt>** - Term
+18. **`<dt>`** - Term
     - _Usage_: Defines a term in a description list.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<dt>Term text</dt>`
-19. **<dl>** - Description list
+19. **`<dl>`** - Description list
     - _Usage_: Defines a description list.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<dl><dt>Term</dt><dd>Description</dd></dl>`
-20. **<ol>** - Ordered list
+20. **`<ol>`** - Ordered list
     - _Usage_: Defines an ordered list.
     - _Attributes_: class, dir, id, lang, style, title, type, etc.
     - _Syntax_: `<ol><li>List item</li></ol>`
-21. **<ul>** - Unordered list
+21. **`<ul>`** - Unordered list
     - _Usage_: Defines an unordered list.
     - _Attributes_: class, dir, id, lang, style, title, type, etc.
     - _Syntax_: `<ul><li>List item</li></ul>`
-22. **<li>** - List item
+22. **`<li>`** - List item
     - _Usage_: Defines an item in a list.
     - _Attributes_: class, dir, id, lang, style, title, value, etc.
     - _Syntax_: `<li>List item</li>`
-23. **<strong>** - Strong importance
+23. **`<strong>`** - Strong importance
     - _Usage_: Defines important text.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<strong>Important text</strong>`
-24. **<em>** - Emphasized text
+24. **`<em>`** - Emphasized text
     - _Usage_: Defines emphasized text.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<em>Emphasized text</em>`
@@ -1219,34 +1219,34 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     - _Usage_: Defines a set of frames.
     - _Attributes_: cols, rows, etc.
     - _Syntax_: `<frameset cols="50%,50%"><frame src="frame1.html"><frame src="frame2.html"></frameset>`
-26. **<iframe>** - Inline frame
+26. **`<iframe>`** - Inline frame
     - _Usage_: Defines an inline frame.
     - _Attributes_: align, frameborder, height, longdesc, marginheight, marginwidth, name, scrolling, src, width.
     - _Syntax_: `<iframe src="<https://www.example.com>" width="500" height="500"></iframe>`
 
-## 16) Explain <table> tag with all the sub tags and attributes.
+## 16) Explain `<table>` tag with all the sub tags and attributes.
 
-**<table> Tag and Subtags:**
+**`<table>` Tag and Subtags:**
 
-- **<table>** - Defines a table.
+- **`<table>`** - Defines a table.
   - _Attributes_: align, border, cellpadding, cellspacing, colgroup, frame, rules, summary, width, etc.
-- **<caption>** - Defines a table caption.
+- **`<caption>`** - Defines a table caption.
   - _Attributes_: align.
-- **<thead>** - Groups the header content in a table.
+- **`<thead>`** - Groups the header content in a table.
   - _Attributes_: align, char, charoff, valign.
-- **<tbody>** - Groups the body content in a table.
+- **`<tbody>`** - Groups the body content in a table.
   - _Attributes_: align, char, charoff, valign.
-- **<tfoot>** - Groups the footer content in a table.
+- **`<tfoot>`** - Groups the footer content in a table.
   - _Attributes_: align, char, charoff, valign.
-- **<tr>** - Defines a table row.
+- **`<tr>`** - Defines a table row.
   - _Attributes_: align, bgcolor, char, charoff, valign.
-- **<th>** - Defines a table header cell.
+- **`<th>`** - Defines a table header cell.
   - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
-- **<td>** - Defines a table data cell.
+- **`<td>`** - Defines a table data cell.
   - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
-- **<colgroup>** - Groups columns within a table.
+- **`<colgroup>`** - Groups columns within a table.
   - _Attributes_: span, width.
-- **<col>** - Specifies column properties for each column.
+- **`<col>`** - Specifies column properties for each column.
   - _Attributes_: span, width.
 
 **Syntax Examples:**
@@ -1321,3 +1321,148 @@ This explanation covers the `<table>` tag, its subtags, and attributes, providin
   - Example: `<td rowspan="3">Content</td>` (spans 3 rows)
 
 In summary, cell padding controls the space between the cell content and its border, while cell spacing controls the space between cells. Colspan and rowspan allow cells to span multiple columns or rows, respectively.
+
+## 18) Write the usage, attributes and syntax for the following controls:
+
+a. Text box
+b. Text area
+c. Radio button
+d. Checkbox
+e. Dropdown
+f. Scrolling List
+g. Date
+h. Time
+i. Url
+j. Color
+k. Spinner
+l. Slider
+m. Submit
+n. Reset
+
+**HTML Form Controls:**
+
+**a. Text Box (`<input type="text">`)**
+
+- _Usage_: Single-line text input.
+- _Attributes_: autocomplete, autofocus, disabled, form, list, maxlength, name, placeholder, readonly, required, size, spellcheck, style, tabindex, value.
+- _Syntax_: `<input type="text" name="textbox" value="Default text">`
+
+**b. Text Area (`<textarea>`)**
+
+- _Usage_: Multi-line text input.
+- _Attributes_: autocomplete, autofocus, cols, disabled, form, name, placeholder, readonly, required, rows, spellcheck, style, tabindex, wrap.
+- _Syntax_: `<textarea name="textarea" rows="4" cols="50">Default text</textarea>`
+
+**c. Radio Button (`<input type="radio">`)**
+
+- _Usage_: Exclusive selection from multiple options.
+- _Attributes_: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="radio" name="radio" value="Option"> Option`
+
+**d. Checkbox (`<input type="checkbox">`)**
+
+- _Usage_: Multiple selections from options.
+- _Attributes_: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="checkbox" name="checkbox" value="Option"> Option`
+
+**e. Dropdown (`<select>`)**
+
+- _Usage_: Selection from a list of options.
+- _Attributes_: autocomplete, disabled, form, multiple, name, required, size, style, tabindex.
+- _Syntax_:
+
+```html
+<select name="dropdown">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+</select>
+```
+
+**f. Scrolling List (`<datalist>`)**
+
+- _Usage_: Predefined list of options for text input fields.
+- _Attributes_: id.
+- _Syntax_:
+
+```html
+<datalist id="list">
+  <option value="Option 1"></option>
+  <option value="Option 2"></option>
+</datalist>
+
+<input list="list" name="scrollingList" />
+```
+
+**g. Date (`<input type="date">`)**
+
+- _Usage_: Date input field.
+- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="date" name="date">`
+
+**h. Time (`<input type="time">`)**
+
+- _Usage_: Time input field.
+- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="time" name="time">`
+
+**i. Url (`<input type="url">`)**
+
+- _Usage_: URL input field.
+- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="url" name="url">`
+
+**j. Color (`<input type="color">`)**
+
+- _Usage_: Color picker input field.
+- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
+- _Syntax_: `<input type="color" name="color">`
+
+**k. Spinner (`<input type="number">`)**
+
+- _Usage_: Numeric input with spin buttons.
+- _Attributes_: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
+- _Syntax_: `<input type="number" name="spinner" min="1" max="100">`
+
+**l. Slider (`<input type="range">`)**
+
+- _Usage_: Range input with a slider.
+- _Attributes_: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
+- _Syntax_: `<input type="range" name="slider" min="1" max="100">`
+
+**m. Submit (`<input type="submit">`)**
+
+- _Usage_: Submits the form data.
+- _Attributes_: autocomplete, disabled, form, formaction, formaction, formenctype, formmethod, formnovalidate, formtarget, name, style, tabindex, value.
+- _Syntax_: `<input type="submit" value="Submit">`
+
+**n. Reset (`<input type="reset">`)**
+
+- _Usage_: Resets all form controls to their initial values.
+- _Attributes_: autocomplete, disabled, form, style, tabindex.
+- _Syntax_: `<input type="reset" value="Reset">`
+
+## 19) Explain the meta tag in detail.
+
+**`<meta>` Tag:**
+
+- **Purpose**: Provides metadata about an HTML document.
+- **Syntax**: `<meta name="attribute" content="value">` or `<meta charset="UTF-8">` (for character set)
+- **Attributes**:
+  - `name`: Specifies the metadata attribute.
+  - `http-equiv`: Specifies an HTTP header.
+  - `content`: Specifies the value associated with the attribute or HTTP header.
+  - `charset`: Specifies the character encoding for the document (e.g., `UTF-8`).
+- **Common uses**:
+  - Setting character encoding: `<meta charset="UTF-8">`
+  - Defining viewport for mobile devices: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+  - Setting page description: `<meta name="description" content="A brief description of the page">`
+  - Setting keywords (deprecated): `<meta name="keywords" content="keyword1, keyword2, keyword3">`
+  - Refreshing the page: `<meta http-equiv="refresh" content="5; URL=http://example.com">` (redirects to [example.com](http://example.com/) after 5 seconds)
+- **Example**:
+
+```html
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="A brief description of the page" />
+<meta http-equiv="refresh" content="5; URL=http://example.com" />
+```

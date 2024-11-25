@@ -1115,7 +1115,7 @@ These five basic HTML tags form the foundation of any HTML document. They help s
 
 ## 15) Write the usage, attributes and syntax for the following tags:
 
-<p>,<b>, <u>, <i>, <tt>,<div>, <span>,<h1> to <h6>,<hr>, <br> <font>,<marquee>,<img>,<a>,<sub>, <sup>,<dd>, <dt>, <dl> <ol>, <ul>, <li>,<strong>, <em>,<frameset>, <iframe>.
+<p>,<b>, <u>, <i>, `<tt>`,<div>, <span>,<h1> to <h6>,<hr>, <br> `<font>`,<marquee>,<img>,<a>,<sub>, <sup>,<dd>, <dt>, <dl> <ol>, <ul>, <li>,<strong>, <em>,`<frameset>`, <iframe>.
 
 **HTML Tags Usage, Attributes, and Syntax:**
 
@@ -1135,10 +1135,10 @@ These five basic HTML tags form the foundation of any HTML document. They help s
    - _Usage_: Italicizes text.
    - _Attributes_: class, dir, id, lang, style, title, etc.
    - _Syntax_: `<i>Italic text</i>`
-5. **<tt>** - Teletype text
+5. **`<tt>`** - Teletype text
    - _Usage_: Displays text in a fixed-width font, like a teletype machine.
    - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<tt>Teletype text</tt>`
+   - _Syntax_: `<tt>`Teletype text`</tt>`
 6. **<div>** - Division or Section
    - _Usage_: Defines a division or a section in an HTML document.
    - _Attributes_: align, class, dir, id, lang, style, title, etc.
@@ -1159,7 +1159,7 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     - _Usage_: Inserts a single line break.
     - _Attributes_: None.
     - _Syntax_: `<br>`
-11. **<font>** - Font
+11. **`<font>`** - Font
     - _Usage_: Specifies a text font.
     - _Attributes_: color, face, size.
     - _Syntax_: `<font face="Arial" size="3">Font content</font>`
@@ -1215,7 +1215,7 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     - _Usage_: Defines emphasized text.
     - _Attributes_: class, dir, id, lang, style, title, etc.
     - _Syntax_: `<em>Emphasized text</em>`
-25. **<frameset>** - Frameset
+25. **`<frameset>`** - Frameset
     - _Usage_: Defines a set of frames.
     - _Attributes_: cols, rows, etc.
     - _Syntax_: `<frameset cols="50%,50%"><frame src="frame1.html"><frame src="frame2.html"></frameset>`

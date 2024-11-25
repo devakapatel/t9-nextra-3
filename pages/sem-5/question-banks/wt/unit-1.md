@@ -1293,3 +1293,31 @@ These five basic HTML tags form the foundation of any HTML document. They help s
 ```
 
 This explanation covers the `<table>` tag, its subtags, and attributes, providing a concise yet comprehensive understanding of how to use tables in HTML.
+
+## 17) Difference between cell padding and cell spacing. Explain Colspan and Rowspan.
+
+**Cell Padding (padding) vs. Cell Spacing (spacing):**
+
+- **Cell Padding** (padding):
+  - Space between the cell wall and the cell content.
+  - Defined using `padding` CSS property or `cellpadding` attribute in HTML.
+  - Measures in pixels (px) or as a percentage (%).
+  - Example: `cellpadding="10"` or `style="padding: 10px;"`
+- **Cell Spacing** (spacing):
+  - Space between cells.
+  - Defined using `cellspacing` attribute in HTML.
+  - Measures in pixels (px).
+  - Example: `cellspacing="10"`
+
+**Colspan and Rowspan:**
+
+- **Colspan** (column span):
+  - Allows a cell to span multiple columns.
+  - Defined using `colspan` attribute in the `<td>` or `<th>` tag.
+  - Example: `<td colspan="3">Content</td>` (spans 3 columns)
+- **Rowspan** (row span):
+  - Allows a cell to span multiple rows.
+  - Defined using `rowspan` attribute in the `<td>` or `<th>` tag.
+  - Example: `<td rowspan="3">Content</td>` (spans 3 rows)
+
+In summary, cell padding controls the space between the cell content and its border, while cell spacing controls the space between cells. Colspan and rowspan allow cells to span multiple columns or rows, respectively.

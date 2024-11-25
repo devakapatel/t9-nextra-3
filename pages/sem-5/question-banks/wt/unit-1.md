@@ -1,491 +1,252 @@
 # Unit 1
 
-## 1) What is AngularJS and what are its main features? How does AngularJS differ from other JavaScript frameworks?
-
-**AngularJS: A Brief Overview and Its Main Features**
+## 1) What is the World Wide Web (WWW) and how does it differ from the Internet?
 
-AngularJS is an open-source front-end JavaScript framework developed by Google, used for building dynamic, single-page applications. It extends HTML with new attributes and expressions, allowing you to create rich, interactive user interfaces.
+### What is the World Wide Web (WWW)?
 
-**Main Features of AngularJS:**
+The **World Wide Web (WWW)**, commonly referred to as the web, is a system of interlinked hypertext documents and multimedia content that is accessed via the Internet. It allows users to view and navigate through web pages using web browsers. The web utilizes the HTTP (Hypertext Transfer Protocol) to transmit data, and it is built on technologies such as HTML (Hypertext Markup Language) for structuring content, CSS (Cascading Style Sheets) for styling, and JavaScript for interactivity.
 
-1. **Two-way Data Binding:** Automatically synchronizes data between model and view, ensuring that changes in one are reflected in the other.
-2. **Directives:** Extend HTML with new attributes and elements, enabling you to create reusable, modular components.
-3. **Dependency Injection:** Allows for easier testing and maintainability by providing a mechanism to inject dependencies into components.
-4. **Templates:** Use plain HTML templates to define the view, with AngularJS expressions to bind data.
-5. **Scopes:** Provide a context for expressing dependencies and managing the lifecycle of components.
-6. **Routing:** Supports client-side routing, allowing for navigation between views without a full page reload.
-7. **Forms:** Offers built-in support for form validation and handling.
-8. **Modularity:** Allows you to organize your application into reusable, maintainable modules.
-9. **Testing:** Provides built-in support for unit testing and end-to-end testing using tools like Jasmine and Protractor.
-
-**How AngularJS Differs from Other JavaScript Frameworks:**
-
-- **HTML-centric:** AngularJS extends HTML with its own syntax, making it easy to integrate with existing HTML structures and templates.
-- **Two-way Data Binding:** Unlike one-way data flow in frameworks like React, AngularJS uses two-way data binding, making it simpler to work with forms and user input.
-- **Full-fledged Framework:** AngularJS is a complete framework, providing solutions for routing, forms, and more, while other frameworks like React or Vue focus more on the view layer.
-- **Large Community and Support:** AngularJS has a large, active community and is backed by Google, ensuring extensive resources, tutorials, and long-term support.
+#### Key Features of the WWW:
 
-**Memorable Tip:** Think of AngularJS as a way to supercharge your HTML, making it dynamic and interactive with two-way data binding and reusable components.
+- **Hyperlinks**: The web's primary feature is its use of hyperlinks, which connect different web pages and resources.
+- **Multimedia Content**: It supports various types of media, including text, images, audio, and video.
+- **Accessibility**: The web is accessible from any device with an Internet connection, making it a global platform for information sharing.
 
-**Example of AngularJS Two-way Data Binding:**
+### How Does the WWW Differ from the Internet?
 
-```html
-<!DOCTYPE html>
-<html>
-  <script src="<https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js>"></script>
-  <body>
-    <div ng-app="myApp" ng-controller="myCtrl">
-      <p>First-name: <input type="text" ng-model="firstName" /></p>
-      <p>Last-name: <input type="text" ng-model="lastName" /></p>
-      <p>Full Name: {{firstName + " " + lastName}}</p>
-    </div>
+While the terms "World Wide Web" and "Internet" are often used interchangeably, they refer to different concepts:
 
-    <script>
-      angular.module("myApp", []).controller("myCtrl", function ($scope) {
-        $scope.firstName = "John";
-        $scope.lastName = "Doe";
-      });
-    </script>
-  </body>
-</html>
-```
-
-In this example, changes in the input fields are automatically reflected in the full name paragraph, demonstrating AngularJS's two-way data binding.
-
-## 2) What are the core benefits of using AngularJS for web development?
-
-**Core Benefits of Using AngularJS for Web Development:**
-
-1. **Simplified Development:** AngularJS extends HTML with its own syntax, making it easy to create dynamic user interfaces using familiar HTML templates and expressions.
-2. **Two-way Data Binding:** Automatically synchronizes data between model and view, reducing boilerplate code and making your application more responsive and intuitive.
-3. **Reusability:** With directives, you can create reusable components that can be easily plugged into different parts of your application, promoting code reuse and maintainability.
-4. **Efficient Testing:** AngularJS supports dependency injection, making it simpler to write unit tests for your application using tools like Jasmine.
-5. **Rich Ecosystem:** Backed by Google, AngularJS has a large, active community, ensuring extensive resources, tutorials, and long-term support. It also integrates well with other tools and services.
-6. **Modularity:** Allows you to organize your application into reusable, maintainable modules, making it easier to manage large-scale projects.
-7. **Mobile Support:** AngularJS is well-suited for mobile development, with support for single-page applications and touch events. It also integrates with Ionic Framework for building mobile apps.
-8. **Performance:** AngularJS uses dirty checking and change detection to efficiently update the DOM, minimizing unnecessary re-renders and improving performance.
-
-**Memorable Tip:** AngularJS makes web development faster, easier, and more maintainable with its simplified development process, two-way data binding, reusability, and efficient testing.
-
-## 3) Explain the MVC (Model-View-Controller) architecture in AngularJS.What are the roles of the Model, View, and Controller in an AngularJS application?
-
-**MVC Architecture in AngularJS:**
-
-AngularJS follows the Model-View-Controller (MVC) architectural pattern, separating an application into three main components: Model, View, and Controller.
-
-**Roles of Model, View, and Controller in AngularJS:**
-
-1. **Model:**
-
-   - Represents the data and the business logic of the application.
-   - Acts as an intermediary between the View and the Controller.
-   - In AngularJS, the Model is typically an object or a set of objects that contain the data and methods for manipulating that data.
-   - Example:
-
-   ```jsx
-   angular.module("myApp", []).controller("myCtrl", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-   });
-   ```
-
-2. **View:**
-
-   - Defines how the data should be presented to the user.
-   - In AngularJS, the View is an HTML template that uses AngularJS expressions and directives to bind data from the Model.
-   - Example:
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <h1>User Profile</h1>
-     <p>Name: {{ user.name }}</p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
-3. **Controller:**
-
-   - Acts as an intermediary between the Model and the View.
-   - Contains the logic for updating the Model and the View in response to user input or other events.
-   - In AngularJS, the Controller is a JavaScript function that is bound to a specific View using the `ng-controller` directive.
-   - Example:
-
-   ```jsx
-   angular.module("myApp", []).controller("myCtrl", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-     $scope.updateName = function (newName) {
-       $scope.user.name = newName;
-     };
-   });
-   ```
-
-**Memorable Tip:** Think of the Model as the data and brains of your application, the View as the face that presents that data, and the Controller as the intermediary that keeps them in sync.
-
-## 4) How does AngularJS implement the MVC pattern in its application structure?
-
-**Implementing MVC in AngularJS Application Structure:**
-
-AngularJS implements the MVC pattern by organizing your application into a specific folder structure and using certain AngularJS features. Here's a simplified, memorable way to understand how AngularJS implements MVC:
-
-1. **Folders and Files:**
-   - Create separate folders for `controllers`, `directives`, `filters`, `services`, and `views`.
-   - Place related JavaScript files in their respective folders (e.g., `controllers/ userCtrl.js`).
-   - Keep your HTML views in the `views` folder (e.g., `views/user.html`).
-2. **Module and Controller:**
-
-   - Create an AngularJS module (e.g., `myApp`) that includes the controllers, directives, filters, and services.
-   - Controllers act as the glue between the Model and the View. They manage the data and logic for a specific part of your application.
-   - Example:
-
-   ```jsx
-   // controllers/userCtrl.js
-   angular
-     .module("myApp")
-     .controller("UserCtrl", function ($scope, userService) {
-       $scope.user = userService.getUser();
-       $scope.updateName = function (newName) {
-         userService.updateUser({ name: newName });
-       };
-     });
-   ```
-
-3. **Service as Model:**
-
-   - Services in AngularJS act as the Model, containing the data and business logic for your application.
-   - Use services to fetch data, manipulate data, or perform complex operations.
-   - Example:
-
-   ```jsx
-   // services/userService.js
-   angular.module("myApp").service("userService", function () {
-     let user = { name: "John Doe", age: 30 };
-     this.getUser = function () {
-       return user;
-     };
-     this.updateUser = function (updatedUser) {
-       user = angular.extend(user, updatedUser);
-     };
-   });
-   ```
-
-4. **View and Template:**
-
-   - Create HTML templates in the `views` folder that define how the data should be presented.
-   - Use AngularJS expressions and directives to bind data from the Controller to the View.
-   - Example:
-
-   ```html
-   <!-- views/user.html -->
-   <div ng-controller="UserCtrl">
-     <h1>User Profile</h1>
-     <p>Name: <input type="text" ng-model="user.name" /></p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
-**Memorable Tip:** Think of the folder structure as the skeleton of your application, with each folder representing a part of the MVC pattern. Controllers act as the glue between the Model (services) and the View (templates), managing the data and logic for a specific part of your application.
-
-## 5) What are directives in AngularJS, and how do they enhance HTML functionality? Explain the difference between built-in and custom directives in AngularJS.
-
-**Directives in AngularJS:**
-
-Directives in AngularJS are functions that extend the functionality of HTML by adding new attributes, elements, or comments. They enable you to create reusable, modular components and enhance the functionality of your HTML templates.
-
-**How Directives Enhance HTML Functionality:**
-
-1. **Add new attributes:** Directives can add new attributes to HTML elements, allowing you to bind data, listen to events, or perform other tasks.
-   - Example: `ng-model`, `ng-click`, `ng-show`
-2. **Create new elements:** Directives can create new HTML elements with custom behavior.
-   - Example: `ng-app`, `ng-controller`
-3. **Replace element content:** Directives can replace the content of an HTML element with custom HTML or dynamic content.
-   - Example: `ng-switch`, `ng-include`
-
-**Built-in vs. Custom Directives:**
-
-1. **Built-in Directives:**
-
-   - Provided by AngularJS itself, like `ng-app`, `ng-controller`, `ng-model`, etc.
-   - Offer common functionality like data binding, event handling, and conditional rendering.
-   - Can be used out-of-the-box without additional configuration.
-   - Example:
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <p>Name: <input type="text" ng-model="user.name" /></p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
-2. **Custom Directives:**
-
-   - Created by developers to encapsulate reusable functionality or extend HTML with new behavior.
-   - Define a new directive using the `directive` function or the `app.directive` method in an AngularJS module.
-   - Can be isolated or shared, with or without a template.
-   - Example:
-
-   ```jsx
-   angular.module("myApp").directive("userProfile", function () {
-     return {
-       restrict: "E",
-       template: `
-         <div>
-           <h1>User Profile</h1>
-           <p>Name: {{ user.name }}</p>
-           <p>Age: {{ user.age }}</p>
-         </div>
-       `,
-       scope: {
-         user: "=",
-       },
-     };
-   });
-   ```
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <user-profile user="user"></user-profile>
-   </div>
-   ```
-
-**Memorable Tip:** Think of directives as superpowers for HTML, enabling you to extend its functionality with new attributes, elements, or behavior. Built-in directives offer common functionality, while custom directives allow you to encapsulate reusable code and create unique components.
-
-## 6) Provide examples of common built-in directives in AngularJS.How do you create and use a custom directive in AngularJS?
-
-**Common Built-in Directives in AngularJS:**
-
-1. **ng-app:** Defines the root element of the AngularJS application.
-   - Example: `<div ng-app="myApp">`
-2. **ng-controller:** Associates an AngularJS controller with an HTML element.
-   - Example: `<div ng-controller="myCtrl">`
-3. **ng-model:** Binds an HTML form control to an AngularJS model.
-   - Example: `<input type="text" ng-model="user.name">`
-4. **ng-click:** Binds an event handler to an HTML element's click event.
-   - Example: `<button ng-click="updateUser()">Update</button>`
-5. **ng-show** and **ng-hide:** Show or hide an HTML element based on an expression's truthiness.
-   - Example: `<p ng-show="user.age > 18">You are an adult.</p>`
-6. **ng-repeat:** Repeats an HTML element for each item in a collection.
-   - Example: `<div ng-repeat="item in items">{{ item }}</div>`
-7. **ng-switch:** Conditionally displays one of several HTML elements based on an expression's value.
-
-   - Example:
-
-   ```html
-   <div ng-switch="user.role">
-     <p ng-switch-when="admin">You are an admin.</p>
-     <p ng-switch-when="user">You are a user.</p>
-     <p ng-switch-default>You are a guest.</p>
-   </div>
-   ```
-
-**Creating and Using a Custom Directive in AngularJS:**
-
-1. **Define the directive:**
-
-   - Using the `directive` function:
-
-   ```jsx
-   angular.module("myApp").directive("myDirective", function () {
-     return {
-       restrict: "A",
-       template: "<div>This is my custom directive!</div>",
-     };
-   });
-   ```
-
-   - Or using the `app.directive` method:
-
-   ```jsx
-   angular.module("myApp").directive("myDirective", function () {
-     return {
-       restrict: "A",
-       template: "<div>This is my custom directive!</div>",
-     };
-   });
-   ```
-
-2. **Use the custom directive in your HTML template:**
-
-   - Add the custom directive as an attribute to an HTML element:
-
-   ```html
-   <div my-directive></div>
-   ```
-
-   - Or use it as an element (if `restrict: 'E'` is specified):
-
-   ```html
-   <my-directive></my-directive>
-   ```
-
-**Memorable Tip:** Custom directives in AngularJS allow you to extend HTML functionality and create reusable components. To create a custom directive, define its behavior and template using the `directive` function, and then use it in your HTML templates like any other built-in directive.
-
-## 7) What are expressions in AngularJS, and how are they different from JavaScript expressions? How are AngularJS expressions used in the view (HTML)?
-
-**Expressions in AngularJS:**
-
-AngularJS expressions are similar to JavaScript expressions but have some key differences and additional features. They are used to bind data from the model to the view and perform simple calculations.
-
-**Differences from JavaScript Expressions:**
-
-1. **No Control Flow Statements:** AngularJS expressions cannot contain control flow statements like `if`, `else`, `for`, `while`, etc.
-2. **No Function Declarations:** You cannot declare functions within AngularJS expressions.
-3. **No Direct DOM Manipulation:** AngularJS expressions cannot directly manipulate the DOM. Instead, they should update the model, which will then be reflected in the view through data binding.
-4. **Interpolation Syntax:** AngularJS uses double curly braces (`{{ }}`) for expression interpolation in the view.
-
-**Using AngularJS Expressions in the View (HTML):**
-
-1. **Interpolation:** Binds the value of an expression to an HTML element's content.
-   - Example: `<p>{{ user.name }}</p>`
-2. **Property Binding:** Binds an expression's value to an HTML element's attribute.
-   - Example: `<input type="text" ng-model="user.name">` (uses `ng-model` for two-way data binding)
-3. **Event Binding:** Binds an expression to an HTML element's event.
-   - Example: `<button ng-click="updateUser()">Update</button>`
-
-**Memorable Tip:** Think of AngularJS expressions as simplified JavaScript expressions that are used to bind data from the model to the view. They have limited functionality compared to JavaScript expressions but are essential for data binding in AngularJS. Use double curly braces (`{{ }}`) for interpolation in your HTML templates to display the value of an expression.
-
-## 8) Discuss how AngularJS expressions are evaluated and how they interact with the scope.
-
-**Evaluating AngularJS Expressions and Interaction with the Scope:**
-
-AngularJS expressions are evaluated in the context of a scope, which acts as the model for the view. Here's how AngularJS expressions are evaluated and interact with the scope:
-
-1. **Scope Association:**
-   - Expressions are associated with a specific scope, either the current scope or a child scope.
-   - By default, expressions are evaluated in the context of the current scope. However, you can use the `$parent` and `$child` scope properties to access parent or child scopes, respectively.
-2. **Expression Parsing and Evaluation:**
-   - AngularJS parses the expression and converts it into an Abstract Syntax Tree (AST).
-   - The AST is then evaluated in the context of the associated scope, resolving any properties or methods referenced in the expression.
-   - Example: In `<p>{{ user.name }}</p>`, AngularJS evaluates `user.name` in the context of the current scope.
-3. **Change Detection:**
-   - AngularJS uses a change detection mechanism to monitor the model for changes and update the view accordingly.
-   - When a model property changes, AngularJS automatically re-evaluates any expressions that depend on that property and updates the view if necessary.
-   - Example: If `user.name` changes, AngularJS will update the content of the `<p>{{ user.name }}</p>` element to reflect the new value.
-4. **Watchers and Dirty Checking:**
-   - AngularJS uses watchers to keep track of changes in the model and trigger view updates.
-   - Watchers monitor specific properties on the scope and notify AngularJS when they change.
-   - AngularJS uses a process called "dirty checking" to determine which expressions need to be re-evaluated based on the changes in the watched properties.
-   - Example: Using `ng-model` adds a watcher for the input element's value, so that changes in the input field update the model and trigger view updates for any expressions that depend on that model property.
-
-**Memorable Tip:** AngularJS expressions are evaluated in the context of a scope, which acts as the model for the view. When a model property changes, AngularJS automatically re-evaluates any expressions that depend on that property and updates the view if necessary. This process is facilitated by watchers and dirty checking, ensuring that the view remains in sync with the model.
-
-## 9) What is the role of a controller in AngularJS? How do you define and use a controller in an AngularJS application?
-
-**Role of a Controller in AngularJS:**
-
-In AngularJS, a controller acts as an intermediary between the model (services) and the view (template). Its primary role is to:
-
-1. **Manage the data:** Fetch data from services, manipulate data, or perform complex operations.
-2. **Provide data to the view:** Expose data properties and methods that can be used in the view to display or interact with the data.
-3. **Handle user input:** Respond to user events and update the model or view accordingly.
-
-**Defining and Using a Controller in AngularJS:**
-
-1. **Define a Controller:**
-
-   - Using the `controller` function:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateName = function (newName) {
-         myService.updateUser({ name: newName });
-       };
-     });
-   ```
-
-   - Or using the `app.controller` method:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       // ...
-     });
-   ```
-
-2. **Inject Dependencies:**
-   - Inject services or other dependencies into the controller function using dependency injection.
-   - Example: Injecting `myService` into the controller.
-3. **Expose Data and Methods:**
-   - Define data properties and methods on the `$scope` object that can be used in the view.
-   - Example: Exposing `user` and `updateName` on the `$scope` object.
-4. **Use the Controller in the View:**
-   - Associate the controller with an HTML element using the `ng-controller` directive.
-   - Example: `<div ng-controller="MyController">`
-   - Access the exposed data and methods in the view using AngularJS expressions.
-   - Example: `<p>Name: <input type="text" ng-model="user.name"></p>`
-
-**Memorable Tip:** Think of a controller in AngularJS as the middleman between the model (services) and the view (template). Its role is to manage data, provide data to the view, and handle user input. To define a controller, use the `controller` function or the `app.controller` method, inject dependencies, expose data and methods on the `$scope` object, and then associate the controller with an HTML element using the `ng-controller` directive.
-
-## 10) Explain how controllers interact with views and models in AngularJS.
-
-**Controllers in AngularJS: Interaction with Views and Models**
-
-In AngularJS, controllers interact with views and models to create dynamic, responsive user interfaces. Here's how controllers bridge the gap between views and models:
-
-1. **View to Controller:**
-
-   - The view communicates with the controller using AngularJS directives like `ng-click`, `ng-model`, or custom directives.
-   - When a user interacts with the view (e.g., clicks a button, enters text in an input field), the associated directive triggers a function or updates a property on the controller's `$scope` object.
-   - Example:
-
-   ```html
-   <!-- View -->
-   <div ng-controller="MyController">
-     <input type="text" ng-model="user.name" />
-     <button ng-click="updateUser()">Update</button>
-   </div>
-   ```
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateUser = function () {
-         myService.updateUser($scope.user);
-       };
-     });
-   ```
-
-2. **Controller to Model:**
-
-   - The controller updates the model (services) by calling methods on the injected services.
-   - When the controller receives data from the view or needs to fetch data, it interacts with the model to perform the necessary operations.
-   - Example:
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateUser = function () {
-         myService.updateUser($scope.user).then(function (updatedUser) {
-           $scope.user = updatedUser;
-         });
-       };
-     });
-   ```
-
-3. **Model to Controller to View:**
-
-   - The model (services) notifies the controller when data changes, either by emitting events or returning promises.
-   - The controller listens for these changes and updates the view accordingly by manipulating the `$scope` object.
-   - Example:
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       myService.userUpdated.subscribe(function (updatedUser) {
-         $scope.user = updatedUser;
-       });
-     });
-   ```
-
-**Memorable Tip:** Controllers in AngularJS act as a bridge between views and models. They receive input from the view, update the model, and then update the view with the latest data. This process ensures that the view remains in sync with the model, creating a responsive and dynamic user interface.
+#### 1. Definition:
+
+- **Internet**: The Internet is a vast network of interconnected computers and servers that communicate with each other through standardized protocols. It is the underlying infrastructure that allows for data exchange.
+- **WWW**: The World Wide Web is a service that operates over the Internet. It consists of the content (web pages) and applications that users access through web browsers.
+
+#### 2. Components:
+
+- **Internet**: Comprises hardware (servers, routers, cables), protocols (TCP/IP), and services (email, file transfer).
+- **WWW**: Consists of web pages, websites, and applications that are hosted on servers connected to the Internet.
+
+#### 3. Functionality:
+
+- **Internet**: Provides various services beyond just web browsing, such as email (SMTP), file transfer (FTP), and remote access.
+- **WWW**: Primarily focuses on accessing and displaying information through web browsers.
+
+#### 4. Access:
+
+- **Internet**: Requires an Internet connection but does not require a web browser.
+- **WWW**: Requires both an Internet connection and a web browser to access its resources.
+
+### Conclusion
+
+In summary, the World Wide Web is a collection of information that can be accessed via the Internet using web browsers. The Internet serves as the backbone infrastructure that enables various services, including the World Wide Web. Understanding this distinction is crucial for grasping how digital communication works today.
+
+## 2) What is the purpose of the HTTP protocol in web communications?
+
+### Purpose of the HTTP Protocol in Web Communications
+
+#### What is HTTP?
+
+**HTTP (Hypertext Transfer Protocol)** is an application-layer protocol used for transmitting hypertext via the Internet. It is the foundation of data communication on the World Wide Web, allowing web browsers and servers to communicate effectively.
+
+#### Key Purposes of HTTP:
+
+1. **Request-Response Model**:
+   - HTTP operates on a request-response model, where a client (usually a web browser) sends a request to a server, and the server responds with the requested resources (such as HTML documents, images, or other data).
+   - This model facilitates efficient communication between clients and servers.
+2. **Resource Identification**:
+   - HTTP uses URLs (Uniform Resource Locators) to identify resources on the web. Each resource is uniquely addressable, allowing users to request specific content easily.
+   - For example, a URL like `https://www.example.com/page` points to a specific page on the server.
+3. **Data Transfer**:
+   - HTTP enables the transfer of various types of data, including text, images, videos, and files. It supports different content types through headers that specify the type of data being sent or received.
+   - The protocol allows for both synchronous (immediate) and asynchronous (delayed) data transfer.
+4. **Stateless Communication**:
+   - HTTP is stateless, meaning that each request from a client to a server is treated independently. The server does not retain any information about previous requests.
+   - This design simplifies server management but can be supplemented with mechanisms like cookies or sessions for stateful interactions.
+5. **Support for Methods**:
+   - HTTP defines several methods (also known as verbs) that specify the desired action to be performed on a resource. Common methods include:
+     - **GET**: Retrieve data from the server.
+     - **POST**: Send data to the server for processing (e.g., submitting forms).
+     - **PUT**: Update an existing resource.
+     - **DELETE**: Remove a resource from the server.
+   - These methods allow for diverse interactions with web resources.
+6. **Error Handling**:
+   - HTTP provides status codes in responses to indicate the outcome of requests. For example:
+     - **200 OK**: The request was successful.
+     - **404 Not Found**: The requested resource could not be found.
+     - **500 Internal Server Error**: There was an error on the server.
+   - These codes help clients understand the result of their requests and take appropriate actions.
+7. **Security Features**:
+   - While HTTP itself is not secure, it can be extended with HTTPS (HTTP Secure), which incorporates SSL/TLS encryption to protect data during transmission.
+   - HTTPS ensures confidentiality and integrity of data exchanged between clients and servers, safeguarding against eavesdropping and tampering.
+
+#### Conclusion
+
+In summary, HTTP plays a crucial role in web communications by facilitating requests and responses between clients and servers, enabling resource identification and transfer, supporting various methods for interaction, and providing error handling mechanisms. Its stateless nature and extensibility with security features make it an essential protocol for modern web applications. Understanding HTTP is fundamental for anyone involved in web development or technology.
+
+## 3) Describe the role of a web browser and how it interacts with web servers.
+
+### Role of a Web Browser
+
+A **web browser** is a software application that enables users to access, retrieve, and view content on the World Wide Web. It acts as an interface between the user and the vast array of information available online. Browsers interpret and render web pages, allowing users to interact with various types of content, such as text, images, videos, and interactive applications.
+
+#### Key Functions of a Web Browser:
+
+1. **Rendering Web Pages**:
+   - Browsers convert HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript into visually formatted web pages that users can view and interact with.
+   - They provide a graphical interface that displays text, images, and other media in a user-friendly manner.
+2. **Navigating the Web**:
+   - Browsers allow users to navigate between different web pages using hyperlinks. Users can enter URLs in the address bar or click on links to move from one page to another.
+   - They also provide features like bookmarks, history, and tabbed browsing to enhance user experience.
+3. **Executing Scripts**:
+   - Modern browsers support JavaScript execution, enabling dynamic content updates and interactive features on web pages.
+   - This allows for functionalities such as form validation, animations, and real-time data updates without requiring a page reload.
+4. **Managing Cookies and Sessions**:
+   - Browsers store cookies, which are small pieces of data sent by servers to remember user preferences or session information.
+   - This helps maintain user sessions across multiple requests and provides personalized experiences.
+5. **Security Features**:
+   - Browsers implement security measures such as HTTPS support, warning users about insecure connections, blocking pop-ups, and preventing malicious downloads.
+   - They also offer privacy features like incognito mode to browse without saving history or cookies.
+
+### Interaction with Web Servers
+
+The interaction between a web browser and a web server follows a structured process known as the **client-server model**. Here’s how it works:
+
+#### 1. Sending Requests:
+
+- When a user enters a URL in the browser's address bar or clicks on a link, the browser initiates an HTTP request to the specified web server.
+- The request includes information such as the method (e.g., GET or POST), headers (which provide metadata about the request), and any additional data (like form inputs).
+
+#### 2. DNS Resolution:
+
+- Before sending the request, the browser performs a DNS (Domain Name System) lookup to translate the human-readable domain name (e.g., [www.example.com](http://www.example.com/)) into an IP address that identifies the server on the Internet.
+
+#### 3. Establishing Connection:
+
+- The browser establishes a TCP (Transmission Control Protocol) connection with the web server using the IP address obtained from DNS.
+- If HTTPS is used, an SSL/TLS handshake occurs to secure the connection.
+
+#### 4. Receiving Responses:
+
+- After processing the request, the web server sends back an HTTP response containing status codes (indicating success or failure), headers (providing additional information), and the requested content (such as HTML documents).
+- The response may also include resources like images or scripts referenced within the HTML.
+
+#### 5. Rendering Content:
+
+- Upon receiving the response, the browser processes the HTML content along with any associated CSS and JavaScript.
+- It renders the web page for display to the user, executing scripts as needed to create dynamic content.
+
+#### 6. Handling Additional Requests:
+
+- If the HTML page contains links to other resources (like images or stylesheets), the browser will issue additional HTTP requests for those resources.
+- This process continues until all necessary resources are loaded and displayed.
+
+### Conclusion
+
+In summary, a web browser serves as a critical tool for accessing and interacting with content on the World Wide Web. It communicates with web servers through HTTP requests and responses, rendering web pages for users while managing security and privacy features. Understanding how browsers operate and interact with servers is essential for anyone involved in web development or technology.
+
+## 4) Differentiate between HTTP and HTTPS. Why is HTTPS considered more secure?
+
+### Differentiating Between HTTP and HTTPS
+
+#### What is HTTP?
+
+**HTTP** stands for **Hypertext Transfer Protocol**. It is the protocol used for transferring data over the web. When you visit a website that starts with "http://", your browser communicates with the server using this protocol to request and receive web pages.
+
+#### What is HTTPS?
+
+**HTTPS** stands for **Hypertext Transfer Protocol Secure**. It is an extension of HTTP that incorporates security measures to protect the data being transferred between your browser and the web server. When a website uses "https://", it means that it is secured with SSL/TLS encryption.
+
+### Key Differences Between HTTP and HTTPS
+
+| Feature            | HTTP                                       | HTTPS                                                               |
+| ------------------ | ------------------------------------------ | ------------------------------------------------------------------- |
+| **Security**       | No encryption; data is sent in plain text. | Uses SSL/TLS to encrypt data, making it secure.                     |
+| **Port**           | Operates on port 80.                       | Operates on port 443.                                               |
+| **Data Integrity** | Vulnerable to interception and tampering.  | Ensures data integrity; protects against tampering.                 |
+| **Authentication** | No verification of the server's identity.  | Verifies the server's identity through certificates.                |
+| **SEO Ranking**    | Lower preference in search rankings.       | Higher preference in search rankings by search engines like Google. |
+
+### Why is HTTPS Considered More Secure?
+
+1. **Encryption**:
+   - HTTPS encrypts the data exchanged between your browser and the web server, making it difficult for hackers to intercept or read the information.
+2. **Data Integrity**:
+   - It ensures that the data sent and received has not been altered during transmission, protecting users from data corruption or tampering.
+3. **Authentication**:
+   - HTTPS uses SSL/TLS certificates to verify the identity of the website, ensuring that users are communicating with the legitimate site and not an imposter.
+4. **Protection Against Attacks**:
+   - HTTPS helps defend against various cyber threats, such as man-in-the-middle attacks, where a malicious actor intercepts communication between two parties.
+
+### Conclusion
+
+In summary, while both HTTP and HTTPS serve as protocols for transferring data over the web, HTTPS offers significant security advantages through encryption, data integrity, and authentication. This makes it essential for protecting sensitive information, especially on websites that handle personal or financial data. As a result, using HTTPS is now a standard practice for ensuring safe online experiences.
+
+## 5) What are the fundamental components of an HTML document?
+
+### Fundamental Components of an HTML Document
+
+An HTML (Hypertext Markup Language) document is the backbone of web pages, providing the structure and content that browsers render. Here are the fundamental components that make up a standard HTML document:
+
+#### 1. **DOCTYPE Declaration**
+
+- **Definition**: The `<!DOCTYPE html>` declaration is the first line of an HTML document.
+- **Purpose**: It informs the browser about the version of HTML being used, ensuring that the page is rendered correctly.
+
+#### 2. **HTML Element**
+
+- **Syntax**: `<html>` ... `</html>`
+- **Purpose**: This element wraps all the content on the page and indicates that it is an HTML document.
+
+#### 3. **Head Element**
+
+- **Syntax**: `<head>` ... `</head>`
+- **Purpose**: Contains meta-information about the document, such as:
+  - **Title**: The title of the document displayed in the browser tab.
+    ```html
+    <title>Your Page Title</title>
+    ```
+  - **Meta Tags**: Information about character set, author, and viewport settings for responsive design.
+    ```html
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ```
+  - **Links to Stylesheets**: CSS files for styling.
+    ```html
+    <link rel="stylesheet" href="styles.css" />
+    ```
+
+#### 4. **Body Element**
+
+- **Syntax**: `<body>` ... `</body>`
+- **Purpose**: Contains all the content that is visible to users, including:
+  - Text (headings, paragraphs)
+  - Images
+  - Links
+  - Lists
+  - Forms
+  - Other media
+
+#### 5. **Structural Elements**
+
+Within the body, various structural elements help organize content:
+
+- **Headings**: Defined using `<h1>` to `<h6>`, with `<h1>` being the most important.
+  ```html
+  <h1>Main Heading</h1>
+  ```
+- **Paragraphs**: Created with `<p>` tags.
+  ```html
+  <p>This is a paragraph.</p>
+  ```
+- **Links**: Created using `<a>` tags.
+  ```html
+  <a href="<https://www.example.com>">Visit Example</a>
+  ```
+- **Images**: Added with `<img>` tags.
+  ```html
+  <img src="image.jpg" alt="Description of image" />
+  ```
+
+#### Conclusion
+
+In summary, a basic HTML document consists of a DOCTYPE declaration, an HTML element, a head element containing metadata and links to stylesheets, and a body element that holds all visible content. Understanding these fundamental components is essential for creating well-structured web pages.

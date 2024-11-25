@@ -10,62 +10,60 @@
 **Ways to apply CSS to an HTML document:**
 
 1. **Inline CSS**: Applied directly to an HTML element using the `style` attribute.
-   - Example: `<p style="color: blue;">This is an inline CSS example.</p>`
+    - Example: `<p style="color: blue;">This is an inline CSS example.</p>`
 2. **Internal CSS**: Defined within a `<style>` block in the `<head>` section of an HTML document.
-
-   - Example:
-
-   ```html
-   <head>
-     <style>
-       p {
-         color: blue;
-       }
-     </style>
-   </head>
-   ```
-
+    - Example:
+    
+    ```html
+    <head>
+      <style>
+        p { color: blue; }
+      </style>
+    </head>
+    
+    ```
+    
 3. **External CSS**: Defined in a separate .css file, linked to the HTML document using the `<link>` element in the `<head>` section.
-
-   - Example:
-
-   ```html
-   <head>
-     <link rel="stylesheet" href="styles.css" />
-   </head>
-   ```
-
-   - `styles.css`:
-
-   ```css
-   p {
-     color: blue;
-   }
-   ```
-
+    - Example:
+    
+    ```html
+    <head>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    ```
+    
+    - `styles.css`:
+    
+    ```css
+    p { color: blue; }
+    
+    ```
+    
 4. **Imported CSS**: Importing one external style sheet into another using the `@import` rule.
-
-   - Example:
-
-   ```css
-   @import url("styles1.css");
-   @import url("styles2.css");
-   ```
+    - Example:
+    
+    ```css
+    @import url('styles1.css');
+    @import url('styles2.css');
+    
+    ```
+    
 
 ## 2) What are the key differences between inline, internal, and external CSS?
 
 - **Inline CSS**:
-  - Applied directly to an HTML element using `style` attribute.
-  - High specificity, takes precedence over other CSS rules.
-  - Not reusable, applies only to the specific element.
+    - Applied directly to an HTML element using `style` attribute.
+    - High specificity, takes precedence over other CSS rules.
+    - Not reusable, applies only to the specific element.
 - **Internal CSS**:
-  - Defined within `<style>` block in the `<head>` section of an HTML document.
-  - Reusable within the same document, but not across multiple documents.
-  - Specificity depends on selector usage.
+    - Defined within `<style>` block in the `<head>` section of an HTML document.
+    - Reusable within the same document, but not across multiple documents.
+    - Specificity depends on selector usage.
 - **External CSS**:
-  - Defined in a separate .css file, linked to HTML using `<link>` in `<head>`.
-  - Highly reusable, can be used across multiple documents.
-  - Specificity depends on selector usage, but generally lower than inline or internal CSS due to being applied globally.
+    - Defined in a separate .css file, linked to HTML using `<link>` in `<head>`.
+    - Highly reusable, can be used across multiple documents.
+    - Specificity depends on selector usage, but generally lower than inline or internal CSS due to being applied globally.
 
 ## 3) Explain the CSS box model and its components.
 
@@ -86,9 +84,10 @@ The box model consists of the following components:
 
 ```css
 .box {
-  width: 200px; /* Width of the content area */
-  height: 100px; /* Height of the content area */
+    width: 200px; /* Width of the content area */
+    height: 100px; /* Height of the content area */
 }
+
 ```
 
 #### 2. **Padding**
@@ -100,8 +99,9 @@ The box model consists of the following components:
 
 ```css
 .box {
-  padding: 20px; /* Uniform padding on all sides */
+    padding: 20px; /* Uniform padding on all sides */
 }
+
 ```
 
 #### 3. **Border**
@@ -113,8 +113,9 @@ The box model consists of the following components:
 
 ```css
 .box {
-  border: 2px solid black; /* A solid black border */
+    border: 2px solid black; /* A solid black border */
 }
+
 ```
 
 #### 4. **Margin**
@@ -126,8 +127,9 @@ The box model consists of the following components:
 
 ```css
 .box {
-  margin: 30px; /* Uniform margin on all sides */
+    margin: 30px; /* Uniform margin on all sides */
 }
+
 ```
 
 #### Visual Representation of the Box Model
@@ -168,11 +170,12 @@ By default, the width and height properties only apply to the content area. Howe
 
 ```css
 .box {
-  box-sizing: border-box; /* Total width includes padding and border */
-  width: 200px;
-  padding: 20px;
-  border: 5px solid black;
+    box-sizing: border-box; /* Total width includes padding and border */
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
 }
+
 ```
 
 #### Conclusion
@@ -189,17 +192,17 @@ The CSS box model is essential for understanding how elements are displayed on a
 **Types of Selectors**:
 
 1. **Element Type**: Selects HTML elements by their tag name.
-   - Example: `p`, `h1`, `div`
+    - Example: `p`, `h1`, `div`
 2. **Class**: Selects elements with a specific class attribute.
-   - Example: `.button`, `.heading`
+    - Example: `.button`, `.heading`
 3. **ID**: Selects a single element with a unique ID.
-   - Example: `#unique-id`
+    - Example: `#unique-id`
 4. **Attribute**: Selects elements based on their attributes.
-   - Example: `[target]`, `[target="_blank"]`
+    - Example: `[target]`, `[target="_blank"]`
 5. **Pseudo-class**: Selects elements based on their state or position.
-   - Example: `:hover`, `:first-child`, `:nth-child()`
+    - Example: `:hover`, `:first-child`, `:nth-child()`
 6. **Combinator**: Combines selectors to create complex selection rules.
-   - Example: `div p`, `h1 + p`
+    - Example: `div p`, `h1 + p`
 
 **Examples**:
 
@@ -220,38 +223,39 @@ Here’s a simple example of how to use `border-radius` in CSS:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border Radius Example</title>
     <style>
-      .rounded-box {
-        width: 200px;
-        height: 100px;
-        background-color: lightblue;
-        border: 2px solid blue;
-        border-radius: 20px; /* Apply border radius */
-        text-align: center;
-        line-height: 100px; /* Center text vertically */
-      }
+        .rounded-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            border-radius: 20px; /* Apply border radius */
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="rounded-box">Rounded Box</div>
-  </body>
+</body>
 </html>
+
 ```
 
 #### Explanation:
 
 1. **HTML Structure**:
-   - A simple `<div>` element with the class `rounded-box`.
+    - A simple `<div>` element with the class `rounded-box`.
 2. **CSS Styles**:
-   - **Width and Height**: The box is set to a width of 200px and a height of 100px.
-   - **Background Color**: The background is light blue.
-   - **Border**: A blue border of 2px.
-   - **Border Radius**: The `border-radius: 20px;` property applies rounded corners with a radius of 20 pixels.
-   - **Text Centering**: The text inside the box is centered both horizontally and vertically.
+    - **Width and Height**: The box is set to a width of 200px and a height of 100px.
+    - **Background Color**: The background is light blue.
+    - **Border**: A blue border of 2px.
+    - **Border Radius**: The `border-radius: 20px;` property applies rounded corners with a radius of 20 pixels.
+    - **Text Centering**: The text inside the box is centered both horizontally and vertically.
 
 You can adjust the value of `border-radius` to achieve different levels of roundness!
 
@@ -262,58 +266,64 @@ CSS3 introduced several new features for handling background images and gradient
 #### Background Images
 
 1. **Multiple Backgrounds**: CSS3 allows you to set multiple background images for a single element. You can specify them using a comma-separated list.
-   - **Example**:
-     ```css
-     .element {
-       background-image: url("image1.jpg"), url("image2.png");
-       background-position: top left, bottom right;
-       background-repeat: no-repeat, repeat;
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .element {
+            background-image: url('image1.jpg'), url('image2.png');
+            background-position: top left, bottom right;
+            background-repeat: no-repeat, repeat;
+        }
+        
+        ```
+        
 2. **Background Size**: The `background-size` property lets you control the size of the background images. You can set it to specific dimensions or keywords like `cover` and `contain`.
-   - **Example**:
-     ```css
-     .element {
-       background-image: url("image.jpg");
-       background-size: cover; /* The image covers the entire element */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .element {
+            background-image: url('image.jpg');
+            background-size: cover; /* The image covers the entire element */
+        }
+        
+        ```
+        
 3. **Background Attachment**: The `background-attachment` property controls how a background image behaves when scrolling. You can set it to `scroll`, `fixed`, or `local`.
-   - **Example**:
-     ```css
-     .element {
-       background-image: url("image.jpg");
-       background-attachment: fixed; /* The image stays fixed when scrolling */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .element {
+            background-image: url('image.jpg');
+            background-attachment: fixed; /* The image stays fixed when scrolling */
+        }
+        
+        ```
+        
 
 #### Gradients
 
 CSS3 introduced linear and radial gradients as background images, which allow for smooth transitions between colors.
 
 1. **Linear Gradients**: Creates a gradient that transitions along a straight line.
-   - **Example**:
-     ```css
-     .element {
-       background: linear-gradient(
-         to right,
-         red,
-         blue
-       ); /* Gradient from red to blue */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .element {
+            background: linear-gradient(to right, red, blue); /* Gradient from red to blue */
+        }
+        
+        ```
+        
 2. **Radial Gradients**: Creates a gradient that radiates from a central point.
-   - **Example**:
-     ```css
-     .element {
-       background: radial-gradient(
-         circle,
-         red,
-         yellow,
-         green
-       ); /* Circular gradient */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .element {
+            background: radial-gradient(circle, red, yellow, green); /* Circular gradient */
+        }
+        
+        ```
+        
 
 #### New Properties for Background Manipulation
 
@@ -336,89 +346,102 @@ CSS3 transformations allow you to modify the appearance and position of elements
 #### Types of Transformations
 
 1. **Translate**: Moves an element from its current position.
-   - **Example**:
-     ```css
-     .translate-example {
-       transform: translate(
-         50px,
-         100px
-       ); /* Moves the element 50px right and 100px down */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .translate-example {
+            transform: translate(50px, 100px); /* Moves the element 50px right and 100px down */
+        }
+        
+        ```
+        
 2. **Scale**: Changes the size of an element.
-   - **Example**:
-     ```css
-     .scale-example {
-       transform: scale(1.5); /* Increases the size by 50% */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .scale-example {
+            transform: scale(1.5); /* Increases the size by 50% */
+        }
+        
+        ```
+        
 3. **Rotate**: Rotates an element around a specified point.
-   - **Example**:
-     ```css
-     .rotate-example {
-       transform: rotate(45deg); /* Rotates the element 45 degrees clockwise */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .rotate-example {
+            transform: rotate(45deg); /* Rotates the element 45 degrees clockwise */
+        }
+        
+        ```
+        
 4. **Skew**: Skews an element along the X and Y axes.
-   - **Example**:
-     ```css
-     .skew-example {
-       transform: skew(
-         20deg,
-         10deg
-       ); /* Skews the element 20 degrees horizontally and 10 degrees vertically */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .skew-example {
+            transform: skew(20deg, 10deg); /* Skews the element 20 degrees horizontally and 10 degrees vertically */
+        }
+        
+        ```
+        
 5. **Combined Transformations**: You can apply multiple transformations at once by separating them with spaces.
-   - **Example**:
-     ```css
-     .combined-example {
-       transform: translate(20px, 30px) scale(1.2) rotate(30deg);
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .combined-example {
+            transform: translate(20px, 30px) scale(1.2) rotate(30deg);
+        }
+        
+        ```
+        
 
 #### 3D Transformations
 
 CSS3 also supports 3D transformations, which include `perspective`, `rotateX`, `rotateY`, and `rotateZ`.
 
 1. **Perspective**: Gives a sense of depth by defining a perspective distance.
-   - **Example**:
-     ```css
-     .perspective-example {
-       perspective: 1000px; /* Defines the perspective distance */
-     }
-
-     .perspective-box {
-       transform: rotateY(45deg); /* Rotates the element in 3D space */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .perspective-example {
+            perspective: 1000px; /* Defines the perspective distance */
+        }
+        
+        .perspective-box {
+            transform: rotateY(45deg); /* Rotates the element in 3D space */
+        }
+        
+        ```
+        
 2. **Rotate in 3D**:
-   - **Example**:
-     ```css
-     .rotate3d-example {
-       transform: rotate3d(
-         1,
-         1,
-         0,
-         45deg
-       ); /* Rotates the element around the X and Y axes */
-     }
-     ```
+    - **Example**:
+        
+        ```css
+        .rotate3d-example {
+            transform: rotate3d(1, 1, 0, 45deg); /* Rotates the element around the X and Y axes */
+        }
+        
+        ```
+        
 
 #### Transitioning Transformations
 
 You can use transitions to animate transformations smoothly.
 
 - **Example**:
-  ```css
-  .transition-example {
-    transition: transform 0.5s; /* Animation duration */
-  }
-
-  .transition-example:hover {
-    transform: scale(1.2) rotate(15deg); /* Scale and rotate on hover */
-  }
-  ```
+    
+    ```css
+    .transition-example {
+        transition: transform 0.5s; /* Animation duration */
+    }
+    
+    .transition-example:hover {
+        transform: scale(1.2) rotate(15deg); /* Scale and rotate on hover */
+    }
+    
+    ```
+    
 
 #### Complete Example
 
@@ -427,28 +450,29 @@ Here’s a complete example combining several transformations:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS3 Transformations Example</title>
     <style>
-      .box {
-        width: 100px;
-        height: 100px;
-        background-color: lightcoral;
-        margin: 50px;
-        transition: transform 0.5s; /* Animation for transformations */
-      }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 50px;
+            transition: transform 0.5s; /* Animation for transformations */
+        }
 
-      .box:hover {
-        transform: translate(50px, 50px) rotate(45deg) scale(1.5); /* Transformation on hover */
-      }
+        .box:hover {
+            transform: translate(50px, 50px) rotate(45deg) scale(1.5); /* Transformation on hover */
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="box"></div>
-  </body>
+</body>
 </html>
+
 ```
 
 #### Summary
@@ -460,9 +484,9 @@ CSS3 transformations provide a powerful way to manipulate elements visually on a
 **CSS3 Transitions**: Gradually change element styles over a specified duration.
 
 - **Improve user interaction**:
-  - Smoothly animate changes to element styles.
-  - Create responsive and engaging user interfaces.
-  - Enhance user experience by providing visual feedback.
+    - Smoothly animate changes to element styles.
+    - Create responsive and engaging user interfaces.
+    - Enhance user experience by providing visual feedback.
 
 **Example**:
 
@@ -481,45 +505,51 @@ button:hover {
 **CSS3 Animations vs. Transitions**:
 
 - **Transitions**: Gradually change styles on state change (e.g., hover, focus).
-  - Example:
-  ```css
-  button {
-    transition: background-color 0.5s ease;
-  }
-  button:hover {
-    background-color: #f00;
-  }
-  ```
+    - Example:
+    
+    ```css
+    button {
+      transition: background-color 0.5s ease;
+    }
+    button:hover {
+      background-color: #f00;
+    }
+    
+    ```
+    
 - **Animations**: Create complex, multi-step animations with keyframes.
-  - Example:
-  ```css
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
+    - Example:
+    
+    ```css
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(200px); }
     }
-    100% {
-      transform: translateX(200px);
+    div {
+      animation: slide 5s infinite;
     }
-  }
-  div {
-    animation: slide 5s infinite;
-  }
-  ```
-  ## 10) Discuss how CSS3 supports multiple columns in a layout. What properties are used?
-  **CSS3 Multi-column Layout**:
-  - **Properties**:
-    - `column-width`: Set column width.
-    - `column-count`: Set number of columns.
-    - `column-gap`: Set gap between columns.
-    - `column-rule`: Set rule width, style, and color for columns.
-  - **Example**:
-  ```css
-  .container {
-    column-width: 200px;
-    column-gap: 20px;
-    column-rule: 1px solid #000;
-  }
-  ```
+    
+    ```
+    
+    ## 10) Discuss how CSS3 supports multiple columns in a layout. What properties are used?
+    
+    **CSS3 Multi-column Layout**:
+    
+    - **Properties**:
+        - `column-width`: Set column width.
+        - `column-count`: Set number of columns.
+        - `column-gap`: Set gap between columns.
+        - `column-rule`: Set rule width, style, and color for columns.
+    - **Example**:
+    
+    ```css
+    .container {
+      column-width: 200px;
+      column-gap: 20px;
+      column-rule: 1px solid #000;
+    }
+    ```
+    
 
 ## 11) What are some of the CSS3 user interface features that enhance web design?
 
@@ -552,6 +582,7 @@ Here's a simple example of how Bootstrap integrates with CSS to create a button:
 ```html
 <!-- HTML -->
 <button type="button" class="btn btn-primary">Button</button>
+
 ```
 
 ```css
@@ -563,16 +594,15 @@ Here's a simple example of how Bootstrap integrates with CSS to create a button:
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary {
@@ -580,6 +610,7 @@ Here's a simple example of how Bootstrap integrates with CSS to create a button:
   background-color: #007bff;
   border-color: #007bff;
 }
+
 ```
 
 In this example, the `.btn` class applies basic button styles, while the `.btn-primary` class applies the specific styles for a primary button, including color, background color, and border color.
@@ -591,36 +622,37 @@ JavaScript is a programming language used to make web pages interactive and dyna
 #### How JavaScript Enhances Web Page Functionality:
 
 1. **Interactivity:**
-   - **User Input:** JavaScript can respond to user actions like clicks, mouse movements, and key presses.
-   - **Dynamic Content:** It can change the content of a web page without reloading the entire page.
+    - **User Input:** JavaScript can respond to user actions like clicks, mouse movements, and key presses.
+    - **Dynamic Content:** It can change the content of a web page without reloading the entire page.
 2. **Animation and Effects:**
-   - JavaScript can create animations, transitions, and other visual effects to make web pages more engaging.
+    - JavaScript can create animations, transitions, and other visual effects to make web pages more engaging.
 3. **Form Validation:**
-   - It can check user input in forms before sending it to the server, ensuring data is correct and complete.
+    - It can check user input in forms before sending it to the server, ensuring data is correct and complete.
 4. **Asynchronous Operations:**
-   - JavaScript allows for asynchronous operations, such as fetching data from a server without interrupting the user experience.
+    - JavaScript allows for asynchronous operations, such as fetching data from a server without interrupting the user experience.
 5. **Integration with APIs:**
-   - It can interact with web APIs to fetch and display data from external sources, like social media feeds or weather updates.
+    - It can interact with web APIs to fetch and display data from external sources, like social media feeds or weather updates.
 
 #### Example of JavaScript in Action:
 
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JavaScript Example</title>
-  </head>
-  <body>
-    <button onclick="changeText()">Click Me!</button>
-    <p id="text">Hello, World!</p>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <button onclick="changeText()">Click Me!</button>
+  <p id="text">Hello, World!</p>
 
-    <script>
-      function changeText() {
-        document.getElementById("text").innerText = "Text Changed!";
-      }
-    </script>
-  </body>
+  <script>
+    function changeText() {
+      document.getElementById('text').innerText = 'Text Changed!';
+    }
+  </script>
+</body>
 </html>
+
 ```
 
 In this example, clicking the button changes the text of a paragraph, demonstrating how JavaScript can make a web page interactive.
@@ -632,33 +664,34 @@ A JavaScript variable is a container that stores data values. You can think of i
 #### Ways to Declare Variables in JavaScript:
 
 1. **Using `var`:**
-
-   - `var` is the oldest way to declare variables.
-   - It has function scope, meaning it is accessible within the function it is declared in.
-
-   ```jsx
-   var x = 10;
-   console.log(x); // Outputs: 10
-   ```
-
+    - `var` is the oldest way to declare variables.
+    - It has function scope, meaning it is accessible within the function it is declared in.
+    
+    ```jsx
+    var x = 10;
+    console.log(x); // Outputs: 10
+    
+    ```
+    
 2. **Using `let`:**
-
-   - `let` is introduced in ES6 and has block scope, meaning it is accessible only within the block (e.g., loop, if statement) it is declared in.
-
-   ```jsx
-   let y = 20;
-   console.log(y); // Outputs: 20
-   ```
-
+    - `let` is introduced in ES6 and has block scope, meaning it is accessible only within the block (e.g., loop, if statement) it is declared in.
+    
+    ```jsx
+    let y = 20;
+    console.log(y); // Outputs: 20
+    
+    ```
+    
 3. **Using `const`:**
-
-   - `const` is also introduced in ES6 and is used to declare constants, which cannot be reassigned.
-   - It also has block scope.
-
-   ```jsx
-   const z = 30;
-   console.log(z); // Outputs: 30
-   ```
+    - `const` is also introduced in ES6 and is used to declare constants, which cannot be reassigned.
+    - It also has block scope.
+    
+    ```jsx
+    const z = 30;
+    console.log(z); // Outputs: 30
+    
+    ```
+    
 
 #### Example Comparing Scope:
 
@@ -675,6 +708,7 @@ function example() {
 }
 
 example();
+
 ```
 
 In this example, `var a` is accessible outside the if block, but `let b` and `const c` are not, demonstrating the difference in scope between `var`, `let`, and `const`.
@@ -684,66 +718,67 @@ In this example, `var a` is accessible outside the if block, but `let b` and `co
 Conditional statements in JavaScript allow you to execute different blocks of code based on certain conditions. Here are the main types:
 
 1. **if statement:**
-
-   - Executes a block of code if a specified condition is true.
-
-   ```jsx
-   let score = 85;
-   if (score >= 90) {
-     console.log("Grade: A");
-   }
-   ```
-
+    - Executes a block of code if a specified condition is true.
+    
+    ```jsx
+    let score = 85;
+    if (score >= 90) {
+      console.log("Grade: A");
+    }
+    
+    ```
+    
 2. **if...else statement:**
-
-   - Executes one block of code if the condition is true, and another block if the condition is false.
-
-   ```jsx
-   let score = 85;
-   if (score >= 90) {
-     console.log("Grade: A");
-   } else {
-     console.log("Grade: B");
-   }
-   ```
-
+    - Executes one block of code if the condition is true, and another block if the condition is false.
+    
+    ```jsx
+    let score = 85;
+    if (score >= 90) {
+      console.log("Grade: A");
+    } else {
+      console.log("Grade: B");
+    }
+    
+    ```
+    
 3. **else if statement:**
-
-   - Allows you to check multiple conditions.
-
-   ```jsx
-   let score = 75;
-   if (score >= 90) {
-     console.log("Grade: A");
-   } else if (score >= 80) {
-     console.log("Grade: B");
-   } else if (score >= 70) {
-     console.log("Grade: C");
-   } else {
-     console.log("Grade: D");
-   }
-   ```
-
+    - Allows you to check multiple conditions.
+    
+    ```jsx
+    let score = 75;
+    if (score >= 90) {
+      console.log("Grade: A");
+    } else if (score >= 80) {
+      console.log("Grade: B");
+    } else if (score >= 70) {
+      console.log("Grade: C");
+    } else {
+      console.log("Grade: D");
+    }
+    
+    ```
+    
 4. **switch statement:**
-
-   - Executes one block of code among many, based on the value of a variable.
-
-   ```jsx
-   let day = 3;
-   switch (day) {
-     case 1:
-       console.log("Monday");
-       break;
-     case 2:
-       console.log("Tuesday");
-       break;
-     case 3:
-       console.log("Wednesday");
-       break;
-     default:
-       console.log("Other day");
-   }
-   ```
+    - Executes one block of code among many, based on the value of a variable.
+    
+    ```jsx
+    let day = 3;
+    switch (day) {
+      case 1:
+        console.log("Monday");
+        break;
+      case 2:
+        console.log("Tuesday");
+        break;
+      case 3:
+        console.log("Wednesday");
+        break;
+      default:
+        console.log("Other day");
+    }
+    
+    ```
+    
 
 In each example, the code inside the conditional block is executed only if the condition is met. The `switch` statement uses the `case` keyword to check for specific values and the `break` keyword to exit the switch block once a match is found.
 
@@ -752,38 +787,39 @@ In each example, the code inside the conditional block is executed only if the c
 Looping constructs in JavaScript allow you to execute a block of code repeatedly based on a given condition. Here are the main types:
 
 1. **for loop:**
-
-   - Executes a block of code a specific number of times.
-
-   ```jsx
-   for (let i = 0; i < 5; i++) {
-     console.log(i); // Outputs: 0, 1, 2, 3, 4
-   }
-   ```
-
+    - Executes a block of code a specific number of times.
+    
+    ```jsx
+    for (let i = 0; i < 5; i++) {
+      console.log(i); // Outputs: 0, 1, 2, 3, 4
+    }
+    
+    ```
+    
 2. **while loop:**
-
-   - Executes a block of code as long as a specified condition is true.
-
-   ```jsx
-   let i = 0;
-   while (i < 5) {
-     console.log(i); // Outputs: 0, 1, 2, 3, 4
-     i++;
-   }
-   ```
-
+    - Executes a block of code as long as a specified condition is true.
+    
+    ```jsx
+    let i = 0;
+    while (i < 5) {
+      console.log(i); // Outputs: 0, 1, 2, 3, 4
+      i++;
+    }
+    
+    ```
+    
 3. **do...while loop:**
-
-   - Similar to the while loop, but ensures the block of code is executed at least once before checking the condition.
-
-   ```jsx
-   let i = 0;
-   do {
-     console.log(i); // Outputs: 0, 1, 2, 3, 4
-     i++;
-   } while (i < 5);
-   ```
+    - Similar to the while loop, but ensures the block of code is executed at least once before checking the condition.
+    
+    ```jsx
+    let i = 0;
+    do {
+      console.log(i); // Outputs: 0, 1, 2, 3, 4
+      i++;
+    } while (i < 5);
+    
+    ```
+    
 
 #### Key Differences:
 
@@ -800,34 +836,39 @@ JavaScript functions are reusable blocks of code that perform a specific task. T
 #### Defining a Function:
 
 1. **Named Function:**
-
-   ```jsx
-   function greet(name) {
-     return "Hello, " + name + "!";
-   }
-   ```
-
+    
+    ```jsx
+    function greet(name) {
+      return 'Hello, ' + name + '!';
+    }
+    
+    ```
+    
 2. **Anonymous Function (using a variable):**
-
-   ```jsx
-   const greet = function (name) {
-     return "Hello, " + name + "!";
-   };
-   ```
-
+    
+    ```jsx
+    const greet = function(name) {
+      return 'Hello, ' + name + '!';
+    };
+    
+    ```
+    
 3. **Arrow Function (introduced in ES6):**
-
-   ```jsx
-   const greet = (name) => {
-     return "Hello, " + name + "!";
-   };
-   ```
+    
+    ```jsx
+    const greet = (name) => {
+      return 'Hello, ' + name + '!';
+    };
+    
+    ```
+    
 
 #### Calling a Function:
 
 ```jsx
-let message = greet("Alice"); // Calls the function and stores the result in 'message'
+let message = greet('Alice'); // Calls the function and stores the result in 'message'
 console.log(message); // Outputs: Hello, Alice!
+
 ```
 
 Functions can take inputs (called parameters) and return an output value. In the examples above, `name` is a parameter, and `'Hello, ' + name + '!'` is the return value.
@@ -842,6 +883,7 @@ You can add event handlers directly in the HTML.
 
 ```html
 <button onclick="alert('Button clicked!')">Click Me</button>
+
 ```
 
 #### 2. Assigning Event Handlers Using JavaScript:
@@ -852,10 +894,11 @@ You can assign event handlers using JavaScript to keep your HTML clean.
 <button id="myButton">Click Me</button>
 
 <script>
-  document.getElementById("myButton").onclick = function () {
-    alert("Button clicked!");
+  document.getElementById('myButton').onclick = function() {
+    alert('Button clicked!');
   };
 </script>
+
 ```
 
 #### 3. Using `addEventListener`:
@@ -866,10 +909,11 @@ The `addEventListener` method allows you to add multiple event handlers to a sin
 <button id="myButton">Click Me</button>
 
 <script>
-  document.getElementById("myButton").addEventListener("click", function () {
-    alert("Button clicked!");
+  document.getElementById('myButton').addEventListener('click', function() {
+    alert('Button clicked!');
   });
 </script>
+
 ```
 
 #### 4. Handling Multiple Events:
@@ -877,19 +921,20 @@ The `addEventListener` method allows you to add multiple event handlers to a sin
 You can handle multiple events on the same element.
 
 ```html
-<input type="text" id="myInput" placeholder="Type something..." />
+<input type="text" id="myInput" placeholder="Type something...">
 
 <script>
-  const input = document.getElementById("myInput");
+  const input = document.getElementById('myInput');
 
-  input.addEventListener("focus", function () {
-    console.log("Input focused");
+  input.addEventListener('focus', function() {
+    console.log('Input focused');
   });
 
-  input.addEventListener("blur", function () {
-    console.log("Input blurred");
+  input.addEventListener('blur', function() {
+    console.log('Input blurred');
   });
 </script>
+
 ```
 
 #### 5. Removing Event Listeners:
@@ -900,15 +945,16 @@ You can also remove event listeners when they are no longer needed.
 <button id="myButton">Click Me</button>
 
 <script>
-  const button = document.getElementById("myButton");
+  const button = document.getElementById('myButton');
 
   function handleClick() {
-    alert("Button clicked!");
-    button.removeEventListener("click", handleClick);
+    alert('Button clicked!');
+    button.removeEventListener('click', handleClick);
   }
 
-  button.addEventListener("click", handleClick);
+  button.addEventListener('click', handleClick);
 </script>
+
 ```
 
 These examples cover different ways to handle events in JavaScript, from inline event handlers to using `addEventListener` for more flexibility and control.
@@ -920,35 +966,38 @@ Cookies in JavaScript are small text files stored on a user's browser by a websi
 #### How to Use Cookies:
 
 1. **Setting a Cookie:**
-
-   ```jsx
-   document.cookie =
-     "username=JohnDoe; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
-   ```
-
+    
+    ```jsx
+    document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+    
+    ```
+    
 2. **Reading a Cookie:**
-
-   ```jsx
-   function getCookie(name) {
-     let cookieArray = document.cookie.split(";");
-     for (let i = 0; i < cookieArray.length; i++) {
-       let cookie = cookieArray[i].trim();
-       if (cookie.startsWith(name + "=")) {
-         return cookie.substring(name.length + 1);
-       }
-     }
-     return null;
-   }
-
-   let username = getCookie("username");
-   console.log(username); // Outputs: JohnDoe
-   ```
-
+    
+    ```jsx
+    function getCookie(name) {
+      let cookieArray = document.cookie.split(';');
+      for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i].trim();
+        if (cookie.startsWith(name + '=')) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return null;
+    }
+    
+    let username = getCookie('username');
+    console.log(username); // Outputs: JohnDoe
+    
+    ```
+    
 3. **Deleting a Cookie:**
-
-   ```jsx
-   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-   ```
+    
+    ```jsx
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    
+    ```
+    
 
 #### Key Points:
 
@@ -970,40 +1019,50 @@ let person = {
   lastName: "Doe",
   age: 30,
   isStudent: false,
-  greet: function () {
+  greet: function() {
     return "Hello, " + this.firstName + " " + this.lastName;
-  },
+  }
 };
+
 ```
 
 #### Accessing Object Properties:
 
 - **Dot Notation:**
-  ```jsx
-  console.log(person.firstName); // Outputs: John
-  ```
+    
+    ```jsx
+    console.log(person.firstName); // Outputs: John
+    
+    ```
+    
 - **Bracket Notation:**
-  ```jsx
-  console.log(person["lastName"]); // Outputs: Doe
-  ```
+    
+    ```jsx
+    console.log(person['lastName']); // Outputs: Doe
+    
+    ```
+    
 
 #### Adding or Modifying Properties:
 
 ```jsx
 person.age = 31; // Modifies age
 person.city = "New York"; // Adds a new property
+
 ```
 
 #### Deleting Properties:
 
 ```jsx
 delete person.isStudent; // Deletes the isStudent property
+
 ```
 
 #### Using Methods:
 
 ```jsx
 console.log(person.greet()); // Outputs: Hello, John Doe
+
 ```
 
 #### Example of Nested Objects:
@@ -1013,11 +1072,12 @@ let user = {
   name: "Jane",
   address: {
     street: "123 Main St",
-    city: "Anytown",
-  },
+    city: "Anytown"
+  }
 };
 
 console.log(user.address.city); // Outputs: Anytown
+
 ```
 
 Objects in JavaScript are versatile and can contain various data types, including other objects. They are essential for structuring complex data and making your code more organized and readable.
@@ -1029,63 +1089,64 @@ Error handling in JavaScript is crucial for managing and responding to runtime e
 #### Methods for Handling Errors:
 
 1. **try...catch Statement:**
-
-   - The `try` block contains code that may throw an exception.
-   - The `catch` block handles the exception.
-
-   ```jsx
-   try {
-     let result = 10 / 0; // This will throw an error
-   } catch (error) {
-     console.log("An error occurred: " + error.message);
-   }
-   ```
-
+    - The `try` block contains code that may throw an exception.
+    - The `catch` block handles the exception.
+    
+    ```jsx
+    try {
+      let result = 10 / 0; // This will throw an error
+    } catch (error) {
+      console.log("An error occurred: " + error.message);
+    }
+    
+    ```
+    
 2. **throw Statement:**
-
-   - You can throw your own exceptions using the `throw` statement.
-
-   ```jsx
-   function checkAge(age) {
-     if (age < 18) {
-       throw new Error("You must be at least 18 years old");
-     }
-   }
-
-   try {
-     checkAge(15);
-   } catch (error) {
-     console.log(error.message); // Outputs: You must be at least 18 years old
-   }
-   ```
-
+    - You can throw your own exceptions using the `throw` statement.
+    
+    ```jsx
+    function checkAge(age) {
+      if (age < 18) {
+        throw new Error("You must be at least 18 years old");
+      }
+    }
+    
+    try {
+      checkAge(15);
+    } catch (error) {
+      console.log(error.message); // Outputs: You must be at least 18 years old
+    }
+    
+    ```
+    
 3. **finally Block:**
-
-   - The `finally` block contains code that will execute regardless of whether an error occurred or not.
-
-   ```jsx
-   try {
-     let result = 10 / 0;
-   } catch (error) {
-     console.log("An error occurred: " + error.message);
-   } finally {
-     console.log("This will always run");
-   }
-   ```
-
+    - The `finally` block contains code that will execute regardless of whether an error occurred or not.
+    
+    ```jsx
+    try {
+      let result = 10 / 0;
+    } catch (error) {
+      console.log("An error occurred: " + error.message);
+    } finally {
+      console.log("This will always run");
+    }
+    
+    ```
+    
 4. **Error Object:**
-
-   - JavaScript has a built-in `Error` object that provides information about the error.
-
-   ```jsx
-   try {
-     throw new Error("Something went wrong");
-   } catch (error) {
-     console.log(error.name); // Outputs: Error
-     console.log(error.message); // Outputs: Something went wrong
-     console.log(error.stack); // Outputs: stack trace
-   }
-   ```
+    - JavaScript has a built-in `Error` object that provides information about the error.
+    
+    ```jsx
+    try {
+      throw new Error("Something went wrong");
+    } catch (error) {
+      console.log(error.name); // Outputs: Error
+      console.log(error.message); // Outputs: Something went wrong
+      console.log(error.stack); // Outputs: stack trace
+    }
+    
+    ```
+    
 
 #### Best Practices:
 
@@ -1117,6 +1178,7 @@ let error = validateName(name);
 if (error) {
   alert(error);
 }
+
 ```
 
 #### 2. Validating Email Address:
@@ -1137,6 +1199,7 @@ let error = validateEmail(email);
 if (error) {
   alert(error);
 }
+
 ```
 
 #### 3. Validating Numeric Input:
@@ -1156,6 +1219,7 @@ let error = validateAge(age);
 if (error) {
   alert(error);
 }
+
 ```
 
 #### 4. Validating Password Strength:
@@ -1181,6 +1245,7 @@ let error = validatePassword(password);
 if (error) {
   alert(error);
 }
+
 ```
 
 #### 5. Validating Date Format:
@@ -1217,37 +1282,34 @@ You can use JavaScript to trigger CSS animations. This approach leverages the po
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      @keyframes move {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(100px);
-        }
-      }
-      .box {
-        width: 50px;
-        height: 50px;
-        background-color: red;
-      }
-      .animate {
-        animation: move 2s infinite;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="box" id="box"></div>
-    <button onclick="startAnimation()">Start Animation</button>
+<head>
+  <style>
+    @keyframes move {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+    .animate {
+      animation: move 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="box"></div>
+  <button onclick="startAnimation()">Start Animation</button>
 
-    <script>
-      function startAnimation() {
-        document.getElementById("box").classList.add("animate");
-      }
-    </script>
-  </body>
+  <script>
+    function startAnimation() {
+      document.getElementById('box').classList.add('animate');
+    }
+  </script>
+</body>
 </html>
+
 ```
 
 #### 2. **Using `requestAnimationFrame`:**
@@ -1256,39 +1318,48 @@ This method provides a way to perform smooth animations by calling a function be
 
 ```jsx
 let start = null;
-const element = document.getElementById("box");
+const element = document.getElementById('box');
 
 function animate(timestamp) {
   if (!start) start = timestamp;
   const progress = timestamp - start;
   element.style.transform = `translateX(${Math.min(progress / 10, 200)}px)`;
-  if (progress < 2000) {
-    // Stop after 2 seconds
+  if (progress < 2000) { // Stop after 2 seconds
     requestAnimationFrame(animate);
   }
 }
 
 requestAnimationFrame(animate);
+
 ```
 
 #### 3. **Libraries for Animations:**
 
 - **jQuery:** A popular library that simplifies DOM manipulation and animations.
-  ```jsx
-  $("#box").animate({ left: "100px" }, 2000);
-  ```
+    
+    ```jsx
+    $('#box').animate({ left: '100px' }, 2000);
+    
+    ```
+    
 - **GSAP (GreenSock Animation Platform):** A powerful library for high-performance animations.
-  ```jsx
-  gsap.to("#box", { x: 100, duration: 2 });
-  ```
+    
+    ```jsx
+    gsap.to('#box', { x: 100, duration: 2 });
+    
+    ```
+    
 - **Anime.js:** A lightweight and flexible library for CSS animations.
-  ```jsx
-  anime({
-    targets: "#box",
-    translateX: 100,
-    duration: 2000,
-  });
-  ```
+    
+    ```jsx
+    anime({
+      targets: '#box',
+      translateX: 100,
+      duration: 2000
+    });
+    
+    ```
+    
 
 #### 4. **Canvas API:**
 
@@ -1298,18 +1369,19 @@ For more complex animations, you can use the HTML5 Canvas API.
 <canvas id="canvas" width="400" height="400"></canvas>
 
 <script>
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = 'red';
     ctx.fillRect(10, 10, 50, 50);
     requestAnimationFrame(draw);
   }
 
   draw();
 </script>
+
 ```
 
 These methods and libraries make it easy to create a variety of animations, from simple movements to complex interactive effects. Using JavaScript for animations can greatly enhance the user experience on your web pages.
@@ -1328,7 +1400,7 @@ You can use JavaScript to play, pause, and stop audio files.
 <button onclick="pauseAudio()">Pause</button>
 
 <script>
-  const audio = document.getElementById("myAudio");
+  const audio = document.getElementById('myAudio');
 
   function playAudio() {
     audio.play();
@@ -1338,6 +1410,7 @@ You can use JavaScript to play, pause, and stop audio files.
     audio.pause();
   }
 </script>
+
 ```
 
 #### Controlling Video Playback:
@@ -1346,13 +1419,13 @@ JavaScript can also control video elements, such as playing, pausing, and adjust
 
 ```html
 <video id="myVideo" width="320" height="240" controls>
-  <source src="video.mp4" type="video/mp4" />
+  <source src="video.mp4" type="video/mp4">
 </video>
 <button onclick="playVideo()">Play</button>
 <button onclick="pauseVideo()">Pause</button>
 
 <script>
-  const video = document.getElementById("myVideo");
+  const video = document.getElementById('myVideo');
 
   function playVideo() {
     video.play();
@@ -1362,6 +1435,7 @@ JavaScript can also control video elements, such as playing, pausing, and adjust
     video.pause();
   }
 </script>
+
 ```
 
 #### Adjusting Volume:
@@ -1370,16 +1444,17 @@ You can use JavaScript to adjust the volume of audio and video elements.
 
 ```html
 <audio id="myAudio" src="audio.mp3" controls></audio>
-<input type="range" id="volumeControl" min="0" max="1" step="0.1" />
+<input type="range" id="volumeControl" min="0" max="1" step="0.1">
 
 <script>
-  const audio = document.getElementById("myAudio");
-  const volumeControl = document.getElementById("volumeControl");
+  const audio = document.getElementById('myAudio');
+  const volumeControl = document.getElementById('volumeControl');
 
-  volumeControl.addEventListener("input", function () {
+  volumeControl.addEventListener('input', function() {
     audio.volume = volumeControl.value;
   });
 </script>
+
 ```
 
 #### Handling Events:
@@ -1388,24 +1463,25 @@ JavaScript can handle events like `play`, `pause`, and `ended` to perform action
 
 ```html
 <video id="myVideo" width="320" height="240" controls>
-  <source src="video.mp4" type="video/mp4" />
+  <source src="video.mp4" type="video/mp4">
 </video>
 
 <script>
-  const video = document.getElementById("myVideo");
+  const video = document.getElementById('myVideo');
 
-  video.addEventListener("play", function () {
-    console.log("Video started playing");
+  video.addEventListener('play', function() {
+    console.log('Video started playing');
   });
 
-  video.addEventListener("pause", function () {
-    console.log("Video paused");
+  video.addEventListener('pause', function() {
+    console.log('Video paused');
   });
 
-  video.addEventListener("ended", function () {
-    console.log("Video ended");
+  video.addEventListener('ended', function() {
+    console.log('Video ended');
   });
 </script>
+
 ```
 
 These examples show how JavaScript can interact with audio and video elements to control playback, adjust volume, and handle events. This makes multimedia content on web pages more dynamic and interactive.
@@ -1425,19 +1501,22 @@ Sure, let's break down the differences between inline, embedded, and external st
 
 - **Definition:** Embedded styles are defined within the `<style>` tag inside the HTML `<head>` section.
 - **Usage:**
-  ```html
-  <head>
-    <style>
-      p {
-        color: blue;
-        font-size: 16px;
-      }
-    </style>
-  </head>
-  <body>
-    <p>This is a paragraph.</p>
-  </body>
-  ```
+    
+    ```html
+    <head>
+      <style>
+        p {
+          color: blue;
+          font-size: 16px;
+        }
+      </style>
+    </head>
+    <body>
+      <p>This is a paragraph.</p>
+    </body>
+    
+    ```
+    
 - **Pros:** Easier to manage than inline styles; styles can be applied to multiple elements.
 - **Cons:** Still within the HTML file, which can make it messy for large projects.
 
@@ -1445,22 +1524,27 @@ Sure, let's break down the differences between inline, embedded, and external st
 
 - **Definition:** External styles are defined in a separate CSS file and linked to the HTML document using the `<link>` tag.
 - **Usage:**
-  ```html
-  <!-- HTML File -->
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <p>This is a paragraph.</p>
-  </body>
-  ```
-  ```css
-  /* styles.css */
-  p {
-    color: blue;
-    font-size: 16px;
-  }
-  ```
+    
+    ```html
+    <!-- HTML File -->
+    <head>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <p>This is a paragraph.</p>
+    </body>
+    
+    ```
+    
+    ```css
+    /* styles.css */
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+    
+    ```
+    
 - **Pros:** Best for large projects; keeps HTML clean; reusable across multiple pages.
 - **Cons:** Requires an additional file; may have slight loading delays.
 
@@ -1473,7 +1557,6 @@ Sure, let's break down the differences between inline, embedded, and external st
 Each type has its use cases, but external style sheets are generally preferred for larger projects due to their maintainability and reusability.
 
 ## 26) Write CSS code to set proper design of registration page that contain
-
 a. following data fields (Student enrol no, student name, Student mobile no,
 b. student email id, branch, semester).
 
@@ -1482,87 +1565,88 @@ Certainly! Below is an example of CSS code to style a registration page containi
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-      .registration-form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-      }
+    .registration-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
 
-      .registration-form h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+    .registration-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-      .registration-form label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
+    .registration-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-      .registration-form input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
+    .registration-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-      .registration-form button {
-        width: 100%;
-        padding: 10px;
-        background-color: #4caf50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+    .registration-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-      .registration-form button:hover {
-        background-color: #45a049;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="registration-form">
-      <h2>Student Registration</h2>
-      <form>
-        <label for="enrolNo">Student Enrol No.</label>
-        <input type="text" id="enrolNo" name="enrolNo" required />
+    .registration-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-form">
+    <h2>Student Registration</h2>
+    <form>
+      <label for="enrolNo">Student Enrol No.</label>
+      <input type="text" id="enrolNo" name="enrolNo" required>
 
-        <label for="name">Student Name</label>
-        <input type="text" id="name" name="name" required />
+      <label for="name">Student Name</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="mobileNo">Student Mobile No.</label>
-        <input type="text" id="mobileNo" name="mobileNo" required />
+      <label for="mobileNo">Student Mobile No.</label>
+      <input type="text" id="mobileNo" name="mobileNo" required>
 
-        <label for="email">Student Email ID</label>
-        <input type="email" id="email" name="email" required />
+      <label for="email">Student Email ID</label>
+      <input type="email" id="email" name="email" required>
 
-        <label for="branch">Branch</label>
-        <input type="text" id="branch" name="branch" required />
+      <label for="branch">Branch</label>
+      <input type="text" id="branch" name="branch" required>
 
-        <label for="semester">Semester</label>
-        <input type="text" id="semester" name="semester" required />
+      <label for="semester">Semester</label>
+      <input type="text" id="semester" name="semester" required>
 
-        <button type="submit">Register</button>
-      </form>
-    </div>
-  </body>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
 </html>
+
 ```
 
 This CSS code styles a registration form for students, including fields for enrollment number, name, mobile number, email ID, branch, and semester. The form is centered on the page with a clean, modern design.
@@ -1576,45 +1660,57 @@ Sure, let's break down margin and padding in a simple and memorable way:
 - **Definition:** Margin is the space outside of an element, between the element and its neighboring elements.
 - **Usage:** Controls the space around an element, pushing other elements away.
 - **CSS Property:** `margin`
-  - `margin-top`, `margin-right`, `margin-bottom`, `margin-left` for specific sides.
-  - Shorthand: `margin: top right bottom left;`
+    - `margin-top`, `margin-right`, `margin-bottom`, `margin-left` for specific sides.
+    - Shorthand: `margin: top right bottom left;`
 - **Example:**
-  ```css
-  .box {
-    margin: 20px; /* All sides */
-    margin-top: 10px; /* Top side only */
-  }
-  ```
+    
+    ```css
+    .box {
+      margin: 20px; /* All sides */
+      margin-top: 10px; /* Top side only */
+    }
+    
+    ```
+    
 
 #### Padding:
 
 - **Definition:** Padding is the space inside an element, between the content and the border.
 - **Usage:** Controls the space within an element, pushing the content away from the border.
 - **CSS Property:** `padding`
-  - `padding-top`, `padding-right`, `padding-bottom`, `padding-left` for specific sides.
-  - Shorthand: `padding: top right bottom left;`
+    - `padding-top`, `padding-right`, `padding-bottom`, `padding-left` for specific sides.
+    - Shorthand: `padding: top right bottom left;`
 - **Example:**
-  ```css
-  .box {
-    padding: 20px; /* All sides */
-    padding-left: 10px; /* Left side only */
-  }
-  ```
+    
+    ```css
+    .box {
+      padding: 20px; /* All sides */
+      padding-left: 10px; /* Left side only */
+    }
+    
+    ```
+    
 
 #### How to Use in Web Page Designing:
 
 - **Margin:** Use margin to create space between elements, ensuring they don't overlap or look cramped.
-  ```css
-  .header {
-    margin-bottom: 20px; /* Space below the header */
-  }
-  ```
+    
+    ```css
+    .header {
+      margin-bottom: 20px; /* Space below the header */
+    }
+    
+    ```
+    
 - **Padding:** Use padding to add space inside elements, making the content look more comfortable and readable.
-  ```css
-  .button {
-    padding: 10px 20px; /* Space inside the button */
-  }
-  ```
+    
+    ```css
+    .button {
+      padding: 10px 20px; /* Space inside the button */
+    }
+    
+    ```
+    
 
 #### Summary:
 
@@ -1632,43 +1728,45 @@ Sure! Below is a simple example of how to change the background color of a `<div
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Background Color on Hover</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <div class="hover-box">Hover over me!</div>
-  </body>
+</body>
 </html>
+
 ```
 
 #### CSS (styles.css):
 
 ```css
 .hover-box {
-  width: 200px;
-  height: 100px;
-  border: 1px solid #000;
-  text-align: center;
-  line-height: 100px;
-  transition: background-color 0.3s; /* Smooth transition */
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 .hover-box:hover {
-  background-color: yellow;
+    background-color: yellow;
 }
+
 ```
 
 #### Explanation:
 
 1. **HTML:**
-   - The HTML file contains a `<div>` element with the class `hover-box`.
+    - The HTML file contains a `<div>` element with the class `hover-box`.
 2. **CSS:**
-   - The `.hover-box` class styles the `<div>` with a specific width, height, border, and text alignment.
-   - The `transition` property is used to make the background color change smoothly.
-   - The `.hover-box:hover` selector changes the background color of the `<div>` to yellow when the mouse hovers over it.
+    - The `.hover-box` class styles the `<div>` with a specific width, height, border, and text alignment.
+    - The `transition` property is used to make the background color change smoothly.
+    - The `.hover-box:hover` selector changes the background color of the `<div>` to yellow when the mouse hovers over it.
 
 This simple example demonstrates how to use CSS to change the background color of a `<div>` element on a mouse hover event. The `transition` property is added to make the background color change smoothly.
 
@@ -1679,66 +1777,67 @@ Certainly! The `position` property in CSS is used to define the positioning beha
 #### Different Values of the `position` Property:
 
 1. **static:**
-
-   - **Default Value:** Elements are positioned according to the normal flow of the document.
-   - **Usage:** No special positioning is applied.
-
-   ```css
-   .static-box {
-     position: static;
-   }
-   ```
-
+    - **Default Value:** Elements are positioned according to the normal flow of the document.
+    - **Usage:** No special positioning is applied.
+    
+    ```css
+    .static-box {
+      position: static;
+    }
+    
+    ```
+    
 2. **relative:**
-
-   - **Description:** Elements are positioned relative to their normal position.
-   - **Usage:** You can use `top`, `right`, `bottom`, and `left` to adjust the position.
-
-   ```css
-   .relative-box {
-     position: relative;
-     top: 20px;
-     left: 20px;
-   }
-   ```
-
+    - **Description:** Elements are positioned relative to their normal position.
+    - **Usage:** You can use `top`, `right`, `bottom`, and `left` to adjust the position.
+    
+    ```css
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+    
+    ```
+    
 3. **absolute:**
-
-   - **Description:** Elements are positioned relative to the nearest positioned (non-static) ancestor.
-   - **Usage:** Useful for creating overlays and positioning elements precisely.
-
-   ```css
-   .absolute-box {
-     position: absolute;
-     top: 50px;
-     left: 50px;
-   }
-   ```
-
+    - **Description:** Elements are positioned relative to the nearest positioned (non-static) ancestor.
+    - **Usage:** Useful for creating overlays and positioning elements precisely.
+    
+    ```css
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    
+    ```
+    
 4. **fixed:**
-
-   - **Description:** Elements are positioned relative to the viewport, which means they stay in the same place even when the page is scrolled.
-   - **Usage:** Commonly used for navigation bars and footers.
-
-   ```css
-   .fixed-box {
-     position: fixed;
-     top: 10px;
-     right: 10px;
-   }
-   ```
-
+    - **Description:** Elements are positioned relative to the viewport, which means they stay in the same place even when the page is scrolled.
+    - **Usage:** Commonly used for navigation bars and footers.
+    
+    ```css
+    .fixed-box {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    
+    ```
+    
 5. **sticky:**
-
-   - **Description:** Elements are positioned based on the user's scroll position. It toggles between relative and fixed, depending on the scroll position.
-   - **Usage:** Useful for creating sticky headers or navigation bars.
-
-   ```css
-   .sticky-box {
-     position: sticky;
-     top: 0;
-   }
-   ```
+    - **Description:** Elements are positioned based on the user's scroll position. It toggles between relative and fixed, depending on the scroll position.
+    - **Usage:** Useful for creating sticky headers or navigation bars.
+    
+    ```css
+    .sticky-box {
+      position: sticky;
+      top: 0;
+    }
+    
+    ```
+    
 
 #### Summary:
 
@@ -1760,6 +1859,7 @@ To create a hyperlink, you use the `<a>` (anchor) tag with the `href` attribute 
 
 ```html
 <a href="<https://www.example.com>">Visit Example</a>
+
 ```
 
 #### Pseudo-Classes of Hyperlinks:
@@ -1767,52 +1867,53 @@ To create a hyperlink, you use the `<a>` (anchor) tag with the `href` attribute 
 Pseudo-classes are used to define the styles of hyperlinks based on their state. Here are the main pseudo-classes:
 
 1. **:link**
-
-   - **Description:** Applies to links that have not been visited.
-   - **Usage:** Styles unvisited links.
-
-   ```css
-   a:link {
-     color: blue;
-     text-decoration: none;
-   }
-   ```
-
+    - **Description:** Applies to links that have not been visited.
+    - **Usage:** Styles unvisited links.
+    
+    ```css
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+    
+    ```
+    
 2. **:visited**
-
-   - **Description:** Applies to links that have been visited.
-   - **Usage:** Styles visited links.
-
-   ```css
-   a:visited {
-     color: purple;
-     text-decoration: none;
-   }
-   ```
-
+    - **Description:** Applies to links that have been visited.
+    - **Usage:** Styles visited links.
+    
+    ```css
+    a:visited {
+      color: purple;
+      text-decoration: none;
+    }
+    
+    ```
+    
 3. **:hover**
-
-   - **Description:** Applies to links when the user hovers over them.
-   - **Usage:** Styles links when the mouse pointer is over them.
-
-   ```css
-   a:hover {
-     color: red;
-     text-decoration: underline;
-   }
-   ```
-
+    - **Description:** Applies to links when the user hovers over them.
+    - **Usage:** Styles links when the mouse pointer is over them.
+    
+    ```css
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    
+    ```
+    
 4. **:active**
-
-   - **Description:** Applies to links when they are being activated (e.g., clicked).
-   - **Usage:** Styles links when they are clicked.
-
-   ```css
-   a:active {
-     color: green;
-     text-decoration: underline;
-   }
-   ```
+    - **Description:** Applies to links when they are being activated (e.g., clicked).
+    - **Usage:** Styles links when they are clicked.
+    
+    ```css
+    a:active {
+      color: green;
+      text-decoration: underline;
+    }
+    
+    ```
+    
 
 #### Example:
 
@@ -1821,40 +1922,41 @@ Here’s a complete example putting it all together:
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      a:link {
-        color: blue;
-        text-decoration: none;
-      }
-      a:visited {
-        color: purple;
-        text-decoration: none;
-      }
-      a:hover {
-        color: red;
-        text-decoration: underline;
-      }
-      a:active {
-        color: green;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="<https://www.example.com>">Visit Example</a>
-  </body>
+<head>
+  <style>
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+    a:visited {
+      color: purple;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    a:active {
+      color: green;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="<https://www.example.com>">Visit Example</a>
+</body>
 </html>
+
 ```
 
 #### Summary:
 
 - **Creating a Hyperlink:** Use the `<a>` tag with the `href` attribute.
 - **Pseudo-Classes:**
-  - `:link`: Styles unvisited links.
-  - `:visited`: Styles visited links.
-  - `:hover`: Styles links when hovered over.
-  - `:active`: Styles links when clicked.
+    - `:link`: Styles unvisited links.
+    - `:visited`: Styles visited links.
+    - `:hover`: Styles links when hovered over.
+    - `:active`: Styles links when clicked.
 
 These pseudo-classes help you create interactive and visually appealing hyperlinks on your web page.
 
@@ -1867,63 +1969,44 @@ These pseudo-classes help you create interactive and visually appealing hyperlin
 **Pseudo-classes:**
 
 - Style links based on their state:
-  - `:link`: Unvisited link (blue)
-  - `:visited`: Visited link (purple)
-  - `:hover`: Link on hover (underline)
-  - `:active`: Link being clicked (yellow background)
-  - `:focus`: Link with focus (red outline)
+    - `:link`: Unvisited link (blue)
+    - `:visited`: Visited link (purple)
+    - `:hover`: Link on hover (underline)
+    - `:active`: Link being clicked (yellow background)
+    - `:focus`: Link with focus (red outline)
 
 Example:
 
 ```css
-a:link {
-  color: blue;
-}
-a:visited {
-  color: purple;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:active {
-  background-color: yellow;
-}
-a:focus {
-  outline: 2px solid red;
-}
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { text-decoration: underline; }
+a:active { background-color: yellow; }
+a:focus { outline: 2px solid red; }
+
 ```
 
 **Pseudo-elements:**
 
 - `::before`: Insert content before an element's content.
-  - Example: `p::before { content: "📝 "; }` (Adds a note icon before paragraph text)
+    - Example: `p::before { content: "📝 "; }` (Adds a note icon before paragraph text)
 - `::after`: Insert content after an element's content.
-  - Example: `p::after { content: " 🌟"; }` (Adds a star after paragraph text)
+    - Example: `p::after { content: " 🌟"; }` (Adds a star after paragraph text)
 - `::first-line`: Select the first line of a block-level element.
-  - Example: `p::first-line { font-size: 1.5em; }` (Makes the first line of a paragraph larger)
+    - Example: `p::first-line { font-size: 1.5em; }` (Makes the first line of a paragraph larger)
 - `::marker`: Select the marker box of a list item.
-  - Example: `li::marker { color: red; }` (Changes the color of list item markers)
+    - Example: `li::marker { color: red; }` (Changes the color of list item markers)
 - `::selection`: Select the part of an element that is selected by the user.
-  - Example: `p::selection { background-color: yellow; }` (Highlights selected text in yellow)
+    - Example: `p::selection { background-color: yellow; }` (Highlights selected text in yellow)
 
 Example:
 
 ```css
-p::before {
-  content: "📝 ";
-}
-p::after {
-  content: " 🌟";
-}
-p::first-line {
-  font-size: 1.5em;
-}
-li::marker {
-  color: red;
-}
-p::selection {
-  background-color: yellow;
-}
+p::before { content: "📝 "; }
+p::after { content: " 🌟"; }
+p::first-line { font-size: 1.5em; }
+li::marker { color: red; }
+p::selection { background-color: yellow; }
 ```
 
 ## 32) What are JavaScript Data Types? What is the use of the NaN function?
@@ -1933,19 +2016,19 @@ p::selection {
 JavaScript has six primitive data types and one non-primitive (object) data type:
 
 1. **Number:** Represents numeric values, both integers and floating-point numbers.
-   - Example: `let x = 42;`
+    - Example: `let x = 42;`
 2. **String:** Represents textual data.
-   - Example: `let name = "John Doe";`
+    - Example: `let name = "John Doe";`
 3. **Boolean:** Represents logical values: true or false.
-   - Example: `let isStudent = true;`
+    - Example: `let isStudent = true;`
 4. **Null:** Represents an empty value or no value.
-   - Example: `let empty = null;`
+    - Example: `let empty = null;`
 5. **Undefined:** Represents a variable that has not been assigned a value.
-   - Example: `let y;`
+    - Example: `let y;`
 6. **Symbol (ES6):** Represents unique and immutable values, often used as object keys.
-   - Example: `let sym = Symbol("description");`
+    - Example: `let sym = Symbol("description");`
 7. **Object:** Represents complex data structures, collections of key-value pairs.
-   - Example: `let person = { name: "John", age: 30 };`
+    - Example: `let person = { name: "John", age: 30 };`
 
 **Use of the `NaN` function:**
 
@@ -1954,20 +2037,23 @@ JavaScript has six primitive data types and one non-primitive (object) data type
 Here's why `NaN` is useful:
 
 - **Checking for invalid numbers:** You can use `NaN` to check if a value is a valid number or not.
-  - Example: `console.log(Number("hello") === NaN); // true`
+    - Example: `console.log(Number("hello") === NaN); // true`
 - **Avoiding mathematical errors:** By checking for `NaN`, you can prevent your code from throwing errors due to invalid mathematical operations.
-  - Example:
-    ```jsx
-    let x = 10 / "2";
-    if (isNaN(x)) {
-      console.log("Invalid operation");
-    } else {
-      console.log(x);
-    }
-    ```
+    - Example:
+        
+        ```jsx
+        let x = 10 / "2";
+        if (isNaN(x)) {
+          console.log("Invalid operation");
+        } else {
+          console.log(x);
+        }
+        
+        ```
+        
 - **Comparing with `NaN`:** Comparing with `NaN` using the strict equality operator (`===`) always returns `false`. To check if a value is `NaN`, use the `isNaN()` function.
-  - Example: `console.log(NaN === NaN); // false`
-  - Example: `console.log(isNaN(NaN)); // true`
+    - Example: `console.log(NaN === NaN); // false`
+    - Example: `console.log(isNaN(NaN)); // true`
 
 ## 33) What are global variables? How are these variables declared and what are the problems associated with using them?
 
@@ -1978,52 +2064,64 @@ Global variables are variables declared outside of any function or block, making
 **Declaring Global Variables:**
 
 1. **At the top level of your script:**
-
-   ```jsx
-   let globalVar = "I am a global variable";
-   ```
-
+    
+    ```jsx
+    let globalVar = "I am a global variable";
+    
+    ```
+    
 2. **Using the `window` object:**
-
-   ```jsx
-   window.globalVar = "I am a global variable";
-   ```
+    
+    ```jsx
+    window.globalVar = "I am a global variable";
+    
+    ```
+    
 
 **Problems Associated with Using Global Variables:**
 
 1. **Name collisions:** Global variables can overwrite or be overwritten by other scripts or libraries, leading to unexpected behavior.
-   - Example:
-     ```jsx
-     // Script 1
-     let user = "John Doe";
-
-     // Script 2
-     let user = "Jane Doe"; // Overwrites the global user variable from Script 1
-     ```
+    - Example:
+        
+        ```jsx
+        // Script 1
+        let user = "John Doe";
+        
+        // Script 2
+        let user = "Jane Doe"; // Overwrites the global user variable from Script 1
+        
+        ```
+        
 2. **Tight coupling:** Global variables create tight coupling between different parts of your code, making it harder to maintain, test, and reuse your code.
-   - Example:
-     ```jsx
-     // Function A uses globalVar
-     function A() {
-       console.log(globalVar);
-     }
-
-     // Function B changes globalVar
-     function B() {
-       globalVar = "New value";
-     }
-     ```
+    - Example:
+        
+        ```jsx
+        // Function A uses globalVar
+        function A() {
+          console.log(globalVar);
+        }
+        
+        // Function B changes globalVar
+        function B() {
+          globalVar = "New value";
+        }
+        
+        ```
+        
 3. **Inaccessibility in modules:** Global variables are not accessible inside modules (ES6) or IIFE (Immediately Invoked Function Expression) closures.
-   - Example:
-     ```jsx
-     // Global variable
-     let globalVar = "I am a global variable";
-
-     // Module
-     (() => {
-       console.log(globalVar); // ReferenceError: globalVar is not defined
-     })();
-     ```
+    - Example:
+        
+        ```jsx
+        // Global variable
+        let globalVar = "I am a global variable";
+        
+        // Module
+        (() => {
+          console.log(globalVar); // ReferenceError: globalVar is not defined
+        })();
+        
+        ```
+        
 
 To avoid these problems, consider using function-scoped or module-scoped variables instead of global variables.
 
@@ -2034,42 +2132,54 @@ To avoid these problems, consider using function-scoped or module-scoped variabl
 The `this` keyword in JavaScript refers to an object, and its value depends on how it's used:
 
 1. **In a function:** `this` refers to the global object (`window` in browsers) if the function is called as a standalone function.
-   - Example:
-     ```jsx
-     function foo() {
-       console.log(this);
-     }
-     foo(); // logs Window {}
-     ```
+    - Example:
+        
+        ```jsx
+        function foo() {
+          console.log(this);
+        }
+        foo(); // logs Window {}
+        
+        ```
+        
 2. **As a method of an object:** `this` refers to the object that the method is called on.
-   - Example:
-     ```jsx
-     const obj = {
-       name: "John",
-       sayName: function () {
-         console.log(this.name);
-       },
-     };
-     obj.sayName(); // logs "John"
-     ```
+    - Example:
+        
+        ```jsx
+        const obj = {
+          name: "John",
+          sayName: function() {
+            console.log(this.name);
+          }
+        };
+        obj.sayName(); // logs "John"
+        
+        ```
+        
 3. **With a constructor function:** `this` refers to the newly created object.
-   - Example:
-     ```jsx
-     function Person(name) {
-       this.name = name;
-     }
-     const john = new Person("John");
-     console.log(john.name); // logs "John"
-     ```
+    - Example:
+        
+        ```jsx
+        function Person(name) {
+          this.name = name;
+        }
+        const john = new Person("John");
+        console.log(john.name); // logs "John"
+        
+        ```
+        
 4. **With call(), apply(), or bind() methods:** You can explicitly set the value of `this` using these methods.
-   - Example:
-     ```jsx
-     function sayName() {
-       console.log(this.name);
-     }
-     const obj = { name: "John" };
-     sayName.call(obj); // logs "John"
-     ```
+    - Example:
+        
+        ```jsx
+        function sayName() {
+          console.log(this.name);
+        }
+        const obj = { name: "John" };
+        sayName.call(obj); // logs "John"
+        
+        ```
+        
 
 **Memorable Tip:**
 
@@ -2082,55 +2192,45 @@ Think of `this` as a reference to the current object, and its value changes base
 JavaScript offers several types of pop-up boxes, also known as dialogs or modals, to display information or prompt user input. Here are the main types:
 
 1. **Alert:** Displays important information or warnings. It has only an "OK" button.
-   - Syntax: `alert(message);`
-   - Example: `alert("Hello, World!");`
+    - Syntax: `alert(message);`
+    - Example: `alert("Hello, World!");`
 2. **Confirm:** Asks the user to confirm an action with "OK" and "Cancel" buttons. It returns a boolean value (`true` for "OK," `false` for "Cancel").
-   - Syntax: `confirm(message);`
-   - Example: `let isConfirmed = confirm("Are you sure?");`
+    - Syntax: `confirm(message);`
+    - Example: `let isConfirmed = confirm("Are you sure?");`
 3. **Prompt:** Asks the user for input with an "OK" and "Cancel" buttons. It returns the user's input as a string or `null` if the user clicks "Cancel."
-   - Syntax: `prompt(message, [defaultValue]);`
-   - Example: `let userInput = prompt("Enter your name:", "Guest");`
+    - Syntax: `prompt(message, [defaultValue]);`
+    - Example: `let userInput = prompt("Enter your name:", "Guest");`
 4. **Custom Modals:** Create custom pop-up boxes using HTML, CSS, and JavaScript. You can control their appearance, content, and behavior.
-   - Example using Bootstrap's Modal component:
-     ```html
-     <!-- Modal -->
-     <div
-       class="modal fade"
-       id="myModal"
-       tabindex="-1"
-       aria-labelledby="exampleModalLabel"
-       aria-hidden="true"
-     >
-       <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-             <button
-               type="button"
-               class="btn-close"
-               data-bs-dismiss="modal"
-               aria-label="Close"
-             ></button>
-           </div>
-           <div class="modal-body">...</div>
-           <div class="modal-footer">
-             <button
-               type="button"
-               class="btn btn-secondary"
-               data-bs-dismiss="modal"
-             >
-               Close
-             </button>
-             <button type="button" class="btn btn-primary">Save changes</button>
-           </div>
-         </div>
-       </div>
-     </div>
-     ```
-     ```jsx
-     const myModal = new bootstrap.Modal(document.getElementById("myModal"));
-     myModal.show();
-     ```
+    - Example using Bootstrap's Modal component:
+        
+        ```html
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        ```
+        
+        ```jsx
+        const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+        
+        ```
+        
 
 These pop-up boxes can be used to provide feedback, ask for user input, or display important information. Custom modals offer more flexibility and control over the appearance and behavior of pop-up boxes.
 
@@ -2141,45 +2241,46 @@ These pop-up boxes can be used to provide feedback, ask for user input, or displ
 The Document Object Model (DOM) is a programming interface for web documents. It represents a page so that programs can change the document structure, style, and content. Here's how you can utilize the DOM in JavaScript:
 
 1. **Accessing Elements:**
-   - By ID: `document.getElementById('id')`
-   - By Class Name: `document.getElementsByClassName('className')`
-   - By Tag Name: `document.getElementsByTagName('tagName')`
-   - By Selector (using querySelector or querySelectorAll): `document.querySelector('#id')`, `document.querySelectorAll('.className')`
+    - By ID: `document.getElementById('id')`
+    - By Class Name: `document.getElementsByClassName('className')`
+    - By Tag Name: `document.getElementsByTagName('tagName')`
+    - By Selector (using querySelector or querySelectorAll): `document.querySelector('#id')`, `document.querySelectorAll('.className')`
 2. **Creating Elements:**
-   - Using `createElement()`: `let newElement = document.createElement('tagName');`
+    - Using `createElement()`: `let newElement = document.createElement('tagName');`
 3. **Manipulating Content:**
-   - Inner Text: `element.innerText = 'new text';`
-   - Inner HTML: `element.innerHTML = '<new html content>';`
-   - Text Content: `element.textContent = 'new text';`
+    - Inner Text: `element.innerText = 'new text';`
+    - Inner HTML: `element.innerHTML = '<new html content>';`
+    - Text Content: `element.textContent = 'new text';`
 4. **Changing Attributes:**
-   - Getting an attribute: `let attrValue = element.getAttribute('attributeName');`
-   - Setting an attribute: `element.setAttribute('attributeName', 'newValue');`
-   - Removing an attribute: `element.removeAttribute('attributeName');`
+    - Getting an attribute: `let attrValue = element.getAttribute('attributeName');`
+    - Setting an attribute: `element.setAttribute('attributeName', 'newValue');`
+    - Removing an attribute: `element.removeAttribute('attributeName');`
 5. **Modifying Styles:**
-   - Inline styles: `element.style.property = 'value';`
-   - ClassList: `element.classList.add('className');`, `element.classList.remove('className');`, `element.classList.toggle('className');`
-   - Computed styles: `let style = window.getComputedStyle(element);`
+    - Inline styles: `element.style.property = 'value';`
+    - ClassList: `element.classList.add('className');`, `element.classList.remove('className');`, `element.classList.toggle('className');`
+    - Computed styles: `let style = window.getComputedStyle(element);`
 6. **Event Handling:**
-   - Adding an event listener: `element.addEventListener('eventType', function);`
+    - Adding an event listener: `element.addEventListener('eventType', function);`
 7. **Traversing the DOM:**
-   - Parent: `element.parentElement;`
-   - Children: `element.children;`
-   - Siblings: `element.previousElementSibling`, `element.nextElementSibling;`
-   - First/Last Child: `element.firstElementChild`, `element.lastElementChild;`
+    - Parent: `element.parentElement;`
+    - Children: `element.children;`
+    - Siblings: `element.previousElementSibling`, `element.nextElementSibling;`
+    - First/Last Child: `element.firstElementChild`, `element.lastElementChild;`
 
 Here's a simple example of accessing, manipulating, and event handling with the DOM:
 
 ```jsx
 // Access an element by ID
-const myElement = document.getElementById("myElement");
+const myElement = document.getElementById('myElement');
 
 // Change the inner text
-myElement.innerText = "New text content";
+myElement.innerText = 'New text content';
 
 // Add an event listener
-myElement.addEventListener("click", function () {
-  alert("You clicked the element!");
+myElement.addEventListener('click', function() {
+  alert('You clicked the element!');
 });
+
 ```
 
 Understanding and utilizing the DOM is crucial for working with web pages in JavaScript, enabling you to interact with, manipulate, and respond to HTML content dynamically.
@@ -2191,63 +2292,82 @@ Understanding and utilizing the DOM is crucial for working with web pages in Jav
 Event handlers in JavaScript allow you to respond to user interactions and other events, such as mouse clicks, key presses, or page loading. Here's how you can utilize event handlers in a simple, memorable way:
 
 1. **Adding Event Listeners:**
-   - Using `addEventListener()` method:
-     ```jsx
-     element.addEventListener('eventType', function);
-
-     ```
-   - Example: Add a click event listener to a button:
-     ```jsx
-     const myButton = document.getElementById("myButton");
-     myButton.addEventListener("click", function () {
-       alert("Button clicked!");
-     });
-     ```
+    - Using `addEventListener()` method:
+        
+        ```jsx
+        element.addEventListener('eventType', function);
+        
+        ```
+        
+    - Example: Add a click event listener to a button:
+        
+        ```jsx
+        const myButton = document.getElementById('myButton');
+        myButton.addEventListener('click', function() {
+          alert('Button clicked!');
+        });
+        
+        ```
+        
 2. **Inline Event Handlers (not recommended):**
-   - Attaching event handlers directly in HTML attributes:
-     ```html
-     <button onclick="myFunction()">Click me</button>
-     ```
-   - Example function:
-     ```jsx
-     function myFunction() {
-       alert("Button clicked!");
-     }
-     ```
+    - Attaching event handlers directly in HTML attributes:
+        
+        ```html
+        <button onclick="myFunction()">Click me</button>
+        
+        ```
+        
+    - Example function:
+        
+        ```jsx
+        function myFunction() {
+          alert('Button clicked!');
+        }
+        
+        ```
+        
 3. **Removing Event Listeners:**
-   - Using `removeEventListener()` method:
-     ```jsx
-     element.removeEventListener('eventType', function);
-
-     ```
-   - Example: Remove the click event listener after a single click:
-     ```jsx
-     const myButton = document.getElementById('myButton');
-     let clickCount = 0;
-     myButton.addEventListener('click', function() {
-       alert('Button clicked!');
-       clickCount++;
-       if (clickCount === 1) {
-         myButton.removeEventListener('click', function);
-       }
-     });
-
-     ```
+    - Using `removeEventListener()` method:
+        
+        ```jsx
+        element.removeEventListener('eventType', function);
+        
+        ```
+        
+    - Example: Remove the click event listener after a single click:
+        
+        ```jsx
+        const myButton = document.getElementById('myButton');
+        let clickCount = 0;
+        myButton.addEventListener('click', function() {
+          alert('Button clicked!');
+          clickCount++;
+          if (clickCount === 1) {
+            myButton.removeEventListener('click', function);
+          }
+        });
+        
+        ```
+        
 4. **Event Object:**
-   - The `event` object contains information about the event, like the target element, mouse position, or key code.
-   - Example: Accessing the target element:
-     ```jsx
-     element.addEventListener("click", function (event) {
-       console.log("Clicked element:", event.target);
-     });
-     ```
+    - The `event` object contains information about the event, like the target element, mouse position, or key code.
+    - Example: Accessing the target element:
+        
+        ```jsx
+        element.addEventListener('click', function(event) {
+          console.log('Clicked element:', event.target);
+        });
+        
+        ```
+        
 5. **Preventing Default Behavior:**
-   - Using `event.preventDefault()` to stop the default behavior of an event.
-   - Example: Preventing a link from following its URL:
-     ```jsx
-     const myLink = document.getElementById("myLink");
-     myLink.addEventListener("click", function (event) {
-       event.preventDefault();
-       alert("Link clicked!");
-     });
-     ```
+    - Using `event.preventDefault()` to stop the default behavior of an event.
+    - Example: Preventing a link from following its URL:
+        
+        ```jsx
+        const myLink = document.getElementById('myLink');
+        myLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          alert('Link clicked!');
+        });
+        ```

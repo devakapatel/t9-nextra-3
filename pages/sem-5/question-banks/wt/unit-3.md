@@ -32,22 +32,27 @@ AngularJS is an open-source front-end JavaScript framework developed by Google, 
 ```html
 <!DOCTYPE html>
 <html>
-  <script src="<https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js>"></script>
-  <body>
-    <div ng-app="myApp" ng-controller="myCtrl">
-      <p>First-name: <input type="text" ng-model="firstName" /></p>
-      <p>Last-name: <input type="text" ng-model="lastName" /></p>
-      <p>Full Name: {{firstName + " " + lastName}}</p>
-    </div>
+<script src="<https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js>"></script>
+<body>
 
-    <script>
-      angular.module("myApp", []).controller("myCtrl", function ($scope) {
-        $scope.firstName = "John";
-        $scope.lastName = "Doe";
-      });
-    </script>
-  </body>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<p>First-name: <input type="text" ng-model="firstName"></p>
+<p>Last-name: <input type="text" ng-model="lastName"></p>
+<p>Full Name: {{firstName + " " + lastName}}</p>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('myCtrl', function($scope) {
+  $scope.firstName = "John";
+  $scope.lastName = "Doe";
+});
+</script>
+
+</body>
 </html>
+
 ```
 
 In this example, changes in the input fields are automatically reflected in the full name paragraph, demonstrating AngularJS's two-way data binding.
@@ -76,47 +81,48 @@ AngularJS follows the Model-View-Controller (MVC) architectural pattern, separat
 **Roles of Model, View, and Controller in AngularJS:**
 
 1. **Model:**
-
-   - Represents the data and the business logic of the application.
-   - Acts as an intermediary between the View and the Controller.
-   - In AngularJS, the Model is typically an object or a set of objects that contain the data and methods for manipulating that data.
-   - Example:
-
-   ```jsx
-   angular.module("myApp", []).controller("myCtrl", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-   });
-   ```
-
+    - Represents the data and the business logic of the application.
+    - Acts as an intermediary between the View and the Controller.
+    - In AngularJS, the Model is typically an object or a set of objects that contain the data and methods for manipulating that data.
+    - Example:
+    
+    ```jsx
+    angular.module('myApp', []).controller('myCtrl', function($scope) {
+      $scope.user = { name: 'John Doe', age: 30 };
+    });
+    
+    ```
+    
 2. **View:**
-
-   - Defines how the data should be presented to the user.
-   - In AngularJS, the View is an HTML template that uses AngularJS expressions and directives to bind data from the Model.
-   - Example:
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <h1>User Profile</h1>
-     <p>Name: {{ user.name }}</p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
+    - Defines how the data should be presented to the user.
+    - In AngularJS, the View is an HTML template that uses AngularJS expressions and directives to bind data from the Model.
+    - Example:
+    
+    ```html
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <h1>User Profile</h1>
+      <p>Name: {{ user.name }}</p>
+      <p>Age: {{ user.age }}</p>
+    </div>
+    
+    ```
+    
 3. **Controller:**
-
-   - Acts as an intermediary between the Model and the View.
-   - Contains the logic for updating the Model and the View in response to user input or other events.
-   - In AngularJS, the Controller is a JavaScript function that is bound to a specific View using the `ng-controller` directive.
-   - Example:
-
-   ```jsx
-   angular.module("myApp", []).controller("myCtrl", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-     $scope.updateName = function (newName) {
-       $scope.user.name = newName;
-     };
-   });
-   ```
+    - Acts as an intermediary between the Model and the View.
+    - Contains the logic for updating the Model and the View in response to user input or other events.
+    - In AngularJS, the Controller is a JavaScript function that is bound to a specific View using the `ng-controller` directive.
+    - Example:
+    
+    ```jsx
+    angular.module('myApp', []).controller('myCtrl', function($scope) {
+      $scope.user = { name: 'John Doe', age: 30 };
+      $scope.updateName = function(newName) {
+        $scope.user.name = newName;
+      };
+    });
+    
+    ```
+    
 
 **Memorable Tip:** Think of the Model as the data and brains of your application, the View as the face that presents that data, and the Controller as the intermediary that keeps them in sync.
 
@@ -127,60 +133,55 @@ AngularJS follows the Model-View-Controller (MVC) architectural pattern, separat
 AngularJS implements the MVC pattern by organizing your application into a specific folder structure and using certain AngularJS features. Here's a simplified, memorable way to understand how AngularJS implements MVC:
 
 1. **Folders and Files:**
-   - Create separate folders for `controllers`, `directives`, `filters`, `services`, and `views`.
-   - Place related JavaScript files in their respective folders (e.g., `controllers/ userCtrl.js`).
-   - Keep your HTML views in the `views` folder (e.g., `views/user.html`).
+    - Create separate folders for `controllers`, `directives`, `filters`, `services`, and `views`.
+    - Place related JavaScript files in their respective folders (e.g., `controllers/ userCtrl.js`).
+    - Keep your HTML views in the `views` folder (e.g., `views/user.html`).
 2. **Module and Controller:**
-
-   - Create an AngularJS module (e.g., `myApp`) that includes the controllers, directives, filters, and services.
-   - Controllers act as the glue between the Model and the View. They manage the data and logic for a specific part of your application.
-   - Example:
-
-   ```jsx
-   // controllers/userCtrl.js
-   angular
-     .module("myApp")
-     .controller("UserCtrl", function ($scope, userService) {
-       $scope.user = userService.getUser();
-       $scope.updateName = function (newName) {
-         userService.updateUser({ name: newName });
-       };
-     });
-   ```
-
+    - Create an AngularJS module (e.g., `myApp`) that includes the controllers, directives, filters, and services.
+    - Controllers act as the glue between the Model and the View. They manage the data and logic for a specific part of your application.
+    - Example:
+    
+    ```jsx
+    // controllers/userCtrl.js
+    angular.module('myApp').controller('UserCtrl', function($scope, userService) {
+      $scope.user = userService.getUser();
+      $scope.updateName = function(newName) {
+        userService.updateUser({ name: newName });
+      };
+    });
+    
+    ```
+    
 3. **Service as Model:**
-
-   - Services in AngularJS act as the Model, containing the data and business logic for your application.
-   - Use services to fetch data, manipulate data, or perform complex operations.
-   - Example:
-
-   ```jsx
-   // services/userService.js
-   angular.module("myApp").service("userService", function () {
-     let user = { name: "John Doe", age: 30 };
-     this.getUser = function () {
-       return user;
-     };
-     this.updateUser = function (updatedUser) {
-       user = angular.extend(user, updatedUser);
-     };
-   });
-   ```
-
+    - Services in AngularJS act as the Model, containing the data and business logic for your application.
+    - Use services to fetch data, manipulate data, or perform complex operations.
+    - Example:
+    
+    ```jsx
+    // services/userService.js
+    angular.module('myApp').service('userService', function() {
+      let user = { name: 'John Doe', age: 30 };
+      this.getUser = function() { return user; };
+      this.updateUser = function(updatedUser) { user = angular.extend(user, updatedUser); };
+    });
+    
+    ```
+    
 4. **View and Template:**
-
-   - Create HTML templates in the `views` folder that define how the data should be presented.
-   - Use AngularJS expressions and directives to bind data from the Controller to the View.
-   - Example:
-
-   ```html
-   <!-- views/user.html -->
-   <div ng-controller="UserCtrl">
-     <h1>User Profile</h1>
-     <p>Name: <input type="text" ng-model="user.name" /></p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
+    - Create HTML templates in the `views` folder that define how the data should be presented.
+    - Use AngularJS expressions and directives to bind data from the Controller to the View.
+    - Example:
+    
+    ```html
+    <!-- views/user.html -->
+    <div ng-controller="UserCtrl">
+      <h1>User Profile</h1>
+      <p>Name: <input type="text" ng-model="user.name"></p>
+      <p>Age: {{ user.age }}</p>
+    </div>
+    
+    ```
+    
 
 **Memorable Tip:** Think of the folder structure as the skeleton of your application, with each folder representing a part of the MVC pattern. Controllers act as the glue between the Model (services) and the View (templates), managing the data and logic for a specific part of your application.
 
@@ -193,58 +194,60 @@ Directives in AngularJS are functions that extend the functionality of HTML by a
 **How Directives Enhance HTML Functionality:**
 
 1. **Add new attributes:** Directives can add new attributes to HTML elements, allowing you to bind data, listen to events, or perform other tasks.
-   - Example: `ng-model`, `ng-click`, `ng-show`
+    - Example: `ng-model`, `ng-click`, `ng-show`
 2. **Create new elements:** Directives can create new HTML elements with custom behavior.
-   - Example: `ng-app`, `ng-controller`
+    - Example: `ng-app`, `ng-controller`
 3. **Replace element content:** Directives can replace the content of an HTML element with custom HTML or dynamic content.
-   - Example: `ng-switch`, `ng-include`
+    - Example: `ng-switch`, `ng-include`
 
 **Built-in vs. Custom Directives:**
 
 1. **Built-in Directives:**
-
-   - Provided by AngularJS itself, like `ng-app`, `ng-controller`, `ng-model`, etc.
-   - Offer common functionality like data binding, event handling, and conditional rendering.
-   - Can be used out-of-the-box without additional configuration.
-   - Example:
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <p>Name: <input type="text" ng-model="user.name" /></p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
+    - Provided by AngularJS itself, like `ng-app`, `ng-controller`, `ng-model`, etc.
+    - Offer common functionality like data binding, event handling, and conditional rendering.
+    - Can be used out-of-the-box without additional configuration.
+    - Example:
+    
+    ```html
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <p>Name: <input type="text" ng-model="user.name"></p>
+      <p>Age: {{ user.age }}</p>
+    </div>
+    
+    ```
+    
 2. **Custom Directives:**
-
-   - Created by developers to encapsulate reusable functionality or extend HTML with new behavior.
-   - Define a new directive using the `directive` function or the `app.directive` method in an AngularJS module.
-   - Can be isolated or shared, with or without a template.
-   - Example:
-
-   ```jsx
-   angular.module("myApp").directive("userProfile", function () {
-     return {
-       restrict: "E",
-       template: `
-         <div>
-           <h1>User Profile</h1>
-           <p>Name: {{ user.name }}</p>
-           <p>Age: {{ user.age }}</p>
-         </div>
-       `,
-       scope: {
-         user: "=",
-       },
-     };
-   });
-   ```
-
-   ```html
-   <div ng-app="myApp" ng-controller="myCtrl">
-     <user-profile user="user"></user-profile>
-   </div>
-   ```
+    - Created by developers to encapsulate reusable functionality or extend HTML with new behavior.
+    - Define a new directive using the `directive` function or the `app.directive` method in an AngularJS module.
+    - Can be isolated or shared, with or without a template.
+    - Example:
+    
+    ```jsx
+    angular.module('myApp').directive('userProfile', function() {
+      return {
+        restrict: 'E',
+        template: `
+          <div>
+            <h1>User Profile</h1>
+            <p>Name: {{ user.name }}</p>
+            <p>Age: {{ user.age }}</p>
+          </div>
+        `,
+        scope: {
+          user: '='
+        }
+      };
+    });
+    
+    ```
+    
+    ```html
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <user-profile user="user"></user-profile>
+    </div>
+    
+    ```
+    
 
 **Memorable Tip:** Think of directives as superpowers for HTML, enabling you to extend its functionality with new attributes, elements, or behavior. Built-in directives offer common functionality, while custom directives allow you to encapsulate reusable code and create unique components.
 
@@ -253,68 +256,72 @@ Directives in AngularJS are functions that extend the functionality of HTML by a
 **Common Built-in Directives in AngularJS:**
 
 1. **ng-app:** Defines the root element of the AngularJS application.
-   - Example: `<div ng-app="myApp">`
+    - Example: `<div ng-app="myApp">`
 2. **ng-controller:** Associates an AngularJS controller with an HTML element.
-   - Example: `<div ng-controller="myCtrl">`
+    - Example: `<div ng-controller="myCtrl">`
 3. **ng-model:** Binds an HTML form control to an AngularJS model.
-   - Example: `<input type="text" ng-model="user.name">`
+    - Example: `<input type="text" ng-model="user.name">`
 4. **ng-click:** Binds an event handler to an HTML element's click event.
-   - Example: `<button ng-click="updateUser()">Update</button>`
+    - Example: `<button ng-click="updateUser()">Update</button>`
 5. **ng-show** and **ng-hide:** Show or hide an HTML element based on an expression's truthiness.
-   - Example: `<p ng-show="user.age > 18">You are an adult.</p>`
+    - Example: `<p ng-show="user.age > 18">You are an adult.</p>`
 6. **ng-repeat:** Repeats an HTML element for each item in a collection.
-   - Example: `<div ng-repeat="item in items">{{ item }}</div>`
+    - Example: `<div ng-repeat="item in items">{{ item }}</div>`
 7. **ng-switch:** Conditionally displays one of several HTML elements based on an expression's value.
-
-   - Example:
-
-   ```html
-   <div ng-switch="user.role">
-     <p ng-switch-when="admin">You are an admin.</p>
-     <p ng-switch-when="user">You are a user.</p>
-     <p ng-switch-default>You are a guest.</p>
-   </div>
-   ```
+    - Example:
+    
+    ```html
+    <div ng-switch="user.role">
+      <p ng-switch-when="admin">You are an admin.</p>
+      <p ng-switch-when="user">You are a user.</p>
+      <p ng-switch-default>You are a guest.</p>
+    </div>
+    
+    ```
+    
 
 **Creating and Using a Custom Directive in AngularJS:**
 
 1. **Define the directive:**
-
-   - Using the `directive` function:
-
-   ```jsx
-   angular.module("myApp").directive("myDirective", function () {
-     return {
-       restrict: "A",
-       template: "<div>This is my custom directive!</div>",
-     };
-   });
-   ```
-
-   - Or using the `app.directive` method:
-
-   ```jsx
-   angular.module("myApp").directive("myDirective", function () {
-     return {
-       restrict: "A",
-       template: "<div>This is my custom directive!</div>",
-     };
-   });
-   ```
-
+    - Using the `directive` function:
+    
+    ```jsx
+    angular.module('myApp').directive('myDirective', function() {
+      return {
+        restrict: 'A',
+        template: '<div>This is my custom directive!</div>'
+      };
+    });
+    
+    ```
+    
+    - Or using the `app.directive` method:
+    
+    ```jsx
+    angular.module('myApp').directive('myDirective', function() {
+      return {
+        restrict: 'A',
+        template: '<div>This is my custom directive!</div>'
+      };
+    });
+    
+    ```
+    
 2. **Use the custom directive in your HTML template:**
-
-   - Add the custom directive as an attribute to an HTML element:
-
-   ```html
-   <div my-directive></div>
-   ```
-
-   - Or use it as an element (if `restrict: 'E'` is specified):
-
-   ```html
-   <my-directive></my-directive>
-   ```
+    - Add the custom directive as an attribute to an HTML element:
+    
+    ```html
+    <div my-directive></div>
+    
+    ```
+    
+    - Or use it as an element (if `restrict: 'E'` is specified):
+    
+    ```html
+    <my-directive></my-directive>
+    
+    ```
+    
 
 **Memorable Tip:** Custom directives in AngularJS allow you to extend HTML functionality and create reusable components. To create a custom directive, define its behavior and template using the `directive` function, and then use it in your HTML templates like any other built-in directive.
 
@@ -334,11 +341,11 @@ AngularJS expressions are similar to JavaScript expressions but have some key di
 **Using AngularJS Expressions in the View (HTML):**
 
 1. **Interpolation:** Binds the value of an expression to an HTML element's content.
-   - Example: `<p>{{ user.name }}</p>`
+    - Example: `<p>{{ user.name }}</p>`
 2. **Property Binding:** Binds an expression's value to an HTML element's attribute.
-   - Example: `<input type="text" ng-model="user.name">` (uses `ng-model` for two-way data binding)
+    - Example: `<input type="text" ng-model="user.name">` (uses `ng-model` for two-way data binding)
 3. **Event Binding:** Binds an expression to an HTML element's event.
-   - Example: `<button ng-click="updateUser()">Update</button>`
+    - Example: `<button ng-click="updateUser()">Update</button>`
 
 **Memorable Tip:** Think of AngularJS expressions as simplified JavaScript expressions that are used to bind data from the model to the view. They have limited functionality compared to JavaScript expressions but are essential for data binding in AngularJS. Use double curly braces (`{{ }}`) for interpolation in your HTML templates to display the value of an expression.
 
@@ -349,21 +356,21 @@ AngularJS expressions are similar to JavaScript expressions but have some key di
 AngularJS expressions are evaluated in the context of a scope, which acts as the model for the view. Here's how AngularJS expressions are evaluated and interact with the scope:
 
 1. **Scope Association:**
-   - Expressions are associated with a specific scope, either the current scope or a child scope.
-   - By default, expressions are evaluated in the context of the current scope. However, you can use the `$parent` and `$child` scope properties to access parent or child scopes, respectively.
+    - Expressions are associated with a specific scope, either the current scope or a child scope.
+    - By default, expressions are evaluated in the context of the current scope. However, you can use the `$parent` and `$child` scope properties to access parent or child scopes, respectively.
 2. **Expression Parsing and Evaluation:**
-   - AngularJS parses the expression and converts it into an Abstract Syntax Tree (AST).
-   - The AST is then evaluated in the context of the associated scope, resolving any properties or methods referenced in the expression.
-   - Example: In `<p>{{ user.name }}</p>`, AngularJS evaluates `user.name` in the context of the current scope.
+    - AngularJS parses the expression and converts it into an Abstract Syntax Tree (AST).
+    - The AST is then evaluated in the context of the associated scope, resolving any properties or methods referenced in the expression.
+    - Example: In `<p>{{ user.name }}</p>`, AngularJS evaluates `user.name` in the context of the current scope.
 3. **Change Detection:**
-   - AngularJS uses a change detection mechanism to monitor the model for changes and update the view accordingly.
-   - When a model property changes, AngularJS automatically re-evaluates any expressions that depend on that property and updates the view if necessary.
-   - Example: If `user.name` changes, AngularJS will update the content of the `<p>{{ user.name }}</p>` element to reflect the new value.
+    - AngularJS uses a change detection mechanism to monitor the model for changes and update the view accordingly.
+    - When a model property changes, AngularJS automatically re-evaluates any expressions that depend on that property and updates the view if necessary.
+    - Example: If `user.name` changes, AngularJS will update the content of the `<p>{{ user.name }}</p>` element to reflect the new value.
 4. **Watchers and Dirty Checking:**
-   - AngularJS uses watchers to keep track of changes in the model and trigger view updates.
-   - Watchers monitor specific properties on the scope and notify AngularJS when they change.
-   - AngularJS uses a process called "dirty checking" to determine which expressions need to be re-evaluated based on the changes in the watched properties.
-   - Example: Using `ng-model` adds a watcher for the input element's value, so that changes in the input field update the model and trigger view updates for any expressions that depend on that model property.
+    - AngularJS uses watchers to keep track of changes in the model and trigger view updates.
+    - Watchers monitor specific properties on the scope and notify AngularJS when they change.
+    - AngularJS uses a process called "dirty checking" to determine which expressions need to be re-evaluated based on the changes in the watched properties.
+    - Example: Using `ng-model` adds a watcher for the input element's value, so that changes in the input field update the model and trigger view updates for any expressions that depend on that model property.
 
 **Memorable Tip:** AngularJS expressions are evaluated in the context of a scope, which acts as the model for the view. When a model property changes, AngularJS automatically re-evaluates any expressions that depend on that property and updates the view if necessary. This process is facilitated by watchers and dirty checking, ensuring that the view remains in sync with the model.
 
@@ -380,41 +387,38 @@ In AngularJS, a controller acts as an intermediary between the model (services) 
 **Defining and Using a Controller in AngularJS:**
 
 1. **Define a Controller:**
-
-   - Using the `controller` function:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateName = function (newName) {
-         myService.updateUser({ name: newName });
-       };
-     });
-   ```
-
-   - Or using the `app.controller` method:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       // ...
-     });
-   ```
-
+    - Using the `controller` function:
+    
+    ```jsx
+    angular.module('myApp').controller('MyController', function($scope, myService) {
+      $scope.user = myService.getUser();
+      $scope.updateName = function(newName) {
+        myService.updateUser({ name: newName });
+      };
+    });
+    
+    ```
+    
+    - Or using the `app.controller` method:
+    
+    ```jsx
+    angular.module('myApp').controller('MyController', function($scope, myService) {
+      // ...
+    });
+    
+    ```
+    
 2. **Inject Dependencies:**
-   - Inject services or other dependencies into the controller function using dependency injection.
-   - Example: Injecting `myService` into the controller.
+    - Inject services or other dependencies into the controller function using dependency injection.
+    - Example: Injecting `myService` into the controller.
 3. **Expose Data and Methods:**
-   - Define data properties and methods on the `$scope` object that can be used in the view.
-   - Example: Exposing `user` and `updateName` on the `$scope` object.
+    - Define data properties and methods on the `$scope` object that can be used in the view.
+    - Example: Exposing `user` and `updateName` on the `$scope` object.
 4. **Use the Controller in the View:**
-   - Associate the controller with an HTML element using the `ng-controller` directive.
-   - Example: `<div ng-controller="MyController">`
-   - Access the exposed data and methods in the view using AngularJS expressions.
-   - Example: `<p>Name: <input type="text" ng-model="user.name"></p>`
+    - Associate the controller with an HTML element using the `ng-controller` directive.
+    - Example: `<div ng-controller="MyController">`
+    - Access the exposed data and methods in the view using AngularJS expressions.
+    - Example: `<p>Name: <input type="text" ng-model="user.name"></p>`
 
 **Memorable Tip:** Think of a controller in AngularJS as the middleman between the model (services) and the view (template). Its role is to manage data, provide data to the view, and handle user input. To define a controller, use the `controller` function or the `app.controller` method, inject dependencies, expose data and methods on the `$scope` object, and then associate the controller with an HTML element using the `ng-controller` directive.
 
@@ -425,68 +429,64 @@ In AngularJS, a controller acts as an intermediary between the model (services) 
 In AngularJS, controllers interact with views and models to create dynamic, responsive user interfaces. Here's how controllers bridge the gap between views and models:
 
 1. **View to Controller:**
-
-   - The view communicates with the controller using AngularJS directives like `ng-click`, `ng-model`, or custom directives.
-   - When a user interacts with the view (e.g., clicks a button, enters text in an input field), the associated directive triggers a function or updates a property on the controller's `$scope` object.
-   - Example:
-
-   ```html
-   <!-- View -->
-   <div ng-controller="MyController">
-     <input type="text" ng-model="user.name" />
-     <button ng-click="updateUser()">Update</button>
-   </div>
-   ```
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateUser = function () {
-         myService.updateUser($scope.user);
-       };
-     });
-   ```
-
+    - The view communicates with the controller using AngularJS directives like `ng-click`, `ng-model`, or custom directives.
+    - When a user interacts with the view (e.g., clicks a button, enters text in an input field), the associated directive triggers a function or updates a property on the controller's `$scope` object.
+    - Example:
+    
+    ```html
+    <!-- View -->
+    <div ng-controller="MyController">
+      <input type="text" ng-model="user.name">
+      <button ng-click="updateUser()">Update</button>
+    </div>
+    
+    ```
+    
+    ```jsx
+    // Controller
+    angular.module('myApp').controller('MyController', function($scope, myService) {
+      $scope.user = myService.getUser();
+      $scope.updateUser = function() {
+        myService.updateUser($scope.user);
+      };
+    });
+    
+    ```
+    
 2. **Controller to Model:**
-
-   - The controller updates the model (services) by calling methods on the injected services.
-   - When the controller receives data from the view or needs to fetch data, it interacts with the model to perform the necessary operations.
-   - Example:
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       $scope.updateUser = function () {
-         myService.updateUser($scope.user).then(function (updatedUser) {
-           $scope.user = updatedUser;
-         });
-       };
-     });
-   ```
-
+    - The controller updates the model (services) by calling methods on the injected services.
+    - When the controller receives data from the view or needs to fetch data, it interacts with the model to perform the necessary operations.
+    - Example:
+    
+    ```jsx
+    // Controller
+    angular.module('myApp').controller('MyController', function($scope, myService) {
+      $scope.user = myService.getUser();
+      $scope.updateUser = function() {
+        myService.updateUser($scope.user).then(function(updatedUser) {
+          $scope.user = updatedUser;
+        });
+      };
+    });
+    
+    ```
+    
 3. **Model to Controller to View:**
-
-   - The model (services) notifies the controller when data changes, either by emitting events or returning promises.
-   - The controller listens for these changes and updates the view accordingly by manipulating the `$scope` object.
-   - Example:
-
-   ```jsx
-   // Controller
-   angular
-     .module("myApp")
-     .controller("MyController", function ($scope, myService) {
-       $scope.user = myService.getUser();
-       myService.userUpdated.subscribe(function (updatedUser) {
-         $scope.user = updatedUser;
-       });
-     });
-   ```
+    - The model (services) notifies the controller when data changes, either by emitting events or returning promises.
+    - The controller listens for these changes and updates the view accordingly by manipulating the `$scope` object.
+    - Example:
+    
+    ```jsx
+    // Controller
+    angular.module('myApp').controller('MyController', function($scope, myService) {
+      $scope.user = myService.getUser();
+      myService.userUpdated.subscribe(function(updatedUser) {
+        $scope.user = updatedUser;
+      });
+    });
+    
+    ```
+    
 
 **Memorable Tip:** Controllers in AngularJS act as a bridge between views and models. They receive input from the view, update the model, and then update the view with the latest data. This process ensures that the view remains in sync with the model, creating a responsive and dynamic user interface.
 
@@ -499,43 +499,44 @@ Filters in AngularJS are used to format data and transform it into a more readab
 **Using Built-in Filters:**
 
 1. **Currency:** Formats a number as currency.
-   - Example: `{{ price | currency }}`
+    - Example: `{{ price | currency }}`
 2. **Date:** Formats a date as a string.
-   - Example: `{{ date | date }}`
+    - Example: `{{ date | date }}`
 3. **LimitTo:** Limits the number of elements in an array.
-   - Example: `{{ [1,2,3,4,5] | limitTo:3 }}`
+    - Example: `{{ [1,2,3,4,5] | limitTo:3 }}`
 4. **OrderBy:** Sorts an array of objects by a specific property.
-   - Example: `{{ users | orderBy:'lastName' }}`
+    - Example: `{{ users | orderBy:'lastName' }}`
 
 **Creating a Custom Filter:**
 
 1. **Define the Filter:**
-
-   - Using the `filter` function:
-
-   ```jsx
-   angular.module("myApp").filter("reverse", function () {
-     return function (input) {
-       return input.split("").reverse().join("");
-     };
-   });
-   ```
-
-   - Or using the `app.filter` method:
-
-   ```jsx
-   angular.module("myApp").filter("reverse", function () {
-     return function (input) {
-       return input.split("").reverse().join("");
-     };
-   });
-   ```
-
+    - Using the `filter` function:
+    
+    ```jsx
+    angular.module('myApp').filter('reverse', function() {
+      return function(input) {
+        return input.split('').reverse().join('');
+      };
+    });
+    
+    ```
+    
+    - Or using the `app.filter` method:
+    
+    ```jsx
+    angular.module('myApp').filter('reverse', function() {
+      return function(input) {
+        return input.split('').reverse().join('');
+      };
+    });
+    
+    ```
+    
 2. **Apply the Custom Filter:**
-   - In the view, using the pipe (`|`) syntax:
-   - Example: `{{ text | reverse }}`
-   - In a controller, by calling the filter function:
-   - Example: `var reversedText = reverseFilter(text);`
+    - In the view, using the pipe (`|`) syntax:
+    - Example: `{{ text | reverse }}`
+    - In a controller, by calling the filter function:
+    - Example: `var reversedText = reverseFilter(text);`
 
 **Memorable Tip:** Filters in AngularJS help format data for better readability and usability. You can use built-in filters or create custom filters to transform data as needed. To create a custom filter, define a function that takes input and returns the transformed output, then apply it in the view or controller using the pipe (`|`) syntax or by calling the filter function directly.
 
@@ -546,48 +547,47 @@ Filters in AngularJS are used to format data and transform it into a more readab
 AngularJS offers several built-in filters to help you transform and format data in your views. Here are some commonly used built-in filters with examples of their usage:
 
 1. **currency:** Formats a number as currency with a specified currency symbol and decimal places.
-   - Usage: `{{ price | currency:'$':2 }}` → `$1,234.56`
-   - Example: `<p>Price: {{ price | currency:'$':2 }}</p>`
+    - Usage: `{{ price | currency:'$':2 }}` → `$1,234.56`
+    - Example: `<p>Price: {{ price | currency:'$':2 }}</p>`
 2. **date:** Formats a date as a string with a specified format.
-   - Usage: `{{ date | date:'MM/dd/yyyy' }}` → `04/15/2022`
-   - Example: `<p>Birthdate: {{ user.birthdate | date:'MM/dd/yyyy' }}</p>`
+    - Usage: `{{ date | date:'MM/dd/yyyy' }}` → `04/15/2022`
+    - Example: `<p>Birthdate: {{ user.birthdate | date:'MM/dd/yyyy' }}</p>`
 3. **filter:** Filters an array of objects based on a search term and a property.
-
-   - Usage: `{{ users | filter:searchTerm:'name' }}`
-   - Example:
-
-   ```html
-   <input type="text" ng-model="searchTerm" />
-   <ul>
-     <li ng-repeat="user in users | filter:searchTerm:'name'">
-       {{ user.name }}
-     </li>
-   </ul>
-   ```
-
+    - Usage: `{{ users | filter:searchTerm:'name' }}`
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="searchTerm">
+    <ul>
+      <li ng-repeat="user in users | filter:searchTerm:'name'">{{ user.name }}</li>
+    </ul>
+    
+    ```
+    
 4. **limitTo:** Limits the number of elements in an array.
-   - Usage: `{{ [1,2,3,4,5] | limitTo:3 }}` → `[1,2,3]`
-   - Example: `<ul><li ng-repeat="item in [1,2,3,4,5] | limitTo:3">{{ item }}</li></ul>`
+    - Usage: `{{ [1,2,3,4,5] | limitTo:3 }}` → `[1,2,3]`
+    - Example: `<ul><li ng-repeat="item in [1,2,3,4,5] | limitTo:3">{{ item }}</li></ul>`
 5. **lowercase** and **uppercase:** Converts a string to lowercase or uppercase, respectively.
-   - Usage: `{{ text | lowercase }}` → `hello world`
-   - Example: `<p>Enter text: <input type="text" ng-model="text"><br>Lowercase: {{ text | lowercase }}</p>`
+    - Usage: `{{ text | lowercase }}` → `hello world`
+    - Example: `<p>Enter text: <input type="text" ng-model="text"><br>Lowercase: {{ text | lowercase }}</p>`
 6. **orderBy:** Sorts an array of objects by a specific property or properties.
-
-   - Usage: `{{ users | orderBy:'lastName' }}` or `{{ users | orderBy:'-lastName' }}` (for descending order)
-   - Example:
-
-   ```html
-   <table>
-     <tr>
-       <th>Name</th>
-       <th>Last Name</th>
-     </tr>
-     <tr ng-repeat="user in users | orderBy:'lastName'">
-       <td>{{ user.firstName }}</td>
-       <td>{{ user.lastName }}</td>
-     </tr>
-   </table>
-   ```
+    - Usage: `{{ users | orderBy:'lastName' }}` or `{{ users | orderBy:'-lastName' }}` (for descending order)
+    - Example:
+    
+    ```html
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Last Name</th>
+      </tr>
+      <tr ng-repeat="user in users | orderBy:'lastName'">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+      </tr>
+    </table>
+    
+    ```
+    
 
 **Memorable Tip:** AngularJS's built-in filters help you transform and format data quickly and easily. Use them to display currency, dates, filtered arrays, limited arrays, case-converted strings, and sorted arrays in your views.
 
@@ -607,44 +607,46 @@ In AngularJS, modules are used to organize and structure your application by gro
 **Creating and Using Modules in AngularJS:**
 
 1. **Create a Module:**
-
-   - Using the `angular.module` function:
-
-   ```jsx
-   var myApp = angular.module("myApp", []);
-   ```
-
-   - Or using the `app` service:
-
-   ```jsx
-   var myApp = angular.module("myApp", []);
-   ```
-
+    - Using the `angular.module` function:
+    
+    ```jsx
+    var myApp = angular.module('myApp', []);
+    
+    ```
+    
+    - Or using the `app` service:
+    
+    ```jsx
+    var myApp = angular.module('myApp', []);
+    
+    ```
+    
 2. **Add Dependencies:**
-   - Pass an array of dependencies to the `angular.module` function to create a new module with access to those dependencies.
-   - Example: `var myApp = angular.module('myApp', ['ngRoute', 'myServices']);`
+    - Pass an array of dependencies to the `angular.module` function to create a new module with access to those dependencies.
+    - Example: `var myApp = angular.module('myApp', ['ngRoute', 'myServices']);`
 3. **Register Components:**
-
-   - Register controllers, directives, filters, and services with the module using the appropriate methods (e.g., `controller`, `directive`, `filter`, `service`).
-   - Example:
-
-   ```jsx
-   myApp.controller("MyController", function ($scope) {
-     // ...
-   });
-
-   myApp.directive("myDirective", function () {
-     // ...
-   });
-
-   myApp.filter("myFilter", function () {
-     // ...
-   });
-
-   myApp.service("myService", function () {
-     // ...
-   });
-   ```
+    - Register controllers, directives, filters, and services with the module using the appropriate methods (e.g., `controller`, `directive`, `filter`, `service`).
+    - Example:
+    
+    ```jsx
+    myApp.controller('MyController', function($scope) {
+      // ...
+    });
+    
+    myApp.directive('myDirective', function() {
+      // ...
+    });
+    
+    myApp.filter('myFilter', function() {
+      // ...
+    });
+    
+    myApp.service('myService', function() {
+      // ...
+    });
+    
+    ```
+    
 
 **Memorable Tip:** Modules in AngularJS are essential for organizing and structuring your application. They help manage dependencies, promote code reuse, and simplify configuration and initialization. Create modules using the `angular.module` function, add dependencies, and register components like controllers, directives, filters, and services to keep your codebase organized and maintainable.
 
@@ -653,38 +655,39 @@ In AngularJS, modules are used to organize and structure your application by gro
 **Creating and Configuring Modules in AngularJS:**
 
 1. **Create a Module:**
-
-   - Using the `angular.module` function:
-
-   ```jsx
-   var myApp = angular.module("myApp", []);
-   ```
-
+    - Using the `angular.module` function:
+    
+    ```jsx
+    var myApp = angular.module('myApp', []);
+    
+    ```
+    
 2. **Add Dependencies:**
-   - Pass an array of dependencies to create a new module with access to those dependencies.
-   - Example: `var myApp = angular.module('myApp', ['ngRoute', 'myServices']);`
+    - Pass an array of dependencies to create a new module with access to those dependencies.
+    - Example: `var myApp = angular.module('myApp', ['ngRoute', 'myServices']);`
 3. **Register Components:**
-
-   - Add controllers, directives, filters, and services to the module using the appropriate methods.
-   - Example:
-
-   ```jsx
-   myApp.controller("MyController", function ($scope) {
-     // ...
-   });
-
-   myApp.directive("myDirective", function () {
-     // ...
-   });
-
-   myApp.filter("myFilter", function () {
-     // ...
-   });
-
-   myApp.service("myService", function () {
-     // ...
-   });
-   ```
+    - Add controllers, directives, filters, and services to the module using the appropriate methods.
+    - Example:
+    
+    ```jsx
+    myApp.controller('MyController', function($scope) {
+      // ...
+    });
+    
+    myApp.directive('myDirective', function() {
+      // ...
+    });
+    
+    myApp.filter('myFilter', function() {
+      // ...
+    });
+    
+    myApp.service('myService', function() {
+      // ...
+    });
+    
+    ```
+    
 
 **Role of Modules in Organizing AngularJS Applications:**
 
@@ -706,72 +709,60 @@ AngularJS simplifies form handling and validation by using data binding and buil
 **Built-in Validation Directives:**
 
 1. **ng-model:** Binds form controls to the model. It also provides basic validation by updating the model when the input changes.
-
-   - Example:
-
-   ```html
-   <input type="text" ng-model="user.name" />
-   ```
-
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="user.name">
+    
+    ```
+    
 2. **ng-required:** Marks a form control as required. If the control is empty, AngularJS will add a validation error.
-
-   - Example:
-
-   ```html
-   <input type="text" ng-model="user.name" ng-required="true" />
-   ```
-
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="user.name" ng-required="true">
+    
+    ```
+    
 3. **ng-minlength** and **ng-maxlength:** Set minimum and maximum length for input fields.
-
-   - Example:
-
-   ```html
-   <input type="text" ng-model="user.name" ng-minlength="3" ng-maxlength="20" />
-   ```
-
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="user.name" ng-minlength="3" ng-maxlength="20">
+    
+    ```
+    
 4. **ng-pattern:** Validates input against a regular expression pattern.
-
-   - Example:
-
-   ```html
-   <input
-     type="text"
-     ng-model="user.email"
-     ng-pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/"
-   />
-   ```
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="user.email" ng-pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/">
+    
+    ```
+    
 
 **Form Validation with ng-form and ng-invalid:**
 
 1. **ng-form:** Groups form controls and enables form-level validation.
-
-   - Example:
-
-   ```html
-   <form ng-form="userForm">
-     <input type="text" ng-model="user.name" ng-required="true" />
-     <input
-       type="email"
-       ng-model="user.email"
-       ng-required="true"
-       ng-pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/"
-     />
-     <button type="submit" ng-disabled="userForm.$invalid">Submit</button>
-   </form>
-   ```
-
+    - Example:
+    
+    ```html
+    <form ng-form="userForm">
+      <input type="text" ng-model="user.name" ng-required="true">
+      <input type="email" ng-model="user.email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/">
+      <button type="submit" ng-disabled="userForm.$invalid">Submit</button>
+    </form>
+    
+    ```
+    
 2. **ng-invalid:** Marks a form control as invalid when a validation error occurs.
-
-   - Example:
-
-   ```html
-   <input
-     type="text"
-     ng-model="user.name"
-     ng-required="true"
-     ng-invalid="userForm.name.$invalid"
-   />
-   ```
+    - Example:
+    
+    ```html
+    <input type="text" ng-model="user.name" ng-required="true" ng-invalid="userForm.name.$invalid">
+    
+    ```
+    
 
 **Memorable Tip:** AngularJS makes form handling and validation easy with built-in directives like `ng-model`, `ng-required`, `ng-minlength`, `ng-maxlength`, and `ng-pattern`. Use `ng-form` to group form controls and enable form-level validation. The `ng-invalid` directive marks form controls as invalid when validation errors occur.
 
@@ -784,47 +775,48 @@ In AngularJS, the scope is an object that ties the model to the view. It acts as
 **How Scope Functions in AngularJS:**
 
 1. **Prototype Inheritance:** Scopes in AngularJS use prototype inheritance to create a hierarchical structure. Each scope has access to properties and methods defined on its parent scope through prototype inheritance.
-
-   - Example:
-
-   ```jsx
-   $scope.user = { name: "John Doe" };
-   $scope.userProfile = function () {
-     return "Profile of " + $scope.user.name;
-   };
-   ```
-
-   ```html
-   <div ng-controller="MyController">
-     <p>Name: {{ user.name }}</p>
-     <p>Profile: {{ userProfile() }}</p>
-     <div ng-controller="ChildController">
-       <p>Profile: {{ userProfile() }}</p>
-       <!-- Accesses the same user and userProfile from the parent scope -->
-     </div>
-   </div>
-   ```
-
+    - Example:
+    
+    ```jsx
+    $scope.user = { name: 'John Doe' };
+    $scope.userProfile = function() {
+      return 'Profile of ' + $scope.user.name;
+    };
+    
+    ```
+    
+    ```html
+    <div ng-controller="MyController">
+      <p>Name: {{ user.name }}</p>
+      <p>Profile: {{ userProfile() }}</p>
+      <div ng-controller="ChildController">
+        <p>Profile: {{ userProfile() }}</p> <!-- Accesses the same user and userProfile from the parent scope -->
+      </div>
+    </div>
+    
+    ```
+    
 2. **Isolation:** Child scopes are isolated from their parent scopes, meaning that changes to properties on a child scope do not affect the parent scope.
-
-   - Example:
-
-   ```jsx
-   $scope.user = { name: "John Doe" };
-   $scope.$new().user = { name: "Jane Doe" }; // Creates a new, isolated scope with its own user property
-   ```
-
+    - Example:
+    
+    ```jsx
+    $scope.user = { name: 'John Doe' };
+    $scope.$new().user = { name: 'Jane Doe' }; // Creates a new, isolated scope with its own user property
+    
+    ```
+    
 3. **Watchers and Digests:** Scopes use watchers to monitor changes in the model and trigger view updates. The digest cycle is responsible for checking if any watched expressions have changed and updating the view accordingly.
-
-   - Example:
-
-   ```jsx
-   $scope.$watch("user.name", function (newValue, oldValue) {
-     if (newValue !== oldValue) {
-       console.log("User name changed from", oldValue, "to", newValue);
-     }
-   });
-   ```
+    - Example:
+    
+    ```jsx
+    $scope.$watch('user.name', function(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        console.log('User name changed from', oldValue, 'to', newValue);
+      }
+    });
+    
+    ```
+    
 
 **Memorable Tip:** The scope in AngularJS is an object that connects the model to the view. It uses prototype inheritance to create a hierarchical structure, allowing child scopes to access properties and methods from their parent scopes. Scopes are isolated from one another, ensuring that changes to one scope do not affect others. The scope uses watchers and the digest cycle to monitor changes in the model and update the view accordingly.
 
@@ -835,62 +827,65 @@ In AngularJS, the scope is an object that ties the model to the view. It acts as
 In AngularJS, the scope and the model have a tight, bi-directional relationship. The model is the data that the view displays and interacts with, while the scope is the object that ties the model to the view. Here's how they relate to each other:
 
 1. **Model as Scope Properties:** The model is represented as properties on the scope. The controller populates these properties with data, and the view displays and manipulates them.
-
-   - Example:
-
-   ```jsx
-   // Controller
-   angular.module("myApp").controller("MyController", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-   });
-   ```
-
-   ```html
-   <!-- View -->
-   <div ng-controller="MyController">
-     <p>Name: {{ user.name }}</p>
-     <p>Age: {{ user.age }}</p>
-   </div>
-   ```
-
+    - Example:
+    
+    ```jsx
+    // Controller
+    angular.module('myApp').controller('MyController', function($scope) {
+      $scope.user = { name: 'John Doe', age: 30 };
+    });
+    
+    ```
+    
+    ```html
+    <!-- View -->
+    <div ng-controller="MyController">
+      <p>Name: {{ user.name }}</p>
+      <p>Age: {{ user.age }}</p>
+    </div>
+    
+    ```
+    
 2. **Two-Way Data Binding:** AngularJS uses two-way data binding to keep the model and the view in sync. Changes in the model are reflected in the view, and changes in the view are reflected in the model.
-
-   - Example:
-
-   ```html
-   <!-- View -->
-   <div ng-controller="MyController">
-     <input type="text" ng-model="user.name" />
-     <p>You entered: {{ user.name }}</p>
-   </div>
-   ```
-
-   In this example, typing in the input field updates the `user.name` model property, and the paragraph displays the current value of `user.name`.
-
+    - Example:
+    
+    ```html
+    <!-- View -->
+    <div ng-controller="MyController">
+      <input type="text" ng-model="user.name">
+      <p>You entered: {{ user.name }}</p>
+    </div>
+    
+    ```
+    
+    In this example, typing in the input field updates the `user.name` model property, and the paragraph displays the current value of `user.name`.
+    
 3. **Scope as Model Container:** The scope acts as a container for the model, providing a place to store and organize the data that the view displays and interacts with.
-
-   - Example:
-
-   ```jsx
-   // Controller
-   angular.module("myApp").controller("MyController", function ($scope) {
-     $scope.user = { name: "John Doe", age: 30 };
-     $scope.updateUser = function (newName) {
-       $scope.user.name = newName;
-     };
-   });
-   ```
-
-   ```html
-   <!-- View -->
-   <div ng-controller="MyController">
-     <input type="text" ng-model="user.name" />
-     <button ng-click="updateUser('Jane Doe')">Update Name</button>
-     <p>Name: {{ user.name }}</p>
-   </div>
-   ```
-
-   In this example, the scope contains the `user` model and the `updateUser` method, which updates the `user.name` property.
+    - Example:
+    
+    ```jsx
+    // Controller
+    angular.module('myApp').controller('MyController', function($scope) {
+      $scope.user = { name: 'John Doe', age: 30 };
+      $scope.updateUser = function(newName) {
+        $scope.user.name = newName;
+      };
+    });
+    
+    ```
+    
+    ```html
+    <!-- View -->
+    <div ng-controller="MyController">
+      <input type="text" ng-model="user.name">
+      <button ng-click="updateUser('Jane Doe')">Update Name</button>
+      <p>Name: {{ user.name }}</p>
+    </div>
+    
+    ```
+    
+    In this example, the scope contains the `user` model and the `updateUser` method, which updates the `user.name` property.
+    
 
 **Memorable Tip:** In AngularJS, the scope and the model have a close relationship. The model is represented as properties on the scope, and two-way data binding keeps the model and the view in sync. The scope acts as a container for the model, providing a place to store and organize the data that the view displays and interacts with.
 
@@ -909,53 +904,51 @@ In AngularJS, a service is a reusable, standalone object that encapsulates funct
 **Creating and Using Services in AngularJS:**
 
 1. **Create a Service:**
-
-   - Using the `service` function:
-
-   ```jsx
-   angular.module("myApp").service("userService", function () {
-     this.getUsers = function () {
-       // Fetch users from a remote API or local data store
-     };
-   });
-   ```
-
-   - Or using the `app.service` method:
-
-   ```jsx
-   angular.module("myApp").service("userService", function () {
-     // ...
-   });
-   ```
-
+    - Using the `service` function:
+    
+    ```jsx
+    angular.module('myApp').service('userService', function() {
+      this.getUsers = function() {
+        // Fetch users from a remote API or local data store
+      };
+    });
+    
+    ```
+    
+    - Or using the `app.service` method:
+    
+    ```jsx
+    angular.module('myApp').service('userService', function() {
+      // ...
+    });
+    
+    ```
+    
 2. **Inject the Service:**
-
-   - Inject the service into a controller, directive, or another service using dependency injection.
-   - Example:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("UserController", function ($scope, userService) {
-       $scope.users = userService.getUsers();
-     });
-   ```
-
+    - Inject the service into a controller, directive, or another service using dependency injection.
+    - Example:
+    
+    ```jsx
+    angular.module('myApp').controller('UserController', function($scope, userService) {
+      $scope.users = userService.getUsers();
+    });
+    
+    ```
+    
 3. **Use the Service:**
-
-   - Call the service methods to perform tasks or access data.
-   - Example:
-
-   ```jsx
-   angular
-     .module("myApp")
-     .controller("UserController", function ($scope, userService) {
-       $scope.users = userService.getUsers();
-       $scope.addUser = function (newUser) {
-         userService.addUser(newUser);
-       };
-     });
-   ```
+    - Call the service methods to perform tasks or access data.
+    - Example:
+    
+    ```jsx
+    angular.module('myApp').controller('UserController', function($scope, userService) {
+      $scope.users = userService.getUsers();
+      $scope.addUser = function(newUser) {
+        userService.addUser(newUser);
+      };
+    });
+    
+    ```
+    
 
 **Memorable Tip:** Services in AngularJS are reusable, standalone objects that encapsulate functionality and data. They help promote code reuse, separate concerns, and improve testability. To create a service, define a function with the desired methods and data, then inject it into controllers, directives, or other services to use its functionality.
 
@@ -973,11 +966,12 @@ In AngularJS, both services and factories are used to create reusable components
 - Example:
 
 ```jsx
-angular.module("myApp").service("userService", function () {
-  this.getUsers = function () {
+angular.module('myApp').service('userService', function() {
+  this.getUsers = function() {
     // Fetch users from a remote API or local data store
   };
 });
+
 ```
 
 **Factories:**
@@ -988,29 +982,30 @@ angular.module("myApp").service("userService", function () {
 - Example:
 
 ```jsx
-angular.module("myApp").factory("userFactory", function () {
+angular.module('myApp').factory('userFactory', function() {
   var users = []; // Private data
 
   return {
-    getUsers: function () {
+    getUsers: function() {
       // Fetch users from a remote API or local data store
       return users;
     },
-    addUser: function (newUser) {
+    addUser: function(newUser) {
       users.push(newUser);
-    },
+    }
   };
 });
+
 ```
 
 **Differences:**
 
 1. **Definition:**
-   - Services are defined using a constructor function, while factories are defined using a configuration block.
-   - Services have an instance-specific context, while factories have a module-specific context.
+    - Services are defined using a constructor function, while factories are defined using a configuration block.
+    - Services have an instance-specific context, while factories have a module-specific context.
 2. **Data Encapsulation:**
-   - Services expose data and methods on the service instance (`this`), while factories can encapsulate data within the factory function and expose only the necessary methods.
+    - Services expose data and methods on the service instance (`this`), while factories can encapsulate data within the factory function and expose only the necessary methods.
 3. **Use Cases:**
-   - Services are typically used for simple, single-responsibility objects, while factories are used when you need to encapsulate data or perform complex initialization.
+    - Services are typically used for simple, single-responsibility objects, while factories are used when you need to encapsulate data or perform complex initialization.
 
 **Memorable Tip:** In AngularJS, services and factories are both used to create reusable components, but they differ in how they are defined and used. Services are defined using a constructor function with an instance-specific context, while factories are defined using a configuration block with a module-specific context. Services expose data and methods on the service instance, while factories can encapsulate data and expose only the necessary methods. Choose the appropriate approach based on your specific use case.

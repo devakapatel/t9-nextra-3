@@ -51,33 +51,33 @@ In summary, the World Wide Web is a collection of information that can be access
 #### Key Purposes of HTTP:
 
 1. **Request-Response Model**:
-   - HTTP operates on a request-response model, where a client (usually a web browser) sends a request to a server, and the server responds with the requested resources (such as HTML documents, images, or other data).
-   - This model facilitates efficient communication between clients and servers.
+    - HTTP operates on a request-response model, where a client (usually a web browser) sends a request to a server, and the server responds with the requested resources (such as HTML documents, images, or other data).
+    - This model facilitates efficient communication between clients and servers.
 2. **Resource Identification**:
-   - HTTP uses URLs (Uniform Resource Locators) to identify resources on the web. Each resource is uniquely addressable, allowing users to request specific content easily.
-   - For example, a URL like `https://www.example.com/page` points to a specific page on the server.
+    - HTTP uses URLs (Uniform Resource Locators) to identify resources on the web. Each resource is uniquely addressable, allowing users to request specific content easily.
+    - For example, a URL like `https://www.example.com/page` points to a specific page on the server.
 3. **Data Transfer**:
-   - HTTP enables the transfer of various types of data, including text, images, videos, and files. It supports different content types through headers that specify the type of data being sent or received.
-   - The protocol allows for both synchronous (immediate) and asynchronous (delayed) data transfer.
+    - HTTP enables the transfer of various types of data, including text, images, videos, and files. It supports different content types through headers that specify the type of data being sent or received.
+    - The protocol allows for both synchronous (immediate) and asynchronous (delayed) data transfer.
 4. **Stateless Communication**:
-   - HTTP is stateless, meaning that each request from a client to a server is treated independently. The server does not retain any information about previous requests.
-   - This design simplifies server management but can be supplemented with mechanisms like cookies or sessions for stateful interactions.
+    - HTTP is stateless, meaning that each request from a client to a server is treated independently. The server does not retain any information about previous requests.
+    - This design simplifies server management but can be supplemented with mechanisms like cookies or sessions for stateful interactions.
 5. **Support for Methods**:
-   - HTTP defines several methods (also known as verbs) that specify the desired action to be performed on a resource. Common methods include:
-     - **GET**: Retrieve data from the server.
-     - **POST**: Send data to the server for processing (e.g., submitting forms).
-     - **PUT**: Update an existing resource.
-     - **DELETE**: Remove a resource from the server.
-   - These methods allow for diverse interactions with web resources.
+    - HTTP defines several methods (also known as verbs) that specify the desired action to be performed on a resource. Common methods include:
+        - **GET**: Retrieve data from the server.
+        - **POST**: Send data to the server for processing (e.g., submitting forms).
+        - **PUT**: Update an existing resource.
+        - **DELETE**: Remove a resource from the server.
+    - These methods allow for diverse interactions with web resources.
 6. **Error Handling**:
-   - HTTP provides status codes in responses to indicate the outcome of requests. For example:
-     - **200 OK**: The request was successful.
-     - **404 Not Found**: The requested resource could not be found.
-     - **500 Internal Server Error**: There was an error on the server.
-   - These codes help clients understand the result of their requests and take appropriate actions.
+    - HTTP provides status codes in responses to indicate the outcome of requests. For example:
+        - **200 OK**: The request was successful.
+        - **404 Not Found**: The requested resource could not be found.
+        - **500 Internal Server Error**: There was an error on the server.
+    - These codes help clients understand the result of their requests and take appropriate actions.
 7. **Security Features**:
-   - While HTTP itself is not secure, it can be extended with HTTPS (HTTP Secure), which incorporates SSL/TLS encryption to protect data during transmission.
-   - HTTPS ensures confidentiality and integrity of data exchanged between clients and servers, safeguarding against eavesdropping and tampering.
+    - While HTTP itself is not secure, it can be extended with HTTPS (HTTP Secure), which incorporates SSL/TLS encryption to protect data during transmission.
+    - HTTPS ensures confidentiality and integrity of data exchanged between clients and servers, safeguarding against eavesdropping and tampering.
 
 #### Conclusion
 
@@ -92,20 +92,20 @@ A **web browser** is a software application that enables users to access, retrie
 #### Key Functions of a Web Browser:
 
 1. **Rendering Web Pages**:
-   - Browsers convert HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript into visually formatted web pages that users can view and interact with.
-   - They provide a graphical interface that displays text, images, and other media in a user-friendly manner.
+    - Browsers convert HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript into visually formatted web pages that users can view and interact with.
+    - They provide a graphical interface that displays text, images, and other media in a user-friendly manner.
 2. **Navigating the Web**:
-   - Browsers allow users to navigate between different web pages using hyperlinks. Users can enter URLs in the address bar or click on links to move from one page to another.
-   - They also provide features like bookmarks, history, and tabbed browsing to enhance user experience.
+    - Browsers allow users to navigate between different web pages using hyperlinks. Users can enter URLs in the address bar or click on links to move from one page to another.
+    - They also provide features like bookmarks, history, and tabbed browsing to enhance user experience.
 3. **Executing Scripts**:
-   - Modern browsers support JavaScript execution, enabling dynamic content updates and interactive features on web pages.
-   - This allows for functionalities such as form validation, animations, and real-time data updates without requiring a page reload.
+    - Modern browsers support JavaScript execution, enabling dynamic content updates and interactive features on web pages.
+    - This allows for functionalities such as form validation, animations, and real-time data updates without requiring a page reload.
 4. **Managing Cookies and Sessions**:
-   - Browsers store cookies, which are small pieces of data sent by servers to remember user preferences or session information.
-   - This helps maintain user sessions across multiple requests and provides personalized experiences.
+    - Browsers store cookies, which are small pieces of data sent by servers to remember user preferences or session information.
+    - This helps maintain user sessions across multiple requests and provides personalized experiences.
 5. **Security Features**:
-   - Browsers implement security measures such as HTTPS support, warning users about insecure connections, blocking pop-ups, and preventing malicious downloads.
-   - They also offer privacy features like incognito mode to browse without saving history or cookies.
+    - Browsers implement security measures such as HTTPS support, warning users about insecure connections, blocking pop-ups, and preventing malicious downloads.
+    - They also offer privacy features like incognito mode to browse without saving history or cookies.
 
 ### Interaction with Web Servers
 
@@ -158,24 +158,24 @@ In summary, a web browser serves as a critical tool for accessing and interactin
 
 ### Key Differences Between HTTP and HTTPS
 
-| Feature            | HTTP                                       | HTTPS                                                               |
-| ------------------ | ------------------------------------------ | ------------------------------------------------------------------- |
-| **Security**       | No encryption; data is sent in plain text. | Uses SSL/TLS to encrypt data, making it secure.                     |
-| **Port**           | Operates on port 80.                       | Operates on port 443.                                               |
-| **Data Integrity** | Vulnerable to interception and tampering.  | Ensures data integrity; protects against tampering.                 |
-| **Authentication** | No verification of the server's identity.  | Verifies the server's identity through certificates.                |
-| **SEO Ranking**    | Lower preference in search rankings.       | Higher preference in search rankings by search engines like Google. |
+| Feature | HTTP | HTTPS |
+| --- | --- | --- |
+| **Security** | No encryption; data is sent in plain text. | Uses SSL/TLS to encrypt data, making it secure. |
+| **Port** | Operates on port 80. | Operates on port 443. |
+| **Data Integrity** | Vulnerable to interception and tampering. | Ensures data integrity; protects against tampering. |
+| **Authentication** | No verification of the server's identity. | Verifies the server's identity through certificates. |
+| **SEO Ranking** | Lower preference in search rankings. | Higher preference in search rankings by search engines like Google. |
 
 ### Why is HTTPS Considered More Secure?
 
 1. **Encryption**:
-   - HTTPS encrypts the data exchanged between your browser and the web server, making it difficult for hackers to intercept or read the information.
+    - HTTPS encrypts the data exchanged between your browser and the web server, making it difficult for hackers to intercept or read the information.
 2. **Data Integrity**:
-   - It ensures that the data sent and received has not been altered during transmission, protecting users from data corruption or tampering.
+    - It ensures that the data sent and received has not been altered during transmission, protecting users from data corruption or tampering.
 3. **Authentication**:
-   - HTTPS uses SSL/TLS certificates to verify the identity of the website, ensuring that users are communicating with the legitimate site and not an imposter.
+    - HTTPS uses SSL/TLS certificates to verify the identity of the website, ensuring that users are communicating with the legitimate site and not an imposter.
 4. **Protection Against Attacks**:
-   - HTTPS helps defend against various cyber threats, such as man-in-the-middle attacks, where a malicious actor intercepts communication between two parties.
+    - HTTPS helps defend against various cyber threats, such as man-in-the-middle attacks, where a malicious actor intercepts communication between two parties.
 
 ### Conclusion
 
@@ -201,51 +201,72 @@ An HTML (Hypertext Markup Language) document is the backbone of web pages, provi
 
 - **Syntax**: `<head>` ... `</head>`
 - **Purpose**: Contains meta-information about the document, such as:
-  - **Title**: The title of the document displayed in the browser tab.
-    ```html
-    <title>Your Page Title</title>
-    ```
-  - **Meta Tags**: Information about character set, author, and viewport settings for responsive design.
-    ```html
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    ```
-  - **Links to Stylesheets**: CSS files for styling.
-    ```html
-    <link rel="stylesheet" href="styles.css" />
-    ```
+    - **Title**: The title of the document displayed in the browser tab.
+        
+        ```html
+        <title>Your Page Title</title>
+        
+        ```
+        
+    - **Meta Tags**: Information about character set, author, and viewport settings for responsive design.
+        
+        ```html
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        ```
+        
+    - **Links to Stylesheets**: CSS files for styling.
+        
+        ```html
+        <link rel="stylesheet" href="styles.css">
+        
+        ```
+        
 
 #### 4. **Body Element**
 
 - **Syntax**: `<body>` ... `</body>`
 - **Purpose**: Contains all the content that is visible to users, including:
-  - Text (headings, paragraphs)
-  - Images
-  - Links
-  - Lists
-  - Forms
-  - Other media
+    - Text (headings, paragraphs)
+    - Images
+    - Links
+    - Lists
+    - Forms
+    - Other media
 
 #### 5. **Structural Elements**
 
 Within the body, various structural elements help organize content:
 
 - **Headings**: Defined using `<h1>` to `<h6>`, with `<h1>` being the most important.
-  ```html
-  <h1>Main Heading</h1>
-  ```
+    
+    ```html
+    <h1>Main Heading</h1>
+    
+    ```
+    
 - **Paragraphs**: Created with `<p>` tags.
-  ```html
-  <p>This is a paragraph.</p>
-  ```
+    
+    ```html
+    <p>This is a paragraph.</p>
+    
+    ```
+    
 - **Links**: Created using `<a>` tags.
-  ```html
-  <a href="<https://www.example.com>">Visit Example</a>
-  ```
+    
+    ```html
+    <a href="<https://www.example.com>">Visit Example</a>
+    
+    ```
+    
 - **Images**: Added with `<img>` tags.
-  ```html
-  <img src="image.jpg" alt="Description of image" />
-  ```
+    
+    ```html
+    <img src="image.jpg" alt="Description of image">
+    
+    ```
+    
 
 #### Conclusion
 
@@ -262,12 +283,15 @@ HTML attributes are special characteristics or properties that provide additiona
 Attributes enhance the functionality and appearance of HTML elements. They can control various aspects such as behavior, styling, and identification. Here’s how they are typically used:
 
 1. **Syntax**:
-   - The basic syntax for an attribute looks like this:
-     ```html
-     <element attributeName="attributeValue">Content</element>
-     ```
+    - The basic syntax for an attribute looks like this:
+        
+        ```html
+        <element attributeName="attributeValue">Content</element>
+        
+        ```
+        
 2. **Common Attributes**:
-   - Many HTML elements share common attributes, while some attributes are specific to certain elements.
+    - Many HTML elements share common attributes, while some attributes are specific to certain elements.
 
 #### Examples of HTML Attributes
 
@@ -277,59 +301,78 @@ Here are some common attributes along with examples:
 
 - **Purpose**: Assigns one or more class names to an element for styling with CSS.
 - **Example**:
-  ```html
-  <p class="intro">This is an introductory paragraph.</p>
-  ```
+    
+    ```html
+    <p class="intro">This is an introductory paragraph.</p>
+    
+    ```
+    
 
 #### 2. **id**
 
 - **Purpose**: Assigns a unique identifier to an element, which can be used for styling or scripting.
 - **Example**:
-  ```html
-  <h1 id="main-title">Welcome to My Website</h1>
-  ```
+    
+    ```html
+    <h1 id="main-title">Welcome to My Website</h1>
+    
+    ```
+    
 
 #### 3. **href**
 
 - **Purpose**: Specifies the URL of a link in anchor (`<a>`) tags.
 - **Example**:
-  ```html
-  <a href="<https://www.example.com>">Visit Example</a>
-  ```
+    
+    ```html
+    <a href="<https://www.example.com>">Visit Example</a>
+    
+    ```
+    
 
 #### 4. **src**
 
 - **Purpose**: Specifies the source URL for images or scripts.
 - **Example**:
-  ```html
-  <img src="image.jpg" alt="A beautiful scenery" />
-  ```
+    
+    ```html
+    <img src="image.jpg" alt="A beautiful scenery">
+    
+    ```
+    
 
 #### 5. **alt**
 
 - **Purpose**: Provides alternative text for images, improving accessibility and SEO.
 - **Example**:
-  ```html
-  <img src="logo.png" alt="Company Logo" />
-  ```
+    
+    ```html
+    <img src="logo.png" alt="Company Logo">
+    
+    ```
+    
 
 #### 6. **style**
 
 - **Purpose**: Applies inline CSS styles directly to an element.
 - **Example**:
-  ```html
-  <p style="color: blue; font-size: 16px;">
-    This text is blue and sized at 16 pixels.
-  </p>
-  ```
+    
+    ```html
+    <p style="color: blue; font-size: 16px;">This text is blue and sized at 16 pixels.</p>
+    
+    ```
+    
 
 #### 7. **title**
 
 - **Purpose**: Provides additional information about an element, often displayed as a tooltip on hover.
 - **Example**:
-  ```html
-  <a href="#" title="Click here for more information">More Info</a>
-  ```
+    
+    ```html
+    <a href="#" title="Click here for more information">More Info</a>
+    
+    ```
+    
 
 #### Conclusion
 
@@ -344,46 +387,59 @@ An HTML5 document has a straightforward and standardized structure that makes it
 #### 1. **DOCTYPE Declaration**
 
 - **Syntax**:
-  ```html
-  <!DOCTYPE html>
-  ```
+    
+    ```html
+    <!DOCTYPE html>
+    
+    ```
+    
 - **Purpose**: This declaration tells the browser that the document is an HTML5 document, ensuring proper rendering.
 
 #### 2. **HTML Element**
 
 - **Syntax**:
-  ```html
-  <html lang="en"></html>
-  ```
+    
+    ```html
+    <html lang="en">
+    </html>
+    
+    ```
+    
 - **Purpose**: The `<html>` tag wraps all the content of the document and includes a `lang` attribute to specify the language of the document.
 
 #### 3. **Head Element**
 
 - **Syntax**:
-  ```html
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Page Title</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  ```
+    
+    ```html
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Page Title</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    ```
+    
 - **Purpose**: Contains metadata about the document, including:
-  - Character set specification (`<meta charset="UTF-8">`)
-  - Viewport settings for responsive design
-  - Document title displayed in the browser tab
-  - Links to external stylesheets or scripts
+    - Character set specification (`<meta charset="UTF-8">`)
+    - Viewport settings for responsive design
+    - Document title displayed in the browser tab
+    - Links to external stylesheets or scripts
 
 #### 4. **Body Element**
 
 - **Syntax**:
-  ```html
-  <body>
-    <h1>Main Heading</h1>
-    <p>This is a paragraph.</p>
-    <a href="<https://www.example.com>">Visit Example</a>
-  </body>
-  ```
+    
+    ```html
+    <body>
+        <h1>Main Heading</h1>
+        <p>This is a paragraph.</p>
+        <a href="<https://www.example.com>">Visit Example</a>
+    </body>
+    
+    ```
+    
 - **Purpose**: Contains all the visible content on the web page, such as text, images, links, and other media.
 
 #### Complete Example of an HTML5 Document
@@ -391,18 +447,19 @@ An HTML5 document has a straightforward and standardized structure that makes it
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First HTML5 Page</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <h1>Welcome to My Website</h1>
     <p>This is a simple HTML5 document structure.</p>
     <a href="<https://www.example.com>">Visit Example</a>
-  </body>
+</body>
 </html>
+
 ```
 
 ### Differences from Previous Versions of HTML
@@ -451,81 +508,83 @@ HTML5 has streamlined many aspects of web development by deprecating certain tag
 
 - **Deprecated**: The `<font>` tag was used to specify font size, color, and face.
 - **Modern Alternative**: Use CSS for styling text.
-  ```html
-  <p style="font-family: Arial; color: blue; font-size: 16px;">
-    This is styled text.
-  </p>
-  ```
+    
+    ```html
+    <p style="font-family: Arial; color: blue; font-size: 16px;">This is styled text.</p>
+    
+    ```
+    
 
 #### 2. **<center>**
 
 - **Deprecated**: The `<center>` tag was used to center-align text and other elements.
 - **Modern Alternative**: Use CSS for alignment.
-  ```html
-  <p style="text-align: center;">This text is centered.</p>
-  ```
+    
+    ```html
+    <p style="text-align: center;">This text is centered.</p>
+    
+    ```
+    
 
 #### 3. **<marquee>**
 
 - **Deprecated**: The `<marquee>` tag was used to create scrolling text or images.
 - **Modern Alternative**: Use CSS animations or JavaScript for similar effects.
-
-  ```html
-  <div style="overflow: hidden; white-space: nowrap;">
-    <span style="display: inline-block; animation: scroll 10s linear infinite;"
-      >Scrolling Text</span
-    >
-  </div>
-
-  <style>
-    @keyframes scroll {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(-100%);
-      }
-    }
-  </style>
-  ```
+    
+    ```html
+    <div style="overflow: hidden; white-space: nowrap;">
+        <span style="display: inline-block; animation: scroll 10s linear infinite;">Scrolling Text</span>
+    </div>
+    
+    <style>
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+    
+    ```
+    
 
 #### 4. **<blink>**
 
 - **Deprecated**: The `<blink>` tag was used to make text blink on the screen.
 - **Modern Alternative**: Use CSS animations or JavaScript (though blinking text is generally discouraged for usability).
-
-  ```html
-  <span style="animation: blink-animation 1s steps(5, start) infinite;"
-    >Blinking Text</span
-  >
-
-  <style>
-    @keyframes blink-animation {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-    }
-  </style>
-  ```
+    
+    ```html
+    <span style="animation: blink-animation 1s steps(5, start) infinite;">Blinking Text</span>
+    
+    <style>
+        @keyframes blink-animation {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+    
+    ```
+    
 
 #### 5. **<frame>, <frameset>, and <noframes>**
 
 - **Deprecated**: These tags were used to create framesets for displaying multiple HTML documents in a single window.
 - **Modern Alternative**: Use CSS with `<iframe>` for embedding content or consider using responsive design techniques.
-  ```html
-  <iframe src="<https://www.example.com>" width="600" height="400"></iframe>
-  ```
+    
+    ```html
+    <iframe src="<https://www.example.com>" width="600" height="400"></iframe>
+    
+    ```
+    
 
 #### 6. **<applet>**
 
 - **Deprecated**: The `<applet>` tag was used to embed Java applets into web pages.
 - **Modern Alternative**: Use `<object>` or `<embed>` for similar functionality, though Java applets are largely obsolete in favor of HTML5 technologies.
-  ```html
-  <object data="your-java-applet.jar" width="300" height="200"></object>
-  ```
+    
+    ```html
+    <object data="your-java-applet.jar" width="300" height="200"></object>
+    
+    ```
+    
 
 #### Conclusion
 
@@ -554,43 +613,46 @@ Let’s say you want to create a simple web application that draws a colored rec
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas Example</title>
     <style>
-      canvas {
-        border: 1px solid black; /* Add a border to the canvas */
-      }
+        canvas {
+            border: 1px solid black; /* Add a border to the canvas */
+        }
     </style>
-  </head>
-  <body>
-    <canvas id="myCanvas" width="400" height="200"></canvas>
+</head>
+<body>
 
-    <script>
-      // Get the canvas element and its context
-      var canvas = document.getElementById("myCanvas");
-      var ctx = canvas.getContext("2d");
+<canvas id="myCanvas" width="400" height="200"></canvas>
 
-      // Set fill color
-      ctx.fillStyle = "blue";
+<script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
 
-      // Draw a rectangle
-      ctx.fillRect(50, 50, 150, 100); // x, y, width, height
-    </script>
-  </body>
+    // Set fill color
+    ctx.fillStyle = 'blue';
+
+    // Draw a rectangle
+    ctx.fillRect(50, 50, 150, 100); // x, y, width, height
+</script>
+
+</body>
 </html>
+
 ```
 
 #### Explanation of the Code
 
 1. **Canvas Element**:
-   - The `<canvas>` tag is defined with an ID (`myCanvas`) and specified dimensions (400 pixels wide and 200 pixels high).
+    - The `<canvas>` tag is defined with an ID (`myCanvas`) and specified dimensions (400 pixels wide and 200 pixels high).
 2. **JavaScript Context**:
-   - The `getContext('2d')` method retrieves the 2D rendering context for the canvas, enabling drawing operations.
+    - The `getContext('2d')` method retrieves the 2D rendering context for the canvas, enabling drawing operations.
 3. **Drawing a Rectangle**:
-   - The `fillStyle` property sets the fill color to blue.
-   - The `fillRect()` method draws a filled rectangle at coordinates (50, 50) with a width of 150 pixels and a height of 100 pixels.
+    - The `fillStyle` property sets the fill color to blue.
+    - The `fillRect()` method draws a filled rectangle at coordinates (50, 50) with a width of 150 pixels and a height of 100 pixels.
 
 #### Conclusion
 
@@ -616,10 +678,11 @@ The `<audio>` element is used to embed sound content in a web page. It supports 
 
 ```html
 <audio controls>
-  <source src="audio-file.mp3" type="audio/mpeg" />
-  <source src="audio-file.ogg" type="audio/ogg" />
-  Your browser does not support the audio element.
+    <source src="audio-file.mp3" type="audio/mpeg">
+    <source src="audio-file.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
 </audio>
+
 ```
 
 #### 2. The `<video>` Element
@@ -637,10 +700,11 @@ The `<video>` element is used to embed video content in a web page. It supports 
 
 ```html
 <video width="640" height="360" controls>
-  <source src="video-file.mp4" type="video/mp4" />
-  <source src="video-file.webm" type="video/webm" />
-  Your browser does not support the video tag.
+    <source src="video-file.mp4" type="video/mp4">
+    <source src="video-file.webm" type="video/webm">
+    Your browser does not support the video tag.
 </video>
+
 ```
 
 ### Differences from Older Methods of Embedding Multimedia
@@ -696,35 +760,38 @@ You can include SVG markup directly within your HTML file. This method allows fo
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inline SVG Example</title>
     <style>
-      .circle {
-        fill: blue;
-        transition: fill 0.3s;
-      }
-      .circle:hover {
-        fill: red;
-      }
+        .circle {
+            fill: blue;
+            transition: fill 0.3s;
+        }
+        .circle:hover {
+            fill: red;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Inline SVG Example</h1>
+</head>
+<body>
 
-    <svg width="200" height="200">
-      <circle class="circle" cx="100" cy="100" r="80" />
-    </svg>
+<h1>Inline SVG Example</h1>
 
-    <script>
-      const circle = document.querySelector(".circle");
-      circle.addEventListener("click", () => {
-        alert("Circle clicked!");
-      });
-    </script>
-  </body>
+<svg width="200" height="200">
+    <circle class="circle" cx="100" cy="100" r="80" />
+</svg>
+
+<script>
+    const circle = document.querySelector('.circle');
+    circle.addEventListener('click', () => {
+        alert('Circle clicked!');
+    });
+</script>
+
+</body>
 </html>
+
 ```
 
 #### Explanation of the Example:
@@ -741,7 +808,8 @@ You can also reference an external SVG file using the `<img>` tag. This method i
 #### Example:
 
 ```html
-<img src="image.svg" alt="Description of the SVG image" />
+<img src="image.svg" alt="Description of the SVG image">
+
 ```
 
 #### 3. **Using the `<object>` Tag**
@@ -751,9 +819,8 @@ The `<object>` tag can be used to embed an external SVG file while allowing for 
 #### Example:
 
 ```html
-<object type="image/svg+xml" data="image.svg">
-  Your browser does not support SVG
-</object>
+<object type="image/svg+xml" data="image.svg">Your browser does not support SVG</object>
+
 ```
 
 #### 4. **Using the `<iframe>` Tag**
@@ -764,6 +831,7 @@ An SVG file can also be embedded in an iframe, which allows for isolation from t
 
 ```html
 <iframe src="image.svg" width="400" height="300"></iframe>
+
 ```
 
 ### Conclusion
@@ -791,49 +859,72 @@ Here are some of the notable new input types and controls introduced in HTML5:
 #### 1. **New Input Types**
 
 - **email**: Validates that the entered text is in the format of an email address.
-  ```html
-  <input type="email" placeholder="Enter your email" />
-  ```
+    
+    ```html
+    <input type="email" placeholder="Enter your email">
+    
+    ```
+    
 - **url**: Validates that the entered text is in the format of a URL.
-  ```html
-  <input type="url" placeholder="Enter website URL" />
-  ```
+    
+    ```html
+    <input type="url" placeholder="Enter website URL">
+    
+    ```
+    
 - **tel**: Provides a numeric keypad for entering telephone numbers.
-  ```html
-  <input type="tel" placeholder="Enter your phone number" />
-  ```
+    
+    ```html
+    <input type="tel" placeholder="Enter your phone number">
+    
+    ```
+    
 - **number**: Allows only numeric input, with optional attributes for min, max, and step values.
-  ```html
-  <input type="number" min="1" max="10" step="1" />
-  ```
+    
+    ```html
+    <input type="number" min="1" max="10" step="1">
+    
+    ```
+    
 - **range**: Creates a slider for selecting a value within a specified range.
-  ```html
-  <input type="range" min="0" max="100" value="50" />
-  ```
+    
+    ```html
+    <input type="range" min="0" max="100" value="50">
+    
+    ```
+    
 - **date**, **time**, **datetime-local**, **month**, and **week**: Provide date and time pickers for easier input.
-  ```html
-  <input type="date" />
-  ```
+    
+    ```html
+    <input type="date">
+    
+    ```
+    
 
 #### 2. **New Attributes**
 
 - **required**: Indicates that a field must be filled out before submitting the form.
-  ```html
-  <input type="text" required placeholder="This field is required" />
-  ```
+    
+    ```html
+    <input type="text" required placeholder="This field is required">
+    
+    ```
+    
 - **pattern**: Specifies a regular expression that the input must match.
-  ```html
-  <input
-    type="text"
-    pattern="[A-Za-z]{3,}"
-    placeholder="Three or more letters"
-  />
-  ```
+    
+    ```html
+    <input type="text" pattern="[A-Za-z]{3,}" placeholder="Three or more letters">
+    
+    ```
+    
 - **min**, **max**, and **step**: Used with numeric inputs to define acceptable ranges and increments.
 - **multiple**: Allows users to select multiple files or options.
-  ```html
-  <input type="file" multiple />
-  ```
+    
+    ```html
+    <input type="file" multiple>
+    
+    ```
+    
 - **autocomplete**: Suggests previously entered values for fields.
 
 #### Example of an HTML5 Form
@@ -843,63 +934,43 @@ Here’s an example showcasing some of these new features:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Form Example</title>
-  </head>
-  <body>
-    <h1>Registration Form</h1>
-    <form action="/submit" method="POST">
-      <label for="name">Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="Your Name"
-      /><br /><br />
+</head>
+<body>
 
-      <label for="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        placeholder="Your Email"
-      /><br /><br />
+<h1>Registration Form</h1>
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
-      <label for="password">Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        required
-        placeholder="Your Password"
-      /><br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" /><br /><br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required placeholder="Your Password"><br><br>
 
-      <label for="phone">Phone:</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="+1234567890"
-      /><br /><br />
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
 
-      <label for="preferences">Preferences:</label>
-      <select id="preferences" name="preferences[]" multiple>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+1234567890"><br><br>
+
+    <label for="preferences">Preferences:</label>
+    <select id="preferences" name="preferences[]" multiple>
         <option value="news">Newsletter</option>
         <option value="updates">Updates</option>
-        <option value="offers">Special Offers</option></select
-      ><br /><br />
+        <option value="offers">Special Offers</option>
+    </select><br><br>
 
-      <button type="submit">Register</button>
-    </form>
-  </body>
+    <button type="submit">Register</button>
+</form>
+
+</body>
 </html>
+
 ```
 
 #### Conclusion
@@ -929,56 +1000,71 @@ HTML5 introduced several new attributes for the `<form>` element and its child e
 - **Purpose**: This attribute disables the browser’s built-in form validation when submitting a form.
 - **Usage**: Useful when you want to implement custom validation logic using JavaScript.
 - **Example**:
-  ```html
-  <form action="/submit" method="POST" novalidate>
-    <!-- Form fields here -->
-  </form>
-  ```
+    
+    ```html
+    <form action="/submit" method="POST" novalidate>
+        <!-- Form fields here -->
+    </form>
+    
+    ```
+    
 
 #### 2. **autocomplete**
 
 - **Purpose**: This attribute specifies whether the browser should enable autocomplete for input fields.
 - **Options**: Can be set to `on` (default) or `off`, or specific values like `name`, `email`, etc., to suggest previously entered values.
 - **Example**:
-  ```html
-  <form action="/submit" method="POST" autocomplete="on">
-    <input type="text" name="username" placeholder="Username" />
-    <input type="password" name="password" placeholder="Password" />
-    <button type="submit">Login</button>
-  </form>
-  ```
+    
+    ```html
+    <form action="/submit" method="POST" autocomplete="on">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+    
+    ```
+    
 
 #### 3. **target**
 
 - **Purpose**: This attribute specifies where to display the response after submitting the form.
 - **Options**: Common values include `_self` (default, open in the same frame), `_blank` (open in a new window), `_parent`, and `_top`.
 - **Example**:
-  ```html
-  <form action="/submit" method="POST" target="_blank">
-    <!-- Form fields here -->
-  </form>
-  ```
+    
+    ```html
+    <form action="/submit" method="POST" target="_blank">
+        <!-- Form fields here -->
+    </form>
+    
+    ```
+    
 
 #### 4. **method**
 
 - **Purpose**: Specifies how to send form data to the server.
 - **Options**: The two primary methods are `GET` (appends data to the URL) and `POST` (sends data in the request body).
 - **Example**:
-  ```html
-  <form action="/submit" method="POST">
-    <!-- Form fields here -->
-  </form>
-  ```
+    
+    ```html
+    <form action="/submit" method="POST">
+        <!-- Form fields here -->
+    </form>
+    
+    ```
+    
 
 #### 5. **action**
 
 - **Purpose**: Defines the URL where the form data will be sent upon submission.
 - **Example**:
-  ```html
-  <form action="/submit" method="POST">
-    <!-- Form fields here -->
-  </form>
-  ```
+    
+    ```html
+    <form action="/submit" method="POST">
+        <!-- Form fields here -->
+    </form>
+    
+    ```
+    
 
 #### Example of an HTML5 Form
 
@@ -987,40 +1073,30 @@ Here’s a simple example that incorporates some of these attributes:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Form Example</title>
-  </head>
-  <body>
-    <h1>Feedback Form</h1>
-    <form action="/submit-feedback" method="POST" novalidate autocomplete="on">
-      <label for="name">Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="Your Name"
-      /><br /><br />
+</head>
+<body>
 
-      <label for="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        placeholder="Your Email"
-      /><br /><br />
+<h1>Feedback Form</h1>
+<form action="/submit-feedback" method="POST" novalidate autocomplete="on">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
-      <label for="feedback">Feedback:</label><br />
-      <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea
-      ><br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
-      <button type="submit">Submit Feedback</button>
-    </form>
-  </body>
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+</body>
 </html>
+
 ```
 
 #### Conclusion
@@ -1042,14 +1118,15 @@ The `<html>` tag is the root element of an HTML document. It signifies the begin
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>My First Web Page</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Hello, World!</h1>
-  </body>
+</body>
 </html>
+
 ```
 
 ### 2. `<head>`
@@ -1062,10 +1139,11 @@ The `<head>` tag contains meta-information about the document, such as its title
 
 ```html
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
 </head>
+
 ```
 
 ### 3. `<title>`
@@ -1078,6 +1156,7 @@ The `<title>` tag defines the title of the web page, which is displayed in the b
 
 ```html
 <title>Welcome to My Website</title>
+
 ```
 
 ### 4. `<body>`
@@ -1090,9 +1169,10 @@ The `<body>` tag contains all the content that is visible to users on the web pa
 
 ```html
 <body>
-  <h1>Main Heading</h1>
-  <p>This is a paragraph of text on my web page.</p>
+    <h1>Main Heading</h1>
+    <p>This is a paragraph of text on my web page.</p>
 </body>
+
 ```
 
 ### 5. `<h1>` to `<h6>`
@@ -1107,155 +1187,153 @@ The `<h1>` to `<h6>` tags are used to define headings in HTML, with `<h1>` being
 <h1>This is a Main Heading</h1>
 <h2>This is a Subheading</h2>
 <h3>This is a Smaller Subheading</h3>
+
 ```
 
 #### Summary
 
 These five basic HTML tags form the foundation of any HTML document. They help structure the content, provide essential information about the page, and enhance user experience. Understanding these tags is crucial for anyone looking to create web pages or learn web development.
 
-## 15) Write the usage, attributes and syntax for the following tags:
-
+## 15) Write the usage, attributes and syntax for the following tags: 
 <p>,<b>, <u>, <i>, <tt>,<div>, <span>,<h1> to <h6>,<hr>, <br> <font>,<marquee>,<img>,<a>,<sub>, <sup>,<dd>, <dt>, <dl> <ol>, <ul>, <li>,<strong>, <em>,<frameset>, <iframe>.
 
 **HTML Tags Usage, Attributes, and Syntax:**
 
 1. **<p>** - Paragraph
-   - _Usage_: Defines a paragraph.
-   - _Attributes_: align, class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<p>Content goes here</p>`
+    - *Usage*: Defines a paragraph.
+    - *Attributes*: align, class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<p>Content goes here</p>`
 2. **<b>** - Bold text
-   - _Usage_: Makes text bold.
-   - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<b>Bold text</b>`
+    - *Usage*: Makes text bold.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<b>Bold text</b>`
 3. **<u>** - Underlined text
-   - _Usage_: Underlines text.
-   - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<u>Underlined text</u>`
+    - *Usage*: Underlines text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<u>Underlined text</u>`
 4. **<i>** - Italic text
-   - _Usage_: Italicizes text.
-   - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<i>Italic text</i>`
+    - *Usage*: Italicizes text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<i>Italic text</i>`
 5. **<tt>** - Teletype text
-   - _Usage_: Displays text in a fixed-width font, like a teletype machine.
-   - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<tt>Teletype text</tt>`
+    - *Usage*: Displays text in a fixed-width font, like a teletype machine.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<tt>Teletype text</tt>`
 6. **<div>** - Division or Section
-   - _Usage_: Defines a division or a section in an HTML document.
-   - _Attributes_: align, class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<div>Content goes here</div>`
+    - *Usage*: Defines a division or a section in an HTML document.
+    - *Attributes*: align, class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<div>Content goes here</div>`
 7. **<span>** - Span
-   - _Usage_: Groups inline-elements for styling purposes.
-   - _Attributes_: class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<span>Span content</span>`
+    - *Usage*: Groups inline-elements for styling purposes.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<span>Span content</span>`
 8. **<h1> to <h6>** - Headings
-   - _Usage_: Defines HTML headings.
-   - _Attributes_: align, class, dir, id, lang, style, title, etc.
-   - _Syntax_: `<h1>Heading 1</h1>` to `<h6>Heading 6</h6>`
+    - *Usage*: Defines HTML headings.
+    - *Attributes*: align, class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<h1>Heading 1</h1>` to `<h6>Heading 6</h6>`
 9. **<hr>** - Horizontal rule
-   - _Usage_: Defines a thematic break in an HTML page (like a horizontal rule).
-   - _Attributes_: align, color, noshade, size, width, etc.
-   - _Syntax_: `<hr>`
+    - *Usage*: Defines a thematic break in an HTML page (like a horizontal rule).
+    - *Attributes*: align, color, noshade, size, width, etc.
+    - *Syntax*: `<hr>`
 10. **<br>** - Line break
-    - _Usage_: Inserts a single line break.
-    - _Attributes_: None.
-    - _Syntax_: `<br>`
+    - *Usage*: Inserts a single line break.
+    - *Attributes*: None.
+    - *Syntax*: `<br>`
 11. **<font>** - Font
-    - _Usage_: Specifies a text font.
-    - _Attributes_: color, face, size.
-    - _Syntax_: `<font face="Arial" size="3">Font content</font>`
+    - *Usage*: Specifies a text font.
+    - *Attributes*: color, face, size.
+    - *Syntax*: `<font face="Arial" size="3">Font content</font>`
 12. **<marquee>** - Scrolling text
-    - _Usage_: Defines scrolling text.
-    - _Attributes_: behavior, direction, scrollamount, scrolldelay, etc.
-    - _Syntax_: `<marquee>Scrolling text</marquee>`
+    - *Usage*: Defines scrolling text.
+    - *Attributes*: behavior, direction, scrollamount, scrolldelay, etc.
+    - *Syntax*: `<marquee>Scrolling text</marquee>`
 13. **<img>** - Image
-    - _Usage_: Defines an image.
-    - _Attributes_: align, alt, border, height, hspace, src, vspace, width.
-    - _Syntax_: `<img src="image.jpg" alt="Alternative text">`
+    - *Usage*: Defines an image.
+    - *Attributes*: align, alt, border, height, hspace, src, vspace, width.
+    - *Syntax*: `<img src="image.jpg" alt="Alternative text">`
 14. **<a>** - Anchor
-    - _Usage_: Defines a hyperlink.
-    - _Attributes_: href, target, title, etc.
-    - _Syntax_: `<a href="<https://www.example.com>">Link text</a>`
+    - *Usage*: Defines a hyperlink.
+    - *Attributes*: href, target, title, etc.
+    - *Syntax*: `<a href="<https://www.example.com>">Link text</a>`
 15. **<sub>** - Subscript
-    - _Usage_: Defines subscripted text.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<sub>Subscript text</sub>`
+    - *Usage*: Defines subscripted text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<sub>Subscript text</sub>`
 16. **<sup>** - Superscript
-    - _Usage_: Defines superscripted text.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<sup>Superscript text</sup>`
+    - *Usage*: Defines superscripted text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<sup>Superscript text</sup>`
 17. **<dd>** - Description
-    - _Usage_: Defines a description of a term in a description list.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<dd>Description text</dd>`
+    - *Usage*: Defines a description of a term in a description list.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<dd>Description text</dd>`
 18. **<dt>** - Term
-    - _Usage_: Defines a term in a description list.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<dt>Term text</dt>`
+    - *Usage*: Defines a term in a description list.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<dt>Term text</dt>`
 19. **<dl>** - Description list
-    - _Usage_: Defines a description list.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<dl><dt>Term</dt><dd>Description</dd></dl>`
+    - *Usage*: Defines a description list.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<dl><dt>Term</dt><dd>Description</dd></dl>`
 20. **<ol>** - Ordered list
-    - _Usage_: Defines an ordered list.
-    - _Attributes_: class, dir, id, lang, style, title, type, etc.
-    - _Syntax_: `<ol><li>List item</li></ol>`
+    - *Usage*: Defines an ordered list.
+    - *Attributes*: class, dir, id, lang, style, title, type, etc.
+    - *Syntax*: `<ol><li>List item</li></ol>`
 21. **<ul>** - Unordered list
-    - _Usage_: Defines an unordered list.
-    - _Attributes_: class, dir, id, lang, style, title, type, etc.
-    - _Syntax_: `<ul><li>List item</li></ul>`
+    - *Usage*: Defines an unordered list.
+    - *Attributes*: class, dir, id, lang, style, title, type, etc.
+    - *Syntax*: `<ul><li>List item</li></ul>`
 22. **<li>** - List item
-    - _Usage_: Defines an item in a list.
-    - _Attributes_: class, dir, id, lang, style, title, value, etc.
-    - _Syntax_: `<li>List item</li>`
+    - *Usage*: Defines an item in a list.
+    - *Attributes*: class, dir, id, lang, style, title, value, etc.
+    - *Syntax*: `<li>List item</li>`
 23. **<strong>** - Strong importance
-    - _Usage_: Defines important text.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<strong>Important text</strong>`
+    - *Usage*: Defines important text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<strong>Important text</strong>`
 24. **<em>** - Emphasized text
-    - _Usage_: Defines emphasized text.
-    - _Attributes_: class, dir, id, lang, style, title, etc.
-    - _Syntax_: `<em>Emphasized text</em>`
+    - *Usage*: Defines emphasized text.
+    - *Attributes*: class, dir, id, lang, style, title, etc.
+    - *Syntax*: `<em>Emphasized text</em>`
 25. **<frameset>** - Frameset
-    - _Usage_: Defines a set of frames.
-    - _Attributes_: cols, rows, etc.
-    - _Syntax_: `<frameset cols="50%,50%"><frame src="frame1.html"><frame src="frame2.html"></frameset>`
+    - *Usage*: Defines a set of frames.
+    - *Attributes*: cols, rows, etc.
+    - *Syntax*: `<frameset cols="50%,50%"><frame src="frame1.html"><frame src="frame2.html"></frameset>`
 26. **<iframe>** - Inline frame
-    - _Usage_: Defines an inline frame.
-    - _Attributes_: align, frameborder, height, longdesc, marginheight, marginwidth, name, scrolling, src, width.
-    - _Syntax_: `<iframe src="<https://www.example.com>" width="500" height="500"></iframe>`
+    - *Usage*: Defines an inline frame.
+    - *Attributes*: align, frameborder, height, longdesc, marginheight, marginwidth, name, scrolling, src, width.
+    - *Syntax*: `<iframe src="<https://www.example.com>" width="500" height="500"></iframe>`
 
 ## 16) Explain <table> tag with all the sub tags and attributes.
 
 **<table> Tag and Subtags:**
 
 - **<table>** - Defines a table.
-  - _Attributes_: align, border, cellpadding, cellspacing, colgroup, frame, rules, summary, width, etc.
+    - *Attributes*: align, border, cellpadding, cellspacing, colgroup, frame, rules, summary, width, etc.
 - **<caption>** - Defines a table caption.
-  - _Attributes_: align.
+    - *Attributes*: align.
 - **<thead>** - Groups the header content in a table.
-  - _Attributes_: align, char, charoff, valign.
+    - *Attributes*: align, char, charoff, valign.
 - **<tbody>** - Groups the body content in a table.
-  - _Attributes_: align, char, charoff, valign.
+    - *Attributes*: align, char, charoff, valign.
 - **<tfoot>** - Groups the footer content in a table.
-  - _Attributes_: align, char, charoff, valign.
+    - *Attributes*: align, char, charoff, valign.
 - **<tr>** - Defines a table row.
-  - _Attributes_: align, bgcolor, char, charoff, valign.
+    - *Attributes*: align, bgcolor, char, charoff, valign.
 - **<th>** - Defines a table header cell.
-  - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
+    - *Attributes*: align, bgcolor, char, charoff, colspan, rowspan, valign.
 - **<td>** - Defines a table data cell.
-  - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
+    - *Attributes*: align, bgcolor, char, charoff, colspan, rowspan, valign.
 - **<colgroup>** - Groups columns within a table.
-  - _Attributes_: span, width.
+    - *Attributes*: span, width.
 - **<col>** - Specifies column properties for each column.
-  - _Attributes_: span, width.
+    - *Attributes*: span, width.
 
 **Syntax Examples:**
 
 ```html
 <table border="1">
-  <caption>
-    Table Caption
-  </caption>
+  <caption>Table Caption</caption>
   <thead>
     <tr>
       <th>Header 1</th>
@@ -1275,6 +1353,7 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     </tr>
   </tfoot>
 </table>
+
 ```
 
 ```html
@@ -1299,31 +1378,30 @@ This explanation covers the `<table>` tag, its subtags, and attributes, providin
 **Cell Padding (padding) vs. Cell Spacing (spacing):**
 
 - **Cell Padding** (padding):
-  - Space between the cell wall and the cell content.
-  - Defined using `padding` CSS property or `cellpadding` attribute in HTML.
-  - Measures in pixels (px) or as a percentage (%).
-  - Example: `cellpadding="10"` or `style="padding: 10px;"`
+    - Space between the cell wall and the cell content.
+    - Defined using `padding` CSS property or  `cellpadding` attribute in HTML.
+    - Measures in pixels (px) or as a percentage (%).
+    - Example: `cellpadding="10"` or `style="padding: 10px;"`
 - **Cell Spacing** (spacing):
-  - Space between cells.
-  - Defined using `cellspacing` attribute in HTML.
-  - Measures in pixels (px).
-  - Example: `cellspacing="10"`
+    - Space between cells.
+    - Defined using `cellspacing` attribute in HTML.
+    - Measures in pixels (px).
+    - Example: `cellspacing="10"`
 
 **Colspan and Rowspan:**
 
 - **Colspan** (column span):
-  - Allows a cell to span multiple columns.
-  - Defined using `colspan` attribute in the `<td>` or `<th>` tag.
-  - Example: `<td colspan="3">Content</td>` (spans 3 columns)
+    - Allows a cell to span multiple columns.
+    - Defined using `colspan` attribute in the `<td>` or `<th>` tag.
+    - Example: `<td colspan="3">Content</td>` (spans 3 columns)
 - **Rowspan** (row span):
-  - Allows a cell to span multiple rows.
-  - Defined using `rowspan` attribute in the `<td>` or `<th>` tag.
-  - Example: `<td rowspan="3">Content</td>` (spans 3 rows)
+    - Allows a cell to span multiple rows.
+    - Defined using `rowspan` attribute in the `<td>` or `<th>` tag.
+    - Example: `<td rowspan="3">Content</td>` (spans 3 rows)
 
 In summary, cell padding controls the space between the cell content and its border, while cell spacing controls the space between cells. Colspan and rowspan allow cells to span multiple columns or rows, respectively.
 
 ## 18) Write the usage, attributes and syntax for the following controls:
-
 a. Text box
 b. Text area
 c. Radio button
@@ -1343,103 +1421,104 @@ n. Reset
 
 **a. Text Box (<input type="text">)**
 
-- _Usage_: Single-line text input.
-- _Attributes_: autocomplete, autofocus, disabled, form, list, maxlength, name, placeholder, readonly, required, size, spellcheck, style, tabindex, value.
-- _Syntax_: `<input type="text" name="textbox" value="Default text">`
+- *Usage*: Single-line text input.
+- *Attributes*: autocomplete, autofocus, disabled, form, list, maxlength, name, placeholder, readonly, required, size, spellcheck, style, tabindex, value.
+- *Syntax*: `<input type="text" name="textbox" value="Default text">`
 
 **b. Text Area (<textarea>)**
 
-- _Usage_: Multi-line text input.
-- _Attributes_: autocomplete, autofocus, cols, disabled, form, name, placeholder, readonly, required, rows, spellcheck, style, tabindex, wrap.
-- _Syntax_: `<textarea name="textarea" rows="4" cols="50">Default text</textarea>`
+- *Usage*: Multi-line text input.
+- *Attributes*: autocomplete, autofocus, cols, disabled, form, name, placeholder, readonly, required, rows, spellcheck, style, tabindex, wrap.
+- *Syntax*: `<textarea name="textarea" rows="4" cols="50">Default text</textarea>`
 
 **c. Radio Button (<input type="radio">)**
 
-- _Usage_: Exclusive selection from multiple options.
-- _Attributes_: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="radio" name="radio" value="Option"> Option`
+- *Usage*: Exclusive selection from multiple options.
+- *Attributes*: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="radio" name="radio" value="Option"> Option`
 
 **d. Checkbox (<input type="checkbox">)**
 
-- _Usage_: Multiple selections from options.
-- _Attributes_: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="checkbox" name="checkbox" value="Option"> Option`
+- *Usage*: Multiple selections from options.
+- *Attributes*: autocomplete, checked, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="checkbox" name="checkbox" value="Option"> Option`
 
 **e. Dropdown (<select>)**
 
-- _Usage_: Selection from a list of options.
-- _Attributes_: autocomplete, disabled, form, multiple, name, required, size, style, tabindex.
-- _Syntax_:
+- *Usage*: Selection from a list of options.
+- *Attributes*: autocomplete, disabled, form, multiple, name, required, size, style, tabindex.
+- *Syntax*:
 
 ```html
 <select name="dropdown">
   <option value="option1">Option 1</option>
   <option value="option2">Option 2</option>
 </select>
+
 ```
 
 **f. Scrolling List (<datalist>)**
 
-- _Usage_: Predefined list of options for text input fields.
-- _Attributes_: id.
-- _Syntax_:
+- *Usage*: Predefined list of options for text input fields.
+- *Attributes*: id.
+- *Syntax*:
 
 ```html
 <datalist id="list">
-  <option value="Option 1"></option>
-  <option value="Option 2"></option>
+  <option value="Option 1">
+  <option value="Option 2">
 </datalist>
+<input list="list" name="scrollingList">
 
-<input list="list" name="scrollingList" />
 ```
 
 **g. Date (<input type="date">)**
 
-- _Usage_: Date input field.
-- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="date" name="date">`
+- *Usage*: Date input field.
+- *Attributes*: autocomplete, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="date" name="date">`
 
 **h. Time (<input type="time">)**
 
-- _Usage_: Time input field.
-- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="time" name="time">`
+- *Usage*: Time input field.
+- *Attributes*: autocomplete, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="time" name="time">`
 
 **i. Url (<input type="url">)**
 
-- _Usage_: URL input field.
-- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="url" name="url">`
+- *Usage*: URL input field.
+- *Attributes*: autocomplete, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="url" name="url">`
 
 **j. Color (<input type="color">)**
 
-- _Usage_: Color picker input field.
-- _Attributes_: autocomplete, disabled, form, name, required, style, tabindex, value.
-- _Syntax_: `<input type="color" name="color">`
+- *Usage*: Color picker input field.
+- *Attributes*: autocomplete, disabled, form, name, required, style, tabindex, value.
+- *Syntax*: `<input type="color" name="color">`
 
 **k. Spinner (<input type="number">)**
 
-- _Usage_: Numeric input with spin buttons.
-- _Attributes_: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
-- _Syntax_: `<input type="number" name="spinner" min="1" max="100">`
+- *Usage*: Numeric input with spin buttons.
+- *Attributes*: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
+- *Syntax*: `<input type="number" name="spinner" min="1" max="100">`
 
 **l. Slider (<input type="range">)**
 
-- _Usage_: Range input with a slider.
-- _Attributes_: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
-- _Syntax_: `<input type="range" name="slider" min="1" max="100">`
+- *Usage*: Range input with a slider.
+- *Attributes*: autocomplete, disabled, form, max, min, name, required, step, style, tabindex, value.
+- *Syntax*: `<input type="range" name="slider" min="1" max="100">`
 
 **m. Submit (<input type="submit">)**
 
-- _Usage_: Submits the form data.
-- _Attributes_: autocomplete, disabled, form, formaction, formaction, formenctype, formmethod, formnovalidate, formtarget, name, style, tabindex, value.
-- _Syntax_: `<input type="submit" value="Submit">`
+- *Usage*: Submits the form data.
+- *Attributes*: autocomplete, disabled, form, formaction, formaction, formenctype, formmethod, formnovalidate, formtarget, name, style, tabindex, value.
+- *Syntax*: `<input type="submit" value="Submit">`
 
 **n. Reset (<input type="reset">)**
 
-- _Usage_: Resets all form controls to their initial values.
-- _Attributes_: autocomplete, disabled, form, style, tabindex.
-- _Syntax_: `<input type="reset" value="Reset">`
+- *Usage*: Resets all form controls to their initial values.
+- *Attributes*: autocomplete, disabled, form, style, tabindex.
+- *Syntax*: `<input type="reset" value="Reset">`
 
 ## 19) Explain the meta tag in detail.
 
@@ -1448,21 +1527,21 @@ n. Reset
 - **Purpose**: Provides metadata about an HTML document.
 - **Syntax**: `<meta name="attribute" content="value">` or `<meta charset="UTF-8">` (for character set)
 - **Attributes**:
-  - `name`: Specifies the metadata attribute.
-  - `http-equiv`: Specifies an HTTP header.
-  - `content`: Specifies the value associated with the attribute or HTTP header.
-  - `charset`: Specifies the character encoding for the document (e.g., `UTF-8`).
+    - `name`: Specifies the metadata attribute.
+    - `http-equiv`: Specifies an HTTP header.
+    - `content`: Specifies the value associated with the attribute or HTTP header.
+    - `charset`: Specifies the character encoding for the document (e.g., `UTF-8`).
 - **Common uses**:
-  - Setting character encoding: `<meta charset="UTF-8">`
-  - Defining viewport for mobile devices: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-  - Setting page description: `<meta name="description" content="A brief description of the page">`
-  - Setting keywords (deprecated): `<meta name="keywords" content="keyword1, keyword2, keyword3">`
-  - Refreshing the page: `<meta http-equiv="refresh" content="5; URL=http://example.com">` (redirects to [example.com](http://example.com/) after 5 seconds)
+    - Setting character encoding: `<meta charset="UTF-8">`
+    - Defining viewport for mobile devices: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+    - Setting page description: `<meta name="description" content="A brief description of the page">`
+    - Setting keywords (deprecated): `<meta name="keywords" content="keyword1, keyword2, keyword3">`
+    - Refreshing the page: `<meta http-equiv="refresh" content="5; URL=http://example.com">` (redirects to [example.com](http://example.com/) after 5 seconds)
 - **Example**:
 
 ```html
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="A brief description of the page" />
-<meta http-equiv="refresh" content="5; URL=http://example.com" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of the page">
+<meta http-equiv="refresh" content="5; URL=http://example.com">
 ```

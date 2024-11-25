@@ -1112,3 +1112,114 @@ The `<h1>` to `<h6>` tags are used to define headings in HTML, with `<h1>` being
 #### Summary
 
 These five basic HTML tags form the foundation of any HTML document. They help structure the content, provide essential information about the page, and enhance user experience. Understanding these tags is crucial for anyone looking to create web pages or learn web development.
+
+## 15) Write the usage, attributes and syntax for the following tags:
+
+<p>,<b>, <u>, <i>, `<tt>`,<div>, <span>,<h1> to <h6>,<hr>, <br> `<font>`,<marquee>,<img>,<a>,<sub>, <sup>,<dd>, <dt>, <dl> <ol>, <ul>, <li>,<strong>, <em>,`<frameset>`, <iframe>.
+
+**HTML Tags Usage, Attributes, and Syntax:**
+
+1. **<p>** - Paragraph
+   - _Usage_: Defines a paragraph.
+   - _Attributes_: align, class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<p>Content goes here</p>`
+2. **<b>** - Bold text
+   - _Usage_: Makes text bold.
+   - _Attributes_: class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<b>Bold text</b>`
+3. **<u>** - Underlined text
+   - _Usage_: Underlines text.
+   - _Attributes_: class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<u>Underlined text</u>`
+4. **<i>** - Italic text
+   - _Usage_: Italicizes text.
+   - _Attributes_: class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<i>Italic text</i>`
+5. **`<tt>`** - Teletype text
+   - _Usage_: Displays text in a fixed-width font, like a teletype machine.
+   - _Attributes_: class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<tt>`Teletype text`</tt>`
+6. **<div>** - Division or Section
+   - _Usage_: Defines a division or a section in an HTML document.
+   - _Attributes_: align, class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<div>Content goes here</div>`
+7. **<span>** - Span
+   - _Usage_: Groups inline-elements for styling purposes.
+   - _Attributes_: class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<span>Span content</span>`
+8. **<h1> to <h6>** - Headings
+   - _Usage_: Defines HTML headings.
+   - _Attributes_: align, class, dir, id, lang, style, title, etc.
+   - _Syntax_: `<h1>Heading 1</h1>` to `<h6>Heading 6</h6>`
+9. **<hr>** - Horizontal rule
+   - _Usage_: Defines a thematic break in an HTML page (like a horizontal rule).
+   - _Attributes_: align, color, noshade, size, width, etc.
+   - _Syntax_: `<hr>`
+10. **<br>** - Line break
+    - _Usage_: Inserts a single line break.
+    - _Attributes_: None.
+    - _Syntax_: `<br>`
+11. **`<font>`** - Font
+    - _Usage_: Specifies a text font.
+    - _Attributes_: color, face, size.
+    - _Syntax_: `<font face="Arial" size="3">Font content</font>`
+12. **<marquee>** - Scrolling text
+    - _Usage_: Defines scrolling text.
+    - _Attributes_: behavior, direction, scrollamount, scrolldelay, etc.
+    - _Syntax_: `<marquee>Scrolling text</marquee>`
+13. **<img>** - Image
+    - _Usage_: Defines an image.
+    - _Attributes_: align, alt, border, height, hspace, src, vspace, width.
+    - _Syntax_: `<img src="image.jpg" alt="Alternative text">`
+14. **<a>** - Anchor
+    - _Usage_: Defines a hyperlink.
+    - _Attributes_: href, target, title, etc.
+    - _Syntax_: `<a href="<https://www.example.com>">Link text</a>`
+15. **<sub>** - Subscript
+    - _Usage_: Defines subscripted text.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<sub>Subscript text</sub>`
+16. **<sup>** - Superscript
+    - _Usage_: Defines superscripted text.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<sup>Superscript text</sup>`
+17. **<dd>** - Description
+    - _Usage_: Defines a description of a term in a description list.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<dd>Description text</dd>`
+18. **<dt>** - Term
+    - _Usage_: Defines a term in a description list.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<dt>Term text</dt>`
+19. **<dl>** - Description list
+    - _Usage_: Defines a description list.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<dl><dt>Term</dt><dd>Description</dd></dl>`
+20. **<ol>** - Ordered list
+    - _Usage_: Defines an ordered list.
+    - _Attributes_: class, dir, id, lang, style, title, type, etc.
+    - _Syntax_: `<ol><li>List item</li></ol>`
+21. **<ul>** - Unordered list
+    - _Usage_: Defines an unordered list.
+    - _Attributes_: class, dir, id, lang, style, title, type, etc.
+    - _Syntax_: `<ul><li>List item</li></ul>`
+22. **<li>** - List item
+    - _Usage_: Defines an item in a list.
+    - _Attributes_: class, dir, id, lang, style, title, value, etc.
+    - _Syntax_: `<li>List item</li>`
+23. **<strong>** - Strong importance
+    - _Usage_: Defines important text.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<strong>Important text</strong>`
+24. **<em>** - Emphasized text
+    - _Usage_: Defines emphasized text.
+    - _Attributes_: class, dir, id, lang, style, title, etc.
+    - _Syntax_: `<em>Emphasized text</em>`
+25. **`<frameset>`** - Frameset
+    - _Usage_: Defines a set of frames.
+    - _Attributes_: cols, rows, etc.
+    - _Syntax_: `<frameset cols="50%,50%"><frame src="frame1.html"><frame src="frame2.html"></frameset>`
+26. **<iframe>** - Inline frame
+    - _Usage_: Defines an inline frame.
+    - _Attributes_: align, frameborder, height, longdesc, marginheight, marginwidth, name, scrolling, src, width.
+    - _Syntax_: `<iframe src="<https://www.example.com>" width="500" height="500"></iframe>`

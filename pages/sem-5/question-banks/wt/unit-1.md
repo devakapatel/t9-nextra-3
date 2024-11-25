@@ -1223,3 +1223,73 @@ These five basic HTML tags form the foundation of any HTML document. They help s
     - _Usage_: Defines an inline frame.
     - _Attributes_: align, frameborder, height, longdesc, marginheight, marginwidth, name, scrolling, src, width.
     - _Syntax_: `<iframe src="<https://www.example.com>" width="500" height="500"></iframe>`
+
+## 16) Explain <table> tag with all the sub tags and attributes.
+
+**<table> Tag and Subtags:**
+
+- **<table>** - Defines a table.
+  - _Attributes_: align, border, cellpadding, cellspacing, colgroup, frame, rules, summary, width, etc.
+- **<caption>** - Defines a table caption.
+  - _Attributes_: align.
+- **<thead>** - Groups the header content in a table.
+  - _Attributes_: align, char, charoff, valign.
+- **<tbody>** - Groups the body content in a table.
+  - _Attributes_: align, char, charoff, valign.
+- **<tfoot>** - Groups the footer content in a table.
+  - _Attributes_: align, char, charoff, valign.
+- **<tr>** - Defines a table row.
+  - _Attributes_: align, bgcolor, char, charoff, valign.
+- **<th>** - Defines a table header cell.
+  - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
+- **<td>** - Defines a table data cell.
+  - _Attributes_: align, bgcolor, char, charoff, colspan, rowspan, valign.
+- **<colgroup>** - Groups columns within a table.
+  - _Attributes_: span, width.
+- **<col>** - Specifies column properties for each column.
+  - _Attributes_: span, width.
+
+**Syntax Examples:**
+
+```html
+<table border="1">
+  <caption>
+    Table Caption
+  </caption>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer 1</td>
+      <td>Footer 2</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```html
+<table border="1">
+  <colgroup span="2" width="50%">
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+</table>
+
+```
+
+This explanation covers the `<table>` tag, its subtags, and attributes, providing a concise yet comprehensive understanding of how to use tables in HTML.

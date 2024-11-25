@@ -1026,3 +1026,89 @@ Here’s a simple example that incorporates some of these attributes:
 #### Conclusion
 
 The `<form>` element plays a vital role in HTML5 by facilitating user interaction and data submission on web pages. With the introduction of new attributes like `novalidate`, `autocomplete`, `target`, and enhanced validation features, HTML5 forms offer improved functionality and user experience. These enhancements allow developers to create more intuitive and efficient forms that cater to modern web application needs.
+
+## 14) Explain 5 basic HTML Tags.
+
+Certainly! Here are five basic HTML tags, along with their purposes and examples of how they are used:
+
+### 1. `<html>`
+
+#### Purpose:
+
+The `<html>` tag is the root element of an HTML document. It signifies the beginning and end of an HTML page.
+
+#### Example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+```
+
+### 2. `<head>`
+
+#### Purpose:
+
+The `<head>` tag contains meta-information about the document, such as its title, character set, stylesheets, and scripts. This information is not displayed directly on the web page.
+
+#### Example:
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First Web Page</title>
+</head>
+```
+
+### 3. `<title>`
+
+#### Purpose:
+
+The `<title>` tag defines the title of the web page, which is displayed in the browser's title bar or tab. It is important for SEO (Search Engine Optimization) and usability.
+
+#### Example:
+
+```html
+<title>Welcome to My Website</title>
+```
+
+### 4. `<body>`
+
+#### Purpose:
+
+The `<body>` tag contains all the content that is visible to users on the web page, including text, images, links, and other elements.
+
+#### Example:
+
+```html
+<body>
+  <h1>Main Heading</h1>
+  <p>This is a paragraph of text on my web page.</p>
+</body>
+```
+
+### 5. `<h1>` to `<h6>`
+
+#### Purpose:
+
+The `<h1>` to `<h6>` tags are used to define headings in HTML, with `<h1>` being the highest (most important) level and `<h6>` being the lowest. Headings help structure content and improve readability.
+
+#### Example:
+
+```html
+<h1>This is a Main Heading</h1>
+<h2>This is a Subheading</h2>
+<h3>This is a Smaller Subheading</h3>
+```
+
+#### Summary
+
+These five basic HTML tags form the foundation of any HTML document. They help structure the content, provide essential information about the page, and enhance user experience. Understanding these tags is crucial for anyone looking to create web pages or learn web development.

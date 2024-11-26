@@ -1113,9 +1113,7 @@ The `<h1>` to `<h6>` tags are used to define headings in HTML, with `<h1>` being
 
 These five basic HTML tags form the foundation of any HTML document. They help structure the content, provide essential information about the page, and enhance user experience. Understanding these tags is crucial for anyone looking to create web pages or learn web development.
 
-## 15) Write the usage, attributes and syntax for the following tags:
-
-`<p>`,`<b>`, `<u>`, `<i>`, `<tt>`, `<div>`, `<span>`, `<h1>` to `<h6>`, `<hr>`, `<br>` `<font>`, `<marquee>`, `<img>`, `<a>`, `<sub>`, `<sup>`, `<dd>`, `<dt>`, `<dl>`, `<ol>`, `<ul>`, `<li>`, `<strong>`, `<em>`, `<frameset>`, `<iframe>`.
+## 15) Write the usage, attributes and syntax for the following tags: `<p>`,`<b>`, `<u>`, `<i>`, `<tt>`, `<div>`, `<span>`, `<h1>` to `<h6>`, `<hr>`, `<br>` `<font>`, `<marquee>`, `<img>`, `<a>`, `<sub>`, `<sup>`, `<dd>`, `<dt>`, `<dl>`, `<ol>`, `<ul>`, `<li>`, `<strong>`, `<em>`, `<frameset>`, `<iframe>`.
 
 **HTML Tags Usage, Attributes, and Syntax:**
 

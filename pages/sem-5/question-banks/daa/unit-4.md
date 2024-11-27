@@ -1,6 +1,6 @@
 # Unit 4
 
-## 1) Show the comparisons that naïve string matcher makes for the pattern p=0001 in the text T=000010001010001.
+## <mark> 1) Show the comparisons that naïve string matcher makes for the pattern p=0001 in the text T=000010001010001. </mark>
 
 To demonstrate the comparisons made by the naïve string matcher for the pattern $$ p = 0001 $$ in the text $$ T = 000010001010001 $$, we will simulate the matching process step-by-step.
 
@@ -87,7 +87,7 @@ The algorithm will attempt to match the pattern at each possible starting positi
 
 The naïve string matcher checks every possible starting position in the text for a potential match against the pattern, making it straightforward but potentially inefficient for large texts or patterns due to its high number of comparisons. In this example, it successfully identified multiple matches for the pattern "0001" within the text "000010001010001".
 
-## 2) Write Naïve sting matching algorithm. Find its time complexity and perform sting matching for given pattern P = “ACD” Text T = “CACDACAACDAC”
+## <mark> 2) Write Naïve sting matching algorithm. Find its time complexity and perform sting matching for given pattern P = “ACD” Text T = “CACDACAACDAC” </mark>
 
 #### Naïve String Matching Algorithm
 
@@ -184,7 +184,7 @@ function naiveStringMatch(T, P):
 
 The naïve string matching algorithm is simple but can be inefficient for larger texts or patterns due to its time complexity of $$ O(nm) $$. In this example, it successfully identified multiple occurrences of the pattern "ACD" within the text "CACDACAACDAC".
 
-## 3) Explain spurious hits in Rabin-Karp string matching algorithm with example. Working modulo q=13, how many spurious hits does the Rabin-Karp matcher encounter in the text T = 2359023141526739921 when looking for the pattern P = 31415?
+## <mark> 3) Explain spurious hits in Rabin-Karp string matching algorithm with example. Working modulo q=13, how many spurious hits does the Rabin-Karp matcher encounter in the text T = 2359023141526739921 when looking for the pattern P = 31415? </mark>
 
 #### Rabin-Karp String Matching Algorithm
 
@@ -340,7 +340,7 @@ In this example, we can see that there are two actual matches for the pattern "3
 
 The Rabin-Karp algorithm efficiently finds occurrences of a pattern within a text using hashing. However, it may encounter spurious hits due to hash collisions, which are false positives that require further verification through direct comparison. In this case, while checking against the pattern "31415", we found actual matches at positions where their hashes matched but also had to check against substrings that resulted in spurious hits.
 
-## 4) Working module q = 11, how many spurious hits does the Rabin-Karp matcher encounter in the text T= 3141592653589793 when looking for the pattern P=26?
+## <mark> 4) Working module q = 11, how many spurious hits does the Rabin-Karp matcher encounter in the text T= 3141592653589793 when looking for the pattern P=26? </mark>
 
 To determine how many spurious hits the Rabin-Karp matcher encounters while searching for the pattern $$ P = 26 $$ in the text $$ T = 3141592653589793 $$ using modulo $$ q = 11 $$, we will follow the steps of the Rabin-Karp algorithm.
 
@@ -456,7 +456,7 @@ Thus, we have:
 
 The Rabin-Karp algorithm can encounter spurious hits due to hash collisions. In this example, there were three spurious hits ("15", "59", and "92") while looking for the pattern "26" in the text "3141592653589793".
 
-## 5) Define Finite Automata? Explain its use for string matching with illustration.
+## <mark> 5) Define Finite Automata? Explain its use for string matching with illustration. </mark>
 
 #### Finite Automata
 
@@ -544,7 +544,7 @@ The DFA reaches an accepting state after reading both occurrences of the pattern
 
 Finite automata provide an efficient method for string matching by constructing a model that recognizes patterns based on defined states and transitions. The DFA processes the input text in linear time relative to its length, making it suitable for applications such as lexical analysis in compilers and searching within texts.
 
-## 6) Compare NP-Hard with NP-Complete problems.
+## <mark> 6) Compare NP-Hard with NP-Complete problems. </mark>
 
 #### Comparison of NP-Hard and NP-Complete Problems
 
@@ -583,7 +583,7 @@ Finite automata provide an efficient method for string matching by constructing 
 
 In summary, while both NP-Hard and NP-Complete problems represent significant challenges in computational theory, they differ fundamentally in their definitions and characteristics. Understanding these differences is crucial for tackling complex algorithmic problems and determining the feasibility of finding efficient solutions.
 
-## 7) Explain P and NP Problems giving examples.
+## <mark> 7) Explain P and NP Problems giving examples. </mark>
 
 #### P and NP Problems
 
@@ -607,7 +607,7 @@ In summary, while both NP-Hard and NP-Complete problems represent significant ch
 
 In summary, P problems are those that can be solved efficiently (in polynomial time), while NP problems are those for which solutions can be verified efficiently. Understanding these classes is crucial for exploring computational complexity and algorithm design.
 
-## 8) Write a short note on NP-Completeness Problem.
+## <mark> 8) Write a short note on NP-Completeness Problem. </mark>
 
 #### NP-Completeness Problem
 
@@ -628,7 +628,7 @@ In summary, P problems are those that can be solved efficiently (in polynomial t
 
 NP-Completeness plays a crucial role in understanding the limits of efficient computation. It helps researchers identify problems that are inherently difficult and guides the development of approximation algorithms and heuristics for practical applications where exact solutions are computationally infeasible.
 
-## 9) Write a brief note on NP-Hard Problems.
+## <mark> 9) Write a brief note on NP-Hard Problems. </mark>
 
 #### NP-Hard Problems
 
@@ -649,7 +649,7 @@ NP-Completeness plays a crucial role in understanding the limits of efficient co
 
 NP-Hard problems are significant in computational complexity theory because they represent some of the most challenging problems in computer science. Understanding their properties helps researchers develop approximation algorithms and heuristics for practical applications where exact solutions are computationally infeasible.
 
-## 10) Define P, NP, NP Complete And NP-Hard problems.
+## <mark> 10) Define P, NP, NP Complete And NP-Hard problems. </mark>
 
 #### Definitions of P, NP, NP-Complete, and NP-Hard Problems
 

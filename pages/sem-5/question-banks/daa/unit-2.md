@@ -246,7 +246,7 @@ def fibonacci_recursive(n):
 
 While the recursive approach to calculating Fibonacci numbers is straightforward and elegant, it is inefficient for large values of $$ n $$ due to its exponential time complexity. For practical applications, iterative methods or dynamic programming approaches (such as memoization) are preferred to improve efficiency.
 
-## <mark> 6) What is recurrence? Solve recurrence equation T (n) = T (n-1) + n usingforward substitution and backward substitution method. </mark>
+## <mark> 6) What is recurrence? Solve recurrence equation T (n) = T (n-1) + n using forward substitution and backward substitution method. </mark>
 
 ### What is Recurrence?
 

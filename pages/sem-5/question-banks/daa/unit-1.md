@@ -2,7 +2,7 @@
 
 ## <mark> 1) What is algorithm? Explain with example. Which are the characteristics of algorithm?</mark>
 
-An algorithm is a sequence of unambiguous instructions designed to solve a specific problem or perform a task. It takes input, processes it through defined steps, and produces output in a finite amount of time. Algorithms are foundational to computer science and can be represented in various forms, including natural language, pseudocode, or programming languages.
+An algorithm is a sequence of unambiguous instructions designed to solve a specific problem or perform a task. It takes input, processes it through defined steps, and produces output in a finite amount of time. Algorithms are foundational to computer science and can be represented in various forms, including natural language, pseudo-code, or programming languages.
 
 ### Example of an Algorithm
 
@@ -10,10 +10,10 @@ A classic example of an algorithm is **Euclid's Algorithm**, which computes the 
 
 1. **Input**: Two non-negative integers, a and b .
 2. **Process**:
-   - While b \neq 0 :
-     - Set temp = b
-     - Set b = a \mod b
-     - Set a = temp
+   - While $b \neq 0$:
+     - Set `temp = b`
+     - Set `b = a \mod b`
+     - Set `a = temp`
 3. **Output**: The value of a when b = 0 is the GCD of the original two integers.
 
 For example, to find the GCD of 48 and 18:

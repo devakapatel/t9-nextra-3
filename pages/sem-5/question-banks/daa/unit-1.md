@@ -1,6 +1,6 @@
 # Unit 1
 
-## 1) What is algorithm? Explain with example. Which are the characteristics of algorithm?
+## <mark> 1) What is algorithm? Explain with example. Which are the characteristics of algorithm?</mark>
 
 An algorithm is a sequence of unambiguous instructions designed to solve a specific problem or perform a task. It takes input, processes it through defined steps, and produces output in a finite amount of time. Algorithms are foundational to computer science and can be represented in various forms, including natural language, pseudocode, or programming languages.
 
@@ -33,7 +33,7 @@ For example, to find the GCD of 48 and 18:
 
 These characteristics ensure that algorithms are reliable and can be implemented effectively in programming and computational tasks.
 
-## 2) Define an algorithm. List various criteria used for analysing an algorithm.
+## <mark> 2) Define an algorithm. List various criteria used for analysing an algorithm.</mark>
 
 An algorithm is defined as a finite sequence of well-defined instructions or steps designed to perform a specific task or solve a particular problem. It takes input, processes it, and produces output in a systematic manner.
 
@@ -51,7 +51,7 @@ When analyzing an algorithm, several criteria are commonly used to evaluate its 
 
 These criteria help in assessing the performance and utility of algorithms in various applications and contexts.
 
-## 3) Define Algorithm. Discuss factors affecting time complexity of an algorithm.
+## <mark> 3) Define Algorithm. Discuss factors affecting time complexity of an algorithm.</mark>
 
 An algorithm is a sequence of unambiguous instructions designed to solve a specific problem or perform a task. It takes input, processes it through defined steps, and produces output in a finite amount of time.
 
@@ -69,7 +69,7 @@ The time complexity of an algorithm is influenced by several factors, including:
 
 Understanding these factors helps in selecting the most efficient algorithm for a given problem and optimizing performance.
 
-## 4) Define Algorithm, Time Complexity and Space Complexity.
+## <mark> 4) Define Algorithm, Time Complexity and Space Complexity.</mark>
 
 An algorithm is defined as a finite sequence of well-defined instructions or steps designed to perform a specific task or solve a particular problem. It takes input, processes it, and produces output in a systematic manner.
 
@@ -87,7 +87,7 @@ Space complexity measures the amount of memory space required by an algorithm as
 - **Time Complexity**: Measures the time an algorithm takes to run as a function of the input size, expressed in Big O notation.
 - **Space Complexity**: Measures the memory space required by an algorithm as a function of the input size, also expressed in Big O notation.
 
-## 5) Explain the terms with example: Set, Relation, Function
+## <mark> 5) Explain the terms with example: Set, Relation, Function.</mark>
 
 #### Set
 
@@ -122,7 +122,7 @@ Here, $A = \{1, 2, 3\}$ and $B = \{a, b\}$ . The function $f$ maps the elements 
 - **Relation**: A subset of the Cartesian product of two sets (e.g., $R = \{(1, a), (2, b)\}$ ).
 - **Function**: A relation where each input from the domain is associated with exactly one output in the codomain (e.g., $f(1) = a, f(2) = b$ ).
 
-## 6) What is a vector? Which operations are performed on vectors?
+## <mark> 6) What is a vector? Which operations are performed on vectors?</mark>
 
 A vector is a mathematical object that has both magnitude (length) and direction. It is typically represented by an arrow in a coordinate system. Vectors can be used to represent various quantities in physics and mathematics, such as displacement, velocity, acceleration, and force.
 
@@ -139,7 +139,7 @@ A vector is a mathematical object that has both magnitude (length) and direction
 
 These operations allow for the manipulation and analysis of vectors in various applications, such as physics, engineering, and computer graphics.
 
-## 7) What is a matrix? Explain the various operations which can be performed on the matrix.
+## <mark> 7) What is a matrix? Explain the various operations which can be performed on the matrix.</mark>
 
 A **matrix** is a rectangular array of numbers, symbols, or expressions, arranged in rows and columns. Each element in a matrix is identified by its position, typically denoted as a\_{ij} , where i is the row number and j is the column number. Matrices are used in various fields, including mathematics, physics, computer science, and engineering, particularly for representing linear transformations and systems of equations.
 
@@ -189,7 +189,7 @@ A **matrix** is a rectangular array of numbers, symbols, or expressions, arrange
 
 These operations allow for a wide range of applications in solving systems of equations, transformations in geometry, and various computations in engineering and physics.
 
-## 8) Define: Order of Growth.
+## <mark> 8) Define: Order of Growth.</mark>
 
 The **order of growth** refers to the way a function behaves as its input size approaches infinity, particularly in the context of algorithm analysis. It provides a high-level understanding of the algorithm's efficiency by describing how the running time or space requirements grow relative to the input size. This concept is crucial for comparing the efficiency of different algorithms, especially when analyzing their time and space complexities.
 
@@ -213,12 +213,7 @@ The **order of growth** refers to the way a function behaves as its input size a
 
 In summary, the order of growth is a fundamental concept in algorithm analysis that helps in understanding and comparing the efficiency of algorithms based on how their resource requirements scale with input size.
 
-## 9) Total Frequency Count for given code is = \***\*\_\_\*\***
-
-for ( i=1; i<= n ; i++)
-{
-printf(“%d” , a[i] )
-}
+## <mark> 9) Total Frequency Count for given code is = \_\_\_\_ <br>for ( i=1; i<= n ; i++)<br>{<br>printf(“%d” , a[i])<br>}</mark>
 
 The total frequency count for the given code can be analyzed by examining the loop structure and the operations performed within it. The code snippet is as follows:
 
@@ -242,7 +237,7 @@ $\text{Total Frequency Count} = n$
 
 This means that the `printf` function is called `n` times, resulting in a total frequency count of `n` for the provided code.
 
-## 10) Explain why analysis of algorithms is important? Explain: Worst Case, Best Case and Average Case Complexity with suitable examples.
+## <mark> 10) Explain why analysis of algorithms is important? Explain: Worst Case, Best Case and Average Case Complexity with suitable examples.</mark>
 
 ### Importance of Algorithm Analysis
 
@@ -272,7 +267,7 @@ When analyzing an algorithm's efficiency, we typically consider three cases:
 
 In practice, we are often interested in the worst-case complexity, as it provides a guarantee on the algorithm's performance. However, the average-case complexity can be more relevant when the inputs are likely to have certain characteristics. For example, in searching for a word in a dictionary, the average-case complexity is more relevant than the worst-case complexity, as the word being searched for is more likely to be near the beginning of the dictionary.
 
-## 11) Discuss best case, average case and worst case asymptotic analysis. When do best case, average case and worst case occur if you want to find out an item from an array of n items.
+## <mark> 11) Discuss best case, average case and worst case asymptotic analysis. When do best case, average case and worst case occur if you want to find out an item from an array of n items.</mark>
 
 #### Best Case, Average Case, and Worst Case Asymptotic Analysis
 
@@ -310,7 +305,7 @@ The **worst case** scenario reflects the maximum time or space required by the a
 
 Understanding these complexities helps in evaluating the efficiency of algorithms and making informed decisions about which algorithm to use based on the expected input characteristics.
 
-## 12) Why do we use asymptotic notations in the study of algorithms? Briefly describe the commonly used asymptotic notations.
+## <mark> 12) Why do we use asymptotic notations in the study of algorithms? Briefly describe the commonly used asymptotic notations.</mark>
 
 We use asymptotic notations in the study of algorithms for several key reasons:
 
@@ -325,7 +320,7 @@ We use asymptotic notations in the study of algorithms for several key reasons:
 
 In summary, asymptotic analysis using O, Ω, and Θ notations provides a powerful framework for understanding, comparing, and classifying algorithms based on their essential efficiency characteristics. This understanding is key to designing and selecting the most appropriate algorithms for practical applications.
 
-## 13) What is meaning of T (n) =O(1). Explain with suitable example.
+## <mark> 13) What is meaning of T (n) =O(1). Explain with suitable example.</mark>
 
 The notation T(n) = O(1) means that the running time of an algorithm is bounded above by a constant, regardless of the input size n. In other words, the algorithm's running time does not depend on the input size and is always less than or equal to some constant value.
 
@@ -359,7 +354,7 @@ Accessing an element in an array using an index takes constant time because the 
 
 In summary, T(n) = O(1) means that the running time of an algorithm is bounded above by a constant, regardless of the input size. Algorithms with constant time complexity are the most efficient because their running time does not depend on the input size.
 
-## 14) What are the different parameters to analyze any algorithm?
+## <mark> 14) What are the different parameters to analyze any algorithm?</mark>
 
 To analyze any algorithm, several parameters are typically considered. These parameters help in evaluating the efficiency and performance of the algorithm. Here are the key parameters used in algorithm analysis:
 
@@ -377,7 +372,7 @@ To analyze any algorithm, several parameters are typically considered. These par
 
 By considering these parameters, one can thoroughly evaluate the efficiency and effectiveness of an algorithm, helping to make informed decisions about its suitability for a given problem.
 
-## 15) What is the smallest value of n such that an algorithm whose running time is $100n^2$ runs faster than an algorithm whose running time is $2^n$ on the same machine?
+## <mark> 15) What is the smallest value of n such that an algorithm whose running time is $100n^2$ runs faster than an algorithm whose running time is $2^n$ on the same machine?</mark>
 
 To find the smallest value of n such that an algorithm with a running time of $100n^2$ runs faster than an algorithm with a running time of $2^n$ , we need to set up the inequality:
 
@@ -452,7 +447,7 @@ $100n^2 < 2^n$
 
 The smallest value of n such that the algorithm with a running time of $100n^2$ runs faster than the algorithm with a running time of $2^n$ is **15**.
 
-## 16) An asymptotically fast algorithm running on Slow computer is better than asymptotically slow algorithm is running on fast computer for larger input size. (True/False) Justify your answer with supporting arguments.
+## <mark> 16) An asymptotically fast algorithm running on Slow computer is better than asymptotically slow algorithm is running on fast computer for larger input size. (True/False) Justify your answer with supporting arguments.</mark>
 
 The statement "An asymptotically fast algorithm running on a slow computer is better than an asymptotically slow algorithm running on a fast computer for larger input size" is **True**. Here’s the justification:
 
@@ -475,7 +470,7 @@ The statement "An asymptotically fast algorithm running on a slow computer is be
 
 In conclusion, the asymptotic performance of an algorithm is a critical factor in its efficiency, especially as input sizes grow. Thus, an asymptotically faster algorithm will generally be more advantageous than a slower one, regardless of the machine's speed, for larger input sizes.
 
-## 17) Prove or disprove that $f(n)$ = 1 + 2 + 3 + … + $n ∈Θ(n^2)$.
+## <mark> 17) Prove or disprove that $f(n)$ = 1 + 2 + 3 + … + $n ∈Θ(n^2)$.</mark>
 
 To prove or disprove that $f(n) = 1 + 2 + 3 + ... + n \in \Theta(n^2)$, we need to show that $f(n)$ is both $O(n^2)$ and $\Omega(n^2)$.
 

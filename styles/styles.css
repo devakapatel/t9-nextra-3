@@ -7,3 +7,7 @@ body code,
 pre {
   font-family: "Fira Code", monospace;
 }
+mark {
+  background-color: transparent;
+  color: #ffc107;
+}

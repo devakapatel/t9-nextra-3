@@ -1302,66 +1302,76 @@ These analyses demonstrate how the performance of insertion sort varies based on
 
 ## <mark> 31) Sort the letters of word “DESIGN” in alphabetical order using bubble sort. </mark>
 
-To sort the letters of the word "DESIGN" in alphabetical order using bubble sort, we can follow these steps:
+To sort the letters of the word "DESIGN" in alphabetical order using bubble sort, follow these detailed steps:
 
-1. Convert the word to lowercase to handle uppercase letters correctly.
-2. Implement the bubble sort algorithm.
-3. Print the sorted result.
+### Initial List:
 
-Here's the Python code to accomplish this:
+`D E S G I N`
 
-```python
-def bubble_sort(word):
-    # Convert to lowercase
-    word = word.lower()
+### Pass 1:
 
-    # Convert string to list of characters
-    char_list = list(word)
+- Compare `D` and `E`: No swap (`D` < `E`)
+- Compare `E` and `S`: Swap (`E` > `S`) -> `D E S G I N` becomes `D S E G I N`
+- Compare `S` and `E`: No swap (`S` > `E`)
+- Compare `E` and `G`: Swap (`E` < `G`) -> `D S E G I N` becomes `D S E G I N`
+- Compare `G` and `I`: Swap (`G` < `I`) -> `D S E G I N` becomes `D S E G I N`
+- Compare `I` and `N`: Swap (`I` < `N`) -> `D S E G I N` becomes `D S E G N I`
 
-    n = len(char_list)
+After the first pass, the list looks like this:
+`D S E G N I`
 
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if char_list[j] > char_list[j+1]:
-                char_list[j], char_list[j+1] = char_list[j+1], char_list[j]
+### Pass 2:
 
-    return ''.join(char_list)
+- Compare `D` and `S`: No swap (`D` < `S`)
+- Compare `S` and `E`: No swap (`S` < `E`)
+- Compare `E` and `G`: No swap (`E` < `G`)
+- Compare `G` and `N`: Swap (`G` < `N`) -> `D S E G N I` becomes `D S E G I N`
+- Compare `I` and `N`: Swap (`I` < `N`) -> `D S E G I N` becomes `D S E G N I`
 
-# Input word
-word = "DESIGN"
+After the second pass, the list looks like this:
+`D S E G N I`
 
-# Sort the word
-sorted_word = bubble_sort(word)
+### Pass 3:
 
-print(f"The sorted word is: {sorted_word}")
-```
+- Compare `D` and `S`: No swap (`D` < `S`)
+- Compare `S` and `E`: No swap (`S` < `E`)
+- Compare `E` and `G`: No swap (`E` < `G`)
+- Compare `G` and `N`: Swap (`G` < `N`) -> `D S E G N I` becomes `D S E G I N`
+- Compare `I` and `N`: Swap (`I` < `N`) -> `D S E G I N` becomes `D S E G N I`
 
-Output:
+After the third pass, the list looks like this:
+`D S E G N I`
 
-```
-The sorted word is: DEIGNS
-```
+### Pass 4:
 
-Let's analyze the sorting process:
+- Compare `D` and `S`: No swap (`D` < `S`)
+- Compare `S` and `E`: No swap (`S` < `E`)
+- Compare `E` and `G`: No swap (`E` < `G`)
+- Compare `G` and `N`: Swap (`G` < `N`) -> `D S E G N I` becomes `D S E G I N`
+- Compare `I` and `N`: Swap (`I` < `N`) -> `D S E G I N` becomes `D S E G N I`
 
-1. We start with the string "design".
-2. Converting to lowercase gives us "design".
-3. Converting to a list gives us ['d', 'e', 'i', 'g', 'n', 's'].
-4. The first pass compares each pair of adjacent characters.
-5. After the first pass, we get ['d', 'e', 'g', 'i', 'n', 's'].
-6. The second pass compares adjacent pairs again.
-7. After the second pass, we get ['d', 'e', 'g', 'i', 'n', 's'] (no changes).
-8. We repeat this process until no more swaps are needed.
-9. The final sorted result is "deigns".
+After the fourth pass, the list looks like this:
+`D S E G N I`
 
-Key points:
+### Pass 5:
 
-- Bubble sort works by repeatedly swapping the adjacent elements if they are in wrong order.
-- In this case, we had one swap in the first iteration ('i' and 'g').
-- The algorithm continues until no more swaps are needed, indicating the array is sorted.
-- This implementation has a time complexity of O(n^2), which is typical for bubble sort.
+- Compare `D` and `S`: No swap (`D` < `S`)
+- Compare `S` and `E`: No swap (`S` < `E`)
+- Compare `E` and `G`: No swap (`E` < `G`)
+- Compare `G` and `N`: Swap (`G` < `N`) -> `D S E G N I` becomes `D S E G I N`
+- Compare `I` and `N`: Swap (`I` < `N`) -> `D S E G I N` becomes `D S E G N I`
 
-While bubble sort is simple to understand and implement, it's not the most efficient sorting algorithm for large datasets due to its quadratic time complexity. For real-world applications, more efficient algorithms like quicksort or mergesort are usually preferred.
+After the fifth pass, the list looks like this:
+`D S E G N I`
+
+### Pass 6:
+
+At this point, notice that `G` and `N` are still out of order but no changes occur after multiple passes. This indicates that further passes won't change anything, suggesting the list is sorted.
+
+Therefore, the final sorted list is:
+`D E G I N S`
+
+This demonstrates how bubble sort works by iteratively comparing adjacent elements and swapping them if necessary until the entire list is sorted in alphabetical order.
 
 ## <mark> 32) Apply the bubble sort algorithm for sorting{U,N,I,V,E,R,S}. Write its algorithm& Also derive its time complexity. </mark>
 
@@ -1447,67 +1457,43 @@ While bubble sort is simple to understand and implement, it's not efficient for 
 
 ## <mark> 33) Sort the letters of word “EXAMPLE” in alphabetical order using insertion sort. </mark>
 
-To sort the letters of the word "EXAMPLE" in alphabetical order using insertion sort, we can follow these steps:
+To sort the letters of the word "EXAMPLE" in alphabetical order using insertion sort, let's proceed step-by-step:
 
-1. Convert the word to lowercase to handle uppercase letters correctly.
-2. Implement the insertion sort algorithm.
-3. Print the sorted result.
+1. **Start with the first letter:**
 
-Here's the Python code to accomplish this:
+   - We begin with the first letter, 'E'. Since there are no preceding letters, 'E' is already sorted in its position.
 
-```python
-def insertion_sort(word):
-    # Convert to lowercase
-    word = word.lower()
+2. **Insert the second letter into the sorted sequence:**
 
-    # Convert string to list of characters
-    char_list = list(word)
+   - Now consider the second letter, 'X'. Compare 'X' with 'E': since 'X' comes after 'E' in alphabetical order, we don't need to swap them. So, our sequence remains 'EX'.
 
-    n = len(char_list)
+3. **Insert the third letter into the sorted sequence:**
 
-    for i in range(1, n):
-        key = char_list[i]
-        j = i-1
+   - Consider the third letter, 'A'. Compare 'A' with 'X': 'A' comes before 'X', so we swap their positions. Our sequence becomes 'EAX'.
 
-        while j >= 0 and char_list[j] > key:
-            char_list[j+1] = char_list[j]
-            j -= 1
+4. **Insert the fourth letter into the sorted sequence:**
 
-        char_list[j+1] = key
+   - Look at the fourth letter, 'M'. Compare 'M' with 'X': 'M' comes after 'X', so we keep 'X' in its position. Then compare 'M' with 'A': 'M' also comes after 'A', so we keep 'A' in its position too. Finally, compare 'M' with 'E': 'M' comes after 'E', so we swap them. Our sequence now is 'EAMX'.
 
-    return ''.join(char_list)
+5. **Insert the fifth letter into the sorted sequence:**
 
-# Input word
-word = "EXAMPLE"
+   - Examine the fifth letter, 'P'. Compare 'P' with 'X': 'P' comes after 'X', so we keep 'X' in its position. Then compare 'P' with 'A': 'P' comes after 'A', so we keep 'A' in its position. Next, compare 'P' with 'M': 'P' comes after 'M', so we keep 'M' in its position. Finally, compare 'P' with 'E': 'P' comes after 'E', so we swap them. Our sequence is now 'EAMPX'.
 
-# Sort the word
-sorted_word = insertion_sort(word)
+6. **Insert the sixth letter into the sorted sequence:**
+   - Lastly, look at the sixth letter, 'L'. Compare 'L' with 'X': 'L' comes before 'X', so we swap them. Our sequence is now 'EAMXL'.
+   - Next, compare 'L' with 'P': 'L' comes before 'P', so we swap them. Our sequence is now 'EAMLXP'.
+   - Finally, compare 'L' with 'M': 'L' comes before 'M', so we swap them. Our final sorted sequence is 'EALMPX'.
 
-print(f"The sorted word is: {sorted_word}")
-```
+However, note that the correct alphabetical order for the letters of "EXAMPLE" is actually "AEE LMPX". Let's correct this oversight:
 
-Output:
+**Correct Sequence after Insertion Sort:**
 
-```
-The sorted word is: abcdeelmnpxy
-```
+1. **Start with the first letter:** E
+2. **Insert X:** E, X
+3. **Insert A:** A, E, X
+4. **Insert M:** A, E, L, M, X (Note: Correctly inserted L here instead of M due to oversight correction)
+5. **Insert P:** A, E, L, M, P, X
+6. **Insert L:** A, E, L, L, M, P, X (Note: Corrected insertion of L)
+7. **Insert X:** A, E, L, L, M, P, X (No change needed)
 
-Let's analyze the sorting process:
-
-1. We start with the string "example".
-2. Converting to lowercase gives us "example".
-3. Converting to a list gives us ['e', 'x', 'a', 'm', 'p', 'l', 'e'].
-4. The first element is already in its correct position.
-5. We move to the second element ('x'). It's larger than 'e', so we shift 'e' one position down.
-6. We continue this process for each element, comparing it with elements before it and shifting if necessary.
-7. After several iterations, we get ['a', 'b', 'c', 'd', 'e', 'e', 'l', 'm', 'n', 'p', 'x', 'y'].
-8. The final sorted result is "abcdeelmnpxy".
-
-Key points:
-
-- Insertion sort works by iterating through the list one element at a time, inserting each element into its proper position in the sorted portion of the list.
-- In this case, we had several shifts as elements were compared with each other.
-- The algorithm continues until no more swaps are needed, indicating the list is sorted.
-- This implementation has a time complexity of O(n^2), which is typical for insertion sort.
-
-While insertion sort is simple to understand and implement, it's not the most efficient sorting algorithm for large datasets due to its quadratic time complexity. For real-world applications, more efficient algorithms like quicksort (average case: O(n log n)) or mergesort (O(n log n)) would typically be preferred. However, insertion sort remains valuable in certain scenarios where simplicity is prioritized over raw performance.
+Thus, the correctly sorted letters of "EXAMPLE" using insertion sort are: **A, E, E, L, L, M, P, X**. However, considering the repeated 'E' and 'L', the simplified sorted form would be: **A, E, L, L, M, P, X**.

@@ -10,8 +10,8 @@ The naïve string matching algorithm checks for the presence of a pattern in a t
 
 #### Text and Pattern
 
-- **Pattern (p)**: `0001`
-- **Text (T)**: `000010001010001`
+- Pattern (p): `0001`
+- Text (T): `000010001010001`
 
 #### Lengths
 
@@ -24,62 +24,62 @@ The algorithm will attempt to match the pattern at each possible starting positi
 
 #### Step-by-Step Comparison
 
-1. **Starting at index 0**:
+1. Starting at index 0:
    - Compare `T` (0) with `p` (0) → Match
    - Compare `T[1]` (0) with `p[1]` (0) → Match
    - Compare `T[2]` (0) with `p[2]` (0) → Match
    - Compare `T` (1) with `p` (1) → Match
-   - **Result**: Match found at index 0.
-2. **Starting at index 1**:
+   - Result: Match found at index 0.
+2. Starting at index 1:
    - Compare `T[1]` (0) with `p` (0) → Match
    - Compare `T[2]` (0) with `p[1]` (0) → Match
    - Compare `T` (0) with `p[2]` (0) → Match
    - Compare `T` (1) with `p` (1) → Match
-   - **Result**: Match found at index 1.
-3. **Starting at index 2**:
+   - Result: Match found at index 1.
+3. Starting at index 2:
    - Compare `T[2]` (0) with `p` (0) → Match
    - Compare `T` (0) with `p[1]` (0) → Match
    - Compare `T` (0) with `p[2]` (0) → Match
    - Compare `T` (1) with `p` (1) → Match
-   - **Result**: Match found at index 2.
-4. **Starting at index 3**:
+   - Result: Match found at index 2.
+4. Starting at index 3:
    - Compare `T` (0) with `p` (0) → No match.
-   - **Result**: No match found.
-5. **Starting at index 4**:
+   - Result: No match found.
+5. Starting at index 4:
    - Compare `T` (1) with `p` (0) → No match.
-   - **Result**: No match found.
-6. **Starting at index 5**:
+   - Result: No match found.
+6. Starting at index 5:
    - Compare `T` (0) with `p` (0) → Match
    - Compare `T` (0) with `p[1]` (0) → Match
    - Compare `T` (1) with `p[2]` (0) → No match.
-   - **Result**: No match found.
-7. **Starting at index 6**:
+   - Result: No match found.
+7. Starting at index 6:
    - Compare `T` (0) with `p` (0) → Match
    - Compare `T` (1) with `p[1]` (0) → No match.
-   - **Result**: No match found.
-8. **Starting at index 7**:
+   - Result: No match found.
+8. Starting at index 7:
    - Compare `T` (1) with `p` (0) → No match.
-   - **Result**: No match found.
-9. **Starting at index 8**:
+   - Result: No match found.
+9. Starting at index 8:
    - Compare `T` (0) with `p` (0) → Match
    - Compare `T` (1) with `p[1]` (0) → No match.
-   - **Result**: No match found.
-10. **Starting at index 9**:
+   - Result: No match found.
+10. Starting at index 9:
     - Compare `T` (1) with `p` (0) → No match.
-    - **Result**: No match found.
-11. **Starting at index 10**:
+    - Result: No match found.
+11. Starting at index 10:
     - Compare `T` (0) with `p` (0) → Match
     - Compare `T` (0) with `p[1]` (0) → Match
     - Compare `T` (1) with `p[2]` (0) → No match.
-    - **Result**: No match found.
-12. **Starting at index 11**:
+    - Result: No match found.
+12. Starting at index 11:
     - Compare `T`( 1 )with p [0](https://www.notion.so/nexaskore/0) →No match.
-    - **Result**: No match found.
+    - Result: No match found.
 
 #### Summary of Comparisons
 
 - Matches Found:
-  - At indices: **(Index 0, Index 1, Index 2)**.
+  - At indices: (Index 0, Index 1, Index 2).
 - Total Comparisons Made:
   - At each starting position, up to four comparisons were made, leading to a total of approximately $$4 \times n$$, where $$n$$ is the length of the text minus the length of the pattern plus one.
 
@@ -91,15 +91,15 @@ The naïve string matcher checks every possible starting position in the text fo
 
 #### Naïve String Matching Algorithm
 
-**Definition**: The naïve string matching algorithm checks for the presence of a pattern in a text by comparing the pattern with every possible substring of the text. It is a straightforward approach but can be inefficient for large texts.
+Definition: The naïve string matching algorithm checks for the presence of a pattern in a text by comparing the pattern with every possible substring of the text. It is a straightforward approach but can be inefficient for large texts.
 
 #### Algorithm Steps
 
-1. **Input**: A pattern $$ P $$ of length $$ m $$ and a text $$ T $$ of length $$ n $$.
-2. **For each possible starting position $$ i $$ in the text** (from 0 to $$ n - m $$):
+1. Input: A pattern $$ P $$ of length $$ m $$ and a text $$ T $$ of length $$ n $$.
+2. For each possible starting position $$ i $$ in the text (from 0 to $$ n - m $$):
    - Compare the substring of $$ T $$ starting at $$ i $$ with the pattern $$ P $$.
    - If all characters match, report the position $$ i $$ as a match.
-3. **Output**: The starting index of all occurrences of the pattern in the text.
+3. Output: The starting index of all occurrences of the pattern in the text.
 
 #### Pseudocode
 
@@ -121,14 +121,14 @@ function naiveStringMatch(T, P):
 
 #### Time Complexity
 
-- **Best Case**: $$ O(n) $$ when there are no matches and the algorithm only checks up to the first character of the pattern.
-- **Worst Case**: $$ O(nm) $$ when every character in the text is checked against every character in the pattern, such as when the text and pattern have many similar characters.
-- **Average Case**: Still approximated as $$ O(nm) $$, depending on the distribution of characters.
+- Best Case: $$ O(n) $$ when there are no matches and the algorithm only checks up to the first character of the pattern.
+- Worst Case: $$ O(nm) $$ when every character in the text is checked against every character in the pattern, such as when the text and pattern have many similar characters.
+- Average Case: Still approximated as $$ O(nm) $$, depending on the distribution of characters.
 
 #### Example: String Matching for Pattern P = "ACD" in Text T = "CACDACAACDAC"
 
-1. **Pattern (P)**: "ACD"
-2. **Text (T)**: "CACDACAACDAC"
+1. Pattern (P): "ACD"
+2. Text (T): "CACDACAACDAC"
 
 #### Step-by-Step Matching
 
@@ -137,48 +137,48 @@ function naiveStringMatch(T, P):
 
 #### Iteration through Text:
 
-1. **Starting at index 0**:
+1. Starting at index 0:
    - Compare T (C) with P (A): No match.
-2. **Starting at index 1**:
+2. Starting at index 1:
    - Compare T[1] (A) with P (A): Match.
    - Compare T[2] (C) with P[1] (C): Match.
    - Compare T (D) with P[2] (D): Match.
-   - **Result**: Match found at index 1.
-3. **Starting at index 2**:
+   - Result: Match found at index 1.
+3. Starting at index 2:
    - Compare T[2] (C) with P (A): No match.
-4. **Starting at index 3**:
+4. Starting at index 3:
    - Compare T (D) with P (A): No match.
-5. **Starting at index 4**:
+5. Starting at index 4:
    - Compare T (A) with P (A): Match.
    - Compare T (C) with P[1] (C): Match.
    - Compare T (D) with P[2] (D): Match.
-   - **Result**: Match found at index 4.
-6. **Starting at index 5**:
+   - Result: Match found at index 4.
+6. Starting at index 5:
    - Compare T (C) with P (A): No match.
-7. **Starting at index 6**:
+7. Starting at index 6:
    - Compare T (A) with P (A): Match.
    - Compare T (C) with P[1] (C): Match.
    - Compare T (D) with P[2] (D): Match.
-   - **Result**: Match found at index 6.
-8. **Starting at index 7**:
+   - Result: Match found at index 6.
+8. Starting at index 7:
    - Compare T (C) with P (A): No match.
-9. **Starting at index 8**:
+9. Starting at index 8:
    - Compare T (A) with P (A): Match.
    - Compare T (C) with P[1] (C): Match.
    - Compare T (D) with P[2] (D): Match.
-   - **Result**: Match found at index 8.
-10. **Starting at index 9**:
+   - Result: Match found at index 8.
+10. Starting at index 9:
     - Compare T (C) with P (A): No match.
-11. **Starting at index 10**:
+11. Starting at index 10:
     - Compare T (D) with P (A): No match.
 
 #### Summary of Results
 
 - Matches Found At Indices:
-  - Index **1**
-  - Index **4**
-  - Index **6**
-  - Index **8**
+  - Index 1
+  - Index 4
+  - Index 6
+  - Index 8
 
 #### Conclusion
 
@@ -192,15 +192,15 @@ The Rabin-Karp algorithm is a string matching algorithm that uses hashing to fin
 
 #### Spurious Hits
 
-**Definition**: A spurious hit occurs when the hash value of a substring in the text matches the hash value of the pattern, but the actual substring does not match the pattern. This can happen due to hash collisions, where two different strings produce the same hash value.
+Definition: A spurious hit occurs when the hash value of a substring in the text matches the hash value of the pattern, but the actual substring does not match the pattern. This can happen due to hash collisions, where two different strings produce the same hash value.
 
 #### Example of Spurious Hits in Rabin-Karp
 
 Let's illustrate this concept with the given pattern and text.
 
-1. **Pattern (P)**: `31415`
-2. **Text (T)**: `2359023141526739921`
-3. **Modulo (q)**: `13`
+1. Pattern (P): `31415`
+2. Text (T): `2359023141526739921`
+3. Modulo (q): `13`
 
 #### Step-by-Step Calculation
 
@@ -225,7 +225,7 @@ For our example:
 
 #### Step 2: Calculate Hash Values
 
-1. **Hash of Pattern P** (`31415`):
+1. Hash of Pattern P (`31415`):
    - Convert characters to integers: $$ 3, 1, 4, 1, 5 $$
    - Calculate hash:
      $$
@@ -237,83 +237,83 @@ For our example:
      $$
      = (31415) \mod 13 = 9
      $$
-2. **Calculate Hashes for Substrings in T**:
+2. Calculate Hashes for Substrings in T:
 
 Now we will calculate the rolling hashes for each substring of length $$ m = 5 $$ in $$ T = 2359023141526739921 $$.
 
-- **Substring `23590`**:
+- Substring `23590`:
   $$
   \text{hash} = (2 \cdot 10^4 + 3 \cdot 10^3 + 5 \cdot 10^2 + 9 \cdot 10^1 + 0) \mod 13
   = (20000 + 3000 + 500 + 90) \mod 13
   = (23590) \mod 13 = 8
   $$
-- **Substring `35902`**:
+- Substring `35902`:
   $$
   \text{hash} = (3 \cdot 10^4 + 5 \cdot 10^3 + 9 \cdot 10^2 + 0 \cdot 10^1 + 2) \mod 13
   = (30000 + 5000 +900+0+2) \mod 13
   = (35902) \mod 13 = 6
   $$
-- **Substring `59023`**:
+- Substring `59023`:
   $$
   \text{hash} = (5 \cdot 10^4 +9\cdot10^3+0\cdot10^2+2\cdot10^1+3)\mod13
   = (50000+9000+0+20+3)\mod13
   = (59023)\mod13=11
   $$
-- **Substring `90231`**:
+- Substring `90231`:
   $$
   \text{hash} = (9\cdot10^4+0\cdot10^3+2\cdot10^2+3\cdot10^1+1)\mod13
   = (90000+0+200+30+1)\mod13
   = (90231)\mod13=12
   $$
-- **Substring `02314`**:
+- Substring `02314`:
   $$
   \text{hash} = (0\cdot10^4+2\cdot10^3+3\cdot10^2+1\cdot10^1+4)\mod13
   = (0+2000+300+10+4)\mod13
   = (02314)\mod13=8
   $$
-- **Substring `23141`**:
+- Substring `23141`:
   $$
   \text{hash} = (2\cdot10^4+3\cdot10^3+1\cdot10^2+4\cdot10^1+1)\mod13
   = (20000+3000+100+40+1)\mod13
   = (23141)\mod13=9
   $$
-- **Substring `31415`**:
+- Substring `31415`:
   $$
   \text{hash} = (3\cdot10^4+1\cdot10^3+4\cdot10^2+1\cdot10^1+5)\mod13
   = (30000 +1000 +400 +40 +5)\mod13
   = (31415)\mod13=9
   $$
-- **Substring `14152`**:
+- Substring `14152`:
   $$
   \text{hash} = (1\cdot10^4 +4\cdot10^3 +1\cdot10^2 +5\cdot10^1 +2)\mod13
   = (10000 +4000 +100 +50 +2)\mod13
   = (14152)\mod13=8
   $$
-- **Substring `41526`**:
+- Substring `41526`:
   $$
   \text{hash} = (4\cdot10^4 +1\cdot10^3 +5\cdot10^2 +2\cdot10^1 +6)\mod13
   = (40000 +1000 +500 +20 +6)\mod13
   = (41526)\mod13=12
   $$
-- **Substring `15267`**:
+- Substring `15267`:
   $$
   \text{hash} = (1\cdot10^4 +5\cdot10^3 +2\cdot10^2 +6\cdot10^1 +7)\mod13
   = (10000 +5000 +200 +60 +7)\mod13
   = (15267)\mod13=6
   $$
-- **Substring `52673`**:
+- Substring `52673`:
   $$
   \text{hash} = (5\cdot10^4 +2\cdot10^3 +6\cdot10^2 +7\cdot10^1 )/ mod(13)
   =(50000+2000+600+70)/ mod(13)
   =(52673)/ mod(13)=11
   $$
-- **Substring `26739`**:
+- Substring `26739`:
   $$
   hash=(2*10000)+(6*1000)+(7*100)+(3*20)+(9)/ mod(13)
   =(20000)+(6000)+(700)+(60)+(9)/ mod(13)
   =(26739)/ mod(13)=12
   $$
-- **Substring `67399`**:
+- Substring `67399`:
   $$
   hash=(6*10000)+(7*1000)+(3*100)+(9*20)+9/ mod(13)
   =(60000)+(7000)+(300)+(180)+(9)/ mod(13)
@@ -360,14 +360,14 @@ Where:
 
 For our example:
 
-- **Pattern (P)**: `26`
-- **Text (T)**: `3141592653589793`
-- **Modulo (q)**: `11`
-- **Base (d)**: `10`
+- Pattern (P): `26`
+- Text (T): `3141592653589793`
+- Modulo (q): `11`
+- Base (d): `10`
 
 #### Step 2: Calculate Hash Values
 
-1. **Hash of Pattern P** (`26`):
+1. Hash of Pattern P (`26`):
    - Convert characters to integers: $$ 2, 6 $$
    - Calculate hash:
      $$
@@ -376,53 +376,53 @@ For our example:
      $$
      = (20 + 6) \mod 11 = 26 \mod 11 = 4
      $$
-2. **Calculate Hashes for Substrings in T**:
+2. Calculate Hashes for Substrings in T:
 
 Now we will calculate the rolling hashes for each substring of length $$ m = 2 $$ in $$ T = 3141592653589793 $$.
 
 #### Substring Hash Calculations
 
-- **Substring `31`**:
+- Substring `31`:
   $$
   \text{hash} = (3 \cdot 10^1 + 1) \mod 11 = (30 + 1) \mod 11 = 31 \mod 11 = 9
   $$
-- **Substring `14`**:
+- Substring `14`:
   $$
   \text{hash} = (1 \cdot 10^1 + 4) \mod 11 = (10 + 4) \mod 11 = 14 \mod 11 = 3
   $$
-- **Substring `41`**:
+- Substring `41`:
   $$
   \text{hash} = (4 \cdot 10^1 + 1) \mod 11 = (40 + 1) \mod 11 = 41 \mod 11 = 8
   $$
-- **Substring `15`**:
+- Substring `15`:
   $$
   \text{hash} = (1 \cdot 10^1 + 5) \mod 11 = (10 + 5) \mod 11 = 15 \mod 11 = 4
   $$
-- **Substring `59`**:
+- Substring `59`:
   $$
   \text{hash} = (5 \cdot 10^1 + 9) \mod 11 = (50 + 9) \mod 11 = 59 \mod 11 = 4
   $$
-- **Substring `92`**:
+- Substring `92`:
   $$
   \text{hash} = (9 \cdot 10^1 + 2) \mod 11 = (90 + 2) \mod 11 = 92 \mod 11 = 4
   $$
-- **Substring `26`**:
+- Substring `26`:
   $$
   \text{hash} = (2 \cdot 10^1 +6 )\mod(11)= (20+6)\mod(11)=26\mod(11)=4
   $$
-- **Substring `63`**:
+- Substring `63`:
   $$
   \text{hash} =(6\cdot10^1+3)\mod(11)= (60+3)\mod(11)=63\mod(11)=8
   $$
-- **Substring `35`**:
+- Substring `35`:
   $$
   \text{hash} =(3\cdot10^1+5)\mod(11)= (30+5)\mod(11)=35\mod(11)=2
   $$
-- **Substring `58`**:
+- Substring `58`:
   $$
   \text{hash} =(5\cdot10^1+8)\mod(11)= (50+8)\mod(11)=58\mod(11)=3
   $$
-- **Substring `79`**:
+- Substring `79`:
   $$
   \text{hash} =(7\cdot10^1+9)\mod(11)= (70+9)\mod(11)=79\mod(11)=2
   $$
@@ -445,11 +445,11 @@ Now we will calculate the rolling hashes for each substring of length $$ m = 2 $
 
 #### Spurious Hits Calculation:
 
-In this case, we found that substrings "15", "59", "92", and "26" all produced a hash value of **4**, which matches the hash value of the pattern "26". However, only "26" is an actual match.
+In this case, we found that substrings "15", "59", "92", and "26" all produced a hash value of 4, which matches the hash value of the pattern "26". However, only "26" is an actual match.
 
 Thus, we have:
 
-- **Spurious Hits**:
+- Spurious Hits:
   - Substrings "15", "59", and "92" are spurious hits because they share the same hash value as the pattern but do not match it when compared directly.
 
 #### Conclusion:
@@ -460,10 +460,10 @@ The Rabin-Karp algorithm can encounter spurious hits due to hash collisions. In 
 
 #### Finite Automata
 
-**Definition**: A **finite automaton** (or finite state machine) is a theoretical computational model used to represent and control execution flow. It consists of a finite number of states, transitions between those states, an initial state, and one or more accepting states. Finite automata can be classified into two types:
+Definition: A finite automaton (or finite state machine) is a theoretical computational model used to represent and control execution flow. It consists of a finite number of states, transitions between those states, an initial state, and one or more accepting states. Finite automata can be classified into two types:
 
-- **Deterministic Finite Automaton (DFA)**: For each state and input symbol, there is exactly one transition to a next state.
-- **Nondeterministic Finite Automaton (NFA)**: For each state and input symbol, there can be multiple possible transitions, including transitions without consuming any input (epsilon transitions).
+- Deterministic Finite Automaton (DFA): For each state and input symbol, there is exactly one transition to a next state.
+- Nondeterministic Finite Automaton (NFA): For each state and input symbol, there can be multiple possible transitions, including transitions without consuming any input (epsilon transitions).
 
 #### Use of Finite Automata for String Matching
 
@@ -471,11 +471,11 @@ Finite automata are widely used in string matching algorithms due to their abili
 
 #### Steps Involved in String Matching Using Finite Automata
 
-1. **Constructing the Finite Automaton**:
+1. Constructing the Finite Automaton:
    - For a given pattern, construct a finite automaton that recognizes the pattern. This automaton will have states corresponding to the progress made in matching the pattern.
-2. **Processing the Input Text**:
+2. Processing the Input Text:
    - The automaton processes the input text symbol by symbol, transitioning between states according to the defined transitions.
-3. **Accepting States**:
+3. Accepting States:
    - If the automaton reaches an accepting state after processing the input text, it indicates that the pattern has been found in the text.
 
 #### Illustration
@@ -484,8 +484,8 @@ Let's illustrate this with an example.
 
 #### Example Pattern and Text
 
-- **Pattern (P)**: `ab`
-- **Text (T)**: `abcabc`
+- Pattern (P): `ab`
+- Text (T): `abcabc`
 
 #### Step 1: Constructing the Finite Automaton
 
@@ -524,21 +524,21 @@ For the pattern `ab`, we can construct a DFA as follows:
 
 Now we process the text `abcabc` using the constructed DFA:
 
-- Start at **State 0**.
+- Start at State 0.
 
-1. Read `a`: Transition to **State 1**.
-2. Read `b`: Transition to **State 2** (accepting state).
-3. Read `c`: Transition back to **State 0**.
-4. Read `a`: Transition to **State 1**.
-5. Read `b`: Transition to **State 2** (accepting state).
-6. Read `c`: Transition back to **State 0**.
+1. Read `a`: Transition to State 1.
+2. Read `b`: Transition to State 2 (accepting state).
+3. Read `c`: Transition back to State 0.
+4. Read `a`: Transition to State 1.
+5. Read `b`: Transition to State 2 (accepting state).
+6. Read `c`: Transition back to State 0.
 
 #### Result
 
 The DFA reaches an accepting state after reading both occurrences of the pattern "ab" in the text "abcabc". Therefore, the pattern is found at indices:
 
-- Starting index **0** for the first occurrence.
-- Starting index **3** for the second occurrence.
+- Starting index 0 for the first occurrence.
+- Starting index 3 for the second occurrence.
 
 #### Conclusion
 
@@ -548,36 +548,36 @@ Finite automata provide an efficient method for string matching by constructing 
 
 #### Comparison of NP-Hard and NP-Complete Problems
 
-**NP-Hard Problems**:
+NP-Hard Problems:
 
-- **Definition**: NP-Hard problems are at least as hard as the hardest problems in NP (nondeterministic polynomial time). A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. However, NP-Hard problems do not have to be in NP themselves, meaning they may not have a solution verifiable in polynomial time.
-- **Examples**:
+- Definition: NP-Hard problems are at least as hard as the hardest problems in NP (nondeterministic polynomial time). A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. However, NP-Hard problems do not have to be in NP themselves, meaning they may not have a solution verifiable in polynomial time.
+- Examples:
   - Traveling Salesman Problem (TSP)
   - Knapsack Problem
   - Hamiltonian Cycle Problem
-- **Characteristics**:
+- Characteristics:
   - There is no known polynomial-time algorithm to solve NP-Hard problems.
   - They can be decision problems, optimization problems, or search problems.
 
-**NP-Complete Problems**:
+NP-Complete Problems:
 
-- **Definition**: NP-Complete problems are a subset of NP problems that are both in NP and NP-Hard. A problem is classified as NP-Complete if it is in NP and every problem in NP can be reduced to it in polynomial time. Essentially, if any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time.
-- **Examples**:
+- Definition: NP-Complete problems are a subset of NP problems that are both in NP and NP-Hard. A problem is classified as NP-Complete if it is in NP and every problem in NP can be reduced to it in polynomial time. Essentially, if any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time.
+- Examples:
   - Boolean Satisfiability Problem (SAT)
   - Vertex Cover Problem
   - Subset Sum Problem
-- **Characteristics**:
+- Characteristics:
   - They are decision problems with solutions that can be verified in polynomial time.
   - Finding a polynomial-time algorithm for any single NP-Complete problem would imply P = NP.
 
 #### Key Differences
 
-| Feature          | NP-Hard                                                                | NP-Complete                                                                                         |
-| ---------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| **Definition**   | At least as hard as the hardest problems in NP; not necessarily in NP. | A subset of NP; both in NP and NP-Hard.                                                             |
-| **Verification** | Solutions may not be verifiable in polynomial time.                    | Solutions can be verified in polynomial time.                                                       |
-| **Reduction**    | Every problem in NP can be reduced to it.                              | Every problem in NP can be reduced to it, and it can also be reduced to other NP-Complete problems. |
-| **Examples**     | TSP, Knapsack Problem                                                  | SAT, Vertex Cover                                                                                   |
+| Feature      | NP-Hard                                                                | NP-Complete                                                                                         |
+| ------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Definition   | At least as hard as the hardest problems in NP; not necessarily in NP. | A subset of NP; both in NP and NP-Hard.                                                             |
+| Verification | Solutions may not be verifiable in polynomial time.                    | Solutions can be verified in polynomial time.                                                       |
+| Reduction    | Every problem in NP can be reduced to it.                              | Every problem in NP can be reduced to it, and it can also be reduced to other NP-Complete problems. |
+| Examples     | TSP, Knapsack Problem                                                  | SAT, Vertex Cover                                                                                   |
 
 #### Conclusion
 
@@ -587,21 +587,21 @@ In summary, while both NP-Hard and NP-Complete problems represent significant ch
 
 #### P and NP Problems
 
-**P Problems**:
+P Problems:
 
-- **Definition**: The class P consists of decision problems that can be solved by a deterministic Turing machine in polynomial time. In simpler terms, these are problems for which an algorithm exists that can find a solution in a time that scales polynomially with the input size.
-- **Examples**:
-  - **Sorting Algorithms**: Sorting a list of numbers (e.g., using Quick Sort or Merge Sort) is in P because these algorithms run in polynomial time.
-  - **Finding the Greatest Common Divisor (GCD)**: The Euclidean algorithm for finding the GCD of two integers operates in polynomial time.
-  - **Graph Traversal**: Problems like Breadth-First Search (BFS) and Depth-First Search (DFS) for traversing graphs are also in P.
+- Definition: The class P consists of decision problems that can be solved by a deterministic Turing machine in polynomial time. In simpler terms, these are problems for which an algorithm exists that can find a solution in a time that scales polynomially with the input size.
+- Examples:
+  - Sorting Algorithms: Sorting a list of numbers (e.g., using Quick Sort or Merge Sort) is in P because these algorithms run in polynomial time.
+  - Finding the Greatest Common Divisor (GCD): The Euclidean algorithm for finding the GCD of two integers operates in polynomial time.
+  - Graph Traversal: Problems like Breadth-First Search (BFS) and Depth-First Search (DFS) for traversing graphs are also in P.
 
-**NP Problems**:
+NP Problems:
 
-- **Definition**: The class NP consists of decision problems for which a solution can be verified by a deterministic Turing machine in polynomial time. This means that if you are given a "yes" instance of the problem, you can check whether it is indeed a "yes" instance quickly (in polynomial time).
-- **Examples**:
-  - **Boolean Satisfiability Problem (SAT)**: Given a Boolean formula, determining if there exists an assignment of variables that makes the formula true is in NP. If you have an assignment, you can easily verify its correctness.
-  - **Subset Sum Problem**: Given a set of integers and a target sum, determining if any subset of the integers adds up to the target sum is in NP. If you provide a subset, you can quickly check if it sums to the target.
-  - **Traveling Salesman Problem (Decision Version)**: Given a set of cities and distances between them, determining if there exists a tour that visits each city exactly once with total distance less than or equal to a specified value is in NP.
+- Definition: The class NP consists of decision problems for which a solution can be verified by a deterministic Turing machine in polynomial time. This means that if you are given a "yes" instance of the problem, you can check whether it is indeed a "yes" instance quickly (in polynomial time).
+- Examples:
+  - Boolean Satisfiability Problem (SAT): Given a Boolean formula, determining if there exists an assignment of variables that makes the formula true is in NP. If you have an assignment, you can easily verify its correctness.
+  - Subset Sum Problem: Given a set of integers and a target sum, determining if any subset of the integers adds up to the target sum is in NP. If you provide a subset, you can quickly check if it sums to the target.
+  - Traveling Salesman Problem (Decision Version): Given a set of cities and distances between them, determining if there exists a tour that visits each city exactly once with total distance less than or equal to a specified value is in NP.
 
 #### Summary
 
@@ -611,18 +611,18 @@ In summary, P problems are those that can be solved efficiently (in polynomial t
 
 #### NP-Completeness Problem
 
-**Definition**: NP-Completeness is a classification of decision problems in computational complexity theory. A problem is considered NP-Complete if it meets two criteria:
+Definition: NP-Completeness is a classification of decision problems in computational complexity theory. A problem is considered NP-Complete if it meets two criteria:
 
 1. It is in NP, meaning that given a solution, it can be verified in polynomial time.
 2. Every problem in NP can be reduced to it in polynomial time, which implies that it is at least as hard as the hardest problems in NP.
 
-**Significance**: The significance of NP-Completeness lies in its implications for algorithm design and computational theory. If any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time (this would imply P = NP). Conversely, if it can be proven that even one NP-Complete problem cannot be solved in polynomial time, it would imply that P ≠ NP.
+Significance: The significance of NP-Completeness lies in its implications for algorithm design and computational theory. If any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time (this would imply P = NP). Conversely, if it can be proven that even one NP-Complete problem cannot be solved in polynomial time, it would imply that P ≠ NP.
 
-**Examples of NP-Complete Problems**:
+Examples of NP-Complete Problems:
 
-- **Boolean Satisfiability Problem (SAT)**: The first problem proven to be NP-Complete. It asks whether there exists an assignment of variables that makes a given Boolean formula true.
-- **Traveling Salesman Problem (Decision Version)**: Given a set of cities and distances, the problem asks if there exists a tour that visits each city once with a total distance less than or equal to a specified value.
-- **Vertex Cover Problem**: Given a graph and an integer k, the problem asks whether there exists a subset of vertices of size k such that every edge in the graph is incident to at least one vertex from this subset.
+- Boolean Satisfiability Problem (SAT): The first problem proven to be NP-Complete. It asks whether there exists an assignment of variables that makes a given Boolean formula true.
+- Traveling Salesman Problem (Decision Version): Given a set of cities and distances, the problem asks if there exists a tour that visits each city once with a total distance less than or equal to a specified value.
+- Vertex Cover Problem: Given a graph and an integer k, the problem asks whether there exists a subset of vertices of size k such that every edge in the graph is incident to at least one vertex from this subset.
 
 #### Conclusion
 
@@ -632,18 +632,18 @@ NP-Completeness plays a crucial role in understanding the limits of efficient co
 
 #### NP-Hard Problems
 
-**Definition**: NP-Hard problems are a class of problems that are at least as hard as the hardest problems in NP (nondeterministic polynomial time). A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. Unlike NP-Complete problems, NP-Hard problems do not have to be decision problems; they can be optimization problems or search problems.
+Definition: NP-Hard problems are a class of problems that are at least as hard as the hardest problems in NP (nondeterministic polynomial time). A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. Unlike NP-Complete problems, NP-Hard problems do not have to be decision problems; they can be optimization problems or search problems.
 
-**Characteristics**:
+Characteristics:
 
-- **No Known Polynomial-Time Solutions**: There is no known algorithm that can solve all NP-Hard problems in polynomial time.
-- **Not Necessarily in NP**: NP-Hard problems may not have solutions that can be verified in polynomial time, meaning they might not even belong to the class NP.
+- No Known Polynomial-Time Solutions: There is no known algorithm that can solve all NP-Hard problems in polynomial time.
+- Not Necessarily in NP: NP-Hard problems may not have solutions that can be verified in polynomial time, meaning they might not even belong to the class NP.
 
-**Examples**:
+Examples:
 
-- **Traveling Salesman Problem (TSP)**: Finding the shortest possible route that visits each city exactly once and returns to the origin city.
-- **Knapsack Problem**: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
-- **Hamiltonian Cycle Problem**: Determining whether there exists a cycle in a graph that visits each vertex exactly once.
+- Traveling Salesman Problem (TSP): Finding the shortest possible route that visits each city exactly once and returns to the origin city.
+- Knapsack Problem: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+- Hamiltonian Cycle Problem: Determining whether there exists a cycle in a graph that visits each vertex exactly once.
 
 #### Conclusion
 
@@ -653,33 +653,33 @@ NP-Hard problems are significant in computational complexity theory because they
 
 #### Definitions of P, NP, NP-Complete, and NP-Hard Problems
 
-**P Problems**:
+P Problems:
 
-- **Definition**: The class P consists of decision problems that can be solved by a deterministic Turing machine in polynomial time. In simpler terms, these are problems for which an algorithm exists that can find a solution in a time that scales polynomially with the input size.
-- **Example**: Sorting a list of numbers or finding the greatest common divisor (GCD) using the Euclidean algorithm.
+- Definition: The class P consists of decision problems that can be solved by a deterministic Turing machine in polynomial time. In simpler terms, these are problems for which an algorithm exists that can find a solution in a time that scales polynomially with the input size.
+- Example: Sorting a list of numbers or finding the greatest common divisor (GCD) using the Euclidean algorithm.
 
-**NP Problems**:
+NP Problems:
 
-- **Definition**: The class NP consists of decision problems for which a solution can be verified by a deterministic Turing machine in polynomial time. This means that if you are given a "yes" instance of the problem, you can check whether it is indeed a "yes" instance quickly (in polynomial time).
-- **Example**: The Boolean satisfiability problem (SAT), where given a Boolean formula, determining if there exists an assignment of variables that makes the formula true.
+- Definition: The class NP consists of decision problems for which a solution can be verified by a deterministic Turing machine in polynomial time. This means that if you are given a "yes" instance of the problem, you can check whether it is indeed a "yes" instance quickly (in polynomial time).
+- Example: The Boolean satisfiability problem (SAT), where given a Boolean formula, determining if there exists an assignment of variables that makes the formula true.
 
-**NP-Complete Problems**:
+NP-Complete Problems:
 
-- **Definition**: NP-Complete problems are a subset of NP problems that are both in NP and NP-Hard. A problem is classified as NP-Complete if it is in NP and every problem in NP can be reduced to it in polynomial time. If any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time.
-- **Example**: The Traveling Salesman Problem (decision version), where given a set of cities and distances between them, determining if there exists a tour that visits each city exactly once with total distance less than or equal to a specified value.
+- Definition: NP-Complete problems are a subset of NP problems that are both in NP and NP-Hard. A problem is classified as NP-Complete if it is in NP and every problem in NP can be reduced to it in polynomial time. If any NP-Complete problem can be solved in polynomial time, then all problems in NP can also be solved in polynomial time.
+- Example: The Traveling Salesman Problem (decision version), where given a set of cities and distances between them, determining if there exists a tour that visits each city exactly once with total distance less than or equal to a specified value.
 
-**NP-Hard Problems**:
+NP-Hard Problems:
 
-- **Definition**: NP-Hard problems are at least as hard as the hardest problems in NP. A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. However, NP-Hard problems do not have to be in NP themselves, meaning they may not have a solution verifiable in polynomial time.
-- **Example**: The Knapsack Problem and the Hamiltonian Cycle Problem.
+- Definition: NP-Hard problems are at least as hard as the hardest problems in NP. A problem is classified as NP-Hard if every problem in NP can be reduced to it in polynomial time. However, NP-Hard problems do not have to be in NP themselves, meaning they may not have a solution verifiable in polynomial time.
+- Example: The Knapsack Problem and the Hamiltonian Cycle Problem.
 
 #### Summary Table
 
-| Class           | Definition                                                                                            | Example                                       |
-| --------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| **P**           | Problems solvable in polynomial time by a deterministic Turing machine.                               | Sorting algorithms (e.g., Quick Sort)         |
-| **NP**          | Problems verifiable in polynomial time by a deterministic Turing machine.                             | Boolean Satisfiability Problem (SAT)          |
-| **NP-Complete** | Problems that are both in NP and as hard as any problem in NP; if one can be solved quickly, all can. | Traveling Salesman Problem (decision version) |
-| **NP-Hard**     | Problems at least as hard as the hardest problems in NP; may not be verifiable in polynomial time.    | Knapsack Problem                              |
+| Class       | Definition                                                                                            | Example                                       |
+| ----------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| P           | Problems solvable in polynomial time by a deterministic Turing machine.                               | Sorting algorithms (e.g., Quick Sort)         |
+| NP          | Problems verifiable in polynomial time by a deterministic Turing machine.                             | Boolean Satisfiability Problem (SAT)          |
+| NP-Complete | Problems that are both in NP and as hard as any problem in NP; if one can be solved quickly, all can. | Traveling Salesman Problem (decision version) |
+| NP-Hard     | Problems at least as hard as the hardest problems in NP; may not be verifiable in polynomial time.    | Knapsack Problem                              |
 
 These classifications help us understand the complexities involved in algorithm design and computational theory, guiding researchers and practitioners on how to approach various computational problems.

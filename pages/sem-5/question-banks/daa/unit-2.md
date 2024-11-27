@@ -1,6 +1,6 @@
 # Unit 2
 
-## <mark> 1) How divide and conquer approach work?
+## <mark> 1) How divide and conquer approach work? </mark>
 
 The divide and conquer approach is a fundamental algorithm design paradigm used to solve complex problems by breaking them down into smaller, more manageable subproblems. Here’s how it works:
 
@@ -49,7 +49,7 @@ The divide and conquer approach is a fundamental algorithm design paradigm used 
 
 The divide and conquer approach effectively reduces complex problems into simpler ones, allowing for efficient solutions through recursive processing and combination of results. It is widely applicable in various fields of computer science, particularly in sorting, searching, and optimization algorithms.
 
-## <mark> 2) What is Divide and Conquer Technique? Explain how to apply divide and conquer technique for solving the problem?
+## <mark> 2) What is Divide and Conquer Technique? Explain how to apply divide and conquer technique for solving the problem? </mark>
 
 ### Divide and Conquer Technique
 
@@ -117,7 +117,7 @@ Consider an array: `[38, 27, 43, 3, 9, 82, 10]`.
 
 The divide and conquer technique is a powerful method for solving problems efficiently by breaking them down into simpler components. This approach not only simplifies complex problems but also leads to efficient algorithms like Merge Sort and Quick Sort. By applying this technique systematically—dividing into smaller problems, solving each independently, and combining results—many computational challenges can be tackled effectively.
 
-## <mark> 3) What do you mean by Divide & Conquer Approach? List advantages and disadvantages of it.
+## <mark> 3) What do you mean by Divide & Conquer Approach? List advantages and disadvantages of it. </mark>
 
 ### Divide and Conquer Approach
 
@@ -147,7 +147,7 @@ The divide and conquer technique is a powerful method for solving problems effic
 
 The divide and conquer approach is a powerful technique in algorithm design that effectively breaks down complex problems into simpler components. While it offers significant advantages in terms of efficiency and simplicity, it also comes with challenges related to overhead, implementation complexity, and memory usage. Understanding when to apply this approach is crucial for developing efficient algorithms.
 
-## <mark> 4) Write iterative and recursive algorithm for finding the factorial of N. Derive the time complexity of both algorithms.
+## <mark> 4) Write iterative and recursive algorithm for finding the factorial of N. Derive the time complexity of both algorithms. </mark>
 
 ### Factorial of N
 
@@ -206,7 +206,7 @@ def factorial_recursive(N):
 
 Both the iterative and recursive algorithms for calculating the factorial of $$ N $$ have a time complexity of $$ O(N) $$. However, the iterative method is generally more space-efficient because it does not involve the overhead of recursive function calls, which can lead to stack overflow for large values of $$ N $$. The recursive method, while elegant and straightforward, may consume more memory due to the call stack.
 
-## <mark> 5) Give the recursive algorithm to find Fibonacci sequence. Comment on the complexity of the algorithm.
+## <mark> 5) Give the recursive algorithm to find Fibonacci sequence. Comment on the complexity of the algorithm. </mark>
 
 ### Recursive Algorithm to Find Fibonacci Sequence
 
@@ -246,7 +246,7 @@ def fibonacci_recursive(n):
 
 While the recursive approach to calculating Fibonacci numbers is straightforward and elegant, it is inefficient for large values of $$ n $$ due to its exponential time complexity. For practical applications, iterative methods or dynamic programming approaches (such as memoization) are preferred to improve efficiency.
 
-## <mark> 6) What is recurrence? Solve recurrence equation T (n) = T (n-1) + n usingforward substitution and backward substitution method.
+## <mark> 6) What is recurrence? Solve recurrence equation T (n) = T (n-1) + n usingforward substitution and backward substitution method. </mark>
 
 ### What is Recurrence?
 
@@ -353,12 +353,7 @@ $$
 T(n) = O(n^2)
 $$
 
-## <mark> 7) Explain master Method and solve the following recurrence equation withmaster method
-
-a. T(n)= 9T(n/3) + n
-b. T(n)= 3T(n/4) + nlgn
-c. T(n)= T(n/2) + 1
-d. T(n)= 7T(n/3) + n2
+## <mark> 7) Explain master Method and solve the following recurrence equation withmaster method. <br> a. T(n)= 9T(n/3) + n <br> b. T(n)= 3T(n/4) + nlgn <br> c. T(n)= T(n/2) + 1 <br> d. T(n)= 7T(n/3) + n2 </mark>
 
 ### Master Method
 
@@ -519,7 +514,7 @@ b. **$$ T(n)=Θ(n log n)$$**
 c. **$$ T(n)=Θ(log n)$$**  
 d. **$$ T(n)=Θ(n^2)$$**
 
-## <mark> 8) Which searching algorithm required Sorted list of elements?
+## <mark> 8) Which searching algorithm required Sorted list of elements? </mark>
 
 The searching algorithm that requires a sorted list of elements is **Binary Search**.
 
@@ -541,7 +536,7 @@ This process is repeated until the target value is found or the sublist size bec
 
 In summary, Binary Search is a highly efficient searching algorithm that requires a sorted list of elements to function correctly.
 
-## <mark> 9) Explain the use of Divide and Conquer Technique for Binary Search Method.Give the algorithm for Binary Search Method. What is the complexity of Binary Search Method?
+## <mark> 9) Explain the use of Divide and Conquer Technique for Binary Search Method.Give the algorithm for Binary Search Method. What is the complexity of Binary Search Method? </mark>
 
 ### Divide and Conquer Technique in Binary Search
 
@@ -613,7 +608,7 @@ def binary_search_recursive(arr, target, left, right):
 
 The Divide and Conquer technique effectively optimizes search operations by reducing the problem size with each step in Binary Search. This results in a highly efficient algorithm for finding elements in sorted arrays with a time complexity of $$ O(\log n) $$.
 
-## <mark> 10) Analyze quick sort algorithm for best case, average case and worst casewith example. In which case it performs similar to selection sort?
+## <mark> 10) Analyze quick sort algorithm for best case, average case and worst casewith example. In which case it performs similar to selection sort? </mark>
 
 ### Quick Sort Algorithm Analysis
 
@@ -658,7 +653,7 @@ In summary:
 - **Worst Case**: $$ O(n^2) $$ (poor pivot choices).
 - Quick Sort behaves similarly to Selection Sort in its worst-case scenario with a time complexity of $$ O(n^2) $$.
 
-## <mark> 11) Explain how multiplication of large integers can be done efficiently by usingdivide and conquer technique?
+## <mark> 11) Explain how multiplication of large integers can be done efficiently by usingdivide and conquer technique? </mark>
 
 ### Efficient Multiplication of Large Integers Using Divide and Conquer
 
@@ -724,7 +719,7 @@ Let's illustrate with a simple example:
 
 The divide and conquer technique, particularly through Karatsuba multiplication, allows for efficient multiplication of large integers by reducing the number of required multiplicative operations. This method significantly improves performance over traditional multiplication algorithms, especially for very large numbers, making it a powerful tool in computational mathematics and computer science.
 
-## <mark> 12) Explain how divide and conquer method help multiplying two squareMatrices. OR Explain Strasson’s algorithm for matrix multiplication.
+## <mark> 12) Explain how divide and conquer method help multiplying two squareMatrices. OR Explain Strasson’s algorithm for matrix multiplication. </mark>
 
 ### Multiplying Two Square Matrices Using Divide and Conquer
 
@@ -786,7 +781,7 @@ The **divide and conquer** method can significantly improve the efficiency of ma
 
 The divide and conquer method enhances matrix multiplication by breaking down larger problems into smaller subproblems, allowing for more efficient calculations through recursive steps. Strassen's algorithm exemplifies how this technique can reduce computational complexity, making it a valuable approach in algorithm design for linear algebra operations.
 
-## <mark> 13) Write an algorithm for quick sort and derive best case, worst case usingdivide and conquer technique also trace given data (3,1,4,5,9,2,6,5)
+## <mark> 13) Write an algorithm for quick sort and derive best case, worst case usingdivide and conquer technique also trace given data (3,1,4,5,9,2,6,5). </mark>
 
 ### Quick Sort Algorithm
 
@@ -876,7 +871,7 @@ Let's trace Quick Sort using the input data: **(3, 1, 4, 5, 9, 2, 6, 5)**.
 
 The Quick Sort algorithm efficiently sorts arrays using a divide-and-conquer approach. Its average and best-case time complexity is $$ O(n \log n) $$, while its worst-case time complexity is $$ O(n^2) $$. The example traced above demonstrates how Quick Sort operates on a given set of data by recursively partitioning and sorting sub-arrays.
 
-## <mark> 14) Write Merge sort algorithm and compute its worst case and best-case time complexity. Sort the List G,U,J,A,R,A,T in alphabetical order using merge sort.
+## <mark> 14) Write Merge sort algorithm and compute its worst case and best-case time complexity. Sort the List G,U,J,A,R,A,T in alphabetical order using merge sort. </mark>
 
 ### Merge Sort Algorithm
 
@@ -975,7 +970,7 @@ After applying Merge Sort to the list `G, U, J, A, R, A, T`, the sorted list in 
 
 Merge Sort is an efficient sorting algorithm with a consistent time complexity of $$ O(n \log n) $$ for best, average, and worst cases. The algorithm effectively sorts the provided list alphabetically through recursive division and merging.
 
-## <mark> 15) Write divide and conquer algorithm to solve Exponential problem. Also solve29 using same algorithm.
+## <mark> 15) Write divide and conquer algorithm to solve Exponential problem. Also solve29 using same algorithm. </mark>
 
 ### Divide and Conquer Algorithm to Solve the Exponential Problem
 
@@ -1084,7 +1079,7 @@ Now we can combine the results:
 
 Using the divide and conquer approach, we have computed that $$ 2^9 = 512 $$. This method is efficient and reduces the number of multiplications needed compared to a straightforward iterative approach. The time complexity of this algorithm is $$ O(\log n) $$, making it very efficient for large values of $$ n $$.
 
-## <mark> 16) Demonstrate Binary Search method to search Key = 14, form the array A=<2,4,7,8,10,13,14,60>
+## <mark> 16) Demonstrate Binary Search method to search Key = 14, form the array A=<2,4,7,8,10,13,14,60> </mark>
 
 ### Demonstrating Binary Search Method
 
@@ -1171,7 +1166,7 @@ The Binary Search method successfully found the key $$ 14 $$ at index **6** in t
 
 This method is efficient with a time complexity of $$ O(\log n) $$, making it suitable for searching in sorted arrays.
 
-## <mark> 17) Apply merge sort algorithm on array A = {2,7,3,5,1,9,4,8}. What is time complexity of merge sort in worst case?
+## <mark> 17) Apply merge sort algorithm on array A = {2,7,3,5,1,9,4,8}. What is time complexity of merge sort in worst case? </mark>
 
 ### Applying Merge Sort on Array A = {2, 7, 3, 5, 1, 9, 4, 8}
 
@@ -1227,7 +1222,7 @@ This complexity arises because the array is divided in half at each level of rec
 
 The sorted array after applying Merge Sort on $$ A = \{2,7,3,5,1,9,4,8\} $$ is $$ A = \{1,2,3,4,5,7,8,9\} $$, and the worst-case time complexity of Merge Sort is $$ O(n \log n) $$.
 
-## <mark> 18) Multiply 981 by 1234 by divide and conquer method.
+## <mark> 18) Multiply 981 by 1234 by divide and conquer method. </mark>
 
 To multiply two large integers using the **divide and conquer** method, we can use **Karatsuba's algorithm**, which is an efficient way to perform multiplication by reducing the number of multiplicative operations required.
 
@@ -1329,7 +1324,7 @@ $$
 
 This efficient multiplication method reduces the number of operations needed compared to traditional multiplication methods.
 
-## <mark> 19) Sort the following list using quick sort algorithm:< 5, 3 ,8 ,1 ,4 ,6 ,2 ,7 > Alsowrite Worst and Best case and Average case of quick sort algorithm.
+## <mark> 19) Sort the following list using quick sort algorithm:< 5, 3 ,8 ,1 ,4 ,6 ,2 ,7 > Alsowrite Worst and Best case and Average case of quick sort algorithm. </mark>
 
 ### Sorting the List Using Quick Sort Algorithm
 
@@ -1451,7 +1446,7 @@ The sorted list is:
 
 The Quick Sort algorithm efficiently sorts the list <5, 3 ,8 ,1 ,4 ,6 ,2 ,7> into <1 ,2 ,3 ,4 ,5 ,6 ,7 ,8>. Its time complexity varies based on the choice of pivot and input arrangement but generally operates in $$ O(n \log n) $$ for best and average cases and $$ O(n^2) $$ for the worst case.
 
-## <mark> 20) What is the basic nature of greedy strategy? Give the characteristics of Greedy Algorithms.
+## <mark> 20) What is the basic nature of greedy strategy? Give the characteristics of Greedy Algorithms. </mark>
 
 ### Basic Nature of Greedy Strategy
 
@@ -1488,7 +1483,7 @@ In essence, greedy algorithms make a sequence of choices, each of which looks be
 
 Greedy algorithms are powerful tools for solving optimization problems where local choices can lead to a globally optimal solution. However, it is essential to analyze whether a greedy approach will yield an optimal solution for a specific problem, as it does not guarantee optimality in all cases.
 
-## <mark> 21) Mention applications of minimum spanning tree.
+## <mark> 21) Mention applications of minimum spanning tree. </mark>
 
 ### Applications of Minimum Spanning Tree (MST)
 
@@ -1531,7 +1526,7 @@ Minimum Spanning Trees (MST) have various applications across different fields. 
 
 These applications highlight the versatility of Minimum Spanning Trees in solving real-world problems across various domains, emphasizing their importance in optimization and network design.
 
-## <mark> 22) Suppose that we have a set of activities to schedule among a large number of lecture halls, where any activity can take place in any lecture hall. We wish to schedule all the activities using as few lecture halls as possible. Give an efficient greedy algorithm to determine which activity should use which lecture hall.
+## <mark> 22) Suppose that we have a set of activities to schedule among a large number of lecture halls, where any activity can take place in any lecture hall. We wish to schedule all the activities using as few lecture halls as possible. Give an efficient greedy algorithm to determine which activity should use which lecture hall. </mark>
 
 To efficiently schedule a set of activities in lecture halls using a greedy algorithm, we can utilize a technique similar to the **Activity Selection Problem**. The goal is to assign activities to the minimum number of lecture halls while ensuring that no two activities overlap in the same hall.
 
@@ -1621,7 +1616,7 @@ Let's consider an example set of activities with their start and end times:
 
 This greedy algorithm effectively assigns activities to lecture halls while minimizing the number of halls used. By always choosing the earliest finishing activity that can fit into a hall, we ensure efficient scheduling.
 
-## <mark> 23) Write greedy algorithm for activity selection problem. Give its time complexity. For following intervals, select the activities according to your algorithm. I1 (1-3), I2 (0- 2), I3 (3-6), I4 (2-5), I5 (5-8), I6 (3-10), I6(7-9).
+## <mark> 23) Write greedy algorithm for activity selection problem. Give its time complexity. For following intervals, select the activities according to your algorithm. I1 (1-3), I2 (0- 2), I3 (3-6), I4 (2-5), I5 (5-8), I6 (3-10), I6(7-9). </mark>
 
 ### Greedy Algorithm for Activity Selection Problem
 
@@ -1710,7 +1705,7 @@ The selected activities are:
 
 The greedy algorithm for the Activity Selection Problem efficiently selects non-overlapping activities based on their finish times. The time complexity of this algorithm is $$ O(n \log n) $$, making it suitable for practical applications in scheduling and resource allocation.
 
-## <mark> 24) Give and Explain the Prim’s Algorithm to find out Minimum Spanning Treewith illustration.
+## <mark> 24) Give and Explain the Prim’s Algorithm to find out Minimum Spanning Treewith illustration. </mark>
 
 ### Prim’s Algorithm for Minimum Spanning Tree
 
@@ -1833,7 +1828,7 @@ The time complexity of Prim's algorithm depends on how you implement it:
 
 Prim's Algorithm is an efficient method for finding a Minimum Spanning Tree in a weighted undirected graph. It systematically builds up the MST by selecting edges based on their weights and ensures that all vertices are connected with minimal total weight.
 
-## <mark> 25) Give and Explain the Kruskal’s Algorithm to find out Minimum Spanning Treewith illustration.
+## <mark> 25) Give and Explain the Kruskal’s Algorithm to find out Minimum Spanning Treewith illustration. </mark>
 
 ### Kruskal’s Algorithm for Minimum Spanning Tree
 
@@ -1973,7 +1968,7 @@ $$ O(E \log E + E \alpha(V)) $$
 
 Kruskal's Algorithm efficiently finds a Minimum Spanning Tree for a weighted undirected graph by sorting edges and using a union-find structure to avoid cycles. It is particularly useful for sparse graphs where $$ E $$ is much less than $$ V^2 $$.
 
-## <mark> 26) Define spanning tree and MST. How Krushkal’s algorithm is different fromPrim’s algorithm.
+## <mark> 26) Define spanning tree and MST. How Krushkal’s algorithm is different fromPrim’s algorithm. </mark>
 
 ### Definitions
 
@@ -1999,7 +1994,7 @@ Both **Kruskal's Algorithm** and **Prim's Algorithm** are greedy algorithms used
 
 In summary, both algorithms are effective for finding Minimum Spanning Trees but are suited to different situations based on how they process edges and their underlying data structures. Kruskal's focuses on edges first, while Prim's focuses on expanding from vertices.
 
-## <mark> 27) Design and explain Dijkstra’s shortest path algorithm.
+## <mark> 27) Design and explain Dijkstra’s shortest path algorithm. </mark>
 
 ### Dijkstra’s Shortest Path Algorithm
 
@@ -2146,7 +2141,7 @@ The time complexity of Dijkstra’s algorithm depends on how you implement the p
 
 Dijkstra’s algorithm efficiently finds the shortest paths from a source vertex to all other vertices in a weighted graph with non-negative weights. Its greedy nature ensures that at each step it makes the best local choice by selecting the closest unvisited vertex.
 
-## <mark> 28) What are the differences between greedy approach and dynamic programming approach? Given n jobs J1 , J2, ….Jn having execution deadlines d1 , d2, …, dn. Design an algorithm using greedy approach to schedule these jobs as per earliest deadline first.
+## <mark> 28) What are the differences between greedy approach and dynamic programming approach? Given n jobs J1 , J2, ….Jn having execution deadlines d1 , d2, …, dn. Design an algorithm using greedy approach to schedule these jobs as per earliest deadline first. </mark>
 
 ### Differences Between Greedy Approach and Dynamic Programming Approach
 
@@ -2232,7 +2227,7 @@ The scheduled jobs are:
 
 The greedy algorithm for scheduling jobs based on the earliest deadline is efficient and straightforward. It sorts the jobs by their deadlines and schedules them accordingly as long as they can be completed before their respective deadlines. This method is particularly effective when dealing with scheduling problems where minimizing lateness or meeting deadlines is crucial.
 
-## <mark> 29) Using greedy algorithm find an optimal solution for knapsack instance n=7,M = 15 (P1, P2, P3, P4, P5, P6, P7) = (10, 5, 15, 7, 6, 18, 3) and (w1, w2, w3, w4, w5, w6, w7) = (2, 3, 5, 7, 1, 4, 1).
+## <mark> 29) Using greedy algorithm find an optimal solution for knapsack instance n=7,M = 15 (P1, P2, P3, P4, P5, P6, P7) = (10, 5, 15, 7, 6, 18, 3) and (w1, w2, w3, w4, w5, w6, w7) = (2, 3, 5, 7, 1, 4, 1). </mark>
 
 To solve the knapsack problem using a greedy algorithm, we will focus on the **fractional knapsack** variant, where we can take fractions of items. The greedy approach is optimal for this version of the problem.
 
@@ -2335,7 +2330,7 @@ The optimal selection of items for maximum profit without exceeding the weight l
 
 Using a greedy algorithm based on the value-to-weight ratio allows us to efficiently determine an optimal solution for this fractional knapsack problem instance with maximum profit while respecting the weight constraints.
 
-## <mark> 30) Consider Kanpsack capacity W=50, w=(10,20,40) and v=(60,80,100) find the maximum profit using greedy approach
+## <mark> 30) Consider Kanpsack capacity W=50, w=(10,20,40) and v=(60,80,100) find the maximum profit using greedy approach. </mark>
 
 To solve the knapsack problem with a capacity of $$ W = 50 $$ using a greedy approach, we need to consider the value-to-weight ratio for each item. The greedy approach is optimal for the **fractional knapsack** variant but may not yield an optimal solution for the **0/1 knapsack** problem. However, we will proceed with the greedy method as requested.
 
@@ -2402,7 +2397,7 @@ The maximum profit achievable with these items is:
 
 This greedy method works well for fractional knapsack problems but does not guarantee an optimal solution for the standard integer knapsack problem. In this case, the maximum profit using a greedy approach is **140** without exceeding the weight limit of **50**.
 
-## <mark> 31) Solve the following knapsack problem using greedy method. Number of items = 5, knapsack capacity W – 100, weight vector = {50,40,30,20,10} and profit vector = {1,2,3,4,5}.
+## <mark> 31) Solve the following knapsack problem using greedy method. Number of items = 5, knapsack capacity W – 100, weight vector = {50,40,30,20,10} and profit vector = {1,2,3,4,5}. </mark>
 
 To solve the given knapsack problem using the **greedy method**, we will follow these steps:
 
@@ -2489,7 +2484,7 @@ The selected items for maximum profit without exceeding the weight limit are:
 
 Using the greedy approach based on value-to-weight ratios, we find that the maximum profit achievable with a knapsack capacity of **100** is **14**, with the selected items being those with weights of **10**, **20**, and **30**, along with an additional item weighing **40**.
 
-## <mark> 32) Consider the instance of the 0/1 (binary) knapsack problem as below with P depicting the value and W depicting the weight of each item whereas M denotes the total weight carrying capacity of the knapsack. Find optimal answer using greedy design technique. Also write the time complexity of greedy approach for solving knapsack problem. P = [40 10 50 30 60] W = [80 10 40 20 90] M = 110
+## <mark> 32) Consider the instance of the 0/1 (binary) knapsack problem as below with P depicting the value and W depicting the weight of each item whereas M denotes the total weight carrying capacity of the knapsack. Find optimal answer using greedy design technique. Also write the time complexity of greedy approach for solving knapsack problem. P = [40 10 50 30 60] W = [80 10 40 20 90] M = 110 </mark>
 
 To solve the **0/1 knapsack problem** using a greedy approach, we need to clarify that the greedy method is not guaranteed to yield an optimal solution for the 0/1 knapsack problem. The greedy approach is typically applied to the **fractional knapsack problem**. However, for educational purposes, let's proceed with applying a greedy-like method by calculating value-to-weight ratios and selecting items based on that.
 

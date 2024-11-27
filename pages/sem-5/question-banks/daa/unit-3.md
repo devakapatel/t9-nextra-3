@@ -1,6 +1,6 @@
 # Unit 3
 
-## 1) Define: Principle of Optimality.
+## <mark> 1) Define: Principle of Optimality. </mark>
 
 ### Principle of Optimality
 
@@ -21,7 +21,7 @@ The **Principle of Optimality** is a key concept in dynamic programming and algo
 
 Understanding the Principle of Optimality is crucial for tackling problems that can be decomposed into simpler subproblems. It helps in designing efficient algorithms that guarantee optimal solutions, making it a fundamental concept in the study of algorithms.
 
-## 2) Explain the terms: Optimal Substructure property.
+## <mark> 2) Explain the terms: Optimal Substructure property. </mark>
 
 ### Optimal Substructure Property
 
@@ -44,7 +44,7 @@ The **Optimal Substructure Property** is a critical concept in the field of algo
 
 Understanding the optimal substructure property is crucial for solving problems in a structured and efficient manner. It guides the development of algorithms that can break down complex problems into simpler, solvable parts, ultimately leading to optimal solutions. This principle is foundational in both theoretical and practical applications of computer science.
 
-## 3) Explain common characteristics of dynamic programming.
+## <mark> 3) Explain common characteristics of dynamic programming. </mark>
 
 ### Common Characteristics of Dynamic Programming
 
@@ -91,7 +91,7 @@ Common problems that can be effectively solved using dynamic programming include
 
 Dynamic programming is a robust method for tackling optimization problems that display optimal substructure and overlapping subproblems. By understanding these characteristics, you can identify when to apply dynamic programming techniques effectively.
 
-## 4) What is the Principle of Optimality? Explain its use in Dynamic Programming Method.
+## <mark> 4) What is the Principle of Optimality? Explain its use in Dynamic Programming Method. </mark>
 
 ### Principle of Optimality
 
@@ -131,7 +131,7 @@ Dynamic programming (DP) leverages the Principle of Optimality to efficiently so
 
 The Principle of Optimality is crucial for the design of dynamic programming algorithms. By ensuring that optimal solutions to subproblems lead to an optimal solution for the overall problem, dynamic programming provides a systematic approach to solving complex problems efficiently. Understanding this principle will greatly enhance your ability to tackle a wide range of algorithmic challenges.
 
-## 5) Compare Dynamic Programming Technique with Greedy Algorithms.
+## <mark> 5) Compare Dynamic Programming Technique with Greedy Algorithms. </mark>
 
 ### Comparison of Dynamic Programming and Greedy Algorithms
 
@@ -189,7 +189,7 @@ Dynamic programming (DP) and greedy algorithms are both algorithmic techniques u
 
 In summary, both dynamic programming and greedy algorithms are valuable techniques in algorithm design. Choosing between them depends on the specific problem characteristics. Dynamic programming is powerful for problems with overlapping subproblems and requires optimal solutions, while greedy algorithms are efficient for problems where local decisions yield globally optimal results. Understanding these differences will help you apply the right technique to solve various algorithmic challenges effectively.
 
-## 6) Explain the difference between divide and conquer method and dynamic programming.
+## <mark> 6) Explain the difference between divide and conquer method and dynamic programming. </mark>
 
 ### Difference Between Divide and Conquer Method and Dynamic Programming
 
@@ -254,7 +254,7 @@ Here's a summary table comparing the **Divide and Conquer** method with **Dynami
 
 Both Divide and Conquer and Dynamic Programming are essential techniques in algorithm design. Understanding their differences helps in selecting the appropriate approach for specific problems, ensuring efficient and optimal solutions.
 
-## 7) What are the advantages of dynamic programming method over divide and conquer method?
+## <mark> 7) What are the advantages of dynamic programming method over divide and conquer method? </mark>
 
 ### Advantages of Dynamic Programming Over Divide and Conquer
 
@@ -289,7 +289,7 @@ Dynamic programming (DP) and divide and conquer are both powerful algorithmic te
 
 In summary, dynamic programming offers significant advantages over divide and conquer, particularly in scenarios involving overlapping subproblems and the need for optimal solutions. By leveraging stored results and a structured approach to problem-solving, dynamic programming can provide efficient and effective solutions to a wide range of complex problems. Understanding these advantages can help in selecting the appropriate technique for a given algorithmic challenge.
 
-## 8) How to solve knapsack problem using dynamic programming?
+## <mark> 8) How to solve knapsack problem using dynamic programming? </mark>
 
 ### Solving the Knapsack Problem Using Dynamic Programming
 
@@ -380,7 +380,7 @@ print(max_value)  ## Output will be 7
 
 The dynamic programming approach to the Knapsack Problem efficiently determines the maximum value that can be obtained without exceeding the knapsack's weight capacity. This method ensures that all possible combinations of items are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 9) Explain Chained Matrix Multiplication with example.
+## <mark> 9) Explain Chained Matrix Multiplication with example. </mark>
 
 ### Chained Matrix Multiplication
 
@@ -477,7 +477,7 @@ Using the above approach, you can determine the minimum number of multiplication
 
 Chained matrix multiplication demonstrates how dynamic programming can be applied to optimize the computation of matrix products by carefully considering the order of operations. This method ensures efficiency in solving problems where the naive approach would be computationally expensive.
 
-## 10) Give optimal substructure for make change problem. Consider an instance of such a problem with coins 1, 4 and 6 units. Illustrate its solutions using a dynamic programming approach involving a payment of 8 units or less.
+## <mark> 10) Give optimal substructure for make change problem. Consider an instance of such a problem with coins 1, 4 and 6 units. Illustrate its solutions using a dynamic programming approach involving a payment of 8 units or less. </mark>
 
 ### Optimal Substructure in the Make Change Problem
 
@@ -553,7 +553,7 @@ Minimum number of coins needed: 2
 
 The make change problem illustrates the optimal substructure property by demonstrating how the solution can be built from the solutions of its subproblems. The dynamic programming approach efficiently computes the minimum number of coins needed for any amount by leveraging previously computed results, making it a powerful technique for solving optimization problems like this one.
 
-## 11) Solve Making Change problem using Dynamic Programming. (Denominations: d1=1, d2=4, d3=6). Give your answer for making change of Rs. 9.
+## <mark> 11) Solve Making Change problem using Dynamic Programming. (Denominations: d1=1, d2=4, d3=6). Give your answer for making change of Rs. 9. </mark>
 
 ### Solving the Making Change Problem Using Dynamic Programming
 
@@ -646,7 +646,7 @@ Here's how the `dp` array looks after processing amounts up to 9:
 
 The dynamic programming approach efficiently finds the minimum number of coins needed to make change for a given amount. This method ensures that all possible combinations are considered while avoiding redundant calculations, thereby optimizing the solution.
 
-## 12) Given coins of denominations 1, 3 and 4 with the amount to be pay is 7. Find optimal no. Of coins and sequence of coins used to pay a given amount using a dynamic method.
+## <mark> 12) Given coins of denominations 1, 3 and 4 with the amount to be pay is 7. Find optimal no. Of coins and sequence of coins used to pay a given amount using a dynamic method. </mark>
 
 ### Solving the Making Change Problem Using Dynamic Programming
 
@@ -773,7 +773,7 @@ The dynamic programming array `dp` and the `coin_used` array will look as follow
 
 The dynamic programming approach efficiently finds both the minimum number of coins needed to make change for a given amount and the specific coins used. This method is optimal for solving problems where the order of operations significantly affects the outcome, ensuring that all possible combinations are considered while avoiding redundant calculations.
 
-## 13) Given coins of denominations 2, 4 and 5 with amount to be pay is 7. Find optimal no.Of coins and sequence of coins used to pay given amount using dynamic method.
+## <mark> 13) Given coins of denominations 2, 4 and 5 with amount to be pay is 7. Find optimal no.Of coins and sequence of coins used to pay given amount using dynamic method. </mark>
 
 ### Solving the Making Change Problem Using Dynamic Programming
 
@@ -890,7 +890,7 @@ The dynamic programming array `dp` and the `coin_used` array will look as follow
 
 The dynamic programming approach efficiently finds both the minimum number of coins needed to make change for a given amount and the specific coins used. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 14) Solve making change problem using dynamic programming Given amount N=8, and denominations d = {1, 3, 5, 6}
+## <mark> 14) Solve making change problem using dynamic programming Given amount N=8, and denominations d = {1, 3, 5, 6} </mark>
 
 To solve the **Making Change Problem** using dynamic programming for the amount **N = 8** with coin denominations **d = {1, 3, 5, 6}**, we will proceed with the following steps:
 
@@ -1008,7 +1008,7 @@ The dynamic programming array `dp` and the `coin_used` array will look as follow
 
 The dynamic programming approach efficiently finds the minimum number of coins needed to make change for a given amount and the specific coins used. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 15) Solve Making change problem using dynamic technique. d1 = 1, d2=2, d3=4, d4=6, Calculate for making change of Rs. 10.
+## <mark> 15) Solve Making change problem using dynamic technique. d1 = 1, d2=2, d3=4, d4=6, Calculate for making change of Rs. 10. </mark>
 
 To solve the **Making Change Problem** using dynamic programming for the amount **10** with coin denominations **{1, 2, 4, 6}**, we will follow these steps:
 
@@ -1130,7 +1130,7 @@ The dynamic programming array `dp` and the `coin_used` array will look as follow
 
 The dynamic programming approach efficiently finds the minimum number of coins needed to make change for a given amount and the specific coins used. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 16) Solve following knapsack problem using dynamic programming algorithm with given capacity W=5, Weight and Value are as follows (2,12),(1,10),(3,20),(2,15).
+## <mark> 16) Solve following knapsack problem using dynamic programming algorithm with given capacity W=5, Weight and Value are as follows (2,12),(1,10),(3,20),(2,15). </mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming for the given capacity $$ W = 5 $$ and the items with weights and values as follows:
 
@@ -1233,7 +1233,7 @@ The dynamic programming table `dp` will look like this:
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 17) Solve the following 0/1 Knapsack Problem using Dynamic Programming. There are five items whose weights and values are given in following arrays. Weight w[] = { 1,2,5,6,7 } Value v[] = {1, 6, 18, 22, 28} Show your equation and find out the optimal knapsack items for weight capacity of 11 units.
+## <mark> 17) Solve the following 0/1 Knapsack Problem using Dynamic Programming. There are five items whose weights and values are given in following arrays. Weight w[] = { 1,2,5,6,7 } Value v[] = {1, 6, 18, 22, 28} Show your equation and find out the optimal knapsack items for weight capacity of 11 units. </mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming with the given items, we will follow these steps:
 
@@ -1344,12 +1344,16 @@ The dynamic programming table `dp` will look like this (for capacity 11):
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 18) Solve the following Knapsack Problem using Dynamic Method. Write the equation for solving above problem. n = 5, W = 100
+## <mark> 18) Solve the following Knapsack Problem using Dynamic Method. Write the equation for solving above problem. n = 5, W = 100</mark>
+
+<mark>
 
 | Object     | 1   | 2   | 3   | 4   | 5   |
 | ---------- | --- | --- | --- | --- | --- |
 | Weight (w) | 10  | 20  | 30  | 40  | 50  |
 | Value (v)  | 20  | 30  | 66  | 40  | 60  |
+
+</mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming with the given data, we will follow these steps:
 
@@ -1456,12 +1460,16 @@ The dynamic programming table `dp` will illustrate how the values are built up b
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 19) Solve the following Knapsack Problem using Dynamic Method. Write the equation for solving above problem. n = 5, W = 11
+## <mark> 19) Solve the following Knapsack Problem using Dynamic Method. Write the equation for solving above problem. n = 5, W = 11 </mark>
+
+<mark>
 
 | Object     | 1   | 2   | 3   | 4   | 5   |
 | ---------- | --- | --- | --- | --- | --- |
 | Weight (w) | 1   | 2   | 5   | 6   | 7   |
 | Value (v)  | 1   | 6   | 18  | 22  | 28  |
+
+</mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming with the provided data, we will follow these steps:
 
@@ -1578,7 +1586,7 @@ The dynamic programming table `dp` will look like this:
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 20) Discuss knapsack problem using dynamic programming. Solve the following knapsack problem using dynamic programming. There are three objects, whose weights w(w1,w2,w3)={1, 2, 3} and values v(v1,v2,v3)={2, 3, 4} are given. The knapsack capacity M is 3 units.
+## <mark> 20) Discuss knapsack problem using dynamic programming. Solve the following knapsack problem using dynamic programming. There are three objects, whose weights w(w1,w2,w3)={1, 2, 3} and values v(v1,v2,v3)={2, 3, 4} are given. The knapsack capacity M is 3 units. </mark>
 
 ### 0/1 Knapsack Problem Using Dynamic Programming
 
@@ -1695,7 +1703,7 @@ The dynamic programming table `dp` will look like this:
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 21) Consider Knapsack capacity W=9, w = (3,4,5,7) and v=(12,40,25,42) find the maximum profit using dynamic method.
+## <mark> 21) Consider Knapsack capacity W=9, w = (3,4,5,7) and v=(12,40,25,42) find the maximum profit using dynamic method. </mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming with the given data, we will follow these steps:
 
@@ -1810,7 +1818,7 @@ The dynamic programming table `dp` will look like this:
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 22) Solve the following Knapsack problem using Dynamic Programming method. Number of items n = 4 and the capacity of knapsack W = 5.
+## <mark> 22) Solve the following Knapsack problem using Dynamic Programming method. Number of items n = 4 and the capacity of knapsack W = 5. </mark>
 
 | Item | Weight (w) | Profit (p) |
 | ---- | ---------- | ---------- |
@@ -1933,7 +1941,7 @@ The dynamic programming table `dp` will look like this:
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 23) How to solve 0-1 knapsack problem using dynamic programming? Consider Items having Value(Rs.)={60,100,120}, Weight(KG)={10,20,30} respectively, Weight Capacity =50KG.
+## <mark> 23) How to solve 0-1 knapsack problem using dynamic programming? Consider Items having Value(Rs.)={60,100,120}, Weight(KG)={10,20,30} respectively, Weight Capacity =50KG. </mark>
 
 To solve the **0/1 Knapsack Problem** using dynamic programming with the provided data, we will follow these steps:
 
@@ -2048,7 +2056,7 @@ The dynamic programming table `dp` would look like this for the given weights an
 
 The dynamic programming approach effectively solves the 0/1 Knapsack Problem by systematically building up solutions to subproblems and using them to find the optimal solution for the overall problem. This method ensures that all possible combinations are considered while avoiding redundant calculations, leading to an optimal solution.
 
-## 24) Explain how to find out Longest Common Subsequence of two strings using Dynamic Programming method. Find any one Longest Common Subsequence of given two strings using Dynamic Programming.<br>S1=abbacdcba<br>S2=bcdbbcaac
+## <mark> 24) Explain how to find out Longest Common Subsequence of two strings using Dynamic Programming method. Find any one Longest Common Subsequence of given two strings using Dynamic Programming.<br>S1=abbacdcba<br>S2=bcdbbcaac </mark>
 
 To find the **Longest Common Subsequence (LCS)** of two strings using the **Dynamic Programming** method, we follow a structured approach. Here’s a detailed explanation and implementation of the algorithm using the provided strings.
 
@@ -2148,7 +2156,7 @@ Length of LCS: 4
 
 The dynamic programming approach efficiently computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 25) Using algorithm determine an Longest Common Sequence of (A,B,C,D,B,A,C,D,F) & (C,B,A,F)(use dynamic programming).
+## <mark> 25) Using algorithm determine an Longest Common Sequence of (A,B,C,D,B,A,C,D,F) & (C,B,A,F)(use dynamic programming). </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the two sequences **(A, B, C, D, B, A, C, D, F)** and **(C, B, A, F)** using the **Dynamic Programming** method, we can follow a systematic approach. Below is a detailed explanation of the algorithm along with a step-by-step implementation.
 
@@ -2243,7 +2251,7 @@ Length of LCS: 3
 
 The dynamic programming approach efficiently computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 26) Given two sequences of characters, P=<ABCDABE>, Q=<CABE> Obtain the longest common subsequence.
+## <mark> 26) Given two sequences of characters, P=<ABCDABE>, Q=<CABE> Obtain the longest common subsequence. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the two sequences **P = <ABCDABE>** and **Q = <CABE>** using the **Dynamic Programming** method, we will follow a structured approach. Below is a detailed explanation and implementation of the algorithm.
 
@@ -2338,7 +2346,7 @@ Length of LCS: 4
 
 The dynamic programming approach efficiently computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 27) Find Longest Common Subsequence using Dynamic Programming Technique with illustration X={A,B,C,B,D,A,B} Y={B,D,C,A,B,A}
+## <mark> 27) Find Longest Common Subsequence using Dynamic Programming Technique with illustration X={A,B,C,B,D,A,B} Y={B,D,C,A,B,A} </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the sequences **X = {A, B, C, B, D, A, B}** and **Y = {B, D, C, A, B, A}** using the **Dynamic Programming** method, we will follow a structured approach, including the algorithm, the construction of the DP table, and a backtracking step to reconstruct the LCS.
 
@@ -2448,7 +2456,7 @@ The dynamic programming table `dp` can be illustrated as follows, where `dp[i][j
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 28) Given two sequences of characters, P=<MLNOM> Q=<MNOM> Obtain the longest common subsequence.
+## <mark> 28) Given two sequences of characters, P=<MLNOM> Q=<MNOM> Obtain the longest common subsequence. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the two sequences **P = <MLNOM>** and **Q = <MNOM>** using the **Dynamic Programming** method, we will follow a systematic approach. Below is a detailed explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -2556,7 +2564,7 @@ The dynamic programming table `dp` for sequences **P** and **Q** would look like
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 29) Given two sequences of characters, P=<XYZYTXY> Q=<YTZXYX> Obtain the longest common subsequence.
+## <mark> 29) Given two sequences of characters, P=<XYZYTXY> Q=<YTZXYX> Obtain the longest common subsequence. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the two sequences **P = <XYZYTXY>** and **Q = <YTZXYX>** using **Dynamic Programming**, we will follow a systematic approach. Below is a detailed explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -2665,7 +2673,7 @@ The dynamic programming table `dp` can be illustrated as follows. Each cell `dp[
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 30) Given two sequence of characters, X={G,U,J,A,R,A,T}, Y = {J,R,A,T} obtain the longest common subsequence.
+## <mark> 30) Given two sequence of characters, X={G,U,J,A,R,A,T}, Y = {J,R,A,T} obtain the longest common subsequence. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the two sequences **X = {G, U, J, A, R, A, T}** and **Y = {J, R, A, T}** using the **Dynamic Programming** method, we will follow a structured approach. Below is a detailed explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -2775,7 +2783,7 @@ The dynamic programming table `dp` can be illustrated as follows. Each cell `dp[
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 29) Find out LCS of A={K,A,N,D,L,A,P} and B = {A,N,D,L}.
+## <mark> 29) Find out LCS of A={K,A,N,D,L,A,P} and B = {A,N,D,L}. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the sequences **A = {K, A, N, D, L, A, P}** and **B = {A, N, D, L}**, we will use the **Dynamic Programming** method. Below, I will provide a detailed explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -2885,7 +2893,7 @@ The dynamic programming table `dp` can be illustrated as follows. Each cell `dp[
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 30) Given two strings from 26 symbols set, X="BITTER", Y = "BUTTER" obtain the longest common subsequence.
+## <mark> 30) Given two strings from 26 symbols set, X="BITTER", Y = "BUTTER" obtain the longest common subsequence. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the strings **X = "BITTER"** and **Y = "BUTTER"**, we will use the **Dynamic Programming** method. Below, I will provide a detailed explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -2994,7 +3002,7 @@ The dynamic programming table `dp` for the strings **X** and **Y** would look li
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 31) Find the longest common subsequence for the given two sequences of characters: P = (1,0,0,1,0,1,1,0,1,1,0,1); Q = (0,1,1,0).
+## <mark> 31) Find the longest common subsequence for the given two sequences of characters: P = (1,0,0,1,0,1,1,0,1,1,0,1); Q = (0,1,1,0). </mark>
 
 To find the Longest Common Subsequence (LCS) of the given sequences \( P \) and \( Q \), we can use dynamic programming. The LCS problem exhibits both optimal substructure and overlapping subproblems, making it suitable for a dynamic programming approach.
 
@@ -3099,7 +3107,7 @@ The LCS is \( (0, 1, 1) \).
 
 The longest common subsequence of \( P \) and \( Q \) is \( (0, 1, 1) \) with a length of 3.
 
-## 32) Obtain longest common subsequence using dynamic programming. Given A = “acabaca” and B = “bacac”.
+## <mark> 32) Obtain longest common subsequence using dynamic programming. Given A = “acabaca” and B = “bacac”. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the strings **A = "acabaca"** and **B = "bacac"**, we will use the **Dynamic Programming** approach. Below is a step-by-step explanation of the algorithm, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -3209,7 +3217,7 @@ The dynamic programming table `dp` can be illustrated as follows. Each cell `dp[
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 33) Determine LCS of {1,0,0,1,0,1,0,1} and {0,1,0,1,1,0,1,1,0}. Explain how to find out Longest Common Subsequence of two strings using dynamic programming method.
+## <mark> 33) Determine LCS of {1,0,0,1,0,1,0,1} and {0,1,0,1,1,0,1,1,0}. Explain how to find out Longest Common Subsequence of two strings using dynamic programming method. </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the sequences **A = {1, 0, 0, 1, 0, 1, 0, 1}** and **B = {0, 1, 0, 1, 1, 0, 1, 1, 0}**, we will use the **Dynamic Programming** approach. Here’s a detailed explanation and implementation of the algorithm.
 
@@ -3315,7 +3323,7 @@ The dynamic programming table `dp` could look like this (only showing relevant p
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 34) Find the longest common subsequence for the following two sequences using dynamic programming. Show the complete process. <br>X = 100101001 <br>Y = 101001
+## <mark> 34) Find the longest common subsequence for the following two sequences using dynamic programming. Show the complete process. <br>X = 100101001 <br>Y = 101001 </mark>
 
 To find the **Longest Common Subsequence (LCS)** of the sequences **X = "100101001"** and **Y = "101001"** using the **Dynamic Programming** approach, we will follow a structured process. Below is a detailed explanation of the procedure, the construction of the DP table, and the backtracking step to reconstruct the LCS.
 
@@ -3426,7 +3434,7 @@ The dynamic programming table `dp` can be illustrated as follows. Each cell `dp[
 
 The dynamic programming approach effectively computes the longest common subsequence by breaking the problem into smaller overlapping subproblems, storing the results in a table, and using these results to construct the final solution. This method ensures that we explore all possible subsequences while avoiding redundant calculations, leading to an optimal solution.
 
-## 35) Consider the chain of matrices A1,A2,..,A6 with the dimensions given below. Give the optimal parenthesization to get the product A2..A5
+## <mark> 35) Consider the chain of matrices A1,A2,..,A6 with the dimensions given below. Give the optimal parenthesization to get the product A2..A5. </mark>
 
 | Matrix | Dimension |
 | ------ | --------- |
@@ -3585,7 +3593,7 @@ This means the optimal way to parenthesize the matrix chain \( A_2 \times A_3 \t
 ((A2(A3A4))A5)
 ```
 
-## 36) Using algorithm find an optimal parenthesization of a matrix chain product whose sequence of dimension is (5,10,3,12,5,50,6) (use dynamic programming).
+## <mark> 36) Using algorithm find an optimal parenthesization of a matrix chain product whose sequence of dimension is (5,10,3,12,5,50,6) (use dynamic programming). </mark>
 
 To find the optimal parenthesization of a matrix chain product using dynamic programming, we need to minimize the number of scalar multiplications. The sequence of dimensions given is \( (5, 10, 3, 12, 5, 50, 6) \).
 
@@ -3754,7 +3762,7 @@ This means the optimal way to parenthesize the matrix chain is:
 ((A1(A2A3))((A4A5)A6))
 ```
 
-## 37) Write equation for Chained matrix multiplication using Dynamic programming. Find out optimal sequence for multiplication: A1 [5 × 4], A2 [4 × 6], A3 [6 × 2], and A4 [2 × 7]. Also give the optimal parenthesization of matrices.
+## <mark> 37) Write equation for Chained matrix multiplication using Dynamic programming. Find out optimal sequence for multiplication: A1 [5 × 4], A2 [4 × 6], A3 [6 × 2], and A4 [2 × 7]. Also give the optimal parenthesization of matrices. </mark>
 
 To find the optimal parenthesization for matrix chain multiplication using dynamic programming, we need to minimize the number of scalar multiplications. Given the matrices:
 
@@ -3901,7 +3909,7 @@ This means the optimal way to parenthesize the matrix chain \( A_1 \times A_2 \t
 ((A1(A2A3))A4)
 ```
 
-## 38) Given the four matrix find out optimal sequence for multiplication. D=<15,5,10,20,25>.
+## <mark> 38) Given the four matrix find out optimal sequence for multiplication. D=<15,5,10,20,25>. </mark>
 
 We aim to find the **optimal sequence for multiplying four matrices** \( A_1, A_2, A_3, A_4 \) with dimensions specified by \( D = \{15, 5, 10, 20, 25\} \). The goal is to minimize the total number of scalar multiplications.
 
@@ -4001,19 +4009,19 @@ We aim to find the **optimal sequence for multiplying four matrices** \( A_1, A_
 - **Optimal cost**: \( 5375 \) scalar multiplications.
 - **Optimal parenthesization**: \( ((A_1 \cdot A_2) \cdot (A_3 \cdot A_4)) \).
 
-## 39) Pending
+## <mark> 39) Pending </mark>
 
-## 40) Pending
+## <mark> 40) Pending </mark>
 
-## 41) Pending
+## <mark> 41) Pending </mark>
 
-## 42) Pending
+## <mark> 42) Pending </mark>
 
-## 43) Pending
+## <mark> 43) Pending </mark>
 
-## 44) Pending
+## <mark> 44) Pending </mark>
 
-## 45) Define graph, complete graph and connected graph
+## <mark> 45) Define graph, complete graph and connected graph. </mark>
 
 To provide definitions for the terms **graph**, **complete graph**, and **connected graph**, let's break down each concept clearly:
 
@@ -4063,7 +4071,7 @@ If a graph is not connected, it consists of two or more components that are isol
 
 These definitions form the foundational concepts in graph theory, which is widely used in computer science, network analysis, and many other fields. If you have any follow-up questions or need further details, feel free to ask!
 
-## 46) Explain Depth First Traversal Method for Graph with algorithm with example.
+## <mark> 46) Explain Depth First Traversal Method for Graph with algorithm with example. </mark>
 
 ### Depth First Traversal Method for Graph
 
@@ -4200,7 +4208,7 @@ The order of traversal would be:
 
 Depth First Traversal is a powerful algorithm for exploring graphs and trees. It can be implemented using recursion or an explicit stack. DFS is widely used in applications like maze solving, topological sorting, cycle detection, and pathfinding algorithms.
 
-## 47) Explain Depth First Search algorithm for a graph with example. Also explain Tree Edges, Back Edges and Cross Edges.
+## <mark> 47) Explain Depth First Search algorithm for a graph with example. Also explain Tree Edges, Back Edges and Cross Edges. </mark>
 
 ### Depth First Search (DFS) Algorithm
 
@@ -4367,7 +4375,7 @@ Using the graph above, let's categorize the edges:
 
 Depth First Search (DFS) is a powerful algorithm for graph traversal that can be used for various applications like pathfinding, cycle detection, and more. Understanding the types of edges that can occur during a DFS traversal helps in analyzing the structure and properties of the graph being explored.
 
-## 48) Explain Breath First Traversal Method for Graph with algorithm with example.
+## <mark> 48) Explain Breath First Traversal Method for Graph with algorithm with example. </mark>
 
 ### Breadth First Search (BFS) Algorithm
 
@@ -4505,7 +4513,7 @@ During the BFS traversal, the edges can be classified into two types:
 
 Breadth First Search (BFS) is an essential algorithm for exploring graphs and trees. It systematically explores the neighbors of a vertex before moving on to the next level, ensuring that it visits all vertices at the current depth level before proceeding deeper. BFS is particularly useful for finding the shortest path in unweighted graphs and has various applications in network analysis, web crawling, and social network exploration.
 
-## 49) Differentiate BFS and DFS.
+## <mark> 49) Differentiate BFS and DFS. </mark>
 
 Certainly! Here is a detailed differentiation between **Breadth-First Search (BFS)** and **Depth-First Search (DFS)** algorithms, including their characteristics, advantages, disadvantages, and applications.
 
@@ -4605,7 +4613,7 @@ D   E---F
 
 Both BFS and DFS are fundamental algorithms for graph traversal, each with its own strengths and weaknesses. BFS is ideal for finding the shortest path in unweighted graphs, while DFS is more space-efficient in certain scenarios and is useful for problems that require exploring all possible paths, such as topological sorting and backtracking algorithms. Understanding when to use each algorithm is crucial for effective problem-solving in computer science and algorithm design.
 
-## 50) Explain Backtracking Method. What is the N-Queens Problem? Give solution of 4-Queens Problem using Backtracking Method.
+## <mark> 50) Explain Backtracking Method. What is the N-Queens Problem? Give solution of 4-Queens Problem using Backtracking Method. </mark>
 
 ### Backtracking Method
 
@@ -4735,7 +4743,7 @@ Level 0: Place queen in row 1 → Try columns {1, 2, 3, 4}
 
 This continues until a valid solution is found, or the algorithm backtracks to try other options.
 
-## 51) Find an optimal solution to the knapsack instance n=4, M=8, (P1,P2,P3,P4)=(3,5,6,10) and (W1,W2,W3,W4)=(2,3,4,5) using backtracking. Also draw the corresponding state space tree.
+## <mark> 51) Find an optimal solution to the knapsack instance n=4, M=8, (P1,P2,P3,P4)=(3,5,6,10) and (W1,W2,W3,W4)=(2,3,4,5) using backtracking. Also draw the corresponding state space tree. </mark>
 
 The **Knapsack problem** asks us to maximize the total profit within a given weight capacity. In this case:
 
@@ -4863,7 +4871,7 @@ The **optimal solution** is:
 
 Each path explores all possibilities until the feasible solution is found. Only the branch yielding profit = **18** is optimal.
 
-## 52) Construct an implicit tree for 0-1 Knapsack problem. Give backtracking algorithm to solve it.
+## <mark> 52) Construct an implicit tree for 0-1 Knapsack problem. Give backtracking algorithm to solve it. </mark>
 
 ### Implicit Tree for 0-1 Knapsack Problem
 

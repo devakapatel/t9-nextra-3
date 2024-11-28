@@ -1,6 +1,6 @@
 # Unit 1
 
-## 1) What is network topology? Explain different types of network topology.
+## <mark> 1) What is network topology? Explain different types of network topology.
 
 ### Network Topology
 
@@ -43,7 +43,7 @@ Network topology refers to the physical or logical arrangement of devices in a n
 
 The choice of network topology depends on factors such as cost, reliability, scalability, and the specific requirements of the network. Each topology has its own advantages and disadvantages, and the selection of the appropriate topology is crucial for the efficient and reliable operation of a network.
 
-## 2) What is bit and byte stuffing? Explain with examples.
+## <mark> 2) What is bit and byte stuffing? Explain with examples.
 
 #### Bit Stuffing and Byte Stuffing
 
@@ -117,7 +117,7 @@ Here, the escape byte `0x7D` is inserted before the original flag byte, and the 
 
 Both bit stuffing and byte stuffing are essential techniques in data communication, ensuring that the data is transmitted accurately without confusion with control signals.
 
-## 3) Draw the OSI reference model. Explain the functionality of each layer in brief.
+## <mark> 3) Draw the OSI reference model. Explain the functionality of each layer in brief.
 
 ### OSI Reference Model
 
@@ -178,7 +178,7 @@ The OSI (Open Systems Interconnection) reference model consists of seven layers,
 
 The OSI model provides a standardized framework for network communication, allowing different systems and devices to interoperate. Each layer performs specific functions and communicates with the corresponding layer on the receiving end.
 
-## 4) Give differences between Connection oriented versus Connection less Services.
+## <mark> 4) Give differences between Connection oriented versus Connection less Services.
 
 The main differences between connection-oriented and connectionless services in computer networks are:
 
@@ -203,7 +203,7 @@ The main differences between connection-oriented and connectionless services in 
 
 In summary, connection-oriented services provide reliable and ordered data delivery but with higher overhead, while connectionless services offer simpler and faster data transfer but with potentially unreliable delivery. The choice between the two depends on the specific requirements of the application and network.
 
-## 5) Explain functionality of Repeater, HUB, Bridge, Switch, Router and Gateway.
+## <mark> 5) Explain functionality of Repeater, HUB, Bridge, Switch, Router and Gateway.
 
 Here is an explanation of the functionality of common network devices:
 
@@ -256,7 +256,7 @@ Here is an explanation of the functionality of common network devices:
 
 In summary, these devices differ in the OSI layers they operate at, the functionality they provide, and the types of networks they connect. Repeaters and hubs operate at layer 1, bridges and switches at layer 2, routers at layer 3, and gateways at multiple layers.
 
-## 6) Describe Go Back N and Selective Repeat protocol.
+## <mark> 6) Describe Go Back N and Selective Repeat protocol.
 
 Go Back N and Selective Repeat are two different data link layer protocols that address the issue of reliable data transfer over unreliable channels.
 
@@ -287,7 +287,7 @@ The key differences between the two protocols are:
 
 The choice between Go Back N and Selective Repeat depends on the specific requirements of the network, such as the expected error rate, latency, and the available resources for buffering and processing at the sender and receiver.
 
-## 7) What is the difference between error detection and correction? Explain any One error correction technique with suitable example.
+## <mark> 7) What is the difference between error detection and correction? Explain any One error correction technique with suitable example.
 
 The main difference between error detection and error correction is:
 
@@ -324,7 +324,7 @@ If the receiver gets the codeword as 1101111 (with a single-bit error in the las
 
 This ability to both detect and correct errors makes Hamming codes a widely used error correction technique in digital communications and storage systems.
 
-## 8) Explain TCP/IP Reference Model. Compare TCP/IP with OSI Model.
+## <mark> 8) Explain TCP/IP Reference Model. Compare TCP/IP with OSI Model.
 
 ### TCP/IP Reference Model
 
@@ -380,7 +380,7 @@ The main differences between the TCP/IP and OSI models are:
 
 Despite these differences, both models serve the same purpose of providing a framework for understanding and implementing network communication protocols.
 
-## 9) Compute CRC for a data sequence 10110111 for which the generator is 110011.
+## <mark> 9) Compute CRC for a data sequence 10110111 for which the generator is 110011.
 
 To compute the Cyclic Redundancy Check (CRC) for the data sequence 10110111 using the generator 110011, we can follow these steps:
 
@@ -406,7 +406,7 @@ The remainder is 000000, which means the CRC for the data sequence 10110111 with
 
 Therefore, the complete codeword (data sequence + CRC) is 10110111000000.
 
-## 10) What is Hamming Code? Explain with one Example.
+## <mark> 10) What is Hamming Code? Explain with one Example.
 
 Let us assume the even parity hamming code from the above example(111001101)is transmitted and the received code is (110001101). Now form received code, let us detect and correct errors.
 

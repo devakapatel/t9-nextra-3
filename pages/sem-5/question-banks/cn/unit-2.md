@@ -1,6 +1,6 @@
 # Unit 2
 
-## 1) Name and categorizes different multiple access protocols.
+## <mark> 1) Name and categorizes different multiple access protocols. </mark>
 
 Multiple access protocols are used in computer networks to manage the sharing of a common communication channel among multiple devices. Here are some of the main types of multiple access protocols:
 
@@ -76,7 +76,7 @@ Multiple access protocols are used in computer networks to manage the sharing of
 
 These multiple access protocols are used in various networks, including local area networks (LANs), wireless networks, and satellite networks, to manage the sharing of the communication channel and ensure efficient data transmission.
 
-## 2) Compare and explain the pure and slotted ALOHA system.
+## <mark> 2) Compare and explain the pure and slotted ALOHA system. </mark>
 
 The pure ALOHA and slotted ALOHA are two different multiple access protocols used in computer networks:
 
@@ -109,7 +109,7 @@ The key differences between pure ALOHA and slotted ALOHA are:
 
 In summary, slotted ALOHA improves upon pure ALOHA by introducing time slots and synchronizing the transmissions, which reduces the probability of collisions and increases the overall efficiency of the protocol.
 
-## 3) Explain different CSMA protocols.
+## <mark> 3) Explain different CSMA protocols. </mark>
 
 There are several variants of Carrier Sense Multiple Access (CSMA) protocols:
 
@@ -146,7 +146,7 @@ The main differences between these protocols are:
 
 The choice of CSMA protocol depends on factors such as the network topology, the expected traffic load, and the ability to detect collisions during transmission.
 
-## 4) What is CSMA/CA?
+## <mark> 4) What is CSMA/CA? </mark>
 
 CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) is a media access control (MAC) protocol used in wireless networks, such as IEEE 802.11 (Wi-Fi), to manage the sharing of the communication channel among multiple devices. It is designed to avoid collisions that occur when two or more stations transmit simultaneously.
 
@@ -170,7 +170,7 @@ The main differences between CSMA/CD (Collision Detection) and CSMA/CA are:
 
 By using random backoff times and deferring transmission when the channel is busy, CSMA/CA helps to reduce the probability of collisions in wireless networks, improving overall performance and fairness in channel access.
 
-## 5) What is CSMA/CD? Explain with Flow chart.
+## <mark> 5) What is CSMA/CD? Explain with Flow chart. </mark>
 
 CSMA/CD (Carrier Sense Multiple Access with Collision Detection) is a media access control (MAC) protocol used in Ethernet networks to manage the sharing of the communication channel among multiple devices. It is designed to detect and handle collisions that occur when two or more stations transmit simultaneously.
 
@@ -190,7 +190,7 @@ The random backoff time is calculated using a binary exponential backoff algorit
 
 CSMA/CD is an effective protocol for managing collisions in Ethernet networks, especially in shared media environments like early Ethernet networks. However, as Ethernet evolved to use switches instead of hubs, collisions became less common, and the need for collision detection became less important. Modern Ethernet networks use CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) instead, which focuses on collision avoidance rather than detection.
 
-## 6) Explain Manchester encoding for the bit stream 1001110100.
+## <mark> 6) Explain Manchester encoding for the bit stream 1001110100. </mark>
 
 #### Manchester Encoding
 
@@ -252,7 +252,7 @@ Signal: ----|    |----|    |----|    |----|    |----|    |----
 
 This encoding method helps in maintaining synchronization between the transmitter and receiver, making it a popular choice in various communication systems.
 
-## 7) How CSMA/CA differs from CSMA/CD. Explain in brief.
+## <mark> 7) How CSMA/CA differs from CSMA/CD. Explain in brief. </mark>
 
 CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) and CSMA/CD (Carrier Sense Multiple Access with Collision Detection) are two different media access control (MAC) protocols used in computer networks to manage the sharing of the communication channel among multiple devices. The main differences between the two protocols are:
 
@@ -274,7 +274,7 @@ CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) and CSMA/CD (Ca
 
 By using random backoff times, deferring transmission when the channel is busy, and relying on acknowledgments, CSMA/CA helps to reduce the probability of collisions in wireless networks, improving overall performance and fairness in channel access. In contrast, CSMA/CD relies on collision detection and immediate retransmission after collisions, which is more suitable for wired networks with lower latency.
 
-## 8) Explain Reservation, Token Passing and POLLING.
+## <mark> 8) Explain Reservation, Token Passing and POLLING. </mark>
 
 #### Reservation, Token Passing, and Polling
 
@@ -347,7 +347,7 @@ Polling is a technique where a central controller (master) sequentially checks e
 
 Each of these methods—Reservation, Token Passing, and Polling—has its own advantages and disadvantages, making them suitable for different types of networks and applications. Understanding these techniques is essential for network engineers and administrators to design efficient communication systems.
 
-## 9) Explain Binary back off algorithm.
+## <mark> 9) Explain Binary back off algorithm. </mark>
 
 #### Binary Backoff Algorithm
 
@@ -391,7 +391,7 @@ The Binary Backoff Algorithm is a method used in networking to manage contention
 
 The Binary Backoff Algorithm is an essential mechanism for managing access to shared communication channels in networks, particularly in environments where collisions are common. Its design helps balance efficiency and fairness, making it a widely used strategy in network protocols.
 
-## 10)Compare static vs dynamic channel allocation.
+## <mark> 10)Compare static vs dynamic channel allocation. </mark>
 
 Here is a comparison of static and dynamic channel allocation in wireless networks:
 
@@ -423,7 +423,7 @@ The key differences are:
 
 Dynamic channel allocation provides more efficient use of spectrum but requires more sophisticated mechanisms to monitor load, coordinate channel borrowing, and avoid interference. The choice depends on the specific network requirements and the trade-offs between efficiency, complexity and performance.
 
-## 11) Explain frame format specified by IEEE 802.3 standard contains following fields.
+## <mark> 11) Explain frame format specified by IEEE 802.3 standard contains following fields. </mark>
 
 #### Frame Format Specified by IEEE 802.3 Standard
 

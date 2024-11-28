@@ -1,6 +1,6 @@
 # Unit 4
 
-## 1) Define the socket. List the types of sockets.
+## <mark> 1) Define the socket. List the types of sockets. </mark>
 
 ### Definition of a Socket
 
@@ -47,7 +47,7 @@ A socket is typically defined by a combination of an IP address, a port number, 
 
 Sockets play a crucial role in enabling network communication between processes. By understanding the different types of sockets—stream sockets (TCP), datagram sockets (UDP), raw sockets, and Unix domain sockets—developers can choose the appropriate socket type for their networking needs.
 
-## 2) List the duties of the transport layer and explain each in brief.
+## <mark> 2) List the duties of the transport layer and explain each in brief. </mark>
 
 ### Duties of the Transport Layer
 
@@ -84,7 +84,7 @@ The transport layer is a crucial component of the OSI (Open Systems Interconnect
 
 The transport layer plays a vital role in ensuring reliable, efficient, and orderly data transmission across networks. Its functions, including segmentation, connection control, flow control, error detection, multiplexing, QoS, and end-to-end communication, are essential for the smooth operation of networked applications.
 
-## 3) Compare UDP & TCP.
+## <mark> 3) Compare UDP & TCP. </mark>
 
 ### Comparison of UDP and TCP
 
@@ -148,7 +148,7 @@ User Datagram Protocol (UDP) and Transmission Control Protocol (TCP) are two fun
 
 In summary, the choice between UDP and TCP depends on the specific requirements of the application. If speed and low latency are critical and some data loss is acceptable, UDP is the better choice. Conversely, if reliable data delivery and ordered transmission are essential, TCP is the preferred protocol. Understanding these differences helps developers and network engineers design effective communication systems based on application needs.
 
-## 4) What is meant by congestion?
+## <mark> 4) What is meant by congestion? </mark>
 
 ### What is Meant by Congestion?
 
@@ -186,7 +186,7 @@ To mitigate congestion, various techniques can be employed, including:
 
 Congestion is a critical issue in network management that can significantly impact performance and user experience. Understanding its causes, effects, and potential solutions is essential for network administrators to maintain efficient and reliable network operations.
 
-## 5) What is function of transport layer?
+## <mark> 5) What is function of transport layer? </mark>
 
 ### Functions of the Transport Layer
 
@@ -223,7 +223,7 @@ The transport layer is a crucial component of the OSI (Open Systems Interconnect
 
 The transport layer plays a vital role in ensuring reliable, efficient, and orderly data transmission across networks. Its functions, including segmentation, connection control, flow control, error detection, multiplexing, QoS, and end-to-end communication, are essential for the smooth operation of networked applications.
 
-## 6) Give the structure of UDP header.
+## <mark> 6) Give the structure of UDP header. </mark>
 
 ### UDP Header Structure
 
@@ -261,7 +261,7 @@ The User Datagram Protocol (UDP) header is a simple structure that consists of f
 
 Understanding the structure of the UDP header is essential for developers and network engineers working with network protocols. The simplicity of the UDP header allows for efficient data transmission, making UDP a valuable protocol for specific applications.
 
-## 7) Explain TCP header and the working of the TCP protocol.
+## <mark> 7) Explain TCP header and the working of the TCP protocol. </mark>
 
 ### TCP Header Structure
 
@@ -314,7 +314,7 @@ TCP operates using a set of processes to ensure reliable and ordered delivery of
 
 TCP is a robust protocol that provides reliable, ordered, and error-checked delivery of data between applications. Its header structure and mechanisms for connection establishment, data transmission, error detection, and connection termination are essential for ensuring high-quality communication over networks.
 
-## 8) Explain world wide web.
+## <mark> 8) Explain world wide web. </mark>
 
 ### The World Wide Web (WWW)
 
@@ -364,7 +364,7 @@ The World Wide Web (WWW), commonly referred to as the Web, is a system of interl
 
 The World Wide Web has transformed the way we access information, communicate, and conduct business. It serves as a platform for sharing knowledge and connecting people worldwide. Understanding its components and functionality is essential for anyone looking to navigate or develop for the Web.
 
-## 9) Explain HyperText Transfer Protocol.
+## <mark> 9) Explain HyperText Transfer Protocol. </mark>
 
 ### Hypertext Transfer Protocol (HTTP)
 
@@ -424,7 +424,7 @@ The Hypertext Transfer Protocol (HTTP) is an application-layer protocol used for
 
 HTTP is the foundation of data communication on the World Wide Web, enabling users to access and interact with online content. Understanding HTTP is essential for web developers, network engineers, and anyone involved in the creation and maintenance of web applications.
 
-## 10) Explain the SMTP.
+## <mark> 10) Explain the SMTP. </mark>
 
 ### Simple Mail Transfer Protocol (SMTP)
 
@@ -481,7 +481,7 @@ The Simple Mail Transfer Protocol (SMTP) is a protocol used for sending and rece
 
 SMTP is a fundamental protocol for email communication on the Internet. Its simple design and effectiveness in transmitting messages make it a critical component of modern email systems. Understanding how SMTP works is essential for anyone involved in email management or network administration.
 
-## 11) Write a note on DNS.
+## <mark> 11) Write a note on DNS. </mark>
 
 ### Domain Name System (DNS)
 
@@ -527,7 +527,7 @@ The Domain Name System (DNS) is a hierarchical and decentralized naming system u
 
 The Domain Name System (DNS) is an essential part of the Internet infrastructure, providing a crucial service that enables users to access websites and services using human-readable domain names. Its hierarchical structure, caching mechanisms, and redundancy contribute to its efficiency and reliability. Understanding DNS is vital for network administrators, web developers, and anyone involved in managing Internet resources.
 
-## 12) Explain about HTTP.
+## <mark> 12) Explain about HTTP. </mark>
 
 ### Hypertext Transfer Protocol (HTTP)
 
@@ -587,7 +587,7 @@ The Hypertext Transfer Protocol (HTTP) is an application-layer protocol used for
 
 HTTP is fundamental to the functioning of the World Wide Web, enabling users to access and interact with online content. Its request-response model, stateless nature, and support for various methods and status codes make it a versatile protocol for web communication. Understanding HTTP is essential for web developers, network engineers, and anyone involved in web technology.
 
-## 13) Write short notes on FTP.
+## <mark> 13) Write short notes on FTP. </mark>
 
 ### File Transfer Protocol (FTP)
 
@@ -644,7 +644,7 @@ The File Transfer Protocol (FTP) is a standard network protocol used for transfe
 
 FTP is a widely used protocol for transferring files over the Internet, offering a robust solution for file management and exchange. Despite its popularity, FTP has some security concerns, as data, including credentials, is transmitted in plain text. Secure alternatives such as FTPS (FTP Secure) and SFTP (SSH File Transfer Protocol) are often recommended for enhanced security.
 
-## 14) Explain internet transport protocol.
+## <mark> 14) Explain internet transport protocol. </mark>
 
 ### Internet Transport Protocols
 
@@ -689,7 +689,7 @@ UDP is a connectionless transport protocol that allows for the transmission of m
 
 The Internet transport protocols, primarily TCP and UDP, serve different purposes based on application requirements. TCP is suitable for applications that require reliable communication, while UDP is ideal for applications where speed is crucial, and some data loss is acceptable. Understanding these protocols is essential for network engineers, developers, and anyone involved in designing and managing network applications.
 
-## 15) Explain TCP segment header.
+## <mark> 15) Explain TCP segment header. </mark>
 
 ### TCP Segment Header Structure
 
@@ -770,7 +770,7 @@ The Transmission Control Protocol (TCP) segment header is an essential component
 
 The TCP segment header is vital for ensuring reliable communication over networks. Its structure provides the necessary information for managing data flow, maintaining order, and verifying data integrity. Understanding the TCP header is essential for network engineers, developers, and anyone involved in working with TCP/IP networks.
 
-## 16) Difference between absolute domain name and relative domain name.
+## <mark> 16) Difference between absolute domain name and relative domain name. </mark>
 
 ### Difference Between Absolute Domain Name and Relative Domain Name
 
@@ -816,7 +816,7 @@ If you need more detailed information or references, you can explore networking 
 1. **Computer Networks, EBook, Global Edition** (Tanenbaum, Andrew Wetherall, David)
 2. **Data and Computer Communications, International Edition** (William Stallings)
 
-## 17) What is domain name system?
+## <mark> 17) What is domain name system? </mark>
 
 ### Domain Name System (DNS)
 
@@ -862,7 +862,7 @@ The Domain Name System (DNS) is a hierarchical and decentralized naming system u
 
 The Domain Name System (DNS) is a crucial part of the Internet infrastructure, providing a vital service that enables users to access websites and services using human-readable domain names. Its hierarchical structure, caching mechanisms, and redundancy contribute to its efficiency and reliability. Understanding DNS is important for network administrators, web developers, and anyone involved in managing Internet resources.
 
-## 18) Explain about MIME.
+## <mark> 18) Explain about MIME. </mark>
 
 ### Multipurpose Internet Mail Extensions (MIME)
 
@@ -908,7 +908,7 @@ MIME plays a crucial role in modern email communication, allowing users to share
 
 MIME has significantly enhanced the functionality of email and other Internet applications by allowing for the transmission of diverse types of content. Understanding MIME is essential for developers and anyone involved in email systems, web development, and content management.
 
-## 19) Explain Principle of Congestion Control.
+## <mark> 19) Explain Principle of Congestion Control. </mark>
 
 ### Principle of Congestion Control
 
@@ -948,7 +948,7 @@ Congestion control refers to the mechanisms and strategies used in computer netw
 
 The principle of congestion control is fundamental to maintaining the performance and reliability of computer networks. By implementing effective congestion control mechanisms, networks can optimize data transmission, minimize delays, and ensure that resources are fairly allocated among users. Understanding these principles is crucial for network engineers and developers involved in designing and managing network systems.
 
-## 20) Draw and explain TCP Header.
+## <mark> 20) Draw and explain TCP Header. </mark>
 
 ### TCP Header Structure
 
@@ -1015,7 +1015,7 @@ The Transmission Control Protocol (TCP) header is a critical component of TCP co
 
 Understanding the TCP header is essential for comprehending how reliable data transmission is achieved in TCP connections. The structure of the TCP header provides the necessary information for managing data flow, maintaining order, and verifying data integrity. This knowledge is crucial for network engineers, developers, and anyone involved in working with TCP/IP networks.
 
-## 21) Draw and explain UDP Header.
+## <mark> 21) Draw and explain UDP Header. </mark>
 
 ### UDP Header Structure
 
@@ -1054,7 +1054,7 @@ The User Datagram Protocol (UDP) header is a simple structure that consists of f
 
 The UDP header is a concise structure that allows for efficient transmission of data without the overhead associated with connection-oriented protocols like TCP. Understanding the UDP header and its fields is essential for developers and network engineers working with applications that utilize this protocol.
 
-## 22) Difference between leaky bucket and token bucket.
+## <mark> 22) Difference between leaky bucket and token bucket. </mark>
 
 ### Difference Between Leaky Bucket and Token Bucket
 
@@ -1086,7 +1086,7 @@ Leaky Bucket and Token Bucket are two popular algorithms used for network traffi
 
 In summary, the leaky bucket and token bucket algorithms serve as effective traffic management techniques in networking, each with its own strengths and weaknesses. The leaky bucket algorithm is ideal for applications requiring a consistent data flow, while the token bucket algorithm is better suited for applications that can benefit from bursty transmissions. Understanding these mechanisms is essential for network engineers and developers aiming to optimize data transmission and manage network congestion.
 
-## 23) Explain with example working of DHCP.
+## <mark> 23) Explain with example working of DHCP. </mark>
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
@@ -1143,7 +1143,7 @@ DHCP operates through a client-server model and involves a series of steps that 
 
 DHCP simplifies the management of IP addresses in networks by automating the assignment process. By using DHCP, network administrators can reduce manual configuration errors, streamline device connectivity, and efficiently manage IP address allocation, especially in dynamic environments like corporate networks, schools, and home networks.
 
-## 24) Explain Leaky Bucket algorithm.
+## <mark> 24) Explain Leaky Bucket algorithm. </mark>
 
 ### Leaky Bucket Algorithm
 

@@ -1,6 +1,6 @@
 # Unit 3
 
-## 1) Compare datagram subnet and virtual circuit subnet.
+## <mark> 1) Compare datagram subnet and virtual circuit subnet. </mark>
 
 Here is a comparison of datagram subnets and virtual circuit subnets:
 
@@ -33,7 +33,7 @@ For more details, you can refer to the following resources:
 
 These books provide in-depth coverage of datagram and virtual circuit subnets in computer networks.
 
-## 2) Explain shortest path routing algorithm.
+## <mark> 2) Explain shortest path routing algorithm. </mark>
 
 #### Shortest Path Routing Algorithm
 
@@ -99,7 +99,7 @@ Several algorithms can be used to implement shortest path routing, including:
 
 The shortest path routing algorithm is a crucial component in networking that ensures efficient data transmission by finding the optimal path between nodes. Understanding and implementing these algorithms can significantly improve network performance and reliability.
 
-## 3) Compare IPv4 & IPv6.
+## <mark> 3) Compare IPv4 & IPv6. </mark>
 
 Here is a comparison of IPv4 (Internet Protocol version 4) and IPv6 (Internet Protocol version 6):
 
@@ -150,7 +150,7 @@ For more detailed information on IPv4, IPv6, and the transition mechanisms, you 
 
 These books provide in-depth coverage of IP protocols and their evolution.
 
-## 4) What is meant by congestion? List the ways of avoiding congestion.
+## <mark> 4) What is meant by congestion? List the ways of avoiding congestion. </mark>
 
 #### What is Congestion?
 
@@ -186,7 +186,7 @@ Here are several strategies to avoid congestion in networks:
 
 By employing these strategies, network administrators can effectively manage and mitigate congestion, ensuring smooth and efficient network operation.
 
-## 5) What is flooding? What are its disadvantages?
+## <mark> 5) What is flooding? What are its disadvantages? </mark>
 
 #### What is Flooding?
 
@@ -215,7 +215,7 @@ To mitigate these disadvantages, various techniques have been developed, such as
 - **Spanning Tree Protocols (STPs)**: Prevent loops by creating a loop-free topology for forwarding broadcast frames.
 - **Selective Flooding**: Limits the number of nodes that participate in the flooding process based on certain criteria, such as distance from the source or node priority.
 
-## 6) Explain about the IP Header.
+## <mark> 6) Explain about the IP Header. </mark>
 
 #### IP Header
 
@@ -259,7 +259,7 @@ The IP header consists of several fields, each serving a specific purpose. Below
 
 The IP header is a vital component of the Internet Protocol that facilitates the routing and delivery of packets across networks. Understanding its structure and fields is essential for network engineers and administrators as it aids in troubleshooting, network design, and performance analysis.
 
-## 7) Explain IP addressing method.
+## <mark> 7) Explain IP addressing method. </mark>
 
 IP addressing is a fundamental concept in computer networking that allows devices to communicate over the Internet or a local network. There are two main versions of IP addressing: IPv4 (Internet Protocol version 4) and IPv6 (Internet Protocol version 6).
 
@@ -300,7 +300,7 @@ IP addresses can be assigned to devices using various methods:
 1. **Static assignment**: The IP address is manually configured on the device.
 2. **Dynamic assignment**: The IP address is automatically assigned to the device using protocols like DHCP (Dynamic Host Configuration Protocol).
 
-## 8) Define routing & explain distance vector routing and link state routing.
+## <mark> 8) Define routing & explain distance vector routing and link state routing. </mark>
 
 #### Routing
 
@@ -339,7 +339,7 @@ Comparison of Distance Vector and Link State Routing:
 | **Overhead**            | Lower (due to the periodic updates)             | Higher (due to the frequent flooding of LSAs)         |
 | **Examples**            | RIP, IGRP                                       | OSPF, IS-IS                                           |
 
-## 9) Explain subnetting.
+## <mark> 9) Explain subnetting. </mark>
 
 #### Subnetting
 
@@ -382,7 +382,7 @@ Let’s say you have the IP address `192.168.1.0` with a default subnet mask of 
 
 Subnetting is a vital technique in network design and management that allows for efficient use of IP addresses, improved performance, enhanced security, and simplified network management. Understanding subnetting is essential for network engineers and administrators to effectively design and maintain networks.
 
-## 10) Write a note on ICMP.
+## <mark> 10) Write a note on ICMP. </mark>
 
 #### Internet Control Message Protocol (ICMP)
 
@@ -439,7 +439,7 @@ The ICMP header consists of the following fields:
 
 ICMP plays a vital role in the functioning of IP networks by facilitating error reporting and providing diagnostic capabilities. Understanding ICMP is essential for network administrators and engineers to effectively manage and troubleshoot network issues.
 
-## 11) To solve the examples related to identifying netid, hostid, subnet mask.
+## <mark> 11) To solve the examples related to identifying netid, hostid, subnet mask. </mark>
 
 To solve examples related to identifying the network ID, host ID, and subnet mask, you can follow these steps:
 
@@ -466,7 +466,7 @@ To solve examples related to identifying the network ID, host ID, and subnet mas
        - 192.168.1.128/26 (Addresses: 192.168.1.128 - 192.168.1.191)
        - 192.168.1.192/26 (Addresses: 192.168.1.192 - 192.168.1.255)
 
-## 12) Explain internetworking.
+## <mark> 12) Explain internetworking. </mark>
 
 #### Internetworking
 
@@ -501,7 +501,7 @@ Internetworking refers to the practice of connecting multiple distinct computer 
 
 Internetworking is a fundamental aspect of modern networking that enables the interconnection of diverse networks, allowing for efficient communication and resource sharing. Understanding the principles of internetworking is essential for network engineers and administrators to design, implement, and manage complex network infrastructures.
 
-## 13) What is a firewall? Why is it used? Explain its working.
+## <mark> 13) What is a firewall? Why is it used? Explain its working. </mark>
 
 #### What is a Firewall?
 
@@ -541,7 +541,7 @@ Firewalls operate based on a set of rules defined by the network administrator. 
 
 Firewalls are essential components of network security, providing a first line of defense against unauthorized access and cyber threats. By monitoring and controlling network traffic based on predefined rules, firewalls help organizations protect their sensitive data and maintain the integrity of their networks.
 
-## 14) Explain flow based routing.
+## <mark> 14) Explain flow based routing. </mark>
 
 #### Flow-Based Routing
 
@@ -576,7 +576,7 @@ Flow-based routing is a network routing technique that focuses on the management
 
 Flow-based routing represents a more intelligent approach to managing network traffic by focusing on the flow of data rather than individual packets. This technique can lead to improved performance, better resource utilization, and enhanced quality of service for critical applications. However, it also introduces complexity and overhead that must be carefully managed.
 
-## 15) Explain shortest path routing algorithm.
+## <mark> 15) Explain shortest path routing algorithm. </mark>
 
 #### Shortest Path Routing Algorithm
 
@@ -642,7 +642,7 @@ Several algorithms can be used to implement shortest path routing, including:
 
 The shortest path routing algorithm is a crucial component in networking that ensures efficient data transmission by finding the optimal path between nodes. Understanding and implementing these algorithms can significantly improve network performance and reliability.
 
-## 16) Compare Classful and classless IP addresses.
+## <mark> 16) Compare Classful and classless IP addresses. </mark>
 
 Here is a comparison of classful and classless IP addressing:
 
@@ -688,7 +688,7 @@ Here is a comparison of classful and classless IP addressing:
 
 In summary, classless IP addressing using CIDR provides more efficient IP address utilization, flexibility, and scalability compared to classful addressing, but it also introduces additional complexity in network design and configuration.
 
-## 17) Explain ARP protocol.
+## <mark> 17) Explain ARP protocol. </mark>
 
 #### Address Resolution Protocol (ARP)
 

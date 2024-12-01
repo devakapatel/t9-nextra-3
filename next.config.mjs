@@ -15,7 +15,3 @@ export default withNextra({
     unoptimized: true,
   },
 });
-
-module.exports = {
-  output: "export",
-};

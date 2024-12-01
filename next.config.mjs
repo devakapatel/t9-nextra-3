@@ -6,12 +6,4 @@ const withNextra = nextra({
   latex: true,
 });
 
-export default withNextra({
-  compress: true,
-
-  images: {
-    formats: ["image/webp"],
-    minimumCacheTTL: 60,
-    unoptimized: true,
-  },
-});
+export default withNextra();

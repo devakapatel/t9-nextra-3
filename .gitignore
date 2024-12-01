@@ -127,4 +127,4 @@ dist
 .pnp.*
 
 /pages/.obsidian
-/.next/cache
+.next/cache

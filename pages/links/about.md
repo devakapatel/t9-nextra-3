@@ -38,7 +38,7 @@ As the sole owner of this website, I make all decisions—but I value your input
 - **Fonts:** Body text: [Inter](https://rsms.me/inter/) | Code snippets: [Fira Code](https://github.com/tonsky/FiraCode)
 - **Forms:** [Tally.so](https://tally.so)
 - **Content:** Written in Markdown using [VSCode](https://code.visualstudio.com/) and [Obsidian](https://obsidian.md).
-- **OS:** Proudly using [Ubuntu 24.04.1](https://ubuntu.com) on Linux.
+- **OS:** Proudly using Linux.
 - **Device:** [Lenovo IdeaPad Gaming 3](<https://www.lenovo.com/us/en/p/laptops/ideapad/ideapad-gaming-laptops/gaming-3-gen-6-(15-amd)/wmd00000479>), powered by AMD Ryzen 7 5800H and an RTX 3050 GPU.
 
 ---

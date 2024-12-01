@@ -4,7 +4,6 @@ const withNextra = nextra({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.jsx",
   latex: true,
-  output: "out",
 });
 
 export default withNextra({
@@ -16,3 +15,7 @@ export default withNextra({
     unoptimized: true,
   },
 });
+
+module.exports = {
+  output: "export",
+};

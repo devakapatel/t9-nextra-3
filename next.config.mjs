@@ -7,8 +7,11 @@ const withNextra = nextra({
 });
 
 export default withNextra({
+  compress: true,
+
   images: {
+    formats: ["image/webp"],
+    minimumCacheTTL: 60,
     unoptimized: true,
   },
-  output: "export",
 });

@@ -6,4 +6,6 @@ const withNextra = nextra({
   latex: true,
 });
 
-export default withNextra();
+export default withNextra({
+  output: "export",
+});

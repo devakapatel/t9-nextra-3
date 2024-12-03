@@ -4,11 +4,11 @@ Navigate through the semesters and access essential resources, links, and more�
 
 ---
 
-### 📚 Semesters:
+## 📚 Semesters:
 
-- #### [Semester 3](./sem-3)
-- #### [Semester 4](./sem-4)
-- #### [Semester 5](./sem-5)
+- ### [Semester 3](./sem-3)
+- ### [Semester 4](./sem-4)
+- ### [Semester 5](./sem-5)
 
 ---
 

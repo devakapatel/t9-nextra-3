@@ -12,13 +12,13 @@ Navigate through the semesters and access essential resources, links, and more�
 
 ---
 
-### 🔗 Useful Links:
+## 🔗 Useful Links:
 
 Looking for forms, WhatsApp groups, or more details about this project? Check out everything [here](./links).
 
 ---
 
-### About T9:
+## About T9:
 
 This is your go-to hub for semester resources, project materials, and collaboration tools. Whether you’re revisiting past work or preparing for exams, T9 is built to make your academic life easier!
 

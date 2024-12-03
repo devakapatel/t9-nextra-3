@@ -1,23 +1,9 @@
 # Semester 5 Resources
 
-### 📄 Assignments
+- ### [Assignments](./sem-5/assignments)
 
-[View Here](./sem-5/assignments)
+- ### [Practicals](./sem-5/practicals)
 
----
+- ### [Question Banks](./sem-5/question-banks)
 
-### 🛠️ Practicals
-
-[View Here](./sem-5/practicals)
-
----
-
-### ❓ Question Banks
-
-[View Here](./sem-5/question-banks)
-
----
-
-### 📘 Syllabus
-
-[View Here](./sem-5/syllabus)
+- ### [Syllabus](./sem-5/syllabus)

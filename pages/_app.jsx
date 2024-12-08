@@ -1,4 +1,9 @@
+import dynamic from "next/dynamic";
 import "../styles/styles.css";
+
+const DynamicHeader = dynamic(() => import("../components/header"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function App({ Component, pageProps }) {
   return (

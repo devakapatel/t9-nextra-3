@@ -1,11 +1,11 @@
 # Syllabus
 
-### [CN](./syllabus/cn)
+- ### [CN](./syllabus/cn)
 
-### [DAA](./syllabus/daa)
+- ### [DAA](./syllabus/daa)
 
-### [MI](./syllabus/mi)
+- ### [MI](./syllabus/mi)
 
-### [PSC](./syllabus/psc)
+- ### [PSC](./syllabus/psc)
 
-### [WT](./syllabus/wt)
+- ### [WT](./syllabus/wt)

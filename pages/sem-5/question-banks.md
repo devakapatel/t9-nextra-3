@@ -1,35 +1,13 @@
 # Question Banks
 
-### 📡 Computer Networks (CN)
+- ### [Computer Networks (CN)](./question-banks/cn)
 
-[View Here](./question-banks/cn)
+- ### [Design and Analysis of Algorithms (DAA)](./question-banks/daa)
 
----
+- ### [Internet of Things (IoT)](./question-banks/iot)
 
-### 📊 Design and Analysis of Algorithms (DAA)
+- ### [Microprocessors and Interfaces (MI)](./question-banks/mi)
 
-[View Here](./question-banks/daa)
+- ### [Python for Scientific Computing (PSC)](./question-banks/psc)
 
----
-
-### 🌐 Internet of Things (IoT)
-
-[View Here](./question-banks/iot)
-
----
-
-### 🖥️ Microprocessors and Interfaces (MI)
-
-[View Here](./question-banks/mi)
-
----
-
-### 🐍 Python for Scientific Computing (PSC)
-
-[View Here](./question-banks/psc)
-
----
-
-### 🌍 Web Technologies (WT)
-
-[View Here](./question-banks/wt)
+- ### [Web Technologies (WT)](./question-banks/wt)

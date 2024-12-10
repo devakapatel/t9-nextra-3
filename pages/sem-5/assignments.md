@@ -1,11 +1,11 @@
 # Assignments
 
-### [CN](./assignments/cn)
+- ### [CN](./assignments/cn)
 
-### [IoT](./assignments/iot)
+- ### [IoT](./assignments/iot)
 
-### [MI](./assignments/mi)
+- ### [MI](./assignments/mi)
 
-### [PSC](./assignments/psc)
+- ### [PSC](./assignments/psc)
 
-### [WT](./assignments/wt)
+- ### [WT](./assignments/wt)

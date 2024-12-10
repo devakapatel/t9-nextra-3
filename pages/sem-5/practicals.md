@@ -1,11 +1,11 @@
 # Practicals
 
-### [CN](./practicals/cn)
+- ### [CN](./practicals/cn)
 
-### [DAA](./practicals/daa)
+- ### [DAA](./practicals/daa)
 
-### [IoT](./practicals/iot)
+- ### [IoT](./practicals/iot)
 
-### [MI](./practicals/mi)
+- ### [MI](./practicals/mi)
 
-### [WT](./practicals/wt)
+- ### [WT](./practicals/wt)

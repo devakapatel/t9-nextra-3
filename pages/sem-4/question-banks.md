@@ -1,5 +1,5 @@
 # Question Banks
 
-- ### [CJP](./question-banks/cjp)
+- ### [Core Java Programming](./question-banks/cjp)
 
-- ### [OS](./question-banks/os)
+- ### [Operating Systems](./question-banks/os)

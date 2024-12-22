@@ -1,7 +1,7 @@
 # Syllabus
 
-- ### [IoT](./syllabus/iot)
+- ### [Internet of Things (IoT)](./syllabus/iot)
 
-- ### [ISD](./syllabus/isd)
+- ### [Internet of Things - Sensors and Devices (ISD)](./syllabus/isd)
 
-- ### [OS](./syllabus/os)
+- ### [Operating Systems (OS)](./syllabus/os)

@@ -6,9 +6,9 @@ Find out more about this project and its creator: [here](./links/about).
 
 ---
 
-### 💬 Join the Community
+### 💬 Join the WhatsApp Group
 
-- WhatsApp Group: Connect and collaborate with peers: [Join Here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0).
+- Connect and collaborate with peers: [Join Here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0).
 
 ---
 

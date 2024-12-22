@@ -1,4 +1,4 @@
-# ISD
+# Internet of Things - Sensors and Devices
 
 - ### [Unit 1](./isd/unit-1)
 

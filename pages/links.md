@@ -12,12 +12,6 @@ Find out more about this project and its creator: [here](./links/about).
 
 ---
 
-### 🎮 Entertainment Zone
-
-Explore the latest games, movies, and web series: [Visit the Entertainment Site](https://u9.pages.dev).
-
----
-
 ### 📤 Contribute Resources
 
 Help expand the community knowledge base by submitting material: [Submit Here](https://tally.so/r/nr6d2N).

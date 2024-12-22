@@ -1,6 +1,6 @@
 # Semester 4 Resources
 
-<!-- - ### [Assignments](./sem-4/assignments) -->
+- ### [Assignments](./sem-4/assignments)
 
 <!-- - ### [Practicals](./sem-4/practicals) -->
 

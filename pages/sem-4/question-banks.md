@@ -8,4 +8,6 @@
 
 - ### [Internet of Things (IoT)](./question-banks/iot)
 
+- ### [ISD](./question-banks/isd)
+
 - ### [Operating Systems (OS)](./question-banks/os)

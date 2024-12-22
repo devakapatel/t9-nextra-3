@@ -2,8 +2,8 @@
 
 - ### [Assignments](./sem-4/assignments)
 
-<!-- - ### [Practicals](./sem-4/practicals) -->
+- ### [Practicals](./sem-4/practicals)
 
 - ### [Question Banks](./sem-4/question-banks)
 
-<!-- - ### [Syllabus](./sem-4/syllabus) -->
+- ### [Syllabus](./sem-4/syllabus)

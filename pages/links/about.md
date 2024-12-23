@@ -35,7 +35,6 @@ As the sole owner of this website, I make all decisions—but I value your input
 
 - **Technology:** [Nextra](https://nextra.site) by Next.js
 - **Hosting:** [Cloudflare](https://cloudflare.com)
-- **Fonts:** Body text: [Inter](https://rsms.me/inter/) | Code snippets: [Fira Code](https://github.com/tonsky/FiraCode)
 - **Forms:** [Tally.so](https://tally.so)
 - **Content:** Written in Markdown using [VSCode](https://code.visualstudio.com/) and [Obsidian](https://obsidian.md).
 - **OS:** Proudly using Linux.

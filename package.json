@@ -14,5 +14,8 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.5"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
   }
 }

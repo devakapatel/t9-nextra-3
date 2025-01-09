@@ -36,7 +36,9 @@ As the sole owner of this website, I make all decisions—but I value your input
 - **Technology:** [Nextra](https://nextra.site) by Next.js
 - **Hosting:** [Cloudflare](https://cloudflare.com)
 - **Forms:** [Tally.so](https://tally.so)
+- **Fonts:** Helvetica.
 - **Content:** Written in Markdown using [VSCode](https://code.visualstudio.com/) and [Obsidian](https://obsidian.md).
+- **Artificial intelligence Models:** [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), [Phind](https://phind.com), [Gemini](https://gemini.google.com), [Perplexity](https://perplexity.ai) and [Mistral](https://mistral.ai)
 - **OS:** Proudly using Linux.
 - **Device:** [Lenovo IdeaPad Gaming 3](<https://www.lenovo.com/us/en/p/laptops/ideapad/ideapad-gaming-laptops/gaming-3-gen-6-(15-amd)/wmd00000479>), powered by AMD Ryzen 7 5800H and an RTX 3050 GPU.
 

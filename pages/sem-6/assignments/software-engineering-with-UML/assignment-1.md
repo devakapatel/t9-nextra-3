@@ -1,6 +1,6 @@
 # Assignment 1
 
-## <mark> 1)What is Software Engineering? Explain the Evolving role of software with software crisis on the horizon and software myths. </mark>
+## <mark> 1) What is Software Engineering? Explain the Evolving role of software with software crisis on the horizon and software myths. </mark>
 
 ### Software Engineering, Evolving Role of Software, and Software Crisis
 
@@ -32,7 +32,7 @@ The software crisis refers to the challenges and difficulties faced in the devel
 
 By understanding the evolving role of software, recognizing the challenges of the software crisis, and debunking common myths, software engineers can adopt effective practices to develop high-quality, reliable, and maintainable software systems.
 
-## <mark> 2)Explain Software Engineering as a Layered Technology. </mark>
+## <mark> 2) Explain Software Engineering as a Layered Technology. </mark>
 
 ### Software Engineering as a Layered Technology
 
@@ -70,7 +70,7 @@ By understanding the evolving role of software, recognizing the challenges of th
 
 By understanding the layered structure of software engineering, developers can adopt a more structured and efficient approach to building high-quality software systems.
 
-## <mark> 3)Define Software Development Life Cycle (Software Process Model) with suitable diagram. </mark>
+## <mark> 3) Define Software Development Life Cycle (Software Process Model) with suitable diagram. </mark>
 
 **Software Development Life Cycle (SDLC)**
 
@@ -131,7 +131,7 @@ The Software Development Life Cycle (SDLC) is a systematic process used by softw
 
 The choice of SDLC model depends on various factors, including project size, complexity, team expertise, and project constraints.
 
-## <mark> 4)Explain Linear Sequential Model (Waterfall Model) with all the steps. </mark>
+## <mark> 4) Explain Linear Sequential Model (Waterfall Model) with all the steps. </mark>
 
 **Linear Sequential Model (Waterfall Model)**
 
@@ -192,7 +192,7 @@ The Waterfall Model is a classic software development approach that follows a li
 
 The Waterfall Model, while a classic approach, is often less suitable for complex projects with changing requirements or iterative development. More flexible models like Agile have gained popularity in recent years to address the limitations of the Waterfall Model.
 
-## <mark> 5)Write short notes on Evolutionary Process Model and Concurrent Development Model. </mark>
+## <mark> 5) Write short notes on Evolutionary Process Model and Concurrent Development Model. </mark>
 
 ### Short Notes on Evolutionary Process Model and Concurrent Development Model
 
@@ -234,7 +234,7 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 
 ![5-2.png](./5-2.png)
 
-## <mark> 6)Explain RAD model and Incremental Model with Suitable Diagrams. </mark>
+## <mark> 6) Explain RAD model and Incremental Model with Suitable Diagrams. </mark>
 
 ### RAD Model
 
@@ -297,7 +297,7 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 
 Both RAD and Incremental models are iterative and incremental approaches that emphasize user involvement and rapid delivery. The choice between them depends on factors such as project complexity, team expertise, and user requirements.
 
-## <mark> 7)Explain the following models: (a) Prototype Model (b) Spiral Model </mark>
+## <mark> 7) Explain the following models: (a) Prototype Model (b) Spiral Model </mark>
 
 **a) Prototype Model**
 
@@ -335,7 +335,7 @@ Both RAD and Incremental models are iterative and incremental approaches that em
   - Can be complex to manage.
   - Requires experienced personnel to assess and manage risks effectively.
 
-## <mark> 8)Explain Component Based Development with an example. </mark>
+## <mark> 8) Explain Component Based Development with an example. </mark>
 
 ### Component-Based Development (CBD)
 
@@ -372,7 +372,7 @@ By using these pre-built components, you can significantly reduce development ti
 
 **In essence, CBD promotes a modular and efficient approach to software development by leveraging pre-built components, leading to faster development, reduced costs, and improved software quality.**
 
-## <mark> 9)Differentiate between Product and Process. </mark>
+## <mark> 9) Differentiate between Product and Process. </mark>
 
 **Product vs. Process**
 
@@ -397,7 +397,7 @@ Imagine baking a cake:
 
 Understanding the distinction between product and process is crucial in various fields, including software engineering, manufacturing, and business management.
 
-## <mark> 10)Describe Agile Process Model with example. </mark>
+## <mark> 10) Describe Agile Process Model with example. </mark>
 
 **Agile Process Model**
 

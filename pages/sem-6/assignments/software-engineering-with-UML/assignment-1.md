@@ -230,9 +230,9 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 
 **In essence, the Evolutionary Process Model focuses on iterative development and user feedback, while the Concurrent Development Model emphasizes parallel activities and workflow management.**
 
-![5-1.png](./5-1.png.png)
+![5-1.png](./5-1.png)
 
-![5-2.png](./5-2.png.png)
+![5-2.png](./5-2.png)
 
 # 6) Explain RAD model and Incremental Model with Suitable Diagrams.
 

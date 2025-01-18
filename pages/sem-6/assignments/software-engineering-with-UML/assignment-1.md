@@ -1,18 +1,18 @@
 # Assignment 1
 
-# 1) What is Software Engineering? Explain the Evolving role of software with software crisis on the horizon and software myths.
+## 1) What is Software Engineering? Explain the Evolving role of software with software crisis on the horizon and software myths.
 
-## Software Engineering, Evolving Role of Software, and Software Crisis
+### Software Engineering, Evolving Role of Software, and Software Crisis
 
 **Software Engineering** is a systematic and disciplined approach to designing, developing, testing, and maintaining software systems. It involves applying engineering principles, techniques, and tools to ensure the quality, reliability, and efficiency of software products.
 
-### Evolving Role of Software
+#### Evolving Role of Software
 
 - **Ubiquity:** Software is increasingly pervasive in our lives, from smartphones and computers to automobiles, healthcare, and critical infrastructure.
 - **Complexity:** Software systems are becoming more complex, with interconnected components and intricate functionalities.
 - **Velocity:** The demand for new software and updates is constantly growing, requiring faster development cycles.
 
-### Software Crisis
+#### Software Crisis
 
 The software crisis refers to the challenges and difficulties faced in the development and maintenance of software systems. These challenges include:
 
@@ -21,7 +21,7 @@ The software crisis refers to the challenges and difficulties faced in the devel
 - **Poor Quality:** Software products may contain bugs, errors, or security vulnerabilities, impacting user experience and reliability.
 - **Lack of Maintainability:** Software systems can become difficult to modify or update over time, hindering their adaptability.
 
-### Software Myths
+#### Software Myths
 
 - **Myth:** "Adding more programmers to a late project will make it finish sooner."
 - **Reality:** Adding more programmers can increase communication overhead and coordination challenges, potentially slowing down the project.
@@ -32,13 +32,13 @@ The software crisis refers to the challenges and difficulties faced in the devel
 
 By understanding the evolving role of software, recognizing the challenges of the software crisis, and debunking common myths, software engineers can adopt effective practices to develop high-quality, reliable, and maintainable software systems.
 
-# 2) Explain Software Engineering as a Layered Technology.
+## 2) Explain Software Engineering as a Layered Technology.
 
-## Software Engineering as a Layered Technology
+### Software Engineering as a Layered Technology
 
 **Software engineering** can be visualized as a layered technology, with each layer building upon the foundation of the previous one. This layered approach ensures a structured and systematic development process, leading to robust and maintainable software systems.
 
-### The Layers of Software Engineering
+#### The Layers of Software Engineering
 
 1. **The Process Layer:**
 
@@ -57,11 +57,11 @@ By understanding the evolving role of software, recognizing the challenges of th
    - **Components:** Includes integrated development environments (IDEs), version control systems, testing frameworks, and project management tools.
    - **Example:** Visual Studio, Eclipse, Git, Jira.
 
-### Visual Representation
+#### Visual Representation
 
 ![2.png](./2.png)
 
-### Key Benefits of the Layered Approach
+#### Key Benefits of the Layered Approach
 
 - **Modularity:** Each layer has a specific function, making the development process more organized and manageable.
 - **Flexibility:** Changes in one layer can be made without affecting the entire system.
@@ -70,7 +70,7 @@ By understanding the evolving role of software, recognizing the challenges of th
 
 By understanding the layered structure of software engineering, developers can adopt a more structured and efficient approach to building high-quality software systems.
 
-# 3) Define Software Development Life Cycle (Software Process Model) with suitable diagram.
+## 3) Define Software Development Life Cycle (Software Process Model) with suitable diagram.
 
 **Software Development Life Cycle (SDLC)**
 
@@ -131,7 +131,7 @@ The Software Development Life Cycle (SDLC) is a systematic process used by softw
 
 The choice of SDLC model depends on various factors, including project size, complexity, team expertise, and project constraints.
 
-# 4) Explain Linear Sequential Model (Waterfall Model) with all the steps.
+## 4) Explain Linear Sequential Model (Waterfall Model) with all the steps.
 
 **Linear Sequential Model (Waterfall Model)**
 
@@ -192,11 +192,11 @@ The Waterfall Model is a classic software development approach that follows a li
 
 The Waterfall Model, while a classic approach, is often less suitable for complex projects with changing requirements or iterative development. More flexible models like Agile have gained popularity in recent years to address the limitations of the Waterfall Model.
 
-# 5) Write short notes on Evolutionary Process Model and Concurrent Development Model.
+## 5) Write short notes on Evolutionary Process Model and Concurrent Development Model.
 
-## Short Notes on Evolutionary Process Model and Concurrent Development Model
+### Short Notes on Evolutionary Process Model and Concurrent Development Model
 
-### Evolutionary Process Model
+#### Evolutionary Process Model
 
 - **Core Concept:** Iterative and incremental development approach.
 - **Process:**
@@ -213,7 +213,7 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
   - Potential for scope creep if not managed well.
   - Requires strong user involvement.
 
-### Concurrent Development Model
+#### Concurrent Development Model
 
 - **Core Concept:** Multiple activities occur concurrently rather than sequentially.
 - **Process:**
@@ -234,9 +234,9 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 
 ![5-2.png](./5-2.png)
 
-# 6) Explain RAD model and Incremental Model with Suitable Diagrams.
+## 6) Explain RAD model and Incremental Model with Suitable Diagrams.
 
-## RAD Model
+### RAD Model
 
 **Rapid Application Development (RAD)** is a software development methodology that emphasizes rapid prototyping and iterative development. It aims to deliver functional systems quickly by using pre-built components and focusing on user feedback.
 
@@ -265,7 +265,7 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 - **Not suitable for all projects:** Best suited for projects with well-defined requirements and modular design.
 - **Potential for scope creep:** If not managed well, the project scope may expand.
 
-## Incremental Model
+### Incremental Model
 
 **Incremental Model** is a software development methodology where the product is developed in increments, with each increment delivering a portion of the required functionality. Each increment undergoes the complete software development cycle (requirements, design, implementation, testing).
 
@@ -297,7 +297,7 @@ The Waterfall Model, while a classic approach, is often less suitable for comple
 
 Both RAD and Incremental models are iterative and incremental approaches that emphasize user involvement and rapid delivery. The choice between them depends on factors such as project complexity, team expertise, and user requirements.
 
-# 7) Explain the following models: (a) Prototype Model (b) Spiral Model
+## 7) Explain the following models: (a) Prototype Model (b) Spiral Model
 
 **a) Prototype Model**
 
@@ -335,9 +335,9 @@ Both RAD and Incremental models are iterative and incremental approaches that em
   - Can be complex to manage.
   - Requires experienced personnel to assess and manage risks effectively.
 
-# 8) Explain Component Based Development with an example.
+## 8) Explain Component Based Development with an example.
 
-## Component-Based Development (CBD)
+### Component-Based Development (CBD)
 
 **Component-Based Development (CBD)** is a software development approach that focuses on building software systems by assembling pre-existing, independent software components. These components are like modular building blocks that can be easily integrated and reused across different applications.
 
@@ -372,7 +372,7 @@ By using these pre-built components, you can significantly reduce development ti
 
 **In essence, CBD promotes a modular and efficient approach to software development by leveraging pre-built components, leading to faster development, reduced costs, and improved software quality.**
 
-# 9) Differentiate between Product and Process.
+## 9) Differentiate between Product and Process.
 
 **Product vs. Process**
 
@@ -397,7 +397,7 @@ Imagine baking a cake:
 
 Understanding the distinction between product and process is crucial in various fields, including software engineering, manufacturing, and business management.
 
-# 10) Describe Agile Process Model with example.
+## 10) Describe Agile Process Model with example.
 
 **Agile Process Model**
 

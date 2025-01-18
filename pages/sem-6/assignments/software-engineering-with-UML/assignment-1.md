@@ -440,3 +440,462 @@ Imagine a team developing a mobile app for ordering food. Using the Agile approa
 - **Improved team morale:** Empowers teams to make decisions and take ownership.
 
 **In essence, the Agile process model provides a flexible and iterative approach to software development, enabling teams to deliver high-quality products that meet the evolving needs of customers.**
+
+## <mark> 11) Explain Requirement analysis, specification and requirement modelling. </mark>
+
+**1. Requirement Analysis**
+
+- **Definition:** The process of identifying, documenting, and validating the specific needs and expectations of the stakeholders (users, customers, etc.) for a software system.
+- **Key Activities:**
+  - **Elicitation:** Gathering requirements from various sources (interviews, surveys, workshops, document analysis).
+  - **Analysis:** Studying and understanding the gathered requirements, identifying conflicts, ambiguities, and inconsistencies.
+  - **Negotiation:** Resolving conflicts and prioritizing requirements based on feasibility, cost, and value.
+  - **Documentation:** Recording the agreed-upon requirements in a clear, concise, and unambiguous manner.
+
+**2. Requirement Specification**
+
+- **Definition:** A formal document that precisely describes the required functionalities, features, and constraints of a software system. It serves as a contract between the development team and the stakeholders.
+- **Key Characteristics:**
+  - **Complete:** All necessary requirements are included.
+  - **Consistent:** No contradictions or ambiguities exist.
+  - **Correct:** Accurately reflects the needs of the stakeholders.
+  - **Unambiguous:** Clear and easy to understand.
+  - **Verifiable:** Can be objectively tested and validated.
+  - **Traceable:** Links between requirements and other project documents (e.g., design, test cases) can be established.
+
+**3. Requirement Modeling**
+
+- **Definition:** The process of creating visual representations of the software requirements using various modeling techniques.
+- **Common Techniques:**
+  - **Use Case Diagrams:** Illustrate the interactions between users and the system.
+  - **Data Flow Diagrams (DFDs):** Show the flow of data through the system.
+  - **Entity-Relationship Diagrams (ERDs):** Model the data entities and their relationships.
+  - **State Diagrams:** Represent the different states of a system and the transitions between them.
+- **Benefits:**
+  - **Improved communication:** Visual models help stakeholders understand the requirements more easily.
+  - **Early identification of issues:** Potential problems can be identified and addressed early in the development cycle.
+  - **Better documentation:** Visual models provide a clear and concise representation of the requirements.
+
+**In summary:**
+
+- Requirement analysis is the process of gathering, analyzing, and documenting the needs of stakeholders.
+- Requirement specification is the formal document that describes these requirements in detail.
+- Requirement modeling involves creating visual representations of the requirements using various techniques.
+
+By effectively performing requirement analysis, specification, and modeling, software development teams can ensure that they build systems that meet the needs of their users and achieve project success.
+
+## <mark> 12) What are the characteristics of SRS? Write down the steps to write an SRS document. </mark>
+
+**Characteristics of a Good SRS**
+
+- **Correctness:** The requirements must accurately reflect the needs of the stakeholders.
+- **Completeness:** All necessary requirements should be included, with no missing information.
+- **Unambiguousness:** Requirements should be clearly stated and avoid ambiguity or vagueness.
+- **Consistency:** No contradictions or conflicts should exist within the requirements.
+- **Verifiability:** Requirements should be testable and measurable to ensure they are met.
+- **Modifiability:** The SRS should be easy to update and change as requirements evolve.
+- **Traceability:** Links between requirements and other project documents (e.g., design, test cases) should be maintained.
+- **Clarity:** The SRS should be written in clear, concise, and easy-to-understand language.
+- **Feasibility:** Requirements should be technically and economically feasible to implement.
+
+**Steps to Write an SRS Document**
+
+1. **Inception:**
+
+   - **Identify Stakeholders:** Determine who will be using the software and who will be affected by it.
+   - **Define Scope:** Clearly define the boundaries of the project, including what is and is not included.
+   - **Gather Information:** Collect information from various sources, such as interviews, surveys, and existing documentation.
+
+2. **Elicitation:**
+
+   - **Conduct Interviews:** Interview stakeholders to understand their needs and expectations.
+   - **Conduct Workshops:** Facilitate workshops to gather requirements from multiple stakeholders.
+   - **Use Questionnaires and Surveys:** Collect data from a larger group of stakeholders.
+   - **Analyze Existing Documentation:** Review existing documents, such as business plans and user manuals.
+
+3. **Analysis:**
+
+   - **Identify and Document Requirements:** Categorize requirements (functional, non-functional, user, system).
+   - **Prioritize Requirements:** Determine the importance and urgency of each requirement.
+   - **Resolve Conflicts:** Identify and resolve any conflicting requirements.
+   - **Validate Requirements:** Ensure that requirements are accurate, complete, and consistent.
+
+4. **Specification:**
+
+   - **Write Clear and Concise Statements:** Use precise language and avoid ambiguity.
+   - **Use Diagrams and Models:** Employ visual aids like use case diagrams, data flow diagrams, and state diagrams to illustrate requirements.
+   - **Create a Table of Contents and Index:** Organize the document for easy navigation.
+   - **Review and Approve:** Obtain approval from stakeholders on the final version of the SRS.
+
+5. **Maintenance:**
+   - **Track Changes:** Maintain a record of all changes made to the SRS.
+   - **Regularly Review and Update:** Update the SRS as requirements evolve or change.
+
+By following these steps and adhering to the characteristics of a good SRS, you can create a valuable document that serves as a foundation for successful software development.
+
+## <mark> 13) What is the Requirement Engineering Process? List and explain requirement engineering tasks. </mark>
+
+**Requirement Engineering Process**
+
+Requirement Engineering is the systematic process of identifying, analyzing, documenting, and managing the needs and expectations of stakeholders for a software system. It's a crucial step in the software development lifecycle, as it ensures that the final product meets the needs of the users and achieves the project objectives.
+
+**Key Tasks in Requirement Engineering**
+
+1. **Feasibility Study:**
+
+   - **Purpose:** To determine if the proposed software system is technically and economically feasible.
+   - **Activities:**
+     - Analyze project scope and objectives.
+     - Assess technical feasibility (available technology, skills, etc.).
+     - Evaluate economic feasibility (cost-benefit analysis, ROI).
+     - Identify potential risks and challenges.
+
+2. **Requirements Elicitation:**
+
+   - **Purpose:** To gather information about the needs and expectations of stakeholders.
+   - **Techniques:**
+     - Interviews
+     - Surveys
+     - Focus groups
+     - Workshops
+     - Document analysis
+     - Observation
+
+3. **Requirements Analysis:**
+
+   - **Purpose:** To analyze the gathered information, identify conflicts, ambiguities, and inconsistencies.
+   - **Activities:**
+     - Study and understand the requirements.
+     - Identify and resolve conflicts among stakeholders.
+     - Prioritize requirements based on importance and feasibility.
+     - Create models (e.g., use case diagrams, data flow diagrams) to visualize requirements.
+
+4. **Requirements Specification:**
+
+   - **Purpose:** To document the agreed-upon requirements in a clear, concise, and unambiguous manner.
+   - **Output:** Software Requirements Specification (SRS) document.
+   - **Characteristics of a good SRS:** Correctness, completeness, consistency, unambiguity, verifiability, traceability, modifiability, clarity, feasibility.
+
+5. **Requirements Validation:**
+
+   - **Purpose:** To ensure that the requirements are correct, complete, and consistent.
+   - **Techniques:**
+     - Reviews and inspections
+     - Prototyping
+     - Walkthroughs
+     - User feedback
+
+6. **Requirements Management:**
+   - **Purpose:** To track and manage changes to requirements throughout the project lifecycle.
+   - **Activities:**
+     - Maintain the SRS document.
+     - Track and resolve change requests.
+     - Communicate changes to stakeholders.
+
+**Importance of Requirement Engineering**
+
+- **Reduced Costs:** Early identification and resolution of issues can save significant costs later in the development cycle.
+- **Improved Quality:** Ensures that the software meets the needs of users and achieves project objectives.
+- **Increased Customer Satisfaction:** Better understanding of user needs leads to higher customer satisfaction.
+- **Reduced Risk:** Early identification and mitigation of risks.
+- **Improved Communication:** Provides a common understanding of requirements among stakeholders.
+
+By following these steps and best practices, organizations can effectively conduct requirement engineering and ensure the successful development of high-quality software systems.
+
+## <mark> 14) Describe Software design concepts and principles. </mark>
+
+**Software Design Concepts**
+
+- **Abstraction:**
+
+  - Simplifying complex systems by focusing on essential features and ignoring irrelevant details.
+  - Examples:
+    - Defining a car as a vehicle without concerning yourself with its internal mechanics.
+    - Creating a user interface that hides the underlying complexity of the system.
+
+- **Encapsulation:**
+
+  - Bundling data (attributes) and methods (operations) that operate on that data within a single unit (e.g., a class or object).
+  - Hides the internal implementation details from the outside world.
+  - Improves maintainability and reduces the impact of changes.
+
+- **Modularity:**
+
+  - Breaking down a large system into smaller, more manageable modules (components).
+  - Each module has a specific responsibility and well-defined interfaces.
+  - Improves code reusability, maintainability, and testability.
+
+- **Inheritance:**
+
+  - Creating new classes (subclasses) from existing ones (superclasses).
+  - Subclasses inherit properties and behaviors from their parent classes.
+  - Promotes code reusability and reduces redundancy.
+
+- **Polymorphism:**
+  - The ability of objects of different classes to be treated as objects of a common type.
+  - Enables flexibility and extensibility in software design.
+
+**Software Design Principles**
+
+- **SOLID Principles:**
+
+  - **Single Responsibility Principle (SRP):** A class should have only one reason to change.
+  - **Open/Closed Principle (OCP):** Software entities should be open for extension but closed for modification.
+  - **Liskov Substitution Principle (LSP):** Subtypes must be substitutable for their base types without altering the correctness of the program.
+  - **Interface Segregation Principle (ISP):** Clients should not be forced to depend on interfaces they don't use.
+  - **Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+- **DRY (Don't Repeat Yourself):** Avoid code duplication by extracting common logic into reusable components.
+
+- **KISS (Keep It Simple, Stupid):** Favor simple and straightforward solutions over complex ones.
+
+- **YAGNI (You Ain't Gonna Need It):** Avoid implementing features that are not currently required.
+
+- **Law of Demeter:** An object should have limited knowledge of the objects it collaborates with.
+
+**Key Considerations in Software Design**
+
+- **Usability:** How easy is the software to use and learn?
+- **Maintainability:** How easy is it to modify and update the software?
+- **Reusability:** Can components of the software be reused in other projects?
+- **Performance:** How efficiently does the software perform its tasks?
+- **Testability:** How easily can the software be tested?
+
+By following these concepts and principles, software developers can create well-structured, maintainable, and efficient software systems.
+
+## <mark> 15) Define module coupling and cohesion. Explain different types of coupling and Cohesion. </mark>
+
+**Coupling**
+
+- **Definition:** Coupling refers to the degree of interdependence between software modules.
+- **High Coupling:** Modules are highly dependent on each other. Changes in one module often necessitate changes in other modules. This makes the system difficult to maintain, understand, and test.
+- **Low Coupling:** Modules are relatively independent. Changes in one module have minimal impact on other modules. This promotes modularity, reusability, and maintainability.
+
+**Types of Coupling (from high to low):**
+
+1. **Content Coupling:** One module directly modifies the internal data of another module. (Worst type)
+2. **Common Coupling:** Two modules share the same global data area.
+3. **Stamp Coupling:** One module passes a data structure to another module, and the receiving module uses only a portion of it.
+4. **Data Coupling:** Modules communicate by passing simple data parameters.
+5. **Message Coupling:** Modules communicate through well-defined interfaces using messages. (Best type)
+
+**Cohesion**
+
+- **Definition:** Cohesion measures the degree to which the elements within a single module are functionally related and work together to achieve a common goal.
+- **High Cohesion:** All elements within a module are closely related and work together to achieve a single, well-defined function.
+- **Low Cohesion:** A module performs unrelated tasks or has elements that are not closely related to its primary function.
+
+**Types of Cohesion (from low to high):**
+
+1. **Coincidental Cohesion:** Elements within a module are completely unrelated.
+2. **Logical Cohesion:** Elements within a module are grouped together based on a logical association, but they don't necessarily belong together functionally.
+3. **Temporal Cohesion:** Elements within a module are grouped together because they are executed at the same time, not because they are functionally related.
+4. **Procedural Cohesion:** Elements within a module are grouped together because they are part of the same procedure or sequence of steps.
+5. **Communicational Cohesion:** Elements within a module operate on the same data or use the same input/output.
+6. **Functional Cohesion:** All elements within a module work together to achieve a single, well-defined function. (Best type)
+
+**In summary:**
+
+- **Strive for low coupling:** This promotes modularity, maintainability, and reusability.
+- **Strive for high cohesion:** This makes modules more focused, easier to understand, and less prone to errors.
+
+By carefully considering coupling and cohesion during the design phase, software developers can create more maintainable, flexible, and robust systems.
+
+## <mark> 16) Explain Different Symbols of E-R Diagrams. Draw E-R diagram for University Examination System. </mark>
+
+**Symbols Used in E-R Diagrams**
+
+- **Entity:** Represented by a rectangle. An entity is a real-world object or concept that you want to track in your database. For example, "Student," "Course," "Department."
+- **Attribute:** Represented by an oval or circle connected to an entity. Attributes are the properties or characteristics of an entity. For example, "Student_ID," "Name," "Course_Name," "Credits."
+- **Relationship:** Represented by a diamond shape. A relationship shows how two or more entities are associated with each other. For example, "enrolled_in" between "Student" and "Course."
+- **Cardinality:** Represented by symbols (0, 1, or N) on the lines connecting entities to relationships. It defines the number of instances of one entity that can be associated with instances of another entity.
+  - **1:1:** One-to-one relationship (e.g., one student can have only one student ID).
+  - **1:N:** One-to-many relationship (e.g., one instructor can teach many courses).
+  - **N:M:** Many-to-many relationship (e.g., many students can enroll in many courses).
+- **Primary Key:** Underlined attribute within an entity. It uniquely identifies each instance of that entity.
+- **Foreign Key:** An attribute in one entity that references the primary key of another entity. It establishes a link between the two entities.
+
+**E-R Diagram for University Examination System**
+
+Here's a simplified E-R diagram for a University Examination System:
+
+![16.png](./16.png)
+
+**Entities:**
+
+- **Student:**
+  - Attributes: Student_ID (Primary Key), Name, Address, Contact_No
+- **Course:**
+  - Attributes: Course_ID (Primary Key), Course_Name, Credits
+- **Instructor:**
+  - Attributes: Instructor_ID (Primary Key), Name, Department
+- **Exam:**
+  - Attributes: Exam_ID (Primary Key), Course_ID, Date, Time
+- **Result:**
+  - Attributes: Result_ID (Primary Key), Student_ID, Course_ID, Marks
+
+**Relationships:**
+
+- **Teaches:** Instructor 1:N Course
+- **Enrolled_In:** Student N:M Course
+- **Conducts:** Instructor 1:N Exam
+- **Appears_In:** Student N:M Exam
+- **Obtains:** Student 1:1 Result
+- **Belongs_To:** Result 1:1 Exam
+
+**Note:** This is a simplified representation. A real-world system would likely have more entities, attributes, and relationships, such as departments, subjects, grades, etc.
+
+This E-R diagram visually represents the entities, attributes, and relationships involved in a university examination system, providing a foundation for designing the database schema.
+
+## <mark> 17) List out all architectural design styles and explain any one in detail. </mark>
+
+**List of Architectural Design Styles:**
+
+- **Layered Architecture:**
+- **Client-Server Architecture:**
+- **Three-Tier Architecture:**
+- **Peer-to-Peer Architecture:**
+- **Event-Driven Architecture:**
+- **Microservices Architecture:**
+- **Service-Oriented Architecture (SOA):**
+- **Cloud-Native Architecture:**
+- **Data-Centric Architecture:**
+- **Pipe and Filter Architecture:**
+- **Model-View-Controller (MVC) Architecture:**
+
+**Detailed Explanation: Client-Server Architecture**
+
+**Client-Server Architecture** is a distributed software architecture where the application is divided into two main parts:
+
+- **Client:** The client is the user interface or application that interacts with the user. It sends requests to the server and receives responses.
+- **Server:** The server is a central computer or system that provides services to the clients. It manages data, processes requests, and sends responses back to the clients.
+
+**Key Characteristics:**
+
+- **Centralized Control:** The server controls access to data and resources.
+- **Scalability:** Can be scaled by adding more servers to handle increased load.
+- **Flexibility:** Clients can be located anywhere with network access.
+- **Maintainability:** Easier to maintain and update the server than individual client applications.
+
+**Examples:**
+
+- **Web Applications:** Web browsers (clients) request web pages from web servers.
+- **Email Systems:** Email clients send and receive emails through email servers.
+- **Database Systems:** Client applications connect to a database server to access and manipulate data.
+
+**Advantages:**
+
+- **Centralized Data Management:** Ensures data consistency and security.
+- **Improved Resource Sharing:** Allows efficient sharing of resources among multiple clients.
+- **Enhanced Scalability:** Can easily accommodate a growing number of users.
+
+**Disadvantages:**
+
+- **Single Point of Failure:** If the server fails, all clients are affected.
+- **Performance Bottlenecks:** Can experience performance issues if the server is overloaded.
+- **Security Concerns:** The server can be a target for attacks.
+
+**In summary:** Client-Server Architecture is a widely used and versatile architectural style that provides a robust and scalable solution for many software applications.
+
+## <mark> 18) Draw Data Flow Diagram (DFD) of Level-0, Level-1 and Level-2 for Airlines Reservation System. </mark>
+
+![18-1.png](./18-1.png)
+
+![18-2.png](./18-2.png)
+
+![18-3.png](./18-3.png)
+
+## <mark> 19) Explain functional oriented Design Approach. </mark>
+
+**Functional Oriented Design Approach**
+
+In functional-oriented design, the software system is decomposed into a set of interacting units or modules, where each unit has a clearly defined function. This approach focuses on identifying and organizing the system's functionalities.
+
+**Key Concepts:**
+
+- **Functions:** The core building blocks of the system. Each function performs a specific task and has well-defined inputs and outputs.
+- **Data Flow:** The movement of data between functions. Data flows from one function to another as input and is transformed into output.
+- **Modules:** Groups of related functions that work together to achieve a specific sub-goal of the system.
+- **Decomposition:** The process of breaking down the overall system into smaller, more manageable functions and modules.
+
+**Steps in Functional Oriented Design:**
+
+1. **Problem Definition:** Clearly define the problem and the desired functionality of the system.
+2. **Functional Decomposition:** Break down the system into a hierarchy of functions, starting with high-level functions and gradually refining them into more detailed sub-functions.
+3. **Data Flow Analysis:** Identify the data flow between functions and determine the data structures required for input and output.
+4. **Module Design:** Design the individual modules, specifying their inputs, outputs, and internal logic.
+5. **Interface Design:** Define the interfaces between modules, including the data formats and communication protocols.
+
+**Techniques Used in Functional Oriented Design:**
+
+- **Data Flow Diagrams (DFDs):** Graphical representation of the flow of data through a system.
+- **Structured English:** A formal language for describing the logic of a function.
+- **Decision Tables:** Tabular representation of complex decision-making logic.
+
+**Advantages of Functional Oriented Design:**
+
+- **Modularity:** Enhances code reusability, maintainability, and testability.
+- **Clarity:** Improves the understanding of the system's functionality.
+- **Efficiency:** Can lead to efficient implementations.
+
+**Disadvantages of Functional Oriented Design:**
+
+- **Data-centric:** Can sometimes lead to data redundancy and inconsistencies.
+- **Limited flexibility:** May not be as flexible as object-oriented design for handling complex interactions and evolving requirements.
+
+**In summary:**
+
+Functional-oriented design is a classic approach to software design that emphasizes the decomposition of the system into well-defined functions. While it has its limitations, it remains a valuable technique for designing modular and efficient software systems, particularly in domains where data flow and functional transformations are central.
+
+## <mark> 20) What is the importance of component level design? Using an appropriate example. </mark>
+
+**Importance of Component-Level Design**
+
+Component-level design is a crucial phase in the software development process. It focuses on defining the internal details of each software component identified during the architectural design. This includes specifying data structures, algorithms, interface characteristics, and communication mechanisms.
+
+**Key Importance:**
+
+- **Modularity and Reusability:**
+
+  - Well-designed components are self-contained units with well-defined interfaces.
+  - This promotes modularity, making the system easier to understand, maintain, and modify.
+  - Reusable components can be used in multiple projects, saving time and effort.
+
+- **Improved Maintainability:**
+
+  - Changes to one component have minimal impact on other components.
+  - This makes it easier to fix bugs, add new features, and adapt to changing requirements.
+
+- **Enhanced Testability:**
+
+  - Components with well-defined interfaces are easier to test independently.
+  - This allows for more thorough testing and earlier detection of defects.
+
+- **Improved Communication:**
+  - Clear component specifications facilitate better communication among developers.
+  - This reduces misunderstandings and improves team coordination.
+
+**Example: E-commerce Website**
+
+Imagine designing an e-commerce website. At the component level, you might define components such as:
+
+- **User Management:**
+
+  - Data structures: User profiles (username, password, address, etc.)
+  - Algorithms: User registration, login, password recovery
+  - Interface: Methods for user registration, login, and profile updates
+
+- **Product Catalog:**
+
+  - Data structures: Product information (name, description, price, image, etc.)
+  - Algorithms: Search, filtering, sorting products
+  - Interface: Methods for retrieving product information, adding products to the cart
+
+- **Shopping Cart:**
+  - Data structures: Cart items (product ID, quantity)
+  - Algorithms: Adding/removing items, calculating total price, applying discounts
+  - Interface: Methods for adding items to the cart, removing items from the cart, checking out
+
+By carefully designing these components, you ensure that they are well-structured, reusable, and easy to maintain. This leads to a more robust, efficient, and maintainable e-commerce system.
+
+In summary, component-level design is a critical step in the software development process that directly impacts the quality, maintainability, and success of the final product. By focusing on creating well-defined, modular, and reusable components, developers can build more robust, flexible, and adaptable software systems.

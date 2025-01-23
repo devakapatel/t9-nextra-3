@@ -6,7 +6,7 @@
 
 - ### [Data Science (DS)](./syllabus/data-science)
 
-- ### [Distributed Systems (DS)](./syllabus/distributed-systems)
+- ### [Distributed System (DS)](./syllabus/distributed-system)
 
 - ### [Internet of Things (IoT)](./syllabus/internet-of-things.md) (Open Elective)
 

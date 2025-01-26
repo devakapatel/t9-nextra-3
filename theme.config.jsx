@@ -48,11 +48,7 @@ export default {
     content: null,
   },
   footer: {
-    content: (
-      <span>
-        T9 &copy; {new Date().getFullYear()} | Owned and managed by Nexa Skore
-      </span>
-    ),
+    content: <span>T9 &copy; {new Date().getFullYear()}</span>,
   },
   head: DynamicHead,
 };

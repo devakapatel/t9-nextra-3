@@ -2,6 +2,8 @@
 
 - ### [Automata Theory and Compiler Design (ATCD)](./assignments/automata-theory-and-compiler-design)
 
+- ### [Cyptography and Network Security (CNS)](./assignments/cyptography-and-network-security)
+
 - ### [Distributed System (DS)](./assignments/distributed-system)
 
 - ### [Internet of Things (IoT)](./assignments/internet-of-things) (Minor)

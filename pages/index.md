@@ -13,6 +13,12 @@ Navigate through the semesters and access essential resources, links, and more�
 
 ---
 
+## 💬 Join WhatApp Group
+
+Click [here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0) to join whatsapp group for regular updates.
+
+---
+
 ## 🔗 Useful Links:
 
 Looking for forms, WhatsApp groups, or more details about this project? Check out everything [here](./links).

@@ -8,6 +8,8 @@
 
 - ### [Internet of Things (IoT)](./assignments/internet-of-things) (Minor)
 
+- ### [Security and Privacy in IoT](./assignments/security-and-privacy-in-iot) (Minor)
+
 - ### [Mobile Application Development (MAD)](./assignments/mobile-application-development)
 
 - ### [Software Engineering with UML (SEUML)](./assignments/software-engineering-with-UML)

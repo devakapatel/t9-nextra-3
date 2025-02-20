@@ -1,3 +1,3 @@
 # Data Compression
 
-- ### [Assignment 1](./data-compression/assignment-1)
+- ### [Assignment 2](./data-compression/assignment-2)

@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 2
 
 ## 1) Write a method to generate a tag in arithmetic coding.
 

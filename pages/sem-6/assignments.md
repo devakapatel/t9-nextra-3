@@ -4,6 +4,8 @@
 
 - ### [Cyptography and Network Security (CNS)](./assignments/cyptography-and-network-security)
 
+- ### [Data Compression (DC)](./assignments/data-compression)
+
 - ### [Distributed System (DS)](./assignments/distributed-system)
 
 - ### [Internet of Things (IoT)](./assignments/internet-of-things) (Minor)

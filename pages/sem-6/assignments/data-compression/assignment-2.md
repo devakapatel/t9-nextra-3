@@ -1,6 +1,6 @@
 # Assignment 2
 
-## 1) Write a method to generate a tag in arithmetic coding.
+## <mark> 1) Write a method to generate a tag in arithmetic coding. </mark>
 
 The following Python code implements a method to generate a tag (code) in arithmetic coding. This assumes you already have the probability model (cumulative probabilities) for the symbols in your alphabet.
 
@@ -63,7 +63,7 @@ print(f"Tag for D: {tag_D}")  # Output: Tag for D: 9/10
 
 This improved answer uses the `fractions` module for better precision in representing the fractional tag. Remember that for a complete arithmetic coding implementation, you'll need to handle interval scaling (to avoid precision loss with very small intervals) and concatenation of tags for multiple symbols. This example only shows generating the tag for a _single_ symbol. A full implementation is significantly more complex.
 
-## 2) Write an encoding algorithm for arithmetic coding.
+## <mark> 2) Write an encoding algorithm for arithmetic coding. </mark>
 
 This code implements a simplified arithmetic coding algorithm for encoding. It handles only lowercase letters a-z and a space character. For a production-ready system, you'd need significantly more robust error handling and the ability to handle a much larger character set (potentially using a binary tree for efficient symbol lookup).
 
@@ -150,7 +150,7 @@ This simplified example provides a basic understanding of arithmetic coding. For
 
 This improved implementation would be considerably more complex but much more efficient and robust.
 
-## 3) Define arithmetic coding. Encode and decode "BACBA" with arithmetic coding (P(A) = 0.5, P(B) = 0.3, P(C) = 0.2)
+## <mark> 3) Define arithmetic coding. Encode and decode "BACBA" with arithmetic coding (P(A) = 0.5, P(B) = 0.3, P(C) = 0.2) </mark>
 
 ```python
 def arithmetic_encode(sequence, probabilities):
@@ -269,7 +269,7 @@ The decoding process is the reverse. You start with the tag and iteratively dete
 
 - **Context Modeling:** Arithmetic coding can be combined with context modeling (where the probability of a symbol depends on the preceding symbols) to further improve compression. This is a powerful technique used in many modern compression algorithms.
 
-## 4) Write a method to generate binary code A={al, a2, a3, a4} (P(a1)=0.5, P(a2)=0.25, P(a3)=0.125, p(a4)=0.125)
+## <mark> 4) Write a method to generate binary code A={al, a2, a3, a4} (P(a1)=0.5, P(a2)=0.25, P(a3)=0.125, p(a4)=0.125) </mark>
 
 Several methods can generate binary codes for the given probabilities. The most efficient is likely to use Huffman coding, which creates a prefix-free code minimizing the expected code length. However, a simpler method (though potentially less efficient) is a straightforward approach based on cumulative probabilities.
 
@@ -328,7 +328,7 @@ print(code) # Output will be a dictionary with optimal Huffman codes.
 
 Remember to choose the method that best suits your needs. For simple cases, Method 1 is sufficient. For larger alphabets or where code length efficiency is critical, Huffman coding (Method 2) is preferred. The output codes might differ slightly depending on the algorithm's tie-breaking decisions, but all valid solutions will have similar lengths.
 
-## 5) Write a method to generate a tag using the scaling method. Encode and decode the sequence "123121" (P(a1)=0.8, P(a2)=0.02, P(a3)=0.18)
+## <mark> 5) Write a method to generate a tag using the scaling method. Encode and decode the sequence "123121" (P(a1)=0.8, P(a2)=0.02, P(a3)=0.18) </mark>
 
 ```python
 def generate_tag(sequence, probabilities):
@@ -437,7 +437,7 @@ else:
 
 This revised version provides a much more robust and accurate implementation of the scaling method for encoding and decoding. It addresses the potential issues and provides clear error handling.
 
-## 6) Degenerate the sequence using a scaling method.. [Consider the same sequence and frequencies which you have generated in question-5]
+## <mark> 6) Degenerate the sequence using a scaling method.. [Consider the same sequence and frequencies which you have generated in question-5] </mark>
 
 Degenerating a sequence using the scaling method is essentially the _reverse_ process of encoding. You start with a tag (a value within the range [0, 1)) and iteratively determine the symbols that correspond to that tag, effectively reconstructing the original sequence. Here's how you can adapt the code from the previous response to perform degeneration:
 
@@ -513,7 +513,7 @@ Imagine the interval [0, 1) divided into segments according to the cumulative pr
 
 **Important Note:** Degeneration relies on having the _exact_ same probabilities used for encoding. If the probabilities are even slightly different, the degeneration process will likely fail to reconstruct the original sequence.
 
-## 7) Write the difference between arithmetic coding and huffman coding.
+## <mark> 7) Write the difference between arithmetic coding and huffman coding. </mark>
 
 Both arithmetic coding and Huffman coding are entropy encoding techniques used for lossless data compression, but they achieve this in fundamentally different ways:
 
@@ -545,7 +545,7 @@ Both arithmetic coding and Huffman coding are entropy encoding techniques used f
 
 While Huffman coding is simpler and often sufficient for many applications, arithmetic coding tends to achieve higher compression ratios, particularly when dealing with smaller files or skewed symbol probabilities. However, this improved efficiency comes at the cost of increased implementation complexity.
 
-## 8) Decipher tag using given tag value and frequencies. Tag value= 0.772352, F(1) = 0.8 F(2) = 0.82 F(3) = 1 F(k) = 0 k <= 0 (upto 4 Sequence) [Using Method-2]
+## <mark> 8) Decipher tag using given tag value and frequencies. Tag value= 0.772352, F(1) = 0.8 F(2) = 0.82 F(3) = 1 F(k) = 0 k <= 0 (upto 4 Sequence) [Using Method-2] </mark>
 
 The provided information describes a decoding problem likely related to a frequency-based tag system, possibly in the context of information retrieval or data compression. Let's break down the problem and attempt a solution using "Method-2" (which isn't explicitly defined, so we'll have to make some assumptions).
 
@@ -590,7 +590,7 @@ Then, if the tag value (0.772352) fell within the probability range for "AB" (wi
 
 Without the crucial mapping between the cumulative frequencies and the actual sequences (the specifics of "Method-2"), we cannot fully decipher the tag value. The problem statement needs additional information to provide a complete solution. The process outlined above shows how to _begin_ the decoding, but it stops short due to the missing mapping data.
 
-## 9) Write an encoding algorithm using integer implementation.
+## <mark> 9) Write an encoding algorithm using integer implementation. </mark>
 
 This algorithm uses a simple substitution cipher with a key to encode an integer message. It's not cryptographically secure – for that, you'd need far more sophisticated methods – but it demonstrates integer-based encoding.
 
@@ -662,7 +662,7 @@ print(f"Result for invalid input: {invalid_encoded}") # Output: -1
 
 This code works by treating the integer as a sequence of digits. Each digit is shifted by the key using modular arithmetic to wrap around if the result exceeds 9. The decoded function reverses this process. Remember that this is a very basic example and not suitable for secure communication. For real-world encryption, use established cryptographic libraries.
 
-## 10) Decode the following binary sequence using integer implementation method. 1100010010000000 (upto 4 elements) count(1)=40, count(2)= 1, count(3)= 9, Total_count=50
+## <mark> 10) Decode the following binary sequence using integer implementation method. 1100010010000000 (upto 4 elements) count(1)=40, count(2)= 1, count(3)= 9, Total_count=50 </mark>
 
 The provided information is incomplete and inconsistent for decoding the binary sequence using an integer implementation method. Let's break down why:
 

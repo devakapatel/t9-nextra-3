@@ -1,6 +1,6 @@
 # Assignment 2
 
-## 1) Define Asymmetric Key Encryption with a proper Diagram.
+## <mark> 1) Define Asymmetric Key Encryption with a proper Diagram. </mark>
 
 ### Asymmetric Key Encryption (Public Key Encryption)
 
@@ -89,7 +89,7 @@ Asymmetric Key Encryption, also known as Public Key Encryption, is a cryptograph
 
 In summary, Asymmetric Key Encryption provides a powerful mechanism for secure communication and digital signatures, relying on the mathematical relationship between a public and private key pair. It is a crucial component of modern security infrastructure.
 
-## 2) Explain the distribution of public keys in detail.
+## <mark> 2) Explain the distribution of public keys in detail. </mark>
 
 The distribution of public keys is a critical aspect of public-key cryptography (also known as asymmetric cryptography). It allows parties to communicate securely without having previously exchanged a secret key. The primary goal is to ensure that each entity can reliably obtain the correct public key of another entity to encrypt messages for them or verify their digital signatures. Let's break down the details:
 
@@ -243,7 +243,7 @@ Here are the common methods used to distribute public keys, each with its own se
 
 The distribution of public keys is a vital aspect of public-key cryptography. Various methods exist, each with its strengths and weaknesses. Choosing the appropriate method depends on the specific security requirements, scale, cost, and complexity of the application. PKI with digital certificates is the most widely used and trusted approach for many applications, but other methods like the web of trust and blockchain-based identity systems are gaining traction in specific contexts. Regardless of the method chosen, it's crucial to carefully consider the security implications and ensure that the public key distribution process is robust and reliable to prevent attacks.
 
-## 3) Explain RSA public key cryptography with all steps.
+## <mark> 3) Explain RSA public key cryptography with all steps. </mark>
 
 RSA is a widely used public-key cryptosystem. It relies on the mathematical difficulty of factoring large numbers. Here's a breakdown of the key generation and encryption/decryption processes:
 
@@ -304,7 +304,7 @@ The security of RSA relies on the difficulty of factoring large numbers. Given _
 
 RSA is a fundamental algorithm in modern cryptography and is widely used for secure communication, digital signatures, and key exchange. Its strength lies in the mathematical properties of prime numbers and modular arithmetic.
 
-## 4) Justify Diffie Hellman Key Exchange vulnerable to Man in Middle Attack.
+## <mark> 4) Justify Diffie Hellman Key Exchange vulnerable to Man in Middle Attack. </mark>
 
 The Diffie-Hellman Key Exchange protocol allows two parties (Alice and Bob) to establish a shared secret over an insecure channel. While it's ingenious, it's vulnerable to a Man-in-the-Middle (MITM) attack because **it lacks authentication**. Here's a breakdown:
 
@@ -389,7 +389,7 @@ The solution to the Man-in-the-Middle attack is to add authentication. This can 
 
 In summary, Diffie-Hellman is a powerful tool for establishing shared secrets, but it must be combined with authentication mechanisms to be truly secure in the face of active adversaries. The lack of authentication makes it inherently vulnerable to the Man-in-the-Middle attack.
 
-## 5) P and Q are two prime numbers. P=7, and Q=17. Take public key E=5. If the plaintext value is 6, then what will be the cipher text value according to the RSA algorithm? Explain in detail.
+## <mark> 5) P and Q are two prime numbers. P=7, and Q=17. Take public key E=5. If the plaintext value is 6, then what will be the cipher text value according to the RSA algorithm? Explain in detail. </mark>
 
 Okay, let's break down the RSA encryption process with the given values and calculate the ciphertext.
 
@@ -474,7 +474,7 @@ Calculating 41<sup>77</sup> mod 119 by hand is tedious, but using a calculator o
 - Ciphertext: 41
 - The process involves calculating N, Φ(N), and then applying the encryption formula C = M<sup>E</sup> mod N. Finding the private key D is essential for decryption.
 
-## 6) Solve this example Using Knapsack algorithm Super Increasing sequence={1, 2, 4, 10, 20, 40} Do necessary calculations to solve.
+## <mark> 6) Solve this example Using Knapsack algorithm Super Increasing sequence={1, 2, 4, 10, 20, 40} Do necessary calculations to solve. </mark>
 
 Okay, let's break down how to solve a knapsack problem using a super-increasing sequence. Remember, the key advantage of a super-increasing sequence is that it allows for a very efficient and straightforward solution compared to a general knapsack problem.
 

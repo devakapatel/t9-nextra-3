@@ -1,6 +1,6 @@
 # Assignment 3
 
-## 1) Explain 4 P’s (Management Spectrum) of Effective Project Management in detail.
+## <mark> 1) Explain 4 P’s (Management Spectrum) of Effective Project Management in detail. </mark>
 
 The "4 Ps" in project management, while not a universally standardized framework like the PMBOK Guide's knowledge areas, often represent a practical and intuitive approach to effective project management. These Ps often refer to **People, Process, Product, and Project**. Let's break them down:
 
@@ -46,7 +46,7 @@ The "4 Ps" in project management, while not a universally standardized framework
 
 In essence, effective project management requires a balanced approach across these four Ps. Ignoring any one of them can jeopardize the success of the entire project. The relative importance of each P might vary depending on the specific project, but all are fundamentally interconnected and crucial for achieving desired outcomes.
 
-## 2) Describe the concept of Product metrics, Process metrics and Project metrics.
+## <mark> 2) Describe the concept of Product metrics, Process metrics and Project metrics. </mark>
 
 Product, process, and project metrics are all crucial for evaluating the success of a software development effort, but they focus on different aspects:
 
@@ -80,7 +80,7 @@ Product, process, and project metrics are all crucial for evaluating the success
 
 The key difference is the focus: Product metrics assess the _outcome_, process metrics assess the _how_, and project metrics assess the _delivery_. Effective software development uses all three types of metrics in a coordinated way to improve quality, efficiency, and overall success. The specific metrics used will vary depending on the project, the development methodology, and the organization's goals.
 
-## 3) Explain Software Project management and W5HH principle.
+## <mark> 3) Explain Software Project management and W5HH principle. </mark>
 
 ### Software Project Management
 
@@ -111,7 +111,7 @@ The W5HH principle is a mnemonic device used to ensure comprehensive planning an
 
 By systematically addressing these questions, project managers can ensure that everyone involved understands the project's purpose, scope, and execution plan, leading to better communication, collaboration, and ultimately, project success. The W5HH principle aids in creating a clear and comprehensive project plan, minimizing misunderstandings and improving overall project management.
 
-## 4) Explain COCOMO Model and its types for project estimation with suitable example.
+## <mark> 4) Explain COCOMO Model and its types for project estimation with suitable example. </mark>
 
 The Constructive Cost Model (COCOMO) is a procedural software cost estimation model. It's used to predict the effort and time required to develop a software project based on various factors like project size, experience of the development team, and the complexity of the software. COCOMO comes in three different forms, each with increasing levels of detail and accuracy:
 
@@ -168,7 +168,7 @@ This revised estimate shows that considering the cost drivers increases the effo
 
 Basic COCOMO is quick and easy but less accurate. Intermediate COCOMO improves accuracy by adding cost drivers. Detailed COCOMO is the most accurate but requires the most input data. The choice of which COCOMO model to use depends on the stage of the project and the level of detail available. Early in the project lifecycle, Basic or Intermediate COCOMO might suffice, while later, when more information is available, Detailed COCOMO can be employed.
 
-## 5) Write a Short note on FP (Function Point Analysis) and LOC (Line of Code).
+## <mark> 5) Write a Short note on FP (Function Point Analysis) and LOC (Line of Code). </mark>
 
 ### FP (Function Point Analysis) vs. LOC (Lines of Code)
 
@@ -188,7 +188,7 @@ Both Function Point Analysis (FP) and Lines of Code (LOC) are software estimatio
 
 **In summary:** While LOC provides a quick, albeit crude, measure of software size, FP offers a more robust and meaningful measure of functional size, making it preferable for project estimation, effort prediction, and productivity measurement, especially in large and complex projects. FP is less susceptible to coding style variations and focuses on the value delivered to the user rather than the implementation details.
 
-## 6) Describe various types of Software Project Planning tools for project scheduling and tracking. (Work Breakdown Structure/PERT/Gantt Chart/ CPM)
+## <mark> 6) Describe various types of Software Project Planning tools for project scheduling and tracking. (Work Breakdown Structure/PERT/Gantt Chart/ CPM) </mark>
 
 Several tools aid in software project planning, scheduling, and tracking. They offer different approaches to visualizing and managing the project lifecycle. Here's a breakdown of some key methods:
 
@@ -224,7 +224,7 @@ Several tools aid in software project planning, scheduling, and tracking. They o
 
 These tools are often used together. A WBS provides the foundation, PERT or CPM helps determine the schedule, and a Gantt chart visually represents and tracks the schedule. Modern project management software usually integrates all these functionalities. Choosing the right combination depends on the project's complexity, risk profile, and team preferences.
 
-## 7) What do you mean by Risk Analysis? Explain RMMM.
+## <mark> 7) What do you mean by Risk Analysis? Explain RMMM. </mark>
 
 Risk analysis is the systematic process of identifying, analyzing, and evaluating potential risks that could affect a project, business, or other undertaking. It involves determining the likelihood and potential impact of each risk, enabling informed decision-making and proactive mitigation strategies. The goal is not to eliminate all risk (which is often impossible), but to understand and manage it effectively, minimizing its negative consequences and maximizing opportunities.
 
@@ -262,7 +262,7 @@ By using an RMMM, organizations can:
 
 RMMM is a flexible tool and the specific columns can be adapted to suit the needs of a particular project or organization.
 
-## 8) Define Risk Identification,Risk Projection and Risk Refinement.
+## <mark> 8) Define Risk Identification,Risk Projection and Risk Refinement. </mark>
 
 Let's define each of these risk management concepts:
 
@@ -291,7 +291,7 @@ Risk refinement is an iterative process of improving the accuracy and detail of 
 
 Risk refinement is a continuous process that occurs throughout the lifecycle of a project or system, ensuring that the risk management plan remains relevant and effective. The goal is to maintain an accurate and up-to-date understanding of the risks and their potential consequences.
 
-## 9) Differentiate Quality Assurance Vs Quality Control.
+## <mark> 9) Differentiate Quality Assurance Vs Quality Control. </mark>
 
 Quality Assurance (QA) and Quality Control (QC) are both crucial for ensuring a product or service meets required standards, but they differ significantly in their approach and focus:
 
@@ -315,7 +315,7 @@ Quality Assurance (QA) and Quality Control (QC) are both crucial for ensuring a 
 
 **In short:** QA is about _doing the right things_, while QC is about _doing things right_. They are complementary and work best when implemented together. A strong QA process minimizes the need for extensive QC, resulting in greater efficiency and reduced costs.
 
-## 10) What is Software Reviews? Explain its types.
+## <mark> 10) What is Software Reviews? Explain its types. </mark>
 
 Software reviews are critical evaluations of software applications, systems, or components. They assess various aspects of the software to determine its quality, usability, functionality, security, and overall value. These reviews are used by developers, businesses, and individual users to make informed decisions about software selection, development, and improvement.
 

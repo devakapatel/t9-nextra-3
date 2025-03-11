@@ -1,0 +1,72 @@
+import { useState, useEffect } from 'react';
+
+export function CommitsList() {
+  const [commits, setCommits] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+useEffect(() => {
+async function fetchCommits() {
+try {
+setLoading(true);
+const response = await fetch('https://api.github.com/repos/devakapatel/t9/commits');
+
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setCommits(data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching commits:', err);
+        setError(err.message);
+        setLoading(false);
+      }
+    }
+
+    fetchCommits();
+
+}, []);
+
+const formatDate = (dateString) => {
+const options = {
+year: 'numeric',
+month: 'short',
+day: 'numeric',
+hour: '2-digit',
+minute: '2-digit',
+};
+return new Date(dateString).toLocaleDateString(undefined, options);
+};
+
+if (loading) return <div className="p-4">Loading commit history...</div>;
+if (error) return <div className="p-4 text-red-600">Error loading commits: {error}</div>;
+
+return (
+
+<div className="max-w-4xl mx-auto p-4">
+  <div className="overflow-x-auto">
+    <table className="w-full border border-gray-300 shadow-lg rounded-lg">
+      <thead className="bg-gray-200">
+        <tr className="text-left">
+          <th className="px-4 py-2">Commit Message</th>
+          <th className="px-4 py-2">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {commits.map((commit) => (
+          <tr key={commit.sha} className="border-t text-sm">
+            <td className="px-4 py-3">{commit.commit.message}</td>
+            <td className="px-4 py-3">
+              {formatDate(commit.commit.author.date)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+); }
+
+<CommitsList />;

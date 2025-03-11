@@ -30,3 +30,5 @@ Looking for forms, WhatsApp groups, or more details about this project? Check ou
 This is your go-to hub for semester resources, project materials, and collaboration tools. Whether you’re revisiting past work or preparing for exams, T9 is built to make your academic life easier!
 
 ---
+
+test : [here](./updates.mdx)

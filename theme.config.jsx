@@ -48,7 +48,19 @@ export default {
     content: null,
   },
   footer: {
-    content: <span>T9 &copy; {new Date().getFullYear()}</span>,
+    content: (
+      <span>
+        T9 &copy; {new Date().getFullYear()} | Owned and managed by
+        <a
+          href="https://github.com/devakapatel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Dev Patel
+        </a>
+      </span>
+    ),
   },
   head: DynamicHead,
 };

@@ -2,4 +2,6 @@
 
 - ### [Automata Theory and Compiler Design (ATCD)](./question-banks/automata-theory-and-compiler-design)
 
+- ### [Cryptography and Network Security (CNS)](./question-banks/cryptography-and-network-security)
+
 - ### [Data Science (DS)](./question-banks/data-science)

@@ -6,4 +6,6 @@
 
 - ### [Data Science (DS)](./question-banks/data-science)
 
+- ### [Mobile Application Development (MAD)](./question-banks/mobile-applicarion-development)
+
 - ### [Software Engineering with UML (SEUML)](./question-banks/software-engineering-with-uml)

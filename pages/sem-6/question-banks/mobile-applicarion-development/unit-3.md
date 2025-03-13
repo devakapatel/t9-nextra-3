@@ -2,11 +2,11 @@
 
 ## <mark> 1) What is SQLite? write a short note on it? </mark>
 
-### **SQLite in Android**
+### SQLite in Android
 
 **SQLite** is a **lightweight, relational database management system (RDBMS)** used in Android for **storing structured data locally** on the device. It is embedded within Android, meaning no **separate server** or configuration is required.
 
-### **Features of SQLite**
+### Features of SQLite
 
 1. **Lightweight & Embedded** – No external setup needed.
 2. **ACID-Compliant** – Ensures data integrity with **Atomicity, Consistency, Isolation, and Durability**.
@@ -14,9 +14,9 @@
 4. **Local Storage** – Stores data in a **single file on the device**.
 5. **Efficient & Fast** – Works well for **small to medium-sized applications**.
 
-### **Basic Example: Using SQLite in Android**
+### Basic Example: Using SQLite in Android
 
-#### **1. Create a Database Helper Class (`DatabaseHelper.java`)**
+#### 1. Create a Database Helper Class (`DatabaseHelper.java`)
 
 ```java
 import android.content.Context;
@@ -45,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 }
 ```
 
-#### **2. Insert Data into SQLite**
+#### 2. Insert Data into SQLite
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -56,23 +56,23 @@ db.insert("students", null, values);
 db.close();
 ```
 
-### **Use Cases of SQLite**
+### Use Cases of SQLite
 
 - **Offline Applications** – Stores data locally without internet.
 - **User Data Storage** – Saves user preferences, settings, and history.
 - **Small to Medium Databases** – Manages local data efficiently for mobile apps.
 
-### **Conclusion**
+### Conclusion
 
 SQLite is a **powerful and efficient local database** for Android applications. It is widely used for **storing structured data** without requiring an internet connection.
 
 ## <mark> 2) Explain the concept of Broadcast Receivers in detail. </mark>
 
-### **Broadcast Receivers in Android**
+### Broadcast Receivers in Android
 
 A **Broadcast Receiver** in Android is a component that listens for **system-wide or app-specific broadcast messages**. These broadcasts notify apps about **system events or custom app events**, such as **battery status, network changes, SMS received, etc.**
 
-### **Types of Broadcasts in Android**
+### Types of Broadcasts in Android
 
 1. **System Broadcasts** – Sent by the Android system when an event occurs.
 
@@ -83,9 +83,9 @@ A **Broadcast Receiver** in Android is a component that listens for **system-wid
    - Example: A **music app** can broadcast an event when a song starts playing.
    - Sent using: `sendBroadcast()`
 
-### **Implementing a Broadcast Receiver in Android**
+### Implementing a Broadcast Receiver in Android
 
-#### **1. Create a Broadcast Receiver Class (`MyReceiver.java`)**
+#### 1. Create a Broadcast Receiver Class (`MyReceiver.java`)
 
 ```java
 import android.content.BroadcastReceiver;
@@ -101,7 +101,7 @@ public class MyReceiver extends BroadcastReceiver {
 }
 ```
 
-#### **2. Register the Receiver in `AndroidManifest.xml` (Static Registration)**
+#### 2. Register the Receiver in `AndroidManifest.xml` (Static Registration)
 
 ```xml
 <receiver android:name=".MyReceiver">
@@ -111,7 +111,7 @@ public class MyReceiver extends BroadcastReceiver {
 </receiver>
 ```
 
-#### **3. Register the Receiver Dynamically in Java (Dynamic Registration)**
+#### 3. Register the Receiver Dynamically in Java (Dynamic Registration)
 
 ```java
 import android.content.IntentFilter;
@@ -121,16 +121,16 @@ IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
 registerReceiver(myReceiver, filter);
 ```
 
-### **Sending a Custom Broadcast**
+### Sending a Custom Broadcast
 
-#### **1. Sending a Broadcast from an Activity**
+#### 1. Sending a Broadcast from an Activity
 
 ```java
 Intent intent = new Intent("com.example.CUSTOM_BROADCAST");
 sendBroadcast(intent);
 ```
 
-#### **2. Receiving the Custom Broadcast**
+#### 2. Receiving the Custom Broadcast
 
 ```xml
 <receiver android:name=".MyReceiver">
@@ -140,7 +140,7 @@ sendBroadcast(intent);
 </receiver>
 ```
 
-### **Common Use Cases of Broadcast Receivers**
+### Common Use Cases of Broadcast Receivers
 
 | Event                     | Intent Action                             |
 | ------------------------- | ----------------------------------------- |
@@ -149,24 +149,24 @@ sendBroadcast(intent);
 | **Boot Completed**        | `Intent.ACTION_BOOT_COMPLETED`            |
 | **Airplane Mode Changed** | `Intent.ACTION_AIRPLANE_MODE_CHANGED`     |
 
-### **Conclusion**
+### Conclusion
 
 Broadcast Receivers allow apps to **listen for system events or custom broadcasts**. They are useful for **handling background tasks, updating UI based on events, and enabling inter-app communication**.
 
 ## <mark> 3) What is Cursor? Explain methods of Cursor class. </mark>
 
-### **Cursor in Android**
+### Cursor in Android
 
 A **Cursor** in Android is an interface that provides **random read and write access** to the result set returned by a database query. It is used to **navigate through database records** retrieved from **SQLite**.
 
-### **Key Features of Cursor**
+### Key Features of Cursor
 
 1. **Allows Iteration** – Moves through rows in a result set.
 2. **Provides Access to Columns** – Retrieves values using column indices.
 3. **Optimized for Performance** – Handles large datasets efficiently.
 4. **Supports Data Modification** – Can update and delete records.
 
-### **Common Methods of Cursor Class**
+### Common Methods of Cursor Class
 
 | Method                              | Description                                               |
 | ----------------------------------- | --------------------------------------------------------- |
@@ -183,7 +183,7 @@ A **Cursor** in Android is an interface that provides **random read and write ac
 | `isBeforeFirst()`                   | Returns `true` if the cursor is **before the first row**. |
 | `close()`                           | Closes the cursor to **release resources**.               |
 
-### **Example: Using Cursor to Read Data from SQLite**
+### Example: Using Cursor to Read Data from SQLite
 
 ```java
 import android.database.Cursor;
@@ -209,26 +209,26 @@ public void fetchData() {
 }
 ```
 
-### **Conclusion**
+### Conclusion
 
 The **Cursor class** is essential for working with **SQLite databases** in Android. It provides **efficient data retrieval** methods and helps in **iterating, modifying, and accessing database records**.
 
 ## <mark> 4) Explain SQLite Open Helper with example. </mark>
 
-### **SQLiteOpenHelper in Android**
+### SQLiteOpenHelper in Android
 
 `SQLiteOpenHelper` is an **abstract class** in Android that provides **an easy way to manage SQLite databases**. It helps in **creating, upgrading, and managing database versions** without writing complex SQL code manually.
 
-### **Key Features of SQLiteOpenHelper**
+### Key Features of SQLiteOpenHelper
 
 1. **Manages Database Creation & Versioning** – Automatically handles **database creation and schema upgrades**.
 2. **Efficient Database Access** – Uses **caching** to improve performance.
 3. **Handles Migrations** – Upgrades or downgrades the database when the version changes.
 4. **Prevents Memory Leaks** – Helps in managing **database connections efficiently**.
 
-### **Steps to Implement SQLiteOpenHelper**
+### Steps to Implement SQLiteOpenHelper
 
-#### **1. Create a Database Helper Class (`DatabaseHelper.java`)**
+#### 1. Create a Database Helper Class (`DatabaseHelper.java`)
 
 ```java
 import android.content.Context;
@@ -264,7 +264,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 }
 ```
 
-#### **2. Insert Data into Database (`MainActivity.java`)**
+#### 2. Insert Data into Database (`MainActivity.java`)
 
 ```java
 import android.content.ContentValues;
@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Methods in SQLiteOpenHelper**
+### Methods in SQLiteOpenHelper
 
 | Method                                                         | Description                                                 |
 | -------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -306,19 +306,19 @@ public class MainActivity extends AppCompatActivity {
 | `getWritableDatabase()`                                        | Returns a **read/write** instance of the database.          |
 | `close()`                                                      | Closes the database connection.                             |
 
-### **Conclusion**
+### Conclusion
 
 `SQLiteOpenHelper` **simplifies database management** by handling **creation, upgrades, and version control** automatically. It is widely used in **offline storage, user data management, and caching** in Android apps.
 
 ## <mark> 5) Explain Opening and Creating Databases with the SQLite Open Helper. </mark>
 
-### **Opening and Creating Databases with SQLiteOpenHelper in Android**
+### Opening and Creating Databases with SQLiteOpenHelper in Android
 
 In Android, **SQLiteOpenHelper** is used to **create, open, and manage SQLite databases** efficiently. It simplifies database handling by **automatically creating or upgrading the database** when needed.
 
-### **Steps to Create and Open a Database Using SQLiteOpenHelper**
+### Steps to Create and Open a Database Using SQLiteOpenHelper
 
-#### **1. Create a Database Helper Class (`DatabaseHelper.java`)**
+#### 1. Create a Database Helper Class (`DatabaseHelper.java`)
 
 This class extends `SQLiteOpenHelper` and **manages database creation and version control**.
 
@@ -356,7 +356,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 }
 ```
 
-#### **2. Open or Create the Database in an Activity (`MainActivity.java`)**
+#### 2. Open or Create the Database in an Activity (`MainActivity.java`)
 
 To **open or create** a database, instantiate `DatabaseHelper`.
 
@@ -384,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Methods Used for Opening and Creating Databases**
+### Methods Used for Opening and Creating Databases
 
 | Method                                                         | Description                                                               |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -393,19 +393,19 @@ public class MainActivity extends AppCompatActivity {
 | `onCreate(SQLiteDatabase db)`                                  | Called **once** when the database is first created.                       |
 | `onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)` | Called when the **database version changes**, used for migrations.        |
 
-### **Conclusion**
+### Conclusion
 
 Using `SQLiteOpenHelper`, Android apps can **create, open, and manage SQLite databases** seamlessly. It ensures that databases are created only **once**, and provides methods to **handle upgrades automatically**, making it essential for **local data storage**.
 
 ## <mark> 6) Explain Opening and Creating Databases without the SQLite Open Helper. </mark>
 
-### **Opening and Creating Databases Without SQLiteOpenHelper in Android**
+### Opening and Creating Databases Without SQLiteOpenHelper in Android
 
 In Android, **databases can be created and opened manually** using `SQLiteDatabase` instead of `SQLiteOpenHelper`. This approach gives more **control over database operations** but requires **manual handling** of database creation and versioning.
 
-### **Steps to Open and Create a Database Without SQLiteOpenHelper**
+### Steps to Open and Create a Database Without SQLiteOpenHelper
 
-#### **1. Create or Open a Database (`MainActivity.java`)**
+#### 1. Create or Open a Database (`MainActivity.java`)
 
 We use `SQLiteDatabase.openOrCreateDatabase()` or `SQLiteDatabase.execSQL()` to create a database and table.
 
@@ -436,7 +436,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **2. Insert Data into the Database**
+### 2. Insert Data into the Database
 
 Manually inserting data using `execSQL()`.
 
@@ -452,7 +452,7 @@ db.execSQL(insertQuery);
 db.close();
 ```
 
-### **3. Retrieve Data from the Database**
+### 3. Retrieve Data from the Database
 
 Using a `Cursor` to fetch data.
 
@@ -476,7 +476,7 @@ cursor.close();
 db.close();
 ```
 
-### **Methods Used for Manual Database Management**
+### Methods Used for Manual Database Management
 
 | Method                                      | Description                                                         |
 | ------------------------------------------- | ------------------------------------------------------------------- |
@@ -485,7 +485,7 @@ db.close();
 | `rawQuery(sqlQuery, selectionArgs)`         | Executes a **SELECT query** and returns a `Cursor`.                 |
 | `close()`                                   | Closes the database connection.                                     |
 
-### **Comparison: With vs. Without SQLiteOpenHelper**
+### Comparison: With vs. Without SQLiteOpenHelper
 
 | Feature                   | Using SQLiteOpenHelper | Without SQLiteOpenHelper |
 | ------------------------- | ---------------------- | ------------------------ |
@@ -495,19 +495,19 @@ db.close();
 | **Ease of Use**           | Easier                 | Harder                   |
 | **Control Over Database** | Limited                | Full Control             |
 
-### **Conclusion**
+### Conclusion
 
 Manually opening and creating databases **without SQLiteOpenHelper** provides **full control** but requires **more effort** for **handling versions, migrations, and optimizations**. It is suitable for **small projects or cases where full customization is needed**.
 
 ## <mark> 7) Explain how to Query, insert, update and delete rows from Database. </mark>
 
-### **Query, Insert, Update, and Delete Rows in SQLite Database in Android**
+### Query, Insert, Update, and Delete Rows in SQLite Database in Android
 
 In Android, we use **SQLiteDatabase** to perform **CRUD (Create, Read, Update, Delete) operations** on an SQLite database.
 
-### **1. Inserting Data into Database**
+### 1. Inserting Data into Database
 
-#### **Using `insert()` Method (Recommended)**
+#### Using `insert()` Method (Recommended)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -523,15 +523,15 @@ if (result != -1) {
 }
 ```
 
-#### **Using `execSQL()` Method (Manual SQL Query Execution)**
+#### Using `execSQL()` Method (Manual SQL Query Execution)
 
 ```java
 db.execSQL("INSERT INTO students (name, age) VALUES ('Alice', 22)");
 ```
 
-### **2. Querying Data from Database**
+### 2. Querying Data from Database
 
-#### **Using `rawQuery()` Method (Recommended for SELECT Queries)**
+#### Using `rawQuery()` Method (Recommended for SELECT Queries)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getReadableDatabase();
@@ -551,15 +551,15 @@ cursor.close();
 db.close();
 ```
 
-#### **Using `query()` Method (Safer and More Flexible)**
+#### Using `query()` Method (Safer and More Flexible)
 
 ```java
 Cursor cursor = db.query("students", new String[]{"id", "name", "age"}, null, null, null, null, null);
 ```
 
-### **3. Updating Data in Database**
+### 3. Updating Data in Database
 
-#### **Using `update()` Method (Recommended)**
+#### Using `update()` Method (Recommended)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -574,15 +574,15 @@ if (rowsAffected > 0) {
 }
 ```
 
-#### **Using `execSQL()` Method (Manual SQL Query Execution)**
+#### Using `execSQL()` Method (Manual SQL Query Execution)
 
 ```java
 db.execSQL("UPDATE students SET age = 30 WHERE name = 'Alice'");
 ```
 
-### **4. Deleting Data from Database**
+### 4. Deleting Data from Database
 
-#### **Using `delete()` Method (Recommended)**
+#### Using `delete()` Method (Recommended)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -594,13 +594,13 @@ if (rowsDeleted > 0) {
 }
 ```
 
-#### **Using `execSQL()` Method (Manual SQL Query Execution)**
+#### Using `execSQL()` Method (Manual SQL Query Execution)
 
 ```java
 db.execSQL("DELETE FROM students WHERE name = 'Alice'");
 ```
 
-### **Comparison of Methods**
+### Comparison of Methods
 
 | Operation  | Recommended Method        | Alternative Method           |
 | ---------- | ------------------------- | ---------------------------- |
@@ -609,7 +609,7 @@ db.execSQL("DELETE FROM students WHERE name = 'Alice'");
 | **Update** | `update()`                | `execSQL("UPDATE ...")`      |
 | **Delete** | `delete()`                | `execSQL("DELETE ...")`      |
 
-### **Conclusion**
+### Conclusion
 
 - **`insert()`, `query()`, `update()`, and `delete()`** methods are preferred because they provide **better security and flexibility**.
 - **`execSQL()`** is useful for complex operations but should be used cautiously.
@@ -617,21 +617,21 @@ db.execSQL("DELETE FROM students WHERE name = 'Alice'");
 
 ## <mark> 8) What is service? Explain Service Life Cycle. </mark>
 
-### **What is a Service in Android?**
+### What is a Service in Android?
 
 A **Service** in Android is a **background component** that runs **without a user interface (UI)**. It is used for **long-running operations** such as **playing music, downloading files, or processing data** in the background.
 
-### **Types of Services in Android**
+### Types of Services in Android
 
 1. **Foreground Service** – Runs in the background but **shows a notification** (e.g., music player).
 2. **Background Service** – Runs **without user interaction** (e.g., syncing data).
 3. **Bound Service** – Allows **other components (Activities/Fragments) to bind** and interact with the service.
 
-### **Service Lifecycle in Android**
+### Service Lifecycle in Android
 
 A service has **three main states** and follows a **specific lifecycle**.
 
-#### **Service Lifecycle Methods**
+#### Service Lifecycle Methods
 
 | Method             | Description                                                                                     |
 | ------------------ | ----------------------------------------------------------------------------------------------- |
@@ -641,13 +641,13 @@ A service has **three main states** and follows a **specific lifecycle**.
 | `onUnbind()`       | Called **when all clients unbind** from a bound service.                                        |
 | `onDestroy()`      | Called **when the service is stopped**. Used for cleanup.                                       |
 
-### **Service Lifecycle Diagram**
+### Service Lifecycle Diagram
 
 ![3-8.png](./3-8.png)
 
-### **Example: Creating a Simple Service in Android**
+### Example: Creating a Simple Service in Android
 
-#### **1. Create a Service Class (`MyService.java`)**
+#### 1. Create a Service Class (`MyService.java`)
 
 ```java
 import android.app.Service;
@@ -681,13 +681,13 @@ public class MyService extends Service {
 }
 ```
 
-#### **2. Register the Service in `AndroidManifest.xml`**
+#### 2. Register the Service in `AndroidManifest.xml`
 
 ```xml
 <service android:name=".MyService" />
 ```
 
-#### **3. Start and Stop the Service from an Activity**
+#### 3. Start and Stop the Service from an Activity
 
 ```java
 // Start Service
@@ -698,23 +698,23 @@ startService(intent);
 stopService(intent);
 ```
 
-### **Conclusion**
+### Conclusion
 
 A **Service** is used for **background tasks** in Android without UI. The **Service Lifecycle** is managed using methods like `onCreate()`, `onStartCommand()`, and `onDestroy()`. Services are useful for **long-running operations like music playback, downloading, and background processing**.
 
 ## <mark> 9) Explain Type of Services in android. </mark>
 
-### **Types of Services in Android**
+### Types of Services in Android
 
 Android provides **three types of services** based on how they are used and managed by the system:
 
-### **1. Foreground Service**
+### 1. Foreground Service
 
 - Runs in the **background** but remains **visible to the user** by displaying a **notification**.
 - Used for tasks that must run **continuously** (e.g., music playback, file downloading).
 - Requires the **`startForeground()`** method to show a persistent notification.
 
-#### **Example: Creating a Foreground Service**
+#### Example: Creating a Foreground Service
 
 ```java
 import android.app.Notification;
@@ -765,20 +765,20 @@ public class MyForegroundService extends Service {
 }
 ```
 
-#### **Use Cases**
+#### Use Cases
 
 ✔ Playing music in the background  
 ✔ Tracking user location  
 ✔ Downloading large files
 
-### **2. Background Service**
+### 2. Background Service
 
 - Runs in the **background without user interaction**.
 - Does not require a **persistent notification** like a foreground service.
 - Used for **short-term tasks** (e.g., syncing data, sending notifications).
 - Can be stopped by the system if **low on memory**.
 
-#### **Example: Creating a Background Service**
+#### Example: Creating a Background Service
 
 ```java
 import android.app.Service;
@@ -814,20 +814,20 @@ public class MyBackgroundService extends Service {
 }
 ```
 
-#### **Use Cases**
+#### Use Cases
 
 ✔ Syncing app data in the background  
 ✔ Sending periodic notifications  
 ✔ Processing tasks without user interaction
 
-### **3. Bound Service**
+### 3. Bound Service
 
 - Allows **other components (Activities, Fragments, or other Services)** to **bind** to it and interact with it.
 - Runs **only as long as components are bound** to it.
 - Used when an app **needs interaction with the service** (e.g., fetching live data).
 - Uses **`onBind()`** method to return an **IBinder** interface for communication.
 
-#### **Example: Creating a Bound Service**
+#### Example: Creating a Bound Service
 
 ```java
 import android.app.Service;
@@ -855,7 +855,7 @@ public class MyBoundService extends Service {
 }
 ```
 
-#### **Binding to the Service in an Activity**
+#### Binding to the Service in an Activity
 
 ```java
 MyBoundService myService;
@@ -880,13 +880,13 @@ Intent intent = new Intent(this, MyBoundService.class);
 bindService(intent, connection, Context.BIND_AUTO_CREATE);
 ```
 
-#### **Use Cases**
+#### Use Cases
 
 ✔ Fetching live data (e.g., stock prices, weather updates)  
 ✔ Music players with play/pause functionality  
 ✔ Messaging apps retrieving real-time messages
 
-### **Comparison of Android Service Types**
+### Comparison of Android Service Types
 
 | Feature                       | Foreground Service         | Background Service           | Bound Service                  |
 | ----------------------------- | -------------------------- | ---------------------------- | ------------------------------ |
@@ -896,7 +896,7 @@ bindService(intent, connection, Context.BIND_AUTO_CREATE);
 | **Can Be Stopped by System?** | ❌ No                      | ✅ Yes                       | ✅ Yes (if all clients unbind) |
 | **Example Use Cases**         | Music Player, GPS Tracking | Data Syncing, File Uploading | Live Chat, Streaming           |
 
-### **Conclusion**
+### Conclusion
 
 Android provides **three types of services** to handle **different background tasks efficiently**:  
 ✔ **Foreground Service** – For **long-running tasks with a visible notification**.  
@@ -907,18 +907,18 @@ Each type plays a **crucial role in app performance and user experience**.
 
 ## <mark> 10) Explain the concept of Alarm Manager in Android. </mark>
 
-### **AlarmManager in Android**
+### AlarmManager in Android
 
 **AlarmManager** is a system service in Android that allows applications to **schedule tasks** to be executed at a specific time, even if the app is not running. It is useful for **background operations, reminders, notifications, and periodic tasks**.
 
-### **Features of AlarmManager**
+### Features of AlarmManager
 
 ✔ **Schedules tasks for future execution** (one-time or repeating).  
 ✔ **Works even if the app is closed**.  
 ✔ **Can wake up the device** if required.  
 ✔ **Efficient for long-term scheduling** instead of running background services continuously.
 
-### **Types of Alarms in AlarmManager**
+### Types of Alarms in AlarmManager
 
 | Alarm Type                | Description                                                                                         |
 | ------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -927,9 +927,9 @@ Each type plays a **crucial role in app performance and user experience**.
 | `ELAPSED_REALTIME`        | Triggers the alarm after a specified time, based on **device uptime**, without waking the device.   |
 | `ELAPSED_REALTIME_WAKEUP` | Triggers the alarm after a specified time and **wakes up the device** if asleep.                    |
 
-### **Example: Setting Up an Alarm Using AlarmManager**
+### Example: Setting Up an Alarm Using AlarmManager
 
-#### **1. Register Alarm in an Activity (`MainActivity.java`)**
+#### 1. Register Alarm in an Activity (`MainActivity.java`)
 
 ```java
 import android.app.AlarmManager;
@@ -969,7 +969,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#### **2. Create a Broadcast Receiver (`AlarmReceiver.java`)**
+#### 2. Create a Broadcast Receiver (`AlarmReceiver.java`)
 
 ```java
 import android.content.BroadcastReceiver;
@@ -985,13 +985,13 @@ public class AlarmReceiver extends BroadcastReceiver {
 }
 ```
 
-#### **3. Register the Receiver in `AndroidManifest.xml`**
+#### 3. Register the Receiver in `AndroidManifest.xml`
 
 ```xml
 <receiver android:name=".AlarmReceiver"/>
 ```
 
-### **Repeating Alarm Example**
+### Repeating Alarm Example
 
 To **repeat an alarm every 10 minutes**, use:
 
@@ -1004,7 +1004,7 @@ alarmManager.setRepeating(
 );
 ```
 
-### **Canceling an Alarm**
+### Canceling an Alarm
 
 To cancel an alarm:
 
@@ -1012,31 +1012,31 @@ To cancel an alarm:
 alarmManager.cancel(pendingIntent);
 ```
 
-### **Use Cases of AlarmManager**
+### Use Cases of AlarmManager
 
 ✔ **Reminders and Notifications** (e.g., medication reminders, meeting alerts).  
 ✔ **Background Syncing** (e.g., updating weather data at regular intervals).  
 ✔ **Scheduling Long-Term Tasks** (e.g., checking for app updates daily).
 
-### **Conclusion**
+### Conclusion
 
 AlarmManager is used for **scheduling tasks in the background** at a specific time, even if the app is **closed**. It is useful for **reminders, notifications, and periodic updates** without consuming unnecessary resources.
 
 ## <mark> 11) What is AsyncTask? Explain it in detail. </mark>
 
-### **AsyncTask in Android (Deprecated in API Level 30)**
+### AsyncTask in Android (Deprecated in API Level 30)
 
 **AsyncTask** is a **background task handler** in Android that allows operations to run **asynchronously** on a separate thread, without blocking the **main UI thread**. It is mainly used for **short background tasks** like fetching data from the internet or performing computations.
 
 > ⚠ **Note:** AsyncTask was **deprecated in API Level 30 (Android 11)** because of **memory leaks and inefficient background execution**. **Alternatives:** Use **Kotlin Coroutines, Executors, or WorkManager** instead.
 
-### **Why Use AsyncTask?**
+### Why Use AsyncTask?
 
 ✔ Runs tasks in the background without freezing the UI.  
 ✔ Useful for short operations like **network requests, database queries, or image processing**.  
 ✔ Provides easy **UI thread interaction** with `onPostExecute()`.
 
-### **AsyncTask Lifecycle Methods**
+### AsyncTask Lifecycle Methods
 
 | Method                          | Description                                                                                           |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -1045,9 +1045,9 @@ AlarmManager is used for **scheduling tasks in the background** at a specific ti
 | `onProgressUpdate(Progress...)` | Runs on **UI thread**, updates the UI with progress values.                                           |
 | `onPostExecute(Result)`         | Runs on **UI thread** after task completion (used for updating UI with results).                      |
 
-### **Example: Using AsyncTask in Android**
+### Example: Using AsyncTask in Android
 
-#### **1. Implement AsyncTask (`DownloadTask.java`)**
+#### 1. Implement AsyncTask (`DownloadTask.java`)
 
 ```java
 import android.os.AsyncTask;
@@ -1085,37 +1085,37 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 }
 ```
 
-#### **2. Execute AsyncTask from an Activity (`MainActivity.java`)**
+#### 2. Execute AsyncTask from an Activity (`MainActivity.java`)
 
 ```java
 new DownloadTask().execute("https://example.com/file");
 ```
 
-### **Limitations of AsyncTask**
+### Limitations of AsyncTask
 
 ❌ Can cause **memory leaks** if not handled properly.  
 ❌ **Not suitable for long-running tasks** (use WorkManager instead).  
 ❌ **Runs on a single thread pool**, affecting performance.
 
-### **Alternatives to AsyncTask (Recommended)**
+### Alternatives to AsyncTask (Recommended)
 
 ✔ **Kotlin Coroutines** – Efficient and easy to use (`GlobalScope.launch {}`)  
 ✔ **Executors** – Uses Java’s `ExecutorService` for background tasks.  
 ✔ **WorkManager** – Best for long-running tasks (e.g., syncing data).
 
-### **Conclusion**
+### Conclusion
 
 AsyncTask was used for **short background tasks** but has been **deprecated** due to **performance issues**. Developers should use **Kotlin Coroutines or WorkManager** for **modern Android development**.
 
 ## <mark> 12) How to add notification in Android App? </mark>
 
-### **How to Add Notification in an Android App**
+### How to Add Notification in an Android App
 
 Android **notifications** allow apps to send messages, alerts, or updates to users even when the app is **not active**. These appear in the **notification tray** and can include **text, images, actions, and sounds**.
 
-### **Steps to Implement Notifications in Android**
+### Steps to Implement Notifications in Android
 
-#### **1. Add Required Permission in `AndroidManifest.xml`**
+#### 1. Add Required Permission in `AndroidManifest.xml`
 
 For Android 13+ (API 33), **request notification permission**:
 
@@ -1123,7 +1123,7 @@ For Android 13+ (API 33), **request notification permission**:
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 ```
 
-#### **2. Create a Notification Channel (For Android 8.0 and Above)**
+#### 2. Create a Notification Channel (For Android 8.0 and Above)
 
 ```java
 import android.app.NotificationChannel;
@@ -1148,7 +1148,7 @@ private void createNotificationChannel() {
 }
 ```
 
-#### **3. Trigger a Notification (`MainActivity.java`)**
+#### 3. Trigger a Notification (`MainActivity.java`)
 
 ```java
 import android.app.Notification;
@@ -1196,25 +1196,25 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **4. Running the App**
+### 4. Running the App
 
 - When the app runs, it creates a **notification channel**.
 - It **triggers a notification**, which appears in the **notification tray**.
 - Clicking the notification **opens the MainActivity**.
 
-### **Features of Android Notifications**
+### Features of Android Notifications
 
 ✔ **Auto-cancel** after clicking.  
 ✔ **Opens Activity** on tap.  
 ✔ **Custom Actions** (reply, dismiss, open URL).  
 ✔ **Supports Images, Sounds, and Vibration.**
 
-### **Use Cases of Notifications**
+### Use Cases of Notifications
 
 ✔ **Reminders** (e.g., Alarm, Meeting).  
 ✔ **Chat Messages** (WhatsApp, Telegram).  
 ✔ **Background Task Completion** (Download Complete).
 
-### **Conclusion**
+### Conclusion
 
 Android notifications help **engage users** by providing **timely updates and alerts**. Using **NotificationCompat**, apps can ensure notifications **work on all Android versions**.

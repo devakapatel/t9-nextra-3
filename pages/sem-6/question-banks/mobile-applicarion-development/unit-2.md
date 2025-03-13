@@ -6,7 +6,7 @@
 
 A **View** in Android is a **UI component** that is used to **display and interact with elements** in an application. Examples of Views include **Button, TextView, EditText, ImageView**, etc. All Views are subclasses of the `android.view.View` class.
 
-### **Creating a View**
+### Creating a View
 
 1. **Using XML (Recommended)**
 
@@ -31,7 +31,7 @@ A **View** in Android is a **UI component** that is used to **display and intera
          LinearLayout.LayoutParams.WRAP_CONTENT));
      ```
 
-### **Modifying a View**
+### Modifying a View
 
 1. **Changing View Properties in Java**
 
@@ -57,7 +57,7 @@ A **View** in Android is a **UI component** that is used to **display and intera
      });
      ```
 
-### **Conclusion**
+### Conclusion
 
 Views are **building blocks of UI design** in Android. They can be **created, modified, and interacted with** using XML or Java/Kotlin code to build interactive applications.
 
@@ -67,14 +67,14 @@ Views are **building blocks of UI design** in Android. They can be **created, mo
 
 **DatePicker** and **TimePicker** are UI components in Android that allow users to **select a date or time** in an intuitive way.
 
-### **1. DatePicker**
+### 1. DatePicker
 
 - Used to **select a date** (day, month, year).
 - Can be displayed as:
   - **DatePickerDialog** (popup dialog).
   - **DatePicker Widget** (embedded in the layout).
 
-#### **Example: DatePickerDialog in Java**
+#### Example: DatePickerDialog in Java
 
 ```java
 // Open DatePickerDialog when button is clicked
@@ -99,7 +99,7 @@ btnSelectDate.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-### **2. TimePicker**
+### 2. TimePicker
 
 - Used to **select a time** (hour, minute).
 - Can be displayed as:
@@ -107,7 +107,7 @@ btnSelectDate.setOnClickListener(new View.OnClickListener() {
   - **TimePicker Widget** (in the layout).
 - Supports **12-hour or 24-hour format**.
 
-#### **Example: TimePickerDialog in Java**
+#### Example: TimePickerDialog in Java
 
 ```java
 // Open TimePickerDialog when button is clicked
@@ -131,7 +131,7 @@ btnSelectTime.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-### **Conclusion**
+### Conclusion
 
 - **DatePicker** is used to select a date, while **TimePicker** is used to select a time.
 - Both can be implemented using **dialogs or UI widgets**.
@@ -143,13 +143,13 @@ btnSelectTime.setOnClickListener(new View.OnClickListener() {
 
 **Localization** in Android refers to the process of **adapting an application for different languages, regions, and cultures**. It helps in making an app **accessible to a global audience** by providing text, images, and other resources in different languages.
 
-### **Key Features of Localization**
+### Key Features of Localization
 
 1. **Supports Multiple Languages** – Users can view the app in their preferred language.
 2. **Region-Specific Formatting** – Handles date, time, currency, and number formats.
 3. **Uses Resource Files** – Stores text in `res/values/` folders to support different languages.
 
-### **Steps for Implementing Localization**
+### Steps for Implementing Localization
 
 1. **Define Default Strings in `res/values/strings.xml`**
 
@@ -188,7 +188,7 @@ btnSelectTime.setOnClickListener(new View.OnClickListener() {
    textView.setText(getString(R.string.greeting));
    ```
 
-### **Conclusion**
+### Conclusion
 
 Localization in Android allows apps to **adapt to different languages and regions**, improving user experience and **expanding the app’s global reach**.
 
@@ -200,9 +200,9 @@ Localization in Android allows apps to **adapt to different languages and region
 
 To **listen to Native Broadcast Intents**, we use a **BroadcastReceiver**, which responds when the system sends a broadcast.
 
-### **Steps to Listen to Native Broadcast Intents**
+### Steps to Listen to Native Broadcast Intents
 
-#### **1. Create a BroadcastReceiver Class**
+#### 1. Create a BroadcastReceiver Class
 
 Define a `BroadcastReceiver` that listens for system events.  
 Example: Listening for **battery level changes**.
@@ -222,7 +222,7 @@ public class BatteryReceiver extends BroadcastReceiver {
 }
 ```
 
-#### **2. Register the Receiver in `AndroidManifest.xml`**
+#### 2. Register the Receiver in `AndroidManifest.xml`
 
 Add the receiver inside the `<application>` tag.
 
@@ -234,7 +234,7 @@ Add the receiver inside the `<application>` tag.
 </receiver>
 ```
 
-#### **3. Register Receiver Dynamically in Activity (Optional)**
+#### 3. Register Receiver Dynamically in Activity (Optional)
 
 Instead of declaring in `AndroidManifest.xml`, you can register it in an activity.
 
@@ -255,7 +255,7 @@ protected void onPause() {
 }
 ```
 
-### **Common Native Broadcast Intents**
+### Common Native Broadcast Intents
 
 | Intent Action                              | Description                     |
 | ------------------------------------------ | ------------------------------- |
@@ -265,7 +265,7 @@ protected void onPause() {
 | `android.intent.action.POWER_CONNECTED`    | Device connected to power.      |
 | `android.intent.action.POWER_DISCONNECTED` | Device disconnected from power. |
 
-### **Conclusion**
+### Conclusion
 
 Listening to **Native Broadcast Intents** allows apps to respond to system events like **battery status, network changes, and power connections**, improving app functionality and user experience.
 
@@ -275,7 +275,7 @@ Listening to **Native Broadcast Intents** allows apps to respond to system event
 
 **Download Manager** is an Android system service that **handles long-running downloads in the background**. It allows applications to download files efficiently while handling **network failures, system reboots, and retries** automatically.
 
-### **Features of Download Manager**
+### Features of Download Manager
 
 1. **Handles Large File Downloads** – Efficiently downloads large files without freezing the UI.
 2. **Supports Background Downloading** – Runs downloads in the background, allowing users to continue using the app.
@@ -283,16 +283,16 @@ Listening to **Native Broadcast Intents** allows apps to respond to system event
 4. **Manages Download Notifications** – Shows progress in the notification bar.
 5. **Supports Various Network Conditions** – Can restrict downloads to Wi-Fi only.
 
-### **Using Download Manager in Android**
+### Using Download Manager in Android
 
-#### **1. Add Permission in `AndroidManifest.xml`**
+#### 1. Add Permission in `AndroidManifest.xml`
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-#### **2. Start a File Download**
+#### 2. Start a File Download
 
 ```java
 import android.app.DownloadManager;
@@ -317,7 +317,7 @@ public void startDownload(Context context) {
 }
 ```
 
-### **3. Monitor Download Progress**
+### 3. Monitor Download Progress
 
 To track download status, register a `BroadcastReceiver`.
 
@@ -343,13 +343,13 @@ Register the receiver dynamically in an activity:
 registerReceiver(new DownloadReceiver(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 ```
 
-### **Use Cases of Download Manager**
+### Use Cases of Download Manager
 
 - **Downloading PDFs, images, or videos** in apps.
 - **Updating files in the background** for offline access.
 - **Handling large downloads** without affecting app performance.
 
-### **Conclusion**
+### Conclusion
 
 Download Manager simplifies downloading large files by handling **background tasks, failures, and progress tracking**, ensuring a **smooth user experience**.
 
@@ -359,13 +359,13 @@ Download Manager simplifies downloading large files by handling **background tas
 
 Android provides **three types of menus** to display options and actions in an application. These menus help improve **user interaction and navigation**.
 
-### **1. Options Menu**
+### 1. Options Menu
 
 - The **primary menu** for an activity, displayed in the **toolbar/action bar**.
 - Typically used for **settings, search, or common actions**.
 - Appears when the user taps the **three-dot menu**.
 
-#### **Example: Creating an Options Menu**
+#### Example: Creating an Options Menu
 
 **Step 1: Define Menu in XML (`res/menu/menu_main.xml`)**
 
@@ -390,12 +390,12 @@ public boolean onCreateOptionsMenu(Menu menu) {
 }
 ```
 
-### **2. Context Menu**
+### 2. Context Menu
 
 - A **floating menu** that appears **on long press** of a UI element.
 - Used for **actions related to a specific item**, like **edit, delete, or share**.
 
-#### **Example: Creating a Context Menu**
+#### Example: Creating a Context Menu
 
 **Step 1: Register View for Context Menu (`MainActivity.java`)**
 
@@ -422,12 +422,12 @@ public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMen
 }
 ```
 
-### **3. Popup Menu**
+### 3. Popup Menu
 
 - A **temporary menu** that appears **next to a clicked view**.
 - Used for **quick actions like selecting an item or sharing content**.
 
-#### **Example: Creating a Popup Menu**
+#### Example: Creating a Popup Menu
 
 **Step 1: Create Popup Menu in Java (`MainActivity.java`)**
 
@@ -457,7 +457,7 @@ protected void onCreate(Bundle savedInstanceState) {
 </menu>
 ```
 
-### **Comparison of Menus**
+### Comparison of Menus
 
 | Menu Type        | How It Appears                  | Use Case                                       |
 | ---------------- | ------------------------------- | ---------------------------------------------- |
@@ -465,7 +465,7 @@ protected void onCreate(Bundle savedInstanceState) {
 | **Context Menu** | On long press of an item        | Item-specific actions like **Edit, Delete**    |
 | **Popup Menu**   | Next to a clicked view          | Quick actions like **Share, Add to Favorites** |
 
-### **Conclusion**
+### Conclusion
 
 Android menus enhance **user experience** by providing structured ways to **navigate, interact, and perform actions** within an app.
 
@@ -475,16 +475,16 @@ Android menus enhance **user experience** by providing structured ways to **navi
 
 A **Spinner** in Android is a **dropdown UI component** that allows users to **select one option from a list**. It is similar to a dropdown menu in web development.
 
-### **Features of Spinner**
+### Features of Spinner
 
 1. **Dropdown List** – Displays a list of selectable items.
 2. **Default Selection** – Shows the first item by default.
 3. **Customizable Appearance** – Can be styled using custom adapters.
 4. **Efficient UI Component** – Saves space compared to RadioButtons.
 
-### **Steps to Implement a Spinner**
+### Steps to Implement a Spinner
 
-#### **1. Define Spinner in XML Layout** (`res/layout/activity_main.xml`)
+#### 1. Define Spinner in XML Layout (`res/layout/activity_main.xml`)
 
 ```xml
 <Spinner
@@ -493,7 +493,7 @@ A **Spinner** in Android is a **dropdown UI component** that allows users to **s
     android:layout_height="wrap_content"/>
 ```
 
-#### **2. Create and Set Data in Java** (`MainActivity.java`)
+#### 2. Create and Set Data in Java (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -545,7 +545,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Explanation**
+### Explanation
 
 1. **Define Spinner in XML** – Adds a Spinner component to the UI.
 2. **Create Data Source** – Defines a list of selectable options.
@@ -553,19 +553,19 @@ public class MainActivity extends AppCompatActivity {
 4. **Set the Adapter** – Attaches the adapter to the Spinner.
 5. **Handle Selection Events** – Uses `setOnItemSelectedListener()` to capture user selection.
 
-### **Conclusion**
+### Conclusion
 
 A **Spinner** is a user-friendly dropdown component that allows users to **select one item from a list**. It improves UI efficiency and is commonly used for **form inputs, filters, and settings menus**.
 
 ## <mark> 8) Write down the pseudo code for Radio button and Checkbox. </mark>
 
-### **Pseudo Code for RadioButton and CheckBox in Android**
+### Pseudo Code for RadioButton and CheckBox in Android
 
-### **1. RadioButton in Android**
+### 1. RadioButton in Android
 
 A **RadioButton** allows users to **select only one option** from a group.
 
-#### **XML Layout for RadioButton (`activity_main.xml`)**
+#### XML Layout for RadioButton (`activity_main.xml`)
 
 ```xml
 <RadioGroup
@@ -593,7 +593,7 @@ A **RadioButton** allows users to **select only one option** from a group.
     android:text="Submit"/>
 ```
 
-#### **Java Code for RadioButton (`MainActivity.java`)**
+#### Java Code for RadioButton (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -632,11 +632,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **2. CheckBox in Android**
+### 2. CheckBox in Android
 
 A **CheckBox** allows users to **select multiple options** independently.
 
-#### **XML Layout for CheckBox (`activity_main.xml`)**
+#### XML Layout for CheckBox (`activity_main.xml`)
 
 ```xml
 <CheckBox
@@ -658,7 +658,7 @@ A **CheckBox** allows users to **select multiple options** independently.
     android:text="Submit"/>
 ```
 
-#### **Java Code for CheckBox (`MainActivity.java`)**
+#### Java Code for CheckBox (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -701,7 +701,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Conclusion**
+### Conclusion
 
 - **RadioButton** allows **only one selection** from a group.
 - **CheckBox** allows **multiple selections** independently.
@@ -713,16 +713,16 @@ public class MainActivity extends AppCompatActivity {
 
 A **CheckBox** in Android is a **UI component** that allows users to **select multiple options independently**. It is useful for cases where users may choose **more than one option**, such as selecting preferences, settings, or features.
 
-### **Features of CheckBox**
+### Features of CheckBox
 
 1. **Multiple Selection** – Users can select **one or more** options.
 2. **Independent State** – Each checkbox operates separately.
 3. **Two-State Behavior** – A checkbox can be **checked (true)** or **unchecked (false)**.
 4. **Custom Styling** – Checkboxes can be styled with custom colors and images.
 
-### **Example: Implementing CheckBox in Android**
+### Example: Implementing CheckBox in Android
 
-#### **1. Define CheckBoxes in XML (`activity_main.xml`)**
+#### 1. Define CheckBoxes in XML (`activity_main.xml`)
 
 ```xml
 <LinearLayout
@@ -752,7 +752,7 @@ A **CheckBox** in Android is a **UI component** that allows users to **select mu
 </LinearLayout>
 ```
 
-#### **2. Handle CheckBox Selection in Java (`MainActivity.java`)**
+#### 2. Handle CheckBox Selection in Java (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -795,19 +795,19 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Explanation**
+### Explanation
 
 1. **CheckBoxes are defined in XML** – Users can select multiple options.
 2. **Initialize CheckBoxes in Java** – Retrieve their state using `isChecked()`.
 3. **Handle Button Click** – Display selected options using `Toast`.
 
-### **Use Cases of CheckBox**
+### Use Cases of CheckBox
 
 - Selecting **multiple interests/preferences** (e.g., "Sports", "Music", "Movies").
 - Enabling/disabling **features** in an app (e.g., "Enable Notifications", "Dark Mode").
 - Accepting **terms and conditions** before proceeding.
 
-### **Conclusion**
+### Conclusion
 
 A **CheckBox** in Android provides an easy way to **select multiple options**. It enhances user interaction by allowing **customizable selections** in forms, settings, and preference screens.
 
@@ -817,7 +817,7 @@ A **CheckBox** in Android provides an easy way to **select multiple options**. I
 
 **EditText** is an Android UI component that allows users to **input text** in an application. It is commonly used for **forms, login screens, and user feedback sections**.
 
-### **Features of EditText**
+### Features of EditText
 
 1. **User Input** – Allows users to type text.
 2. **Customizable Input Type** – Supports text, numbers, passwords, email, etc.
@@ -825,9 +825,9 @@ A **CheckBox** in Android provides an easy way to **select multiple options**. I
 4. **Validation Support** – Can restrict input length and format.
 5. **Auto-Correction & Suggestions** – Supports predictive text.
 
-### **Example: Implementing EditText in Android**
+### Example: Implementing EditText in Android
 
-#### **1. Define EditText in XML (`activity_main.xml`)**
+#### 1. Define EditText in XML (`activity_main.xml`)
 
 ```xml
 <LinearLayout
@@ -852,7 +852,7 @@ A **CheckBox** in Android provides an easy way to **select multiple options**. I
 </LinearLayout>
 ```
 
-#### **2. Handle EditText Input in Java (`MainActivity.java`)**
+#### 2. Handle EditText Input in Java (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -889,14 +889,14 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Explanation**
+### Explanation
 
 1. **EditText in XML** – Accepts user input with a placeholder (`hint`).
 2. **Retrieve Text in Java** – `editText.getText().toString()` gets the input.
 3. **Validate Input** – Ensures the field is not empty before showing a message.
 4. **Display Input Using Toast** – Shows a greeting message with the entered name.
 
-### **Common Input Types in EditText**
+### Common Input Types in EditText
 
 | Input Type         | Description                        |
 | ------------------ | ---------------------------------- |
@@ -906,13 +906,13 @@ public class MainActivity extends AppCompatActivity {
 | `number`           | Numeric input                      |
 | `textPassword`     | Password input (hidden characters) |
 
-### **Use Cases of EditText**
+### Use Cases of EditText
 
 - **Login and Registration Forms** – Accept usernames, passwords, and emails.
 - **Search Fields** – Allow users to search content in an app.
 - **Feedback Forms** – Collect user comments and reviews.
 
-### **Conclusion**
+### Conclusion
 
 EditText is a key UI component for **user input** in Android apps. It supports **different input types, validation, and customization**, making it suitable for various applications.
 
@@ -922,16 +922,16 @@ EditText is a key UI component for **user input** in Android apps. It supports *
 
 **TextView** is a UI component in Android used to **display static or dynamic text** on the screen. It does not allow user input like `EditText` but is commonly used for labels, headings, and displaying messages.
 
-### **Features of TextView**
+### Features of TextView
 
 1. **Displays Read-Only Text** – Used for labels, descriptions, and instructions.
 2. **Supports Styling** – Can change **font size, color, style, and alignment**.
 3. **Dynamic Text Update** – Can update text programmatically.
 4. **Supports Click Events** – Can detect clicks using `setOnClickListener()`.
 
-### **Example: Implementing TextView in Android**
+### Example: Implementing TextView in Android
 
-#### **1. Define TextView in XML (`activity_main.xml`)**
+#### 1. Define TextView in XML (`activity_main.xml`)
 
 ```xml
 <LinearLayout
@@ -958,7 +958,7 @@ EditText is a key UI component for **user input** in Android apps. It supports *
 </LinearLayout>
 ```
 
-#### **2. Modify TextView Programmatically (`MainActivity.java`)**
+#### 2. Modify TextView Programmatically (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -989,13 +989,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Explanation**
+### Explanation
 
 1. **TextView in XML** – Displays **default text**, styled with **size, color, and padding**.
 2. **Modify Text in Java** – `textView.setText("New Text")` updates the displayed text.
 3. **Button Click Listener** – Changes text dynamically when the button is clicked.
 
-### **Common Properties of TextView**
+### Common Properties of TextView
 
 | Property            | Description                                |
 | ------------------- | ------------------------------------------ |
@@ -1005,13 +1005,13 @@ public class MainActivity extends AppCompatActivity {
 | `android:textStyle` | Makes text **bold, italic, or normal**.    |
 | `android:gravity`   | Aligns text **left, center, or right**.    |
 
-### **Use Cases of TextView**
+### Use Cases of TextView
 
 - Displaying **headings, labels, and instructions**.
 - Showing **messages and notifications**.
 - Updating **dynamic content** (e.g., **score in a game**).
 
-### **Conclusion**
+### Conclusion
 
 TextView is an essential UI element in Android for **displaying text**. It can be **styled, modified, and updated dynamically**, making it useful for **static and dynamic text content**.
 
@@ -1021,23 +1021,23 @@ TextView is an essential UI element in Android for **displaying text**. It can b
 
 **Padding** in Android is the **space between the content of a View and its border**. It defines how much **inner spacing** should be kept inside the View before the content starts.
 
-### **Key Features of Padding**
+### Key Features of Padding
 
 1. **Creates Inner Spacing** – Prevents text or images from touching the edges of the View.
 2. **Improves Readability** – Helps in better UI alignment and appearance.
 3. **Can Be Applied Individually** – Supports padding for **top, bottom, left, and right** separately.
 4. **Works with All Views** – Can be applied to **TextView, Button, ImageView, etc.**
 
-### **Types of Padding in Android**
+### Types of Padding in Android
 
 1. **`android:padding`** – Applies equal padding to all sides.
 2. **`android:paddingLeft`**, `android:paddingRight` – Sets padding for left and right.
 3. **`android:paddingTop`**, `android:paddingBottom` – Sets padding for top and bottom.
 4. **`android:paddingHorizontal`**, `android:paddingVertical` _(API 26+)_ – Applies padding to left-right or top-bottom together.
 
-### **Example: Using Padding in Android**
+### Example: Using Padding in Android
 
-#### **1. Define Padding in XML (`activity_main.xml`)**
+#### 1. Define Padding in XML (`activity_main.xml`)
 
 ```xml
 <LinearLayout
@@ -1066,7 +1066,7 @@ TextView is an essential UI element in Android for **displaying text**. It can b
 </LinearLayout>
 ```
 
-### **2. Modify Padding Programmatically (`MainActivity.java`)**
+### 2. Modify Padding Programmatically (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -1087,13 +1087,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Explanation**
+### Explanation
 
 1. **Padding in XML** – `android:padding="20dp"` adds equal spacing inside the `TextView`.
 2. **Custom Padding for Buttons** – `android:paddingHorizontal="10dp"` sets horizontal padding only.
 3. **Dynamic Padding in Java** – `setPadding(30, 10, 30, 10)` changes padding at runtime.
 
-### **Difference Between Padding and Margin**
+### Difference Between Padding and Margin
 
 | Feature           | Padding                                                | Margin                                                                     |
 | ----------------- | ------------------------------------------------------ | -------------------------------------------------------------------------- |
@@ -1101,13 +1101,13 @@ public class MainActivity extends AppCompatActivity {
 | **Affects Size?** | Increases View size by pushing content inward.         | Creates spacing without affecting View size.                               |
 | **Usage**         | Used for text/image spacing inside a View.             | Used for layout spacing between Views.                                     |
 
-### **Use Cases of Padding**
+### Use Cases of Padding
 
 - **Improving UI Design** – Adds space to make UI elements readable.
 - **Button & Text Spacing** – Ensures text doesn’t touch button edges.
 - **Card & Image Layouts** – Provides uniform padding inside cards or images.
 
-### **Conclusion**
+### Conclusion
 
 Padding in Android **improves UI appearance** by creating **inner spacing** inside Views. It helps in **better alignment, readability, and visual appeal** of UI elements.
 
@@ -1117,9 +1117,9 @@ Padding in Android **improves UI appearance** by creating **inner spacing** insi
 
 A **Button** in Android is a **UI component** that allows users to **perform an action** when clicked. It is commonly used for **submitting forms, navigating between activities, or triggering events**.
 
-### **Types of Buttons in Android**
+### Types of Buttons in Android
 
-#### **1. Normal Button (`Button`)**
+#### 1. Normal Button (`Button`)
 
 - The default button used for general actions.
 - Example:
@@ -1131,7 +1131,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
       android:text="Submit" />
   ```
 
-#### **2. Image Button (`ImageButton`)**
+#### 2. Image Button (`ImageButton`)
 
 - A button that displays an **image** instead of text.
 - Example:
@@ -1143,7 +1143,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
       android:src="@drawable/ic_launcher" />
   ```
 
-#### **3. Toggle Button (`ToggleButton`)**
+#### 3. Toggle Button (`ToggleButton`)
 
 - A button that switches **between ON and OFF states**.
 - Example:
@@ -1156,7 +1156,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
       android:textOff="OFF" />
   ```
 
-#### **4. Radio Button (`RadioButton`)**
+#### 4. Radio Button (`RadioButton`)
 
 - Allows users to **select one option from a group**.
 - Example:
@@ -1167,7 +1167,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
   </RadioGroup>
   ```
 
-#### **5. CheckBox Button (`CheckBox`)**
+#### 5. CheckBox Button (`CheckBox`)
 
 - Allows **multiple selections**.
 - Example:
@@ -1179,7 +1179,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
       android:text="Accept Terms" />
   ```
 
-#### **6. Floating Action Button (`FloatingActionButton`)**
+#### 6. Floating Action Button (`FloatingActionButton`)
 
 - A **round button** that floats above the UI, typically for quick actions.
 - Example:
@@ -1191,7 +1191,7 @@ A **Button** in Android is a **UI component** that allows users to **perform an 
       android:src="@drawable/ic_add"/>
   ```
 
-### **Example: Handling Button Click in Java (`MainActivity.java`)**
+### Example: Handling Button Click in Java (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -1220,22 +1220,22 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Conclusion**
+### Conclusion
 
 Android provides different types of buttons for **various user interactions**, such as **normal buttons, image buttons, toggle buttons, and floating action buttons**. Buttons improve **user experience and navigation** within an app.
 
 ## <mark> 14) Define the role of XML, JAVA, Manifest and String files in android. </mark>
 
-### **Role of XML, Java, Manifest, and String Files in Android**
+### Role of XML, Java, Manifest, and String Files in Android
 
 Android applications are built using **multiple components**, including **XML for UI design**, **Java (or Kotlin) for logic**, **Manifest for app configuration**, and **String files for localization**.
 
-### **1. XML Files (Extensible Markup Language)**
+### 1. XML Files (Extensible Markup Language)
 
 - Used for **defining UI layouts, resources, and configurations**.
 - Located in the **`res/` directory**.
 
-#### **Types of XML Files in Android**
+#### Types of XML Files in Android
 
 | XML File                       | Purpose                               |
 | ------------------------------ | ------------------------------------- |
@@ -1244,7 +1244,7 @@ Android applications are built using **multiple components**, including **XML fo
 | `res/menu/`                    | Defines menu items for the app.       |
 | `res/values/colors.xml`        | Stores app color definitions.         |
 
-#### **Example (activity_main.xml)**
+#### Example (activity_main.xml)
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1259,12 +1259,12 @@ Android applications are built using **multiple components**, including **XML fo
 </LinearLayout>
 ```
 
-### **2. Java Files**
+### 2. Java Files
 
 - Contain the **application logic, event handling, and backend code**.
 - Located in the **`src/main/java/com.example.myapp/` directory**.
 
-#### **Example (MainActivity.java)**
+#### Example (MainActivity.java)
 
 ```java
 import android.os.Bundle;
@@ -1283,14 +1283,14 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **3. Android Manifest File (`AndroidManifest.xml`)**
+### 3. Android Manifest File (`AndroidManifest.xml`)
 
 - **Registers components (Activities, Services, Broadcast Receivers)**.
 - Declares **permissions** (e.g., Internet, Camera, Storage).
 - Specifies **app metadata** (package name, theme, launcher activity).
 - Located in the **`app/src/main/` directory**.
 
-#### **Example (`AndroidManifest.xml`)**
+#### Example (`AndroidManifest.xml`)
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1313,12 +1313,12 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
-### **4. String Resource File (`res/values/strings.xml`)**
+### 4. String Resource File (`res/values/strings.xml`)
 
 - Stores **text values** separately to support **localization**.
 - Avoids hardcoding text in Java/XML files.
 
-#### **Example (`strings.xml`)**
+#### Example (`strings.xml`)
 
 ```xml
 <resources>
@@ -1339,7 +1339,7 @@ public class MainActivity extends AppCompatActivity {
 textView.setText(getString(R.string.welcome_message));
 ```
 
-### **Conclusion**
+### Conclusion
 
 | Component                | Purpose                                                             |
 | ------------------------ | ------------------------------------------------------------------- |
@@ -1352,11 +1352,11 @@ Each component plays a **crucial role** in Android development, ensuring **struc
 
 ## <mark> 15) Explain the term material design in android with an example. </mark>
 
-### **Material Design in Android**
+### Material Design in Android
 
 **Material Design** is a **design language** developed by **Google** to create modern, visually appealing, and user-friendly Android applications. It provides a **consistent UI experience** across different devices using **animations, shadows, depth effects, and responsive layouts**.
 
-### **Key Features of Material Design**
+### Key Features of Material Design
 
 1. **Elevation & Shadows** – Adds **depth and layering** to UI elements.
 2. **Smooth Animations** – Uses **motion effects** for transitions.
@@ -1364,9 +1364,9 @@ Each component plays a **crucial role** in Android development, ensuring **struc
 4. **Responsive UI** – Adapts layouts for different **screen sizes**.
 5. **Material Components** – Provides **pre-built widgets** like **FloatingActionButton, CardView, AppBar, Bottom Navigation**.
 
-### **Example: Implementing Material Design in Android**
+### Example: Implementing Material Design in Android
 
-#### **1. Add Material Design Dependencies (`build.gradle`)**
+#### 1. Add Material Design Dependencies (`build.gradle`)
 
 ```gradle
 dependencies {
@@ -1374,7 +1374,7 @@ dependencies {
 }
 ```
 
-#### **2. Use Material Design Components in XML (`activity_main.xml`)**
+#### 2. Use Material Design Components in XML (`activity_main.xml`)
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -1418,7 +1418,7 @@ dependencies {
 </LinearLayout>
 ```
 
-#### **3. Handle Button Clicks in Java (`MainActivity.java`)**
+#### 3. Handle Button Clicks in Java (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -1454,13 +1454,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **Conclusion**
+### Conclusion
 
 **Material Design** improves **user experience** by adding **depth, motion, and responsive UI components**. Android provides **Material Components** like **MaterialButton, FloatingActionButton, and CardView**, which help in building **modern and attractive apps**.
 
 ## <mark> 16) Differentiate between android themes and style. </mark>
 
-### **Difference Between Android Themes and Styles**
+### Difference Between Android Themes and Styles
 
 | Feature           | **Style**                                                                                                        | **Theme**                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -1470,7 +1470,7 @@ public class MainActivity extends AppCompatActivity {
 | **Defined In**    | `res/values/styles.xml`                                                                                          | `res/values/themes.xml` or `styles.xml`                                                             |
 | **Applied Using** | `style="@style/MyStyle"` in XML for a specific View.                                                             | `android:theme="@style/MyTheme"` in `AndroidManifest.xml` for the whole Activity or app.            |
 
-### **Example of Style (Applied to a Single View)**
+### Example of Style (Applied to a Single View)
 
 **styles.xml**
 
@@ -1493,7 +1493,7 @@ public class MainActivity extends AppCompatActivity {
     style="@style/CustomButton"/>
 ```
 
-### **Example of Theme (Applied to Entire App or Activity)**
+### Example of Theme (Applied to Entire App or Activity)
 
 **themes.xml**
 
@@ -1515,7 +1515,7 @@ public class MainActivity extends AppCompatActivity {
 </application>
 ```
 
-### **Conclusion**
+### Conclusion
 
 - **Styles** define **individual View properties**, making UI elements **consistent**.
 - **Themes** apply **styles globally**, ensuring **uniformity** across **Activities and the entire app**.

@@ -8,6 +8,8 @@
 
 - ### [Distributed Systems (DS)](./question-banks/distributed-systems)
 
+- ### [Internet of Things (IoT)](./question-banks/internet-of-things) (Minor)
+
 - ### [Mobile Application Development (MAD)](./question-banks/mobile-applicarion-development)
 
 - ### [Software Engineering with UML (SEUML)](./question-banks/software-engineering-with-uml)

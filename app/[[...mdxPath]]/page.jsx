@@ -21,4 +21,3 @@ export default async function Page(props) {
     </Wrapper>
   );
 }
-export const runtime = "edge";

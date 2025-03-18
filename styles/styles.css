@@ -2,11 +2,3 @@ mark {
   background-color: transparent;
   color: #ffc107;
 }
-
-._mx-auto {
-  max-width: 100% !important  ;
-}
-
-._max-w-6xl {
-  max-width: 100% !important;
-}

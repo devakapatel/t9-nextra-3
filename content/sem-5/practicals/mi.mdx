@@ -1,0 +1,977 @@
+# Microprocessors and Interfaces
+
+## Lab 1 : PROGRAMMING BASED ON DATA TRANSFER AND ARITHMETIC OPERATIONS
+
+### **1. Load the memory address 2100H with 0x45 and transfer it to accumulator. Copy accumulator to register B, C, D, E, H and L.**
+
+```nasm copy
+MVI A, 0x45
+LXI H, 2100H
+MOV M, A
+MOV A, M
+MOV B, A
+MOV C, A
+MOV D, A
+MOV E, A
+MOV H, A
+MOV L, A
+HLT
+```
+
+### 2. Load the accumulator with 0x45 and save accumulator at memory location 2105H.
+
+```nasm copy
+MVI A, 0x45
+LXI H, 2105H
+MOV M, A
+HLT
+```
+
+### 3. Write instructions to load 0x65 in register C and 0x92 in the accumulator. Store the content of both register at memory location 2122H and 2212H.
+
+```nasm copy
+MVI C, 0x65
+MVI A, 0x92
+LXI H, 2122H
+MOV M, C
+LXI H, 2212H
+MOV M, A
+HLT
+```
+
+### 4. Write a program to exchange the content of B and C register.
+
+```nasm copy
+MOV D, B
+MOV B, C
+MOV C, D
+HLT
+```
+
+### 5. Write a program to exchange the content of memory location 2000H and 2001H.
+
+```nasm copy
+LXI H, 2000H
+MOV A, M
+LXI H, 2001H
+MOV B, M
+LXI H, 2000H
+MOV M, B
+LXI H, 2001H
+MOV M, A
+HLT
+```
+
+## Lab 2 : **PROGRAMMING BASED ON ARITHMETIC AND LOGICAL OPERATIONS**
+
+### 1. Write an assembly language program for the adding of two 8-bits numbers stored at memory location 2100H and 2101H respectively. Store the result at memory location 2102H.
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+INX H
+ADD M
+INX H
+MOV M, A
+HLT
+```
+
+### 2. Write an ALP to add two sixteen bit numbers and store 16-bit result.
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+INX H
+MOV B, M
+INX H
+MOV C, M
+INX H
+MOV D, M
+
+MOV A, B
+ADD C
+MOV E, A
+
+MOV A, D
+ADC B
+MOV H, A
+
+LXI H, 2104H
+MOV M, E
+INX H
+MOV M, H
+HLT
+```
+
+### 3. Subtract two 8-bit numbers at 2100H and 2101H. Save the result at location 2102H.
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+INX H
+SUB M
+INX H
+MOV M, A
+HLT
+```
+
+### 4. Write a program to subtract two 16-bit numbers and store the result.
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+INX H
+MOV B, M
+INX H
+MOV C, M
+INX H
+MOV D, M
+
+MOV A, B
+SUB C
+MOV E, A
+
+MOV A, D
+SBB B
+MOV H, A
+
+LXI H, 2104H
+MOV M, E
+INX H
+MOV M, H
+HLT
+```
+
+### 5. Write ALP to find one’s complement of data 0x55 stored at memory location
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+CMA
+MOV M, A
+HLT
+```
+
+### 6. Write an ALP to find two’s complement of data 0x45 stored at memory location
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+CMA
+INR A
+MOV M, A
+HLT
+```
+
+### 7. Write an ALP to unpacked data stored at location 2100H. Save result at memory locations 2101H and 2102H.
+
+```nasm copy
+LXI H, 2100H
+MOV A, M
+ANI 0F0H
+RRC
+RRC
+RRC
+RRC
+MOV B, A
+MOV A, M
+ANI 0F0H
+MOV M, B
+INX H
+MOV M, A
+HLT
+```
+
+### 8. Write a program that takes two nibbles from 2100H, 2101H and combines to form byte. The nibbles from 2100 are to be taken as most significant nibble.
+
+```nasm copy
+ORG     0000H
+MVI     H, 21H
+MVI     L, 00H
+MOV     A, M
+ANI     0F0H
+MOV     B, A
+INX     H
+MOV     A, M
+ANI     0F H
+ORA     B
+STA     2200H
+HLT
+```
+
+## Lab 3 : PROGRAMMING BASED ON BRANCH OPERATIONS
+
+### 1. Write a program to multiply two 8 bit data stored at location 2101H and 2102H.
+
+```nasm copy
+ORG 2100H
+LXI H, 2101H
+MOV A, M
+INX H
+MOV B, M
+MVI C, 00H
+MULTIPLY:
+    CMP B
+    JZ END
+    ADD C
+    MOV C, A
+    DCR B
+    JMP MULTIPLY
+END:
+LXI H, 2103H
+MOV M, C
+HLT
+```
+
+### 2. Write a program to add an array of 10 bytes data stored from location 5000H to 5009H and store the result at 500AH and 500BH.
+
+```nasm copy
+ORG 5000H
+DB 01H, 02H, 03H, 04H, 05H, 06H, 07H, 08H, 09H, 0AH
+
+ORG 500AH
+DB 00H, 00H
+
+ORG 2000H
+LXI H, 5000H
+MVI C, 00H
+MVI D, 00H
+MVI B, 0AH
+
+ADD_LOOP:
+    MOV A, M
+    ADD C
+    MOV C, A
+    INX H
+    DCR B
+    JNZ ADD_LOOP
+
+LXI H, 500AH
+MOV M, C
+MOV A, D
+MOV M, A
+
+HLT
+```
+
+### 3. Write a program to subtract an array of 10 bytes data stored from location 5000H to 5009H and store the result at 500AH and 500BH.
+
+```nasm copy
+ORG 5000H
+DB 10H, 02H, 03H, 04H, 05H, 06H, 07H, 08H, 09H, 0AH
+
+ORG 500AH
+DB 00H, 00H
+
+ORG 2000H
+LXI H, 5000H
+MOV A, M
+INX H
+MVI B, 09H
+
+SUB_LOOP:
+    MOV C, M
+    SUB C
+    INX H
+    DCR B
+    JNZ SUB_LOOP
+
+LXI H, 500AH
+MOV M, A
+MOV A, L
+MOV M, A
+
+HLT
+```
+
+### 4. Write a program to find largest and smallest numbers in block of array from 2100H to 2109H. Store the result at location 210AH and 210BH.
+
+```nasm copy
+ORG 2100H
+DB 05H, 03H, 09H, 01H, 07H, 02H, 08H, 06H, 04H, 00H
+
+ORG 210AH
+DB 00H
+
+ORG 210BH
+DB 00H
+
+ORG 2000H
+LXI H, 2100H
+MOV A, M
+MOV B, A
+MOV C, A
+INX H
+MVI D, 09H
+
+FIND_LOOP:
+    MOV A, M
+    CMP B
+    JG UPDATE_LARGEST
+    CMP C
+    JL UPDATE_SMALLEST
+    INX H
+    DCR D
+    JNZ FIND_LOOP
+    JMP STORE_RESULTS
+
+UPDATE_LARGEST:
+    MOV B, A
+    JMP FIND_LOOP
+
+UPDATE_SMALLEST:
+    MOV C, A
+    JMP FIND_LOOP
+
+STORE_RESULTS:
+LXI H, 210AH
+MOV M, B
+LXI H, 210BH
+MOV M, C
+
+HLT
+```
+
+### 5. Write an ALP to sort an array of 10 elements from 2100H in ascending order.
+
+```nasm copy
+ORG 2100H
+DB 05H, 03H, 09H, 01H, 07H, 02H, 08H, 06H, 04H, 0AH
+
+ORG 2000H
+LXI H, 2100H
+MVI B, 0AH
+MVI C, 00H
+
+OUTER_LOOP:
+    MOV D, M
+    INX H
+    MOV E, M
+    INX H
+    MVI A, 00H
+
+INNER_LOOP:
+    CMP D
+    JC NO_SWAP
+    MOV M, D
+    MOV A, 01H
+    INX H
+    MOV D, E
+    MOV E, M
+    JMP INNER_LOOP
+
+NO_SWAP:
+    DCR B
+    JNZ OUTER_LOOP
+
+HLT
+```
+
+### 6. Write an ALP to sort an array of 10 elements from 2100H in descending order.
+
+```nasm copy
+ORG 2100H
+DB 05H, 03H, 09H, 01H, 07H, 02H, 08H, 06H, 04H, 0AH
+
+ORG 2000H
+LXI H, 2100H
+MVI B, 0AH
+MVI C, 00H
+
+OUTER_LOOP:
+    MOV D, M
+    INX H
+    MOV E, M
+    INX H
+    MVI A, 00H
+
+INNER_LOOP:
+    CMP D
+    JZ NO_SWAP
+    JC SWAP
+    JMP NO_SWAP
+
+SWAP:
+    MOV M, D
+    INX H
+    MOV M, E
+    MOV A, 01H
+    INX H
+    MOV D, E
+    MOV E, M
+    JMP INNER_LOOP
+
+NO_SWAP:
+    DCR B
+    JNZ OUTER_LOOP
+
+HLT
+```
+
+## Lab 4 : **Introduction to MASM**
+
+### 1) Write ALP for the Data Transfer between registers.
+
+```nasm copy
+DATA SEGMENT
+; No data is defined in this segment
+DATA ENDS
+CODE SEGMENT
+ASSUME CS: CODE, DS: DATA
+START:
+MOV AX, 0FFFFH ; Load AX with FFFFH
+MOV BX, 0000H ; Load BX with 0000H
+MOV CX, AX ; Transfer data from AX to CX
+MOV DX, BX ; Transfer data from BX to DX
+MOV SI, CX ; Transfer data from CX to SI
+MOV DI, DX ; Transfer data from DX to DI
+MOV AH, 4CH ; Load AH with 4CH (Exit code)
+INT 21H ; Call DOS interrupt to exit
+CODE ENDS
+END START
+```
+
+### 2) Write ALP to ADD two 16 bit numbers.
+
+```nasm copy
+DATA SEGMENT
+NUM1 DW 2335H
+NUM2 DW 6789H
+RESULT DW ?
+DATA ENDS
+CODE SEGMENT ; Code Start Here
+ASSUME CS: CODE, DS: DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AX, NUM1
+MOV BX, NUM2
+ADD AX,BX
+MOV RESULT, AX
+INT 21H
+CODE ENDS ; Program ends here
+END START
+```
+
+### 3) Write ALP Subtract two 16 bit numbers.
+
+```nasm copy
+DATA SEGMENT ; Define the Data if Required..
+NUM1 DW 2335H
+NUM2 DW 6789H
+RESULT DW ?
+DATA ENDS
+CODE SEGMENT ; Code Start Here
+ASSUME CS: CODE, DS: DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AX, NUM1
+MOV BX, NUM2
+SUB BX,AX
+MOV RESULT, AX
+INT 21H
+CODE ENDS ; Program ends here
+END START
+```
+
+## Lab 5 : Programming based on block data transfer
+
+### 1) An ALP to transfer a given block of data from source memory block to the destination memory block without overlap.
+
+```nasm copy
+CASE 1: BYTE TRANSFER
+DATA SEGMENT
+BLOCK1 DB 25H, 55H, 35H, 45H
+BLOCK2 DB ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AL, [SI]
+MOV [DI], AL
+INC SI
+INC DI
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
+
+CASE 2: WORD TRANSFER
+DATA SEGMENT
+BLOCK1 DW 2500H,5554H,3541H,4524H
+BLOCK2 DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+JAIVAL ACHARYA IU2241050062 5CE-A
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK:MOV AX, [SI]
+MOV [DI], AX
+ADD SI, 2
+ADD DI, 2
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
+```
+
+### 2) An ALP to exchange a block of data located from source to the destination memory locations.
+
+```nasm copy
+CASE 1: BYTE EXCHANGE
+DATA SEGMENT
+BLOCK1 DB 25H,55H,35H,45H
+BLOCK2 DB 22H,15H,47H,57H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AL, [SI]
+XCHG AL,[DI]
+MOV [SI], AL
+INC SI
+INC DI
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
+
+CASE 2: WORD TRANSFER
+DATA SEGMENT
+4
+BLOCK1 DW 2554H,5445H,3325H,4435H
+BLOCK2 DW 2762H,1125H,4637H,5657H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+LEA DI, BLOCK2
+MOV CL, 04
+BACK: MOV AX, [SI]
+XCHG AX,[DI]
+MOV [SI], AX
+ADD SI, 2
+ADD DI, 2
+DEC CL
+JNZ BACK
+INT 21H
+CODE ENDS
+END START
+```
+
+## Lab 6 : Programming based on Sorting of An Array of Numbers
+
+### 1) Write an ALP to find the largest number from an array.
+
+```nasm copy
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+LARGEST DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV AX, [SI] ; Initialize LARGEST with the first element
+MOV LARGEST, AX
+MOV CX, 03H ; Loop counter (since we've already processed the first
+element)
+BACK:
+ADD SI, 2 ; Move to the next element
+MOV AX, [SI]
+CMP AX, LARGEST
+JLE SKIP ; If current element is not larger, skip updating LARGEST
+MOV LARGEST, AX
+SKIP:
+LOOP BACK
+MOV AX, LARGEST ; Print the largest number
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+INT 21H
+CODE ENDS
+END START
+```
+
+### 2) Write an ALP to find the smallest number from an array.
+
+```nasm copy
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 1541H, 4524H
+SMALLEST DW ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV AX, [SI] ; Initialize SMALLEST with the first element
+MOV SMALLEST, AX
+MOV CX, 03H ; Loop counter (since we've already processed the first
+element)
+BACK:
+ADD SI, 2 ; Move to the next element
+MOV AX, [SI]
+CMP AX, SMALLEST
+JGE SKIP ; If current element is not smaller, skip updating SMALLEST
+MOV SMALLEST, AX
+SKIP:
+LOOP BACK
+MOV AX, SMALLEST ; Print the smallest number
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+INT 21H
+CODE ENDS
+END START
+```
+
+### 3) Write an ALP to sort the given array of numbers in ascending order.
+
+```nasm copy
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+COUNT DW 04H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV CX, COUNT
+DEC CX
+OUTER:
+LEA SI, BLOCK1
+MOV DX, CX
+INNER:
+MOV AX, [SI]
+CMP AX, [SI+2]
+JLE SKIP
+XCHG AX, [SI+2]
+MOV [SI], AX
+SKIP:
+ADD SI, 2
+DEC DX
+JNZ INNER
+LOOP OUTER
+LEA SI, BLOCK1
+MOV CX, COUNT
+PRINT:
+MOV AX, [SI]
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+ADD SI, 2
+LOOP PRINT
+INT 21H
+CODE ENDS
+END START
+```
+
+### 4) Write an ALP to sort the given array of numbers in descending order.
+
+```nasm copy
+DATA SEGMENT
+BLOCK1 DW 2500H, 5554H, 3541H, 4524H
+COUNT DW 04H
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA SI, BLOCK1
+MOV CX, COUNT
+DEC CX
+OUTER:
+LEA SI, BLOCK1
+MOV DX, CX
+INNER:
+MOV AX, [SI]
+CMP AX, [SI+2]
+JGE SKIP
+XCHG AX, [SI+2]
+MOV [SI], AX
+SKIP:
+ADD SI, 2
+DEC DX
+JNZ INNER
+LOOP OUTER
+LEA SI, BLOCK1
+MOV CX, COUNT
+PRINT:
+MOV AX, [SI]
+MOV DX, AX
+MOV AH, 02H
+INT 21H
+ADD SI, 2
+LOOP PRINT
+INT 21H
+CODE ENDS
+END START
+```
+
+## Lab 7 : Programming based on Bit Manipulation
+
+### 1) Write a program to check if given data is positive or negative.
+
+```nasm copy
+ ; DATA Positive / Negative
+DATA SEGMENT
+NUM DB 72H ; 1000 0010
+MES1 DB 'DATA IS POSITIVE $'
+MES2 DB 'DATA IS NEGATIVE $'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AL,NUM
+ROL AL,1
+JC NEGA
+LEA DX,MES1 ;Declare it positive.
+JMP EXIT ;Exit program.
+NEGA: LEA DX,MES2;Declare it negative.
+8
+EXIT: MOV AH,09H
+INT 21H
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
+```
+
+### 2) Write a program to check if given data is odd or even.
+
+```nasm copy
+; Data even or odd
+DATA SEGMENT
+X DB 27
+MSG1 DB 'NUMBER IS EVEN$'
+MSG2 DB 'NUMBER IS ODD$'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AL,X
+TEST AL,01H
+JNZ EXIT
+LEA DX,MSG1
+MOV AH,09H
+INT 21H
+JMP LAST
+EXIT: LEA DX,MSG2 ;Declare it is Odd number.
+MOV AH,09H
+INT 21H
+LAST: MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
+```
+
+### 3) Write a program to count the number of 1’s and 0’s in given data.
+
+```nasm copy
+; Count number of ones and zeros in a number
+DATA SEGMENT
+X DB 0AAH
+ONE DB ?
+ZERO DB ?
+DATA ENDS
+CODE SEGMENT
+ASSUME CS: CODE,DS:DATA
+START: MOV AX,DATA
+MOV DS,AX
+MOV AH,X
+MOV BL,8 ;Initialize BL to 8.
+MOV CL,1 ;Initialize CL to 1.
+UP: ROR AH,CL ;Perform the single bit rotate operation
+;with respect to right.
+JNC DOWN ;If no carry go to DOWN label.
+INC ONE ;Increment one.
+JMP DOWN1 ;Jump to DOWN1.
+DOWN: INC ZERO ;Increment ZERO.
+DOWN1: DEC BL ;Decrement the BL.
+JNZ UP ;If no zero go to UP label.
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END START
+```
+
+## Lab 8 : Programming based on String Operations
+
+### 1) Write an ALP to transfer a string from one location to other.
+
+```nasm copy
+DATA SEGMENT
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+STRING2 DB 20 DUP (0) ; Destination string, initialized to 0
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+LEA SI, STRING1 ; Load the address of the source string into SI
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REP MOVSB ; Repeat moving bytes from DS:SI to ES:DI
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
+CODE ENDS
+END START
+```
+
+### 2) Write an ALP to reverse the string.
+
+```nasm copy
+DATA SEGMENT
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+STRING2 DB 20 DUP (0) ; Destination string, initialized to 0
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+LEA SI, STRING1 ; Load the address of the source string into SI
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REP MOVSB ; Repeat moving bytes from DS:SI to ES:DI
+LEA SI, STRING2 ; Load the address of the destination string into SI
+ADD SI, CX ; Point SI to the end of the string
+DEC SI ; Decrement SI to point to the last character
+LEA DI, STRING2 ; Load the address of the destination string into DI
+MOV CX, 13 ; Load length of string into CX (including '$'
+terminator)
+STD ; Set the direction flag for backward string operations
+LOOP1:
+LODSB ; Load the byte at SI into AL
+STOSB ; Store the byte in AL at DI
+LOOP LOOP1 ; Repeat until CX = 0
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
+CODE ENDS
+END START
+```
+
+### 3) Write an ALP to find the Character in a string.
+
+```nasm copy
+DATA SEGMENT
+STRING1 DB "HOW ARE YOU$" ; Source string with a terminating
+character
+CHAR DB 'A' ; Character to find
+INDEX DW ? ; Index of the found character
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+LEA SI, STRING1 ; Load the address of the source string into SI
+MOV AL, CHAR ; Load the character to find into AL
+MOV CX, 11 ; Load length of string into CX
+CLD ; Clear the direction flag for forward string operations
+REPNE SCASB ; Scan the source string until the character is
+found
+JNZ NOT_FOUND ; Jump if the character is not found
+SUB SI, CX ; Calculate the index of the found character
+MOV INDEX, SI ; Store the index of the found character
+JMP EXIT
+NOT_FOUND:
+MOV INDEX, -1 ; Set the index to -1 if the character is not found
+EXIT:
+MOV AH, 4CH ; Prepare to exit program
+INT 21H ; Call DOS interrupt to terminate the program
+CODE ENDS
+END START
+```
+
+### 4) Write an ALP to check if the string is palindrome or not.
+
+```nasm copy
+DATA SEGMENT
+STRING DB "madam", '$' ; String to check, terminated with '$'
+MSG_PALINDROME DB "Palindrome$"
+MSG_NOT_PALINDROME DB "Not a Palindrome$"
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+LEA SI, STRING ; Load the address of the source string into SI
+LEA DI, STRING ; Load the address of the source string into DI
+MOV CX, 5 ; Load length of string into CX (excluding '$'
+terminator)
+CLD ; Clear the direction flag for forward string operations
+REPNE SCASB ; Scan the source string until the end is reached
+JNZ NOT_PALINDROME ; Jump if the end of the string is not reached
+LEA SI, STRING ; Load the address of the source string into SI
+LEA DI, STRING ; Load the address of the source string into DI
+ADD SI, CX ; Point SI to the end of the string
+DEC SI ; Decrement SI to point to the last character
+MOV CX, 5 ; Load length of string into CX (excluding '$'
+terminator)
+STD ; Set the direction flag for backward string operations
+REP CMPSB ; Compare bytes from DS:SI to ES:DI
+JE PALINDROME ; Jump if the strings match
+NOT_PALINDROME:
+12
+LEA DX, MSG_NOT_PALINDROME
+MOV AH, 09H
+INT 21H
+JMP EXIT
+PALINDROME:
+LEA DX, MSG_PALINDROME
+MOV AH, 09H
+INT 21H
+EXIT:
+MOV AH, 4CH
+INT 21H
+CODE ENDS
+END START
+```
+
+## Lab 9 : To Study the Dos Interrupt and Write a Program to Display a String on Console using DOS Interrupt.
+
+### 1) Display string on console using DOS interrupts.
+
+```copy
+DATA SEGMENT
+MSG DB 'Hello, World!$'
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+START:
+MOV AX, DATA
+MOV DS, AX
+LEA DX, MSG
+MOV AH, 09h
+INT 21h
+MOV AH, 4Ch
+INT 21h
+CODE ENDS
+END START
+```

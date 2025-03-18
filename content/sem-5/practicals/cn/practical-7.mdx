@@ -1,0 +1,69 @@
+# Practical 7
+
+### AIM:
+Write a program to demonstrate the concept of Byte Stuffing.
+
+### Program Code (python):
+```python copy
+def stuff_string(input_string, flag_word, escape_word):
+    # Start stuffing by adding the initial flag
+    stuffed_string = flag_word + input_string
+    
+    # Replace occurrences of the flag word with escape word + flag word
+    stuffed_string = stuffed_string.replace(flag_word, escape_word + flag_word)
+    
+    # Handle special case to remove any initial extra replacement of the flag word
+    stuffed_string = stuffed_string.replace(escape_word + flag_word, flag_word, 1)
+    
+    # Add the final flag to mark the end
+    stuffed_string += flag_word
+    return stuffed_string
+
+# Test Case 1
+input_string = " Hello World "
+flag_word = "FLAG"
+escape_word = "ESC"
+stuffed_string = stuff_string(input_string, flag_word, escape_word)
+print(stuffed_string)
+
+# Test Case 2
+input_string = " Hello FLAG World "
+stuffed_string = stuff_string(input_string, flag_word, escape_word)
+print(stuffed_string)
+```
+
+### Sample Output:
+```
+FLAG Hello World FLAG
+FLAG Hello ESCFLAG World FLAG
+```
+
+Code (C)
+```c copy
+//BYTE STUFFING
+#include <stdio.h>
+
+int main() {
+    char data[] = "FHelloEWorldF";  // Original data
+    char stuffed[50];
+    char FLAG = 'F';  // Frame delimiter
+    char ESC = 'E';   // Escape character
+    int i = 0, j = 0;
+    
+    stuffed[j] = FLAG; 
+       //whenever E or F occurs,E is inserted before it(E is escape charc.)
+    while (data[i] != '\0') {
+        if (data[i] == FLAG || data[i] == ESC) {
+            stuffed[j++] = ESC;  // Insert escape character
+        }
+        stuffed[j++] = data[i++]; // Copy data character
+    }
+
+    stuffed[j++] = FLAG; // End the frame
+    stuffed[j] = '\0';   // Null-terminate stuffed data
+    
+    printf("Stuffed Data: %s\n", stuffed);
+
+    return 0;
+}
+```

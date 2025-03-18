@@ -50,15 +50,7 @@ export default {
   footer: {
     content: (
       <span>
-        T9 &copy; {new Date().getFullYear()} | Owned and managed by
-        <a
-          href="https://github.com/devakapatel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          Dev Patel
-        </a>
+        T9 &copy; {new Date().getFullYear()} | Owned and managed by Dev Patel
       </span>
     ),
   },

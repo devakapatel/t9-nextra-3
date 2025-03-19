@@ -402,7 +402,7 @@ For Kerberos to function effectively, the following conditions must be met:
 
 Kerberos enhances security in distributed networks by using **ticket-based authentication** and eliminating password transmission. Its applications include enterprise networks, cloud services, and online transactions. 🚀
 
-## <mark> 6) What isPGP? How authentication and confidentiality is maintained in PGP? </mark>
+## <mark> 6) What is PGP? How authentication and confidentiality is maintained in PGP? </mark>
 
 ### Pretty Good Privacy (PGP) and Its Security Mechanisms
 

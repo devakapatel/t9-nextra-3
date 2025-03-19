@@ -134,7 +134,7 @@ Where:
 
 HMAC is favored for its simplicity, efficiency, and resistance to certain cryptographic attacks, making it a cornerstone in modern security practices.
 
-## <mark> 4) 4.Explain Elgamal and Schnorr Digital Signature algorithm with examples. </mark>
+## <mark> 4) Explain Elgamal and Schnorr Digital Signature algorithm with examples. </mark>
 
 ### 1. ElGamal Digital Signature Algorithm
 

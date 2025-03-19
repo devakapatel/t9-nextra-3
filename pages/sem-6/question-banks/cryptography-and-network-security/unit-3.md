@@ -2,15 +2,15 @@
 
 ## <mark> 1) Explain MACs based on Hash functions. </mark>
 
-### **Message Authentication Codes (MACs) Based on Hash Functions**
+### Message Authentication Codes (MACs) Based on Hash Functions
 
 A **Message Authentication Code (MAC)** is a cryptographic technique used to verify the integrity and authenticity of a message. A **MAC based on a hash function** is known as an **HMAC (Hash-based Message Authentication Code)**.
 
-#### **1. What is HMAC?**
+#### 1. What is HMAC?
 
 HMAC is a **keyed-hash function** that combines a cryptographic hash function (e.g., SHA-256) with a **secret key** to generate a secure MAC value. It ensures that the message has not been altered and verifies the sender’s authenticity.
 
-#### **2. HMAC Algorithm Steps:**
+#### 2. HMAC Algorithm Steps:
 
 1. **Key Padding:** The secret key is adjusted to match the block size of the hash function.
 2. **Inner Hashing:**
@@ -22,7 +22,7 @@ HMAC is a **keyed-hash function** that combines a cryptographic hash function (e
    - The result is concatenated with the intermediate hash.
    - The final hash function is applied to produce the **HMAC value**.
 
-#### **3. HMAC Formula:**
+#### 3. HMAC Formula:
 
 $$
 HMAC(K, M) = H((K \oplus opad) || H((K \oplus ipad) || M))
@@ -36,13 +36,13 @@ where:
 - $ ipad $ = 0x36 repeated to match block size
 - $ opad $ = 0x5C repeated to match block size
 
-#### **4. Advantages of HMAC:**
+#### 4. Advantages of HMAC:
 
 - **Stronger Security:** Provides both integrity and authentication.
 - **Resistance to Attacks:** More secure than regular hashing (prevents length extension attacks).
 - **Efficient:** Works with existing hash functions like MD5, SHA-1, and SHA-256.
 
-#### **5. Applications of HMAC:**
+#### 5. Applications of HMAC:
 
 - **Secure communication protocols** (e.g., TLS, SSL, IPsec).
 - **API authentication** (e.g., AWS, OAuth).
@@ -136,9 +136,9 @@ HMAC is favored for its simplicity, efficiency, and resistance to certain crypto
 
 ## <mark> 4) 4.Explain Elgamal and Schnorr Digital Signature algorithm with examples. </mark>
 
-### **1. ElGamal Digital Signature Algorithm**
+### 1. ElGamal Digital Signature Algorithm
 
-#### **Overview**
+#### Overview
 
 ElGamal digital signature is based on the difficulty of the discrete logarithm problem. It consists of three main steps:
 
@@ -146,7 +146,7 @@ ElGamal digital signature is based on the difficulty of the discrete logarithm p
 2. **Signature Generation**
 3. **Signature Verification**
 
-#### **Key Generation**
+#### Key Generation
 
 1. Choose a large prime number $ p $ and a generator $ g $ of $ Z_p^\* $.
 2. Choose a private key $ x $, where $ 1 \leq x \leq p-2 $.
@@ -158,7 +158,7 @@ ElGamal digital signature is based on the difficulty of the discrete logarithm p
 
 ---
 
-#### **Signature Generation**
+#### Signature Generation
 
 For a given message $ m $:
 
@@ -176,7 +176,7 @@ For a given message $ m $:
 
 ---
 
-#### **Signature Verification**
+#### Signature Verification
 
 To verify the signature $ (r, s) $:
 
@@ -195,9 +195,9 @@ To verify the signature $ (r, s) $:
 
 ---
 
-#### **Example (Using Small Numbers)**
+#### Example (Using Small Numbers)
 
-###### **Key Generation**
+###### Key Generation
 
 - Let $ p = 23 $, $ g = 5 $.
 - Choose private key $ x = 6 $.
@@ -207,7 +207,7 @@ To verify the signature $ (r, s) $:
   $$
 - Public key: $ (23, 5, 8) $, Private key: $ x = 6 $.
 
-###### **Signature Generation**
+###### Signature Generation
 
 - Assume $ H(m) = 10 $.
 - Choose $ k = 7 $, where $ \gcd(7, 22) = 1 $.
@@ -222,7 +222,7 @@ To verify the signature $ (r, s) $:
   $$
 - Signature: $ (r, s) = (17, 12) $.
 
-###### **Signature Verification**
+###### Signature Verification
 
 - Compute:
   $$
@@ -236,13 +236,13 @@ To verify the signature $ (r, s) $:
 
 ---
 
-### **2. Schnorr Digital Signature Algorithm**
+### 2. Schnorr Digital Signature Algorithm
 
-#### **Overview**
+#### Overview
 
 Schnorr’s digital signature scheme is based on the difficulty of the discrete logarithm problem. It is known for efficiency and security.
 
-#### **Key Generation**
+#### Key Generation
 
 1. Choose a large prime $ p $ and another prime $ q $ such that $ q $ divides $ p-1 $.
 2. Choose a generator $ g $ of order $ q $.
@@ -254,7 +254,7 @@ Schnorr’s digital signature scheme is based on the difficulty of the discrete 
 
 ---
 
-#### **Signature Generation**
+#### Signature Generation
 
 For a message $ m $:
 
@@ -275,7 +275,7 @@ For a message $ m $:
 
 ---
 
-#### **Signature Verification**
+#### Signature Verification
 
 To verify the signature $ (e, s) $:
 
@@ -291,9 +291,9 @@ To verify the signature $ (e, s) $:
 
 ---
 
-#### **Example (Using Small Numbers)**
+#### Example (Using Small Numbers)
 
-###### **Key Generation**
+###### Key Generation
 
 - Let $ p = 23 $, $ q = 11 $, and $ g = 2 $.
 - Choose private key $ x = 3 $.
@@ -302,7 +302,7 @@ To verify the signature $ (e, s) $:
   y = 2^3 \mod 23 = 8
   $$
 
-###### **Signature Generation**
+###### Signature Generation
 
 - Choose $ k = 4 $.
 - Compute:
@@ -316,7 +316,7 @@ To verify the signature $ (e, s) $:
   $$
 - Signature: $ (e, s) = (5, 0) $.
 
-###### **Signature Verification**
+###### Signature Verification
 
 - Compute:
   $$
@@ -330,7 +330,7 @@ To verify the signature $ (e, s) $:
 
 ---
 
-#### **Comparison of ElGamal and Schnorr Digital Signature Schemes**
+#### Comparison of ElGamal and Schnorr Digital Signature Schemes
 
 | Feature          | ElGamal Signature                 | Schnorr Signature                     |
 | ---------------- | --------------------------------- | ------------------------------------- |
@@ -342,7 +342,7 @@ To verify the signature $ (e, s) $:
 
 ---
 
-#### **Conclusion**
+#### Conclusion
 
 - **ElGamal Signature:** Uses discrete logarithms for security but has longer signatures.
 - **Schnorr Signature:** More efficient, with shorter signatures and better performance.
@@ -351,13 +351,13 @@ Both are widely used in cryptographic applications like digital authentication a
 
 ## <mark> 5) What is Kerberos and its requirements? </mark>
 
-### **Kerberos and Its Requirements**
+### Kerberos and Its Requirements
 
-#### **What is Kerberos?**
+#### What is Kerberos?
 
 Kerberos is a network authentication protocol that uses secret-key cryptography to provide secure authentication between users and services over an insecure network. It was developed at **MIT** and is widely used in enterprise environments, including **Windows Active Directory** and **Unix-based systems**.
 
-#### **How Kerberos Works?**
+#### How Kerberos Works?
 
 Kerberos uses a **trusted third party** called the **Key Distribution Center (KDC)**, which consists of:
 
@@ -367,7 +367,7 @@ Kerberos uses a **trusted third party** called the **Key Distribution Center (KD
 
 The authentication process involves exchanging **tickets** instead of passwords to minimize the risk of password exposure.
 
-#### **Requirements for Kerberos**
+#### Requirements for Kerberos
 
 For Kerberos to function effectively, the following conditions must be met:
 
@@ -398,25 +398,25 @@ For Kerberos to function effectively, the following conditions must be met:
 7. **Secure Network Communication:**
    - Requires a protected environment to prevent unauthorized access to authentication data.
 
-#### **Conclusion**
+#### Conclusion
 
 Kerberos enhances security in distributed networks by using **ticket-based authentication** and eliminating password transmission. Its applications include enterprise networks, cloud services, and online transactions. 🚀
 
 ## <mark> 6) What isPGP? How authentication and confidentiality is maintained in PGP? </mark>
 
-### **Pretty Good Privacy (PGP) and Its Security Mechanisms**
+### Pretty Good Privacy (PGP) and Its Security Mechanisms
 
-#### **What is PGP?**
+#### What is PGP?
 
 **Pretty Good Privacy (PGP)** is an encryption program used for **secure email communication, file encryption, and digital signatures**. It combines **symmetric and asymmetric cryptography** to provide both **confidentiality** and **authentication**. PGP was developed by **Phil Zimmermann** in 1991 and is widely used for securing emails and files.
 
 ---
 
-### **How Authentication and Confidentiality are Maintained in PGP**
+### How Authentication and Confidentiality are Maintained in PGP
 
 PGP ensures **authentication** and **confidentiality** using a hybrid encryption approach:
 
-#### **1. Authentication (Digital Signature)**
+#### 1. Authentication (Digital Signature)
 
 Authentication in PGP is achieved using **digital signatures**, which ensure that the message comes from a trusted sender and has not been altered.
 
@@ -431,7 +431,7 @@ Authentication in PGP is achieved using **digital signatures**, which ensure tha
 
 ---
 
-#### **2. Confidentiality (Encryption)**
+#### 2. Confidentiality (Encryption)
 
 PGP ensures confidentiality by **encrypting** the message so that only the intended recipient can read it.
 
@@ -447,7 +447,7 @@ PGP ensures confidentiality by **encrypting** the message so that only the inten
 
 ---
 
-### **Summary of PGP Security**
+### Summary of PGP Security
 
 | Feature             | Method Used                                |
 | ------------------- | ------------------------------------------ |
@@ -460,19 +460,19 @@ PGP provides **strong security** for emails, files, and documents by combining d
 
 ## <mark> 7) Explain authentication services of X.509. </mark>
 
-### **Authentication Services of X.509**
+### Authentication Services of X.509
 
-#### **What is X.509?**
+#### What is X.509?
 
 X.509 is a widely used **public key infrastructure (PKI) standard** that defines the format of **digital certificates**. These certificates are used for **authentication and secure communication** in applications like SSL/TLS, email security, and VPNs.
 
 ---
 
-### **Authentication Services Provided by X.509**
+### Authentication Services Provided by X.509
 
 X.509 provides **three main authentication services** based on **public key certificates**:
 
-#### **1. One-Way Authentication**
+#### 1. One-Way Authentication
 
 ✅ **Used in:** SSL/TLS (Websites), Secure Email, VPN  
 🔹 **Process:**
@@ -486,7 +486,7 @@ X.509 provides **three main authentication services** based on **public key cert
 
 ---
 
-#### **2. Two-Way (Mutual) Authentication**
+#### 2. Two-Way (Mutual) Authentication
 
 ✅ **Used in:** Secure Client-Server Communication, VPNs  
 🔹 **Process:**
@@ -500,7 +500,7 @@ X.509 provides **three main authentication services** based on **public key cert
 
 ---
 
-#### **3. Three-Way Authentication**
+#### 3. Three-Way Authentication
 
 ✅ **Used in:** Secure Messaging, Encrypted Transactions  
 🔹 **Process:**
@@ -514,7 +514,7 @@ X.509 provides **three main authentication services** based on **public key cert
 
 ---
 
-### **Summary of X.509 Authentication Services**
+### Summary of X.509 Authentication Services
 
 | **Authentication Type** | **Key Features**                                      | **Use Cases**                            |
 | ----------------------- | ----------------------------------------------------- | ---------------------------------------- |
@@ -571,19 +571,19 @@ The MD5 algorithm played a significant role in the history of cryptographic hash
 
 ## <mark> 9) Explain NIST Digital Signature algorithm. </mark>
 
-### **NIST Digital Signature Algorithm (DSA)**
+### NIST Digital Signature Algorithm (DSA)
 
-#### **What is DSA?**
+#### What is DSA?
 
 The **Digital Signature Algorithm (DSA)** is a **public key digital signature scheme** developed by the **National Institute of Standards and Technology (NIST)** in 1991 as part of the **Digital Signature Standard (DSS)**. It is used for **authentication, data integrity, and non-repudiation** in cryptographic applications.
 
 ---
 
-### **Working of DSA**
+### Working of DSA
 
 DSA is based on modular exponentiation and the **Discrete Logarithm Problem (DLP)**. It consists of three main steps:
 
-### **1. Key Generation**
+### 1. Key Generation
 
 To generate a key pair:
 
@@ -597,7 +597,7 @@ To generate a key pair:
 
 ---
 
-### **2. Signing the Message**
+### 2. Signing the Message
 
 To generate a digital signature:
 
@@ -612,7 +612,7 @@ To generate a digital signature:
 
 ---
 
-### **3. Verifying the Signature**
+### 3. Verifying the Signature
 
 To verify the received signature $ (r, s) $:
 
@@ -628,13 +628,13 @@ To verify the received signature $ (r, s) $:
 
 ---
 
-### **Advantages of DSA**
+### Advantages of DSA
 
 ✅ **Secure** due to the difficulty of solving the Discrete Logarithm Problem.  
 ✅ **Efficient for signing** due to modular exponentiation.  
 ✅ **Standardized** by NIST, widely used in government and financial applications.
 
-### **Disadvantages of DSA**
+### Disadvantages of DSA
 
 ❌ Slower **verification** compared to RSA.  
 ❌ Requires **random value (k)** for each signature; reuse can break security.  
@@ -642,13 +642,13 @@ To verify the received signature $ (r, s) $:
 
 ---
 
-### **Conclusion**
+### Conclusion
 
 DSA is a secure and standardized digital signature algorithm used in cryptographic applications. While it has some drawbacks compared to RSA and **Elliptic Curve DSA (ECDSA)**, it remains widely used in **secure communications, digital certificates, and financial transactions**. 🚀
 
 ## <mark> 10) Differentiate between SHA-1 and MD5. </mark>
 
-### **Difference Between SHA-1 and MD5**
+### Difference Between SHA-1 and MD5
 
 SHA-1 and MD5 are both cryptographic **hash functions** used for data integrity and authentication. However, SHA-1 is more secure than MD5 due to its longer hash length and stronger cryptographic properties.
 
@@ -665,7 +665,7 @@ SHA-1 and MD5 are both cryptographic **hash functions** used for data integrity 
 | **Usage**                | Digital signatures, certificates, file integrity      | Checksums, integrity verification                              |
 | **Vulnerabilities**      | Collision attacks found (SHA-1 is now deprecated)     | High collision risk, not recommended for security-critical use |
 
-### **Conclusion**
+### Conclusion
 
 - **MD5 is faster** but highly insecure due to its vulnerability to collisions.
 - **SHA-1 is more secure** but still deprecated in favor of **SHA-256 or SHA-3** for modern applications. 🚀

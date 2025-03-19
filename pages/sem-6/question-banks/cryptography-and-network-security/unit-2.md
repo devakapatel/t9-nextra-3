@@ -316,7 +316,7 @@ For this example, we will illustrate both the encryption and decryption processe
 
 ---
 
-### **Step 1. Key Generation**
+### Step 1. Key Generation
 
 1. **Private (Superincreasing) Sequence:**  
    This is given as
@@ -370,7 +370,7 @@ For this example, we will illustrate both the encryption and decryption processe
 
 ---
 
-### **Step 2. Encryption**
+### Step 2. Encryption
 
 Assume the plaintext message is the 6-bit binary string “101101”. Label the bits corresponding to the private sequence (ordered as given):
 
@@ -401,7 +401,7 @@ Thus, the ciphertext is **223**.
 
 ---
 
-### **Step 3. Decryption**
+### Step 3. Decryption
 
 To decrypt, the receiver (who knows the private key) performs the following steps:
 
@@ -475,7 +475,7 @@ To decrypt, the receiver (who knows the private key) performs the following step
 
 ---
 
-### **Summary**
+### Summary
 
 - **Private Key (Superincreasing sequence):** $ \{1, 2, 4, 10, 20, 40\} $
 - **Modulus $ Q $:** $ 89 $
@@ -489,13 +489,13 @@ This complete example demonstrates the steps involved in the Merkle–Hellman kn
 
 ## <mark> 7) Explain in detail about Elliptic Curve Architecture. </mark>
 
-### **Elliptic Curve Architecture**
+### Elliptic Curve Architecture
 
 Elliptic Curve Cryptography (ECC) is a modern cryptographic approach based on the algebraic structure of elliptic curves over finite fields. It provides high security with smaller key sizes, making it efficient for constrained environments like IoT and mobile devices.
 
 ---
 
-#### **1. Introduction to Elliptic Curves**
+#### 1. Introduction to Elliptic Curves
 
 An **elliptic curve** is a set of points that satisfy the equation:
 
@@ -512,22 +512,22 @@ A **graphical representation** of an elliptic curve is a symmetric curve about t
 
 ---
 
-#### **2. Key Components of Elliptic Curve Architecture**
+#### 2. Key Components of Elliptic Curve Architecture
 
 ECC relies on the mathematical properties of elliptic curves for encryption, key exchange, and digital signatures. The architecture consists of:
 
-##### **a) Curve Definition**
+##### a) Curve Definition
 
 - Defined by parameters $ (p, a, b) $.
 - **Prime Field $ F_p $**: The curve is defined over integers modulo a prime number $ p $.
 - **Binary Field $ F\_{2^m} $**: Used in certain applications where numbers are represented in binary.
 
-##### **b) Elliptic Curve Points**
+##### b) Elliptic Curve Points
 
 - The set of points $ P(x, y) $ on the curve satisfying $ y^2 = x^3 + ax + b $.
 - Includes a special point called the **point at infinity** (denoted as $ O $), acting as the identity element in addition.
 
-##### **c) Point Addition and Doubling**
+##### c) Point Addition and Doubling
 
 ECC operations are defined using **point addition** and **point doubling**, which form the basis of ECC cryptographic algorithms.
 
@@ -559,38 +559,38 @@ ECC operations are defined using **point addition** and **point doubling**, whic
    \lambda = \frac{3x_p^2 + a}{2y_p} \mod p
    $$
 
-##### **d) Scalar Multiplication**
+##### d) Scalar Multiplication
 
 - ECC uses **scalar multiplication**, which involves computing $ kP $ (adding $ P $ to itself $ k $ times).
 - It is the fundamental operation in ECC-based encryption and key exchange.
 
 ---
 
-#### **3. ECC in Cryptographic Applications**
+#### 3. ECC in Cryptographic Applications
 
 ECC is used in:
 
-##### **a) Key Exchange (Elliptic Curve Diffie-Hellman - ECDH)**
+##### a) Key Exchange (Elliptic Curve Diffie-Hellman - ECDH)
 
 - Both parties agree on an elliptic curve and a public base point $ G $.
 - Each party selects a private key ($ d_A, d_B $).
 - Public keys: $ P_A = d_A G $, $ P_B = d_B G $.
 - Shared secret: $ S = d_A P_B = d_B P_A $, ensuring secure key exchange.
 
-##### **b) Digital Signatures (Elliptic Curve Digital Signature Algorithm - ECDSA)**
+##### b) Digital Signatures (Elliptic Curve Digital Signature Algorithm - ECDSA)
 
 - Private key: $ d_A $.
 - Public key: $ P_A = d_A G $.
 - Signature generation and verification involve elliptic curve operations for authentication.
 
-##### **c) Encryption (Elliptic Curve Integrated Encryption Scheme - ECIES)**
+##### c) Encryption (Elliptic Curve Integrated Encryption Scheme - ECIES)
 
 - Uses ECC to encrypt messages securely.
 - More efficient than RSA due to smaller key sizes.
 
 ---
 
-#### **4. Advantages of ECC Architecture**
+#### 4. Advantages of ECC Architecture
 
 1. **Stronger Security with Smaller Keys**: ECC provides the same security as RSA but with much smaller key sizes.
    - 256-bit ECC key ≈ 3072-bit RSA key.
@@ -600,7 +600,7 @@ ECC is used in:
 
 ---
 
-#### **5. Comparison with RSA**
+#### 5. Comparison with RSA
 
 | Feature        | ECC             | RSA                  |
 | -------------- | --------------- | -------------------- |
@@ -611,30 +611,30 @@ ECC is used in:
 
 ---
 
-#### **Conclusion**
+#### Conclusion
 
 ECC is a highly efficient cryptographic system that provides strong security with smaller keys, making it ideal for modern security applications like secure communications, blockchain, and IoT security.
 
 ## <mark> 8) Write a short note on Man in the Middle Attack. </mark>
 
-### **Man-in-the-Middle (MITM) Attack**
+### Man-in-the-Middle (MITM) Attack
 
 A **Man-in-the-Middle (MITM) attack** is a cyberattack where an attacker secretly intercepts and alters communication between two parties without their knowledge. The attacker positions themselves between the sender and receiver to eavesdrop, modify, or inject malicious data.
 
-#### **How MITM Works:**
+#### How MITM Works:
 
 1. **Interception:** The attacker intercepts communication between two parties (e.g., user and website).
 2. **Modification:** The attacker can alter the messages, steal sensitive data (passwords, financial details), or inject malicious content.
 3. **Forwarding:** The manipulated data is sent to the intended recipient, making it appear as a legitimate conversation.
 
-#### **Types of MITM Attacks:**
+#### Types of MITM Attacks:
 
 - **Eavesdropping:** Listening to unencrypted communication.
 - **Session Hijacking:** Stealing active session cookies.
 - **SSL Stripping:** Downgrading HTTPS to HTTP to intercept secure traffic.
 - **Wi-Fi Spoofing:** Creating fake Wi-Fi networks to capture data.
 
-#### **Prevention Methods:**
+#### Prevention Methods:
 
 - Use **end-to-end encryption** (e.g., HTTPS, VPN).
 - Implement **public key infrastructure (PKI)** and digital certificates.
@@ -645,11 +645,11 @@ MITM attacks are dangerous as they compromise confidentiality and integrity, mak
 
 ## <mark> 9) Write a short note on Key Distribution and also define Master and Session Key. </mark>
 
-### **Key Distribution**
+### Key Distribution
 
 Key distribution is the process of securely delivering cryptographic keys to parties that need to communicate securely. Since encryption relies on keys, securely sharing them is crucial to prevent unauthorized access.
 
-#### **Methods of Key Distribution:**
+#### Methods of Key Distribution:
 
 1. **Manual Key Exchange:** Physically delivering keys (e.g., USB drives).
 2. **Public Key Cryptography:** Using asymmetric encryption (e.g., RSA, Diffie-Hellman).
@@ -658,16 +658,16 @@ Key distribution is the process of securely delivering cryptographic keys to par
 
 ---
 
-### **Master Key vs. Session Key**
+### Master Key vs. Session Key
 
-#### **Master Key:**
+#### Master Key:
 
 - A long-term key used to establish a secure connection and generate session keys.
 - Shared between two parties in advance.
 - Less frequently changed to avoid security risks.
 - Example: A pre-shared key (PSK) in a VPN.
 
-#### **Session Key:**
+#### Session Key:
 
 - A temporary key used for a single session of communication.
 - Generated dynamically and discarded after use.
@@ -678,7 +678,7 @@ Efficient key distribution and management are essential for ensuring secure comm
 
 ## <mark> 10) 10.List four general categories of schemes for the distribution of public keys. </mark>
 
-### **Four General Categories of Public Key Distribution Schemes:**
+### Four General Categories of Public Key Distribution Schemes:
 
 1. **Publicly Available Directory:**
 
@@ -707,11 +707,11 @@ Each method has its strengths and weaknesses, with **Public-Key Certificates** a
 
 ## <mark> 11) Write a note on simple secret key distribution. </mark>
 
-### **Simple Secret Key Distribution**
+### Simple Secret Key Distribution
 
 Secret key distribution is the process of securely sharing a symmetric encryption key between two communicating parties. Since symmetric encryption uses the same key for both encryption and decryption, protecting the key during transmission is crucial to prevent unauthorized access.
 
-#### **Basic Methods of Secret Key Distribution:**
+#### Basic Methods of Secret Key Distribution:
 
 1. **Manual Key Exchange:**
 
@@ -740,7 +740,7 @@ Efficient secret key distribution is essential for secure communication, ensurin
 
 ## <mark> 13) Specify the application of public key cryptography. </mark>
 
-### **Applications of Public Key Cryptography**
+### Applications of Public Key Cryptography
 
 Public Key Cryptography (PKC) is widely used for secure communication and authentication. Some key applications include:
 

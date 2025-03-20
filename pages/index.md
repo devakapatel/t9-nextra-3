@@ -1,5 +1,7 @@
 # Welcome to T9
 
+---
+
 Navigate through the semesters and access essential resources, links, and more—all in one place!
 
 ---

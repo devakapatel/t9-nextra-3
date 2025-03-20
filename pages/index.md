@@ -15,7 +15,7 @@ Navigate through the semesters and access essential resources, links, and more�
 
 ---
 
-## 💬 Join WhatApp Group : [here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0)
+## 💬 Join WhatApp Group: [here](https://chat.whatsapp.com/JuvHVkzVjc41ywITKe23h0)
 
 ## 🔗 Useful Links:
 

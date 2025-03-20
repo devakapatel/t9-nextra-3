@@ -10,6 +10,7 @@ const withNextra = nextra({
 });
 
 export default withNextra({
+  revalidate: 5,
   compress: true,
   images: {
     formats: ["image/webp"],

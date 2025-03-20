@@ -1,6 +1,6 @@
 # Unit 3
 
-## 1) What is Software Project Management? Explain the roles and responsibilities of a Project Manager.
+## <mark> 1) What is Software Project Management? Explain the roles and responsibilities of a Project Manager. </mark>
 
 ### Software Project Management: An Overview
 
@@ -35,7 +35,7 @@ A software project manager plays a pivotal role in the success of a software pro
 
 **In essence,** a software project manager is a leader, communicator, problem-solver, and strategist. They need strong organizational, interpersonal, and technical skills to successfully manage complex software development projects. Their ultimate goal is to deliver a high-quality software product that meets the client's needs within the constraints of time and budget.
 
-## 2) Describe different aspects of Software Project Management.
+## <mark> 2) Describe different aspects of Software Project Management. </mark>
 
 Software project management encompasses a broad range of activities, all aimed at delivering a successful software product on time and within budget. Here are some key aspects:
 
@@ -73,7 +73,7 @@ Software project management encompasses a broad range of activities, all aimed a
 
 Effective software project management is crucial for delivering high-quality software on time and within budget. It requires a blend of technical skills, leadership abilities, and strong communication skills. The specific techniques and methodologies used will vary depending on the size, complexity, and nature of the project.
 
-## 3) Explain the Management Spectrum 4 P's for software project management.
+## <mark> 3) Explain the Management Spectrum 4 P's for software project management. </mark>
 
 The "4 P's" in software project management aren't a universally standardized framework like some other project management methodologies (e.g., PRINCE2, Agile). However, we can interpret a plausible "Management Spectrum" of 4 Ps relevant to software projects, focusing on different aspects of managing the project effectively. It's important to note this is an interpretation and not a formally defined model. One possible interpretation is:
 
@@ -107,7 +107,7 @@ The "4 P's" in software project management aren't a universally standardized fra
 
 While not a formally defined model, thinking about these four Ps – People, Process, Product, and Purpose – provides a helpful framework for considering the many aspects necessary for effective software project management. The relative importance of each P will vary depending on the specific project.
 
-## 4) How would you define the W5HH Principle in project management, and why is it important?
+## <mark> 4) How would you define the W5HH Principle in project management, and why is it important? </mark>
 
 The W5HH Principle in project management isn't a formally established or widely recognized methodology like Agile or Waterfall. However, it's a useful mnemonic device that helps ensure comprehensive project planning by addressing key questions before starting any project. It stands for:
 
@@ -131,7 +131,7 @@ The W5HH principle is important because it forces a thorough upfront assessment 
 
 While not a formal methodology, using the W5HH framework as a checklist during the project initiation phase significantly contributes to project success. It helps ensure that all bases are covered before diving into the execution phase.
 
-## 5) What is LOC (Line of Code)? Explain with examples.
+## <mark> 5) What is LOC (Line of Code)? Explain with examples. </mark>
 
 LOC, or Lines of Code, is a metric used to measure the size of a software program by counting the number of lines in the source code. While seemingly simple, it's a crude and often misleading metric, but it's still used for some purposes.
 
@@ -184,7 +184,7 @@ In this example, the LOC would likely be 4, excluding the comments and blank lin
 
 In summary, LOC is a quick and simple metric, but it should be used with extreme caution and ideally in conjunction with other, more comprehensive software metrics to get a realistic understanding of software size, complexity, and quality.
 
-## 6) Define Function Point (FP) analysis and its types in detail.
+## <mark> 6) Define Function Point (FP) analysis and its types in detail. </mark>
 
 ### Function Point (FP) Analysis: A Detailed Explanation
 
@@ -231,7 +231,7 @@ The VAF is calculated based on a questionnaire that assesses the presence and se
 
 In summary, FPA is a valuable technique for estimating software size and effort. While it requires careful application and understanding, its independence from implementation details makes it a more robust alternative to LOC counting, especially in projects involving complex functional requirements and diverse technologies. The use of WFP with a properly calculated VAF provides a much more accurate assessment of the software's functional scope than UFP alone.
 
-## 7) Difference between Function Points (FP) and Lines of Code (LOC) as metrics in software development.
+## <mark> 7) Difference between Function Points (FP) and Lines of Code (LOC) as metrics in software development. </mark>
 
 Function Points (FP) and Lines of Code (LOC) are both metrics used in software development to estimate project size and effort, but they differ significantly in their approach and what they measure:
 
@@ -269,7 +269,7 @@ Function Points (FP) and Lines of Code (LOC) are both metrics used in software d
 
 LOC counts the lines of code; FP counts the functional units delivered. FP is generally considered a more robust and reliable metric for estimating software development effort and size than LOC, even though it's more difficult to calculate. LOC might be useful as a supplementary metric, but it shouldn't be the primary measure of project size or complexity.
 
-## 8) What are the principles and needs of Software Measurement? Explain the classification of software measurement.
+## <mark> 8) What are the principles and needs of Software Measurement? Explain the classification of software measurement. </mark>
 
 ### Principles and Needs of Software Measurement
 
@@ -338,7 +338,7 @@ Software measurements can be classified in various ways, depending on the perspe
 
 It's important to note that these classifications aren't mutually exclusive. A single metric can often fall into multiple categories. For instance, lines of code (LOC) is a code-level, product metric, and can be used for predictive purposes (estimating effort) or control purposes (tracking progress). Selecting the appropriate metrics requires a careful understanding of the project goals and context.
 
-## 9) What is Software Metrics? Describe the characteristics and different types of software metrics.
+## <mark> 9) What is Software Metrics? Describe the characteristics and different types of software metrics. </mark>
 
 ### Software Metrics: Measuring Software's Attributes
 
@@ -412,7 +412,7 @@ Using software metrics effectively requires careful consideration of:
 
 Software metrics are powerful tools when used appropriately. They provide valuable insights into the software development process and product quality, leading to better decision-making, risk management, and ultimately, the creation of higher-quality software. However, they should be used judiciously, and over-reliance on a single metric or misinterpretation of results can be detrimental.
 
-## 10) Explain Process, Product, Project and People Metrics in detail.
+## <mark> 10) Explain Process, Product, Project and People Metrics in detail. </mark>
 
 Metrics are crucial for measuring performance and identifying areas for improvement in any organization. They can be categorized in various ways, and one common approach is to group them by focusing on Process, Product, Project, and People. Let's explore each category in detail:
 
@@ -466,7 +466,7 @@ People metrics focus on the performance, satisfaction, and well-being of employe
 
 It's important to note that these categories are not mutually exclusive. Many metrics can fall under multiple categories. For example, employee productivity can be a people metric, but it can also be a process metric if it's used to evaluate the efficiency of a particular workflow. The selection and use of metrics should be tailored to the specific needs and goals of the organization.
 
-## 11) What is Software Project Size Estimation? Who estimates the project size? Explain different types of project estimation.
+## <mark> 11) What is Software Project Size Estimation? Who estimates the project size? Explain different types of project estimation. </mark>
 
 Software project size estimation is the process of predicting the amount of work required to complete a software project. This work is typically measured in terms of effort (person-hours or person-months), cost (in monetary terms), and time (duration in weeks or months). Accurate estimation is crucial for planning, budgeting, resource allocation, and ultimately, successful project delivery. Underestimation can lead to missed deadlines and budget overruns, while overestimation can lead to wasted resources and missed opportunities.
 
@@ -505,7 +505,7 @@ Several techniques exist for estimating project size. They can broadly be catego
 
 The choice of estimation technique depends on various factors, including the project's size, complexity, available data, and the organization's experience and preferences. Often, a combination of techniques is used to improve accuracy. Regardless of the method chosen, regular monitoring and adjustment of estimates throughout the project lifecycle are essential for effective project management.
 
-## 12) What is the need of software project planning? Explain various steps of project planning activities.
+## <mark> 12) What is the need of software project planning? Explain various steps of project planning activities. </mark>
 
 ### The Need for Software Project Planning
 
@@ -590,7 +590,7 @@ Software project planning is an iterative process, often involving several cycle
 
 By diligently following these steps, software development teams can significantly improve the likelihood of successful project delivery. Remember that flexibility and adaptability are key; the plan should be a living document, updated and adjusted as needed throughout the project lifecycle.
 
-## 13) Describe the following Project management tools: (a) Gantt chart (b) PERT Chart (c) Logic Network (d) Work Breakdown Structure (e) Critical Path Analysis
+## <mark> 13) Describe the following Project management tools: (a) Gantt chart (b) PERT Chart (c) Logic Network (d) Work Breakdown Structure (e) Critical Path Analysis </mark>
 
 Let's describe each project management tool:
 
@@ -604,7 +604,7 @@ Let's describe each project management tool:
 
 **(e) Critical Path Analysis:** Critical path analysis (CPA) is a technique used to identify the longest sequence of dependent tasks in a project. This sequence, called the critical path, determines the shortest possible duration for completing the entire project. Any delay in a task on the critical path will directly delay the project completion. CPA uses information from the network diagram (like PERT or logic network) and task durations to determine the critical path and identify tasks that require close monitoring to avoid delays. It helps in efficient resource allocation and risk management.
 
-## 14) What is Project Scheduling and Tracking Process? List out some project scheduling tools.
+## <mark> 14) What is Project Scheduling and Tracking Process? List out some project scheduling tools. </mark>
 
 ### Project Scheduling and Tracking Process
 
@@ -657,7 +657,7 @@ Many tools are available to assist with project scheduling and tracking. Here ar
 
 The choice of tool depends on the project's complexity, team size, budget, and the organization's preferences. Many tools offer free versions or trials, allowing for exploration before commitment.
 
-## 15) Explain different Objectives of Project Planning.
+## <mark> 15) Explain different Objectives of Project Planning. </mark>
 
 The objectives of project planning are multifaceted and interconnected, ultimately aiming to ensure project success. These objectives can be categorized in several ways, but here's a breakdown of key areas:
 
@@ -703,7 +703,7 @@ The objectives of project planning are multifaceted and interconnected, ultimate
 
 By achieving these objectives during project planning, project managers significantly increase the likelihood of successful project completion, within budget, and to the satisfaction of all stakeholders. The relative importance of each objective will vary depending on the specific project.
 
-## 16) Explain COCOMO Model for Software Project Estimation in detail.
+## <mark> 16) Explain COCOMO Model for Software Project Estimation in detail. </mark>
 
 The Constructive Cost Model (COCOMO) is a regression model used for estimating the effort and time required to develop a software project. It's a widely used model because of its relative simplicity and ease of application, though its accuracy depends heavily on the accuracy of the inputs and the appropriateness of the model chosen for the specific project. COCOMO exists in three forms: Basic, Intermediate, and Detailed.
 
@@ -762,7 +762,7 @@ This is the most comprehensive model. It adds more detail by further breaking do
 
 **In summary:** COCOMO is a valuable tool for software project estimation, particularly in the early stages when detailed information may be scarce. However, its limitations must be kept in mind, and the results should be treated as estimates, not precise predictions. Choosing the appropriate COCOMO version depends on the project's size, complexity, and the level of detail available. It's best used in conjunction with other estimation techniques and expert judgment for a more robust and accurate estimate.
 
-## 17) Describe different types and modes of COCOMO Model with example.
+## <mark> 17) Describe different types and modes of COCOMO Model with example. </mark>
 
 The Constructive Cost Model (COCOMO) is a procedural software cost estimation model. It's not a single model, but rather a family of models with varying levels of detail and complexity. The key types and modes are:
 
@@ -816,7 +816,7 @@ While not strictly "types" of COCOMO, the model is often characterized by differ
 
 In summary, choosing the appropriate COCOMO model depends on the project's size, complexity, and the level of detail required for the cost estimate. Basic COCOMO provides a quick, rough estimate, while Intermediate and Detailed COCOMO provide increasingly accurate but more complex estimations. The modes (organic, semi-detached, embedded) adjust the effort based on the project's inherent characteristics.
 
-## 18) What is Risk? Explain different types of categories of Risk with example.
+## <mark> 18) What is Risk? Explain different types of categories of Risk with example. </mark>
 
 Risk is the possibility of suffering harm or loss; a chance or probability of encountering a hazard. It's essentially the uncertainty about the outcome of an event and the potential negative consequences associated with that outcome. It's important to note that risk isn't just about the likelihood of something bad happening, but also the severity of the potential impact. A low probability event with catastrophic consequences can be a high-risk situation.
 
@@ -849,7 +849,7 @@ This categorisation uses a matrix to assess risks based on the likelihood of occ
 
 These are not mutually exclusive categories; a single risk can fall into multiple categories. For example, a cyberattack could be classified as a technological risk, an operational risk, and a reputational risk, simultaneously. Effective risk management involves identifying, analyzing, and mitigating these various types of risks to protect organizations and individuals from potential harm.
 
-## 19) Explain the concept of Risk Analysis and Quality Management.
+## <mark> 19) Explain the concept of Risk Analysis and Quality Management. </mark>
 
 Risk analysis and quality management are closely related concepts, both crucial for successful project and product development. While distinct, they work together to minimize potential problems and maximize the chances of achieving desired outcomes.
 
@@ -893,7 +893,7 @@ Risk analysis contributes significantly to quality management by:
 
 In essence, robust risk analysis supports effective quality management by anticipating and addressing potential problems before they negatively impact quality, ultimately leading to higher customer satisfaction and improved business outcomes. They are intertwined processes working towards a common goal of achieving excellence.
 
-## 20) Describe different management quality concepts in detail.
+## <mark> 20) Describe different management quality concepts in detail. </mark>
 
 Management quality encompasses a broad range of concepts, all aiming to improve organizational effectiveness and efficiency. Here's a detailed description of some key concepts:
 
@@ -949,7 +949,7 @@ Lean tools include: Value stream mapping, Kanban, 5S, Kaizen events.
 
 These concepts are not mutually exclusive. Many organizations integrate elements from several approaches to create a comprehensive quality management system tailored to their specific needs and industry. The choice of approach depends on the organization's size, industry, and specific challenges.
 
-## 21) Define RMMM Plan (Risk Mitigation, Monitoring and Management).
+## <mark> 21) Define RMMM Plan (Risk Mitigation, Monitoring and Management). </mark>
 
 A Risk Mitigation, Monitoring, and Management Plan (RMMM Plan) is a document that outlines the strategies and processes an organization will use to identify, assess, respond to, and monitor risks throughout a project or initiative's lifecycle. It's a proactive approach to managing uncertainty and minimizing potential negative impacts. The plan typically covers these key areas:
 
@@ -968,7 +968,7 @@ A Risk Mitigation, Monitoring, and Management Plan (RMMM Plan) is a document tha
 
 In essence, an RMMM Plan provides a framework for managing uncertainty and proactively protecting project objectives. It ensures that potential problems are addressed before they escalate into significant issues, leading to improved project success rates and reduced losses.
 
-## 22) Explain Risk Identification, Risk Projection, Risk Refinement and Risk Mitigation in detail.
+## <mark> 22) Explain Risk Identification, Risk Projection, Risk Refinement and Risk Mitigation in detail. </mark>
 
 Let's break down the four key risk management processes:
 
@@ -1020,7 +1020,7 @@ The choice of mitigation strategy depends on the specific risk, the organization
 
 In summary, these four processes are interconnected and iterative. They form a continuous cycle of identifying, assessing, refining, and mitigating risks throughout the lifecycle of a project or organization. Effective risk management requires a proactive, data-driven approach and a strong commitment from all stakeholders.
 
-## 23) What is SQA (Software Quality Assurance)? Explain different types of elements and activities of Software Quality Assurance.
+## <mark> 23) What is SQA (Software Quality Assurance)? Explain different types of elements and activities of Software Quality Assurance. </mark>
 
 ### Software Quality Assurance (SQA) Explained
 
@@ -1056,7 +1056,7 @@ SQA involves a range of activities, including:
 
 In summary, SQA is a crucial element in developing high-quality software. It's not just about testing; it's about building a culture of quality throughout the entire software development lifecycle. By implementing effective SQA processes, organizations can reduce costs, improve customer satisfaction, and increase the overall success of their software projects.
 
-## 24) What are the Objectives of Software Reviews? Explain the process and different types of Software Reviews.
+## <mark> 24) What are the Objectives of Software Reviews? Explain the process and different types of Software Reviews. </mark>
 
 ### Objectives of Software Reviews
 
@@ -1096,7 +1096,7 @@ Several types of software reviews exist, each with its own focus and approach:
 
 The choice of review type depends on factors like the project's size, complexity, risk level, and available resources. A combination of different review types is often used to maximize effectiveness.
 
-## 25) Explain Formal Technical Review (FTR) with example.
+## <mark> 25) Explain Formal Technical Review (FTR) with example. </mark>
 
 A Formal Technical Review (FTR) is a systematic and structured evaluation of a technical product or process. It's a highly disciplined group activity aimed at identifying defects and improving quality _before_ the product reaches the later stages of development or deployment. Unlike informal reviews, FTRs have a defined process, roles, and entry and exit criteria. They are generally more time-consuming but offer a higher likelihood of catching significant problems early on.
 

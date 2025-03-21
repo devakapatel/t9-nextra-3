@@ -1016,10 +1016,11 @@ Thus, the expected variation (standard deviation) is approximately **4.94**.
 
 ## <mark> 20) The mean and standard variation of marks received by 40 students of a class in three subjects Mathematics, English and economics are given below.Which of the three subjects indicates the most elevated deviation and which indicates the most subordinate variation in marks?
 
-| No. of Points Scored    | 0   | 1   | 2   | 3   | 4   | 5   |
-| ----------------------- | --- | --- | --- | --- | --- | --- |
-| No. of Matches (Team A) | 20  | 5   | 4   | 10  | 1   | 2   |
-| No. of Matches (Team B) | 7   | 15  | 10  | 3   | 2   | 5   |
+| Subject   | Mean | Standard Deviation |
+| --------- | ---- | ------------------ |
+| Maths     | 65   | 10                 |
+| English   | 60   | 12                 |
+| Economics | 57   | 14                 |
 
 </mark>
 

@@ -10,6 +10,8 @@
 
 - ### [Internet of Things (IoT)](./question-banks/internet-of-things) (Minor)
 
+- ### [Internet of Things (IoT)](./question-banks/internet-of-things-oe) (Open Elective)
+
 - ### [Security and Privacy in IoT](./question-banks/security-and-privacy-in-iot) (Minor)
 
 - ### [Mobile Application Development (MAD)](./question-banks/mobile-applicarion-development)

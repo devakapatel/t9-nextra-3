@@ -2,16 +2,16 @@
 
 ## <mark> 1) Explain broadcast receiver and their types. </mark>
 
-### **Broadcast Receiver in Android**
+### Broadcast Receiver in Android
 
 A **Broadcast Receiver** is a component in Android that **listens for system-wide or custom broadcast messages**. These messages can be sent by the **system** (e.g., battery low, network change) or by **applications** (e.g., custom event notifications).
 
-### **Types of Broadcast Receivers in Android**
+### Types of Broadcast Receivers in Android
 
 1. **System Broadcast Receivers** – Receive **predefined system broadcasts** (e.g., battery low, boot completed).
 2. **Custom Broadcast Receivers** – Apps send and receive **their own broadcasts** for internal communication.
 
-### **1. System Broadcast Receivers**
+### 1. System Broadcast Receivers
 
 These are sent by Android when certain **system events** occur.
 
@@ -22,9 +22,9 @@ These are sent by Android when certain **system events** occur.
 | Airplane Mode Change | `Intent.ACTION_AIRPLANE_MODE_CHANGED`   |
 | Wi-Fi State Change   | `WifiManager.WIFI_STATE_CHANGED_ACTION` |
 
-#### **Example: Listening for Battery Low**
+#### Example: Listening for Battery Low
 
-##### **1. Create a Broadcast Receiver (`BatteryReceiver.java`)**
+##### 1. Create a Broadcast Receiver (`BatteryReceiver.java`)
 
 ```java
 import android.content.BroadcastReceiver;
@@ -40,7 +40,7 @@ public class BatteryReceiver extends BroadcastReceiver {
 }
 ```
 
-##### **2. Register the Receiver in `AndroidManifest.xml`**
+##### 2. Register the Receiver in `AndroidManifest.xml`
 
 ```xml
 <receiver android:name=".BatteryReceiver">
@@ -50,13 +50,13 @@ public class BatteryReceiver extends BroadcastReceiver {
 </receiver>
 ```
 
-### **2. Custom Broadcast Receivers**
+### 2. Custom Broadcast Receivers
 
 Apps can **send and receive** their own broadcasts.
 
-#### **Example: Sending and Receiving a Custom Broadcast**
+#### Example: Sending and Receiving a Custom Broadcast
 
-##### **1. Create a Custom Receiver (`MyReceiver.java`)**
+##### 1. Create a Custom Receiver (`MyReceiver.java`)
 
 ```java
 import android.content.BroadcastReceiver;
@@ -72,7 +72,7 @@ public class MyReceiver extends BroadcastReceiver {
 }
 ```
 
-##### **2. Register the Receiver in `AndroidManifest.xml`**
+##### 2. Register the Receiver in `AndroidManifest.xml`
 
 ```xml
 <receiver android:name=".MyReceiver">
@@ -82,14 +82,14 @@ public class MyReceiver extends BroadcastReceiver {
 </receiver>
 ```
 
-##### **3. Send a Custom Broadcast from an Activity**
+##### 3. Send a Custom Broadcast from an Activity
 
 ```java
 Intent intent = new Intent("com.example.CUSTOM_BROADCAST");
 sendBroadcast(intent);
 ```
 
-### **Types of Broadcasts Based on Execution**
+### Types of Broadcasts Based on Execution
 
 | Type                                                     | Description                                                                                      |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -98,24 +98,24 @@ sendBroadcast(intent);
 | **Sticky Broadcast** _(Deprecated)_                      | Persists even after broadcast is received, useful for system updates.                            |
 | **Local Broadcast** _(Replaced by LiveData or EventBus)_ | Broadcasts within an app only for efficiency.                                                    |
 
-### **Use Cases of Broadcast Receivers**
+### Use Cases of Broadcast Receivers
 
 ✔ **Battery & Network Status Updates**  
 ✔ **Push Notifications**  
 ✔ **Alarm & Reminders**  
 ✔ **Custom Event Handling Between Components**
 
-### **Conclusion**
+### Conclusion
 
 Broadcast Receivers **allow apps to listen for system and custom events**, improving communication between components. They can be **statically registered in the manifest** or **dynamically registered in Java** for better control.
 
 ## <mark> 2) Explain services with their types. </mark>
 
-### **Services in Android**
+### Services in Android
 
 A **Service** in Android is a **background component** that performs **long-running operations** without needing a **user interface (UI)**. It allows tasks like **playing music, fetching data, or handling network requests** to run in the background.
 
-### **Types of Services in Android**
+### Types of Services in Android
 
 Android provides **three main types of services** based on how they operate:
 
@@ -123,7 +123,7 @@ Android provides **three main types of services** based on how they operate:
 2. **Background Service** – Runs in the background **without user interaction**.
 3. **Bound Service** – Allows **components (Activities, Fragments, etc.)** to bind and interact with it.
 
-### **Diagram: Service Lifecycle in Android**
+### Diagram: Service Lifecycle in Android
 
 ```
               ┌───────────────────┐
@@ -144,13 +144,13 @@ Android provides **three main types of services** based on how they operate:
               └───────────────────┘
 ```
 
-### **1. Foreground Service**
+### 1. Foreground Service
 
 ✔ Runs **in the background** but remains **visible** via a **persistent notification**.  
 ✔ Used for **music players, tracking apps, or ongoing processes**.  
 ✔ Requires **startForeground()** method.
 
-#### **Example: Foreground Service with Notification**
+#### Example: Foreground Service with Notification
 
 ```java
 import android.app.Notification;
@@ -200,13 +200,13 @@ public class MyForegroundService extends Service {
 
 ✅ **Use Cases:** Music players, GPS tracking, file downloads.
 
-### **2. Background Service**
+### 2. Background Service
 
 ✔ Runs in the background **without user interaction**.  
 ✔ Used for **short-term tasks** like **syncing data, sending notifications**.  
 ✔ Can be stopped by the system if **low on memory**.
 
-#### **Example: Background Service**
+#### Example: Background Service
 
 ```java
 import android.app.Service;
@@ -238,13 +238,13 @@ public class MyBackgroundService extends Service {
 
 ✅ **Use Cases:** Syncing data, handling notifications, background computations.
 
-### **3. Bound Service**
+### 3. Bound Service
 
 ✔ Runs **only while components are bound** to it.  
 ✔ Allows **Activities, Fragments, or other components** to interact with it.  
 ✔ Uses **onBind()** method to return an **IBinder** for communication.
 
-#### **Example: Bound Service**
+#### Example: Bound Service
 
 ```java
 import android.app.Service;
@@ -272,7 +272,7 @@ public class MyBoundService extends Service {
 }
 ```
 
-#### **Binding the Service in an Activity**
+#### Binding the Service in an Activity
 
 ```java
 MyBoundService myService;
@@ -299,7 +299,7 @@ bindService(intent, connection, Context.BIND_AUTO_CREATE);
 
 ✅ **Use Cases:** Streaming apps, live data fetching, inter-process communication.
 
-### **Comparison of Android Services**
+### Comparison of Android Services
 
 | Feature                       | Foreground Service         | Background Service           | Bound Service                  |
 | ----------------------------- | -------------------------- | ---------------------------- | ------------------------------ |
@@ -309,7 +309,7 @@ bindService(intent, connection, Context.BIND_AUTO_CREATE);
 | **Can Be Stopped by System?** | ❌ No                      | ✅ Yes                       | ✅ Yes (if all clients unbind) |
 | **Example Use Cases**         | Music Player, GPS Tracking | Data Syncing, File Uploading | Live Chat, Streaming           |
 
-### **Conclusion**
+### Conclusion
 
 ✔ **Foreground Service** – Runs **continuously** with a **notification** (e.g., **music player, tracking**).  
 ✔ **Background Service** – Runs in the background **without UI**, suitable for **short tasks** (e.g., **syncing, notifications**).  
@@ -319,11 +319,11 @@ Each service type is essential for **different app functionalities**, ensuring *
 
 ## <mark> 3) Explain alarm manager with the example of broadcast receiver. </mark>
 
-### **AlarmManager in Android with BroadcastReceiver Example**
+### AlarmManager in Android with BroadcastReceiver Example
 
 **AlarmManager** is a system service in Android that **schedules tasks** to run at a specified time, even if the app is **closed or the device is restarted**. It is commonly used for **reminders, notifications, and periodic background tasks**.
 
-### **Steps to Implement AlarmManager with BroadcastReceiver**
+### Steps to Implement AlarmManager with BroadcastReceiver
 
 To trigger an **alarm event** at a specific time, we use:
 
@@ -331,7 +331,7 @@ To trigger an **alarm event** at a specific time, we use:
 2. **PendingIntent** – Specifies the action (e.g., sending a broadcast).
 3. **BroadcastReceiver** – Receives the alarm trigger and performs an action (e.g., showing a notification).
 
-### **1. Set an Alarm Using AlarmManager (`MainActivity.java`)**
+### 1. Set an Alarm Using AlarmManager (`MainActivity.java`)
 
 ```java
 import android.app.AlarmManager;
@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **2. Create a Broadcast Receiver (`AlarmReceiver.java`)**
+### 2. Create a Broadcast Receiver (`AlarmReceiver.java`)
 
 ```java
 import android.content.BroadcastReceiver;
@@ -387,18 +387,18 @@ public class AlarmReceiver extends BroadcastReceiver {
 }
 ```
 
-### **3. Register the Receiver in `AndroidManifest.xml`**
+### 3. Register the Receiver in `AndroidManifest.xml`
 
 ```xml
 <receiver android:name=".AlarmReceiver"/>
 ```
 
-### **4. Running the App**
+### 4. Running the App
 
 - Click the **"Set Alarm"** button.
 - After **5 seconds**, the **AlarmReceiver** receives the broadcast and **shows a Toast message**.
 
-### **Using AlarmManager for Repeating Alarms**
+### Using AlarmManager for Repeating Alarms
 
 To **repeat the alarm every 10 minutes**, modify `setExact()` to `setRepeating()`:
 
@@ -411,7 +411,7 @@ alarmManager.setRepeating(
 );
 ```
 
-### **Canceling an Alarm**
+### Canceling an Alarm
 
 To cancel an alarm:
 
@@ -419,32 +419,32 @@ To cancel an alarm:
 alarmManager.cancel(pendingIntent);
 ```
 
-### **Use Cases of AlarmManager with BroadcastReceiver**
+### Use Cases of AlarmManager with BroadcastReceiver
 
 ✔ **Reminders and Notifications** (e.g., medication alerts).  
 ✔ **Periodic Background Tasks** (e.g., syncing data, checking updates).  
 ✔ **Task Scheduling** (e.g., alarms, scheduled reports).
 
-### **Conclusion**
+### Conclusion
 
 AlarmManager is a powerful tool for **scheduling background tasks**. When combined with a **BroadcastReceiver**, it allows apps to perform **timed operations even when the app is closed**, making it useful for **reminders, notifications, and periodic updates**.
 
 ## <mark> 4) Explain internal storage in Android with example. </mark>
 
-### **Internal Storage in Android**
+### Internal Storage in Android
 
 **Internal Storage** in Android is a **private storage space** allocated for an app, where files are stored within the device's internal memory. Data saved here is **only accessible to the app itself** and is **deleted when the app is uninstalled**.
 
-### **Features of Internal Storage**
+### Features of Internal Storage
 
 ✔ **Private Storage** – Other apps cannot access the stored files.  
 ✔ **Automatically Deleted** – Files are removed when the app is uninstalled.  
 ✔ **No Permissions Required** – Unlike external storage, **no special permission is needed**.  
 ✔ **Secure and Fast** – Stored files are **sandboxed** and cannot be accessed by other apps.
 
-### **Example: Writing and Reading a File in Internal Storage**
+### Example: Writing and Reading a File in Internal Storage
 
-#### **1. Write Data to Internal Storage (`MainActivity.java`)**
+#### 1. Write Data to Internal Storage (`MainActivity.java`)
 
 ```java
 import android.content.Context;
@@ -484,7 +484,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#### **2. Read Data from Internal Storage (`MainActivity.java`)**
+#### 2. Read Data from Internal Storage (`MainActivity.java`)
 
 ```java
 import android.os.Bundle;
@@ -525,13 +525,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### **File Storage Location in Internal Storage**
+### File Storage Location in Internal Storage
 
 Files are stored in:  
 📂 **`/data/data/com.example.myapp/files/myfile.txt`**  
 (Apps cannot access each other’s storage due to Android's **sandboxing**.)
 
-### **Deleting a File from Internal Storage**
+### Deleting a File from Internal Storage
 
 ```java
 boolean deleted = deleteFile("myfile.txt");
@@ -540,13 +540,13 @@ if (deleted) {
 }
 ```
 
-### **Use Cases of Internal Storage**
+### Use Cases of Internal Storage
 
 ✔ **Saving User Preferences** (e.g., settings, user profile data).  
 ✔ **Storing Application Data** (e.g., cache files, logs).  
 ✔ **Keeping Private Files** (e.g., authentication tokens).
 
-### **Comparison: Internal Storage vs. External Storage**
+### Comparison: Internal Storage vs. External Storage
 
 | Feature                  | Internal Storage                    | External Storage                 |
 | ------------------------ | ----------------------------------- | -------------------------------- |
@@ -555,26 +555,26 @@ if (deleted) {
 | **Data Deletion**        | Deleted when the app is uninstalled | Persists even after uninstalling |
 | **Security**             | High (sandboxed)                    | Lower (other apps can access)    |
 
-### **Conclusion**
+### Conclusion
 
 Internal Storage in Android provides **a secure and private way to store app-specific files**. It is useful for **storing personal user data, settings, and cache files**. Unlike external storage, **it does not require permissions and is automatically deleted when the app is uninstalled**.
 
 ## <mark> 5) Explain SQLite Database with example. </mark>
 
-### **SQLite Database in Android**
+### SQLite Database in Android
 
 **SQLite** is a lightweight, embedded **relational database** used in Android for **storing structured data locally**. It does not require a separate server and provides efficient storage for **offline applications**.
 
-### **Features of SQLite in Android**
+### Features of SQLite in Android
 
 ✔ **Lightweight & Embedded** – No external setup needed.  
 ✔ **Uses SQL Queries** – Supports **CRUD operations** (`Create, Read, Update, Delete`).  
 ✔ **Local Storage** – Stores data in a **single file** on the device.  
 ✔ **Efficient & Fast** – Ideal for **small to medium-sized applications**.
 
-### **Steps to Implement SQLite Database in Android**
+### Steps to Implement SQLite Database in Android
 
-#### **1. Create a Database Helper Class (`DatabaseHelper.java`)**
+#### 1. Create a Database Helper Class (`DatabaseHelper.java`)
 
 ```java
 import android.content.Context;
@@ -605,7 +605,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 }
 ```
 
-#### **2. Insert Data into SQLite (`MainActivity.java`)**
+#### 2. Insert Data into SQLite (`MainActivity.java`)
 
 ```java
 import android.content.ContentValues;
@@ -637,7 +637,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#### **3. Retrieve Data from SQLite (`MainActivity.java`)**
+#### 3. Retrieve Data from SQLite (`MainActivity.java`)
 
 ```java
 import android.database.Cursor;
@@ -672,7 +672,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#### **4. Update Data in SQLite (`MainActivity.java`)**
+#### 4. Update Data in SQLite (`MainActivity.java`)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -687,7 +687,7 @@ if (rowsAffected > 0) {
 }
 ```
 
-#### **5. Delete Data from SQLite (`MainActivity.java`)**
+#### 5. Delete Data from SQLite (`MainActivity.java`)
 
 ```java
 SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
@@ -699,12 +699,12 @@ if (rowsDeleted > 0) {
 }
 ```
 
-### **Use Cases of SQLite**
+### Use Cases of SQLite
 
 ✔ **Offline Applications** – Stores data locally without internet.  
 ✔ **User Data Storage** – Saves **preferences, settings, and history**.  
 ✔ **Small to Medium Databases** – Efficient for **mobile apps**.
 
-### **Conclusion**
+### Conclusion
 
 SQLite in Android provides **a powerful, local database** for storing structured data. It supports **CRUD operations** and is widely used for **offline applications, user data storage, and local caching**.

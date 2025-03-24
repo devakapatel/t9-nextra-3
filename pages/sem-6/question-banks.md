@@ -4,6 +4,8 @@
 
 - ### [Cryptography and Network Security (CNS)](./question-banks/cryptography-and-network-security)
 
+- ### [Data Compression (DC)](./question-banks/data-compression)
+
 - ### [Data Science (DS)](./question-banks/data-science)
 
 - ### [Distributed Systems (DS)](./question-banks/distributed-systems)

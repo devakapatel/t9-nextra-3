@@ -1,16 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap");
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-  font-display: swap;
-}
-
-code,
-pre {
-  font-family: "JetBrains Mono", monospace;
-  font-display: swap;
-}
-
 mark {
   background-color: transparent;
   color: #ffc107;

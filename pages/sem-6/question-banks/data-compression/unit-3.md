@@ -1,11 +1,6 @@
-import { Callout } from "nextra/components";
-
-<Callout type="warning" emoji="⚠️">
-  Check for correctness of answers.
-</Callout>
-;
-
 # Unit 3
+
+# _Check for correctness of answers._
 
 ## 1) What is a static dictionary? Explain diagram coding.
 

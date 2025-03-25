@@ -1,11 +1,6 @@
-import { Callout } from "nextra/components";
-
-<Callout type="warning" emoji="⚠️">
-  Check for correctness of answers.
-</Callout>
-;
-
 # Unit 2
+
+# _Check for correctness of answers._
 
 ## 1) Write a method to generate a tag in arithmetic coding.
 

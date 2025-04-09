@@ -772,7 +772,7 @@ Key points to consider:
 
 This result demonstrates how adding two O-notations results in an O-notation that captures the maximum growth rate between the original functions.
 
-## <mark> 22) Prove that $(n + a)^b = Ө(n^b), b>0$ </mark>
+## <mark> 22) Prove that $(n + a)^b = \text{Ө}(n^b), b>0$ </mark>
 
 To prove that $(n + a)^b = \Theta(n^b)$ for $b > 0$, we need to show that there exist constants $c_1$ and $c_2$ such that:
 

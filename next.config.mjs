@@ -16,4 +16,5 @@ export default withNextra({
     minimumCacheTTL: 60,
     unoptimized: true,
   },
+  output: "export",
 });

@@ -1,0 +1,121 @@
+# Distributed Systems
+
+## <mark> Practical 8: Write a program to implement producer-consumer concept using THREAD. </mark>
+
+```java copy filename="ProducerConsumerExample.java"
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+// Producer class
+class Producer implements Runnable {
+    private BlockingQueue<Integer> queue;
+
+    public Producer(BlockingQueue<Integer> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        try {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Producing: " + i);
+                queue.put(i); // Add an item to the queue
+                Thread.sleep(100); // Simulate time taken to produce
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}
+
+// Consumer class
+class Consumer implements Runnable {
+    private BlockingQueue<Integer> queue;
+
+    public Consumer(BlockingQueue<Integer> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        try {
+            for (int i = 0; i < 10; i++) {
+                Integer value = queue.take(); // Take an item from the queue
+                System.out.println("Consuming: " + value);
+                Thread.sleep(150); // Simulate time taken to consume
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}
+
+// Main class
+public class ProducerConsumerExample {
+    public static void main(String[] args) {
+        BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(5); // Buffer size 5
+
+        Thread producerThread = new Thread(new Producer(queue));
+        Thread consumerThread = new Thread(new Consumer(queue));
+
+        producerThread.start();
+        consumerThread.start();
+
+        try {
+            producerThread.join();
+            consumerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### To run this program, save the program as `ProducerConsumerExample.java` and run following commands in the terminal
+
+```bash
+javac ProducerConsumerExample.java
+java ProducerConsumerExample
+```
+
+## <mark> Practical 9: Write a program to find the length of string using THREAD. </mark>
+
+```java copy filename="StringLengthUsingThread.java"
+// Thread class to calculate string length
+class StringLengthThread extends Thread {
+    private String str;
+    private int length;
+
+    public StringLengthThread(String str) {
+        this.str = str;
+    }
+
+    @Override
+    public void run() {
+        length = str.length();
+        System.out.println("Length of the string \"" + str + "\" is: " + length);
+    }
+}
+
+// Main class
+public class StringLengthUsingThread {
+    public static void main(String[] args) {
+        String inputString = "Hello, World!";
+        StringLengthThread thread = new StringLengthThread(inputString);
+        thread.start(); // Start the thread
+
+        try {
+            thread.join(); // Wait for thread to complete
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### To run this program, save the program as `StringLengthUsingThread.java` and run following commands in the terminal
+
+```bash
+javac StringLengthUsingThread.java
+java StringLengthUsingThread
+```

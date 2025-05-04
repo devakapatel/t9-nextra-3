@@ -21,7 +21,7 @@ Some points about the future of this project:
 
 - 🚀 The technology or UI might change as needed.
 - 🎨 Features will continue to evolve based on user feedback.
-- 💡 Suggestions are welcome! Fill out the form in the [Links Section](../links).
+- 💡 Suggestions are welcome! Fill out the form on the home page.
 
 As the sole owner of this website, I make all decisions—but I value your input to make this platform even better.
 

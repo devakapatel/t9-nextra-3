@@ -10,15 +10,15 @@ _The time may vary by 3 or 4 minutes._
 
 ---
 
+## May 4, 2025 - 04:50 PM
+
+### Added
+
+- [Semester 6 → Practicals → Data Science (DS) → 1 to 10](./sem-6/practicals/data-science)
+
 ## May 3, 2025 - 08:06 AM
 
 ### Added
 
 - [Semester 6 → Practicals → Distributed Systems (DS) → 8th and 9th](./sem-6/practicals/distributed-systems)
 - [Changelogs](./changelogs)
-
-## May 4, 2025 - 04:50 PM
-
-### Added
-
-- [Semester 6 → Practicals → Data Science (DS) → 1 to 10](./sem-6/practicals/data-science)

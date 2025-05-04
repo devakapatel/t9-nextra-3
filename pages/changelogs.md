@@ -16,6 +16,10 @@ _The time may vary by 3 or 4 minutes._
 
 - [Semester 6 → Practicals → Data Science (DS) → 1 to 10](./sem-6/practicals/data-science)
 
+### Changed
+
+- [About](./about)
+
 ## May 3, 2025 - 08:06 AM
 
 ### Added

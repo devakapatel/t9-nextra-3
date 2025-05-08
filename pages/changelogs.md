@@ -10,6 +10,12 @@ _The time may vary by 3 or 4 minutes._
 
 ---
 
+## May 8, 2025 - 02:00 AM
+
+### Added
+
+- [Semester 6 → Practicals → Cryptography and Network Security (CNS) → 1 to 10](./sem-6/practicals/cryptography-and-network-security.mdx)
+
 ## May 4, 2025 - 04:50 PM
 
 ### Added

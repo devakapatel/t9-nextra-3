@@ -6,7 +6,7 @@ The format follows the guidelines of [Keep a Changelog](https://keepachangelog.c
 
 Each entry is categorized by type of change (`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed` and `Security`).
 
-_The time may vary by 3 or 4 minutes._
+_The time may vary by some minutes._
 
 ---
 

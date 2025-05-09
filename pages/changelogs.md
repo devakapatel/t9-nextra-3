@@ -10,11 +10,18 @@ _The time may vary by 3 or 4 minutes._
 
 ---
 
+## May 9, 2025 - PM
+
+### Added
+
+- [Semester 6 → Assignments → Security and Privacy in IoT (SPIoT) → 4](./sem-6/assignments/security-and-privacy-in-iot/)
+- [Semester 6 → Question Banks → Mobile Application Development → Unit 4](./sem-6/question-banks/mobile-applicarion-development)
+
 ## May 8, 2025 - 02:00 AM
 
 ### Added
 
-- [Semester 6 → Practicals → Cryptography and Network Security (CNS) → 1 to 10](./sem-6/practicals/cryptography-and-network-security.mdx)
+- [Semester 6 → Practicals → Cryptography and Network Security (CNS) → 1 to 10](./sem-6/practicals/cryptography-and-network-security)
 
 ## May 4, 2025 - 04:50 PM
 

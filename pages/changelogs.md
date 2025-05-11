@@ -14,11 +14,11 @@ _The time may vary by some minutes._
 
 ### Added
 
-- [Semester 6 → Assignments → Cryptography and Network Security (CNS) → Unit 4](./sem-6/qssion-banks/cryptography-and-network-security)
+- [Semester 6 → Question Banks → Cryptography and Network Security (CNS) → Unit 4](./sem-6/qssion-banks/cryptography-and-network-security)
 
 ### Fixed
 
-- [Semester 6 → Assignments → Mobile Application Development → Link Not Working Fixed](./sem-6/question-banks/mobile-applicarion-development)
+- [Semester 6 → Question Banks → Mobile Application Development → Link Not Working Fixed](./sem-6/question-banks/mobile-applicarion-development)
 
 ## May 9, 2025 - 02:15 PM
 

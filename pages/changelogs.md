@@ -10,6 +10,16 @@ _The time may vary by some minutes._
 
 ---
 
+## May 10, 2025 - 11:00 PM
+
+### Added
+
+- [Semester 6 → Assignments → Cryptography and Network Security (CNS) → Unit 4](./sem-6/qssion-banks/cryptography-and-network-security)
+
+### Fixed
+
+- [Semester 6 → Assignments → Mobile Application Development → Link Not Working Fixed](./sem-6/question-banks/mobile-applicarion-development)
+
 ## May 9, 2025 - 02:15 PM
 
 ### Added

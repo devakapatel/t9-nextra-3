@@ -6,6 +6,8 @@
 
 - ### [Data Structure and Algorithms (DSA)](./question-banks/dsa)
 
+- ### [Elements of Robotics(EOR)](./question-banks/eor)
+
 - ### [Internet of Things (IoT)](./question-banks/iot)
 
 - ### [Internet of Things - Sensors and Devices (ISD)](./question-banks/isd)

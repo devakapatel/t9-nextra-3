@@ -1,7 +1,5 @@
 # Assignment 4
 
-Here are the answers to the questions from Assignment-4, based on the provided resources:
-
 ## <mark> 1) IoT Application Vulnerabilities and Security Impacts </mark>
 
 Common vulnerabilities in IoT applications include weak authentication and authorization, insecure communication channels, outdated or unpatched firmware, lack of secure boot and code integrity, and privacy risks. These vulnerabilities can be exploited to gain unauthorized access, steal data, install malware, compromise networks, and launch Distributed Denial-of-Service (DDoS) attacks.

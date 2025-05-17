@@ -1,5 +1,3 @@
-import { Cards } from "nextra/components";
-
 # Changelog
 
 This file contains all notable changes made to the project starting from **May 3rd, 2025**.
@@ -11,8 +9,6 @@ Each entry is categorized by type of change (`Added`, `Changed`, `Deprecated`, `
 _The time may vary by some minutes._
 
 ---
-
-<Cards.Card title="About Nextra" href="/about" arrow />
 
 ## May 10, 2025 - 11:00 PM
 
